@@ -1,8 +1,72 @@
 ---
-import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import ContentPlaceholder from '../../../../components/ContentPlaceholder.astro';
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import SectionHeading from "../../../../components/common/SectionHeading.astro";
+import { zedEamCapabilityGroups } from "../../../../data/zed-eam";
 ---
 
-<BaseLayout title="قابلیت‌های ZED EAM | دومان سامانه" description="قابلیت‌های محصول ZED EAM پس از تأیید محتوای محصول معرفی خواهند شد.">
-  <ContentPlaceholder eyebrow="ZED EAM / قابلیت‌ها" title="قابلیت‌های ZED EAM" description="فهرست قابلیت‌ها پس از دریافت و تأیید مشخصات محصول منتشر خواهد شد." ctaLabel="تماس با ما" ctaHref="/contact/" />
+<BaseLayout
+  title="قابلیت‌های ZED EAM | دومان سامانه"
+  description="قابلیت‌های ZED EAM در مدیریت دارایی، تجهیزات، نگهداری و تعمیرات و فرآیندهای سازمانی."
+>
+  <main class="features-page">
+    <div class="container">
+      <a class="breadcrumb" href="/products/zed-eam/">محصولات / ZED EAM</a>
+      <SectionHeading
+        id="features-title"
+        title="قابلیت‌های ZED EAM"
+        description="قابلیت‌های مدیریت دارایی سازمانی در دسته‌بندی‌های مرتبط با تجهیزات، نگهداری و اطلاعات مدیریتی."
+      />
+      <div class="feature-groups">
+        {
+          zedEamCapabilityGroups.map((group) => (
+            <section aria-labelledby={group.title}>
+              <h2 id={group.title}>{group.title}</h2>
+              <ul>
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+      </div>
+      <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+    </div>
+  </main>
 </BaseLayout>
+
+<style>
+  .features-page {
+    padding-block: clamp(4rem, 9vw, 8rem);
+  }
+  .breadcrumb {
+    display: inline-block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+  .feature-groups {
+    display: grid;
+    gap: var(--space-xl);
+    margin-block-end: var(--space-xl);
+  }
+  .feature-groups h2 {
+    margin-block-end: var(--space-md);
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+  }
+  .feature-groups ul {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .feature-groups li {
+    padding-block: 0.65rem;
+    border-block-start: 0.0625rem solid var(--color-border);
+    color: var(--color-muted);
+  }
+</style>

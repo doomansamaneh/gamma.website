@@ -6,30 +6,30 @@ This is a static corporate website for the company and its products.
 
 The website must be designed as a **multi-product corporate website** from the beginning.
 
-GammaDesk is currently the primary product, but the architecture must allow additional products to be added without restructuring the website.
+GammaItsm is currently the primary product, but the architecture must allow additional products to be added without restructuring the website.
 
 The website should be deployable as generated static assets without requiring a runtime backend.
 
 The architecture should prioritize:
 
-* Maintainability
-* Performance
-* SEO
-* Accessibility
-* Clear content structure
-* Reusability
-* Minimal client-side JavaScript
-* Easy addition of future products
+- Maintainability
+- Performance
+- SEO
+- Accessibility
+- Clear content structure
+- Reusability
+- Minimal client-side JavaScript
+- Easy addition of future products
 
 ---
 
 ## Technology
 
-* Astro
-* TypeScript
-* HTML
-* CSS
-* Markdown / MDX
+- Astro
+- TypeScript
+- HTML
+- CSS
+- Markdown / MDX
 
 Do not introduce additional frameworks or libraries unless there is a clear requirement.
 
@@ -71,7 +71,7 @@ The website has four major conceptual areas:
 Company
 │
 ├── Products
-│   ├── GammaDesk
+│   ├── GammaItsm
 │   ├── Product 2
 │   ├── Product 3
 │   └── ...
@@ -94,7 +94,7 @@ Company
 └── Contact
 ```
 
-GammaDesk must not be treated as the root entity of the website.
+GammaItsm must not be treated as the root entity of the website.
 
 It is a product owned and developed by the company.
 
@@ -157,27 +157,27 @@ The architecture must support multiple products.
 
 Each product may have:
 
-* Name
-* Description
-* Logo
-* Hero content
-* Features
-* Benefits
-* Screenshots
-* Videos
-* Documentation
-* Related articles
-* FAQ
-* CTA
-* Contact / Demo action
+- Name
+- Description
+- Logo
+- Hero content
+- Features
+- Benefits
+- Screenshots
+- Videos
+- Documentation
+- Related articles
+- FAQ
+- CTA
+- Contact / Demo action
 
 Example:
 
 ```text
-/products/gammadesk
-/products/gammadesk/features
-/products/gammadesk/features/incident-management
-/products/gammadesk/features/problem-management
+/products/GammaItsm
+/products/GammaItsm/features
+/products/GammaItsm/features/incident-management
+/products/GammaItsm/features/problem-management
 
 /products/product-2
 /products/product-2/features/...
@@ -191,13 +191,13 @@ Adding a new product should primarily require adding content and configuration, 
 
 Features belong to a product.
 
-Do not create a global feature hierarchy that assumes all features belong to GammaDesk.
+Do not create a global feature hierarchy that assumes all features belong to GammaItsm.
 
 Example:
 
 ```text
 Product
-└── GammaDesk
+└── GammaItsm
     └── Features
         ├── Incident Management
         ├── Problem Management
@@ -209,13 +209,13 @@ Features should be independently addressable pages when they provide meaningful 
 
 Feature pages may link to:
 
-* Related features
-* Parent product
-* Related articles
-* ITIL documentation
-* Videos
-* FAQ
-* Demo / Contact
+- Related features
+- Parent product
+- Related articles
+- ITIL documentation
+- Videos
+- FAQ
+- Demo / Contact
 
 This internal linking structure should be intentional and SEO-friendly.
 
@@ -227,21 +227,21 @@ Create reusable components for recurring UI patterns.
 
 Examples:
 
-* Header
-* Footer
-* Navigation
-* Hero
-* Section
-* FeatureCard
-* ProductCard
-* CTA
-* Breadcrumb
-* FAQ
-* LogoCloud
-* ArticleCard
-* VideoCard
-* ScreenshotGallery
-* RelatedContent
+- Header
+- Footer
+- Navigation
+- Hero
+- Section
+- FeatureCard
+- ProductCard
+- CTA
+- Breadcrumb
+- FAQ
+- LogoCloud
+- ArticleCard
+- VideoCard
+- ScreenshotGallery
+- RelatedContent
 
 Components should be designed around reusable patterns rather than individual pages.
 
@@ -286,22 +286,22 @@ Marketing content should be separated from presentation whenever practical.
 
 Prefer Markdown/MDX for:
 
-* Blog posts
-* Articles
-* ITIL guides
-* Documentation
-* Long-form content
-* Product feature descriptions where appropriate
+- Blog posts
+- Articles
+- ITIL guides
+- Documentation
+- Long-form content
+- Product feature descriptions where appropriate
 
 Prefer structured data for:
 
-* Products
-* Product metadata
-* Navigation
-* Company information
-* Feature metadata
-* Categories
-* Content relationships
+- Products
+- Product metadata
+- Navigation
+- Company information
+- Feature metadata
+- Categories
+- Content relationships
 
 Content should not be hardcoded into reusable UI components.
 
@@ -366,7 +366,7 @@ For example:
 ```text
 Company Brand
     │
-    ├── GammaDesk
+    ├── GammaItsm
     │      └── Product Accent
     │
     ├── Product 2
@@ -388,23 +388,23 @@ SEO must be considered part of the architecture, not added at the end.
 
 Every meaningful page should support:
 
-* Unique title
-* Meta description
-* Canonical URL
-* Open Graph metadata
-* Semantic HTML
-* Proper heading hierarchy
-* Internal linking
-* Sitemap inclusion
-* Appropriate structured data where applicable
+- Unique title
+- Meta description
+- Canonical URL
+- Open Graph metadata
+- Semantic HTML
+- Proper heading hierarchy
+- Internal linking
+- Sitemap inclusion
+- Appropriate structured data where applicable
 
 URLs should be:
 
-* Stable
-* Human-readable
-* Lowercase
-* Descriptive
-* Consistent
+- Stable
+- Human-readable
+- Lowercase
+- Descriptive
+- Consistent
 
 Avoid unnecessary query parameters for primary content pages.
 
@@ -416,14 +416,14 @@ Accessibility is a first-class requirement.
 
 The website should:
 
-* Use semantic HTML
-* Provide meaningful heading hierarchy
-* Provide accessible navigation
-* Provide descriptive alternative text for meaningful images
-* Maintain sufficient contrast
-* Support keyboard navigation
-* Avoid interaction patterns that require a mouse
-* Respect reduced-motion preferences where relevant
+- Use semantic HTML
+- Provide meaningful heading hierarchy
+- Provide accessible navigation
+- Provide descriptive alternative text for meaningful images
+- Maintain sufficient contrast
+- Support keyboard navigation
+- Avoid interaction patterns that require a mouse
+- Respect reduced-motion preferences where relevant
 
 Do not use visual design as a substitute for semantic structure.
 
@@ -435,14 +435,14 @@ Performance is a core architectural requirement.
 
 Prefer:
 
-* Static HTML
-* Optimized images
-* Modern image formats where appropriate
-* Local fonts where practical
-* Minimal JavaScript
-* Minimal third-party scripts
-* Lazy loading for non-critical media
-* Avoiding unnecessary client-side hydration
+- Static HTML
+- Optimized images
+- Modern image formats where appropriate
+- Local fonts where practical
+- Minimal JavaScript
+- Minimal third-party scripts
+- Lazy loading for non-critical media
+- Avoiding unnecessary client-side hydration
 
 Do not sacrifice performance for decorative animations or unnecessary dependencies.
 
@@ -470,11 +470,11 @@ The production website should have no unnecessary server-side attack surface.
 
 Prefer a static deployment without:
 
-* PHP
-* WordPress
-* MySQL
-* Runtime application servers
-* Server-side CMS
+- PHP
+- WordPress
+- MySQL
+- Runtime application servers
+- Server-side CMS
 
 Secrets, API keys, credentials, and private configuration must never be committed to the repository.
 
@@ -492,12 +492,12 @@ The project should be understandable to another experienced developer joining th
 
 When multiple solutions are possible, prefer the one with:
 
-* Less code
-* Fewer dependencies
-* Less JavaScript
-* Clearer ownership
-* Easier maintenance
-* Better long-term stability
+- Less code
+- Fewer dependencies
+- Less JavaScript
+- Clearer ownership
+- Easier maintenance
+- Better long-term stability
 
 ---
 
@@ -505,6 +505,29 @@ When multiple solutions are possible, prefer the one with:
 
 The most important architectural rule is:
 
-> **Build a company website that currently presents GammaDesk, rather than building a GammaDesk website that may later contain other products.**
+> **Build a company website that currently presents GammaItsm, rather than building a GammaItsm website that may later contain other products.**
 
 Future products must fit naturally into the existing architecture without requiring a fundamental redesign.
+
+Do not implement pages as large monolithic Astro files.
+
+Each page must be composed from meaningful, reusable sections/components.
+
+Separate:
+
+page composition
+reusable UI components
+product-specific components
+content/data
+styling/design tokens
+
+A page file should primarily describe the page structure and composition, not contain large amounts of markup or business/content data.
+
+Components must be designed so that individual sections can be modified, reordered, replaced, or reused without rewriting the entire page.
+
+Avoid both extremes:
+
+monolithic page files
+excessive fragmentation into meaningless micro-components.
+
+Prefer semantic, meaningful components such as ProductHero, FeatureGrid, ScreenshotGallery, FAQSection, CTASection, etc.

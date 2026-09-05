@@ -1,0 +1,519 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductLogo from "./brand/ProductLogo.astro";
+import SectionHeading from "./common/SectionHeading.astro";
+import {
+  zedEamBenefits,
+  zedEamCapabilityGroups,
+  zedEamLifecycle,
+} from "../data/zed-eam";
+import { zedEamModules } from "../data/zed-eam-modules";
+---
+
+<BaseLayout
+  title="ZED EAM | نرم افزار مدیریت دارایی سازمانی | دومان سامانه"
+  description="ZED EAM راهکار مدیریت دارایی سازمانی برای مدیریت تجهیزات، دارایی‌ها، نگهداری و تعمیرات و فرآیندهای مرتبط در سازمان‌ها است."
+>
+  <main>
+    <section class="zed-hero">
+      <div class="container zed-hero-grid">
+        <div class="zed-hero-content">
+          <a class="breadcrumb" href="/products/">خانه / محصولات / ZED EAM</a>
+          <p class="eyebrow">مدیریت دارایی سازمانی</p>
+          <h1>ZED EAM؛ مدیریت یکپارچه دارایی‌های سازمانی</h1>
+          <p class="hero-copy">
+            راهکاری جامع برای مدیریت دارایی‌ها، تجهیزات، نگهداری و تعمیرات و
+            فرآیندهای مرتبط در سازمان‌های دارایی‌محور.
+          </p>
+          <div class="actions">
+            <a class="button button--accent" href="/contact/demo/"
+              >درخواست دمو</a
+            >
+            <a class="text-link" href="#capabilities"
+              >آشنایی با قابلیت‌ها <span aria-hidden="true">←</span></a
+            >
+          </div>
+        </div>
+        <div
+          class="zed-hero-visual"
+          aria-label="نمای مفهومی مدیریت دارایی سازمانی"
+        >
+          <ProductLogo product="zed-eam" class="zed-logo" />
+          <div class="asset-flow" aria-hidden="true">
+            <span>دارایی‌ها</span><i></i><span>فرآیندها</span><i></i><span
+              >نگهداری</span
+            ><i></i><span>اطلاعات</span>
+          </div>
+          <p>از دارایی تا اطلاعات مدیریتی</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section intro-section"
+      aria-labelledby="intro-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading
+          id="intro-title"
+          title="از مدیریت تجهیزات تا مدیریت چرخه عمر دارایی"
+        />
+        <p>
+          سازمان‌هایی که دارایی‌های فیزیکی متعددی دارند، به چیزی بیشتر از یک
+          فهرست تجهیزات نیاز دارند. ZED EAM محیطی ساختاریافته برای شناسایی
+          دارایی‌ها، نگهداری اطلاعات فنی، ثبت سوابق، مدیریت فعالیت‌های نگهداری،
+          کنترل فرآیندهای عملیاتی و پشتیبانی از تصمیم‌های مدیریتی فراهم می‌کند.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="content-section benefits-section"
+      aria-labelledby="benefits-title"
+    >
+      <div class="container">
+        <SectionHeading
+          id="benefits-title"
+          title="نگاهی منسجم به دارایی‌های سازمان"
+        />
+        <div class="benefits-grid">
+          {
+            zedEamBenefits.map((benefit) => (
+              <article class="benefit-item">
+                <h3>{benefit.title}</h3>
+                <p>{benefit.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section modules-section"
+      aria-labelledby="modules-title"
+    >
+      <div class="container">
+        <SectionHeading
+          id="modules-title"
+          title="زیرسیستم‌های ZED EAM"
+          description="ZED EAM مجموعه‌ای از زیرسیستم‌های مرتبط را برای مدیریت دارایی‌ها و فرآیندهای سازمانی در اختیار قرار می‌دهد."
+        />
+        <div class="module-grid">
+          {
+            zedEamModules.map((module, index) => (
+              <a
+                class="module-item"
+                href={`/products/zed-eam/modules/${module.slug}/`}
+              >
+                <span class="module-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{module.name}</h3>
+                <p>{module.shortDescription}</p>
+                <span class="module-link">
+                  مشاهده زیرسیستم <span aria-hidden="true">←</span>
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section capabilities-section"
+      id="capabilities"
+      aria-labelledby="capabilities-title"
+    >
+      <div class="container">
+        <SectionHeading id="capabilities-title" title="قابلیت‌های ZED EAM" />
+        <div class="capability-grid">
+          {
+            zedEamCapabilityGroups.map((group) => (
+              <article class="capability-group">
+                <h3>{group.title}</h3>
+                <ul>
+                  {group.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section lifecycle-section"
+      aria-labelledby="lifecycle-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading
+          id="lifecycle-title"
+          title="مدیریت دارایی در تمام چرخه عمر"
+        />
+        <p>
+          اطلاعات دارایی در یک نقطه متمرکز می‌شود تا سازمان بتواند وضعیت، سوابق
+          و فرآیندهای مرتبط با دارایی‌ها را در طول چرخه عمر آن‌ها مدیریت کند.
+        </p>
+        <ol class="lifecycle-list">
+          {
+            zedEamLifecycle.map((stage, index) => (
+              <li>
+                <span>{index + 1}</span>
+                {stage}
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <section
+      class="content-section audience-section"
+      aria-labelledby="audience-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading
+          id="audience-title"
+          title="ZED EAM برای چه سازمان‌هایی مناسب است؟"
+        />
+        <p>
+          ZED EAM برای سازمان‌های دارای تعداد زیاد تجهیزات، شرکت‌های صنعتی و
+          خدماتی و سازمان‌هایی مناسب است که دارایی‌های فیزیکی گسترده، فرآیندهای
+          نگهداری و تعمیرات پیچیده یا نیاز به مدیریت متمرکز اطلاعات دارایی
+          دارند.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="content-section integration-section"
+      aria-labelledby="integration-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading
+          id="integration-title"
+          title="بخشی از اکوسیستم نرم‌افزاری سازمان"
+        />
+        <p>
+          ZED EAM یکی از محصولات سازمانی دومان سامانه است و می‌تواند در کنار
+          سایر راهکارهای این مجموعه، بخشی از ساختار نرم‌افزاری سازمان باشد.
+          جزئیات یکپارچه‌سازی‌ها بر اساس نیاز و معماری هر سازمان بررسی می‌شود.
+        </p>
+        <a class="text-link" href="/products/">مشاهده محصولات دومان سامانه ←</a>
+      </div>
+    </section>
+
+    <section
+      class="content-section company-section"
+      aria-labelledby="company-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading
+          id="company-title"
+          title="ZED EAM؛ محصولی از دومان سامانه"
+        />
+        <p>
+          ZED EAM یکی از محصولات سازمانی دومان سامانه است که با هدف مدیریت
+          ساختاریافته دارایی‌ها و فرآیندهای مرتبط با آن‌ها توسعه یافته است.
+        </p>
+        <a class="text-link" href="/company/about/">آشنایی با دومان سامانه ←</a>
+      </div>
+    </section>
+
+    <section class="zed-cta" aria-labelledby="zed-cta-title">
+      <div class="container narrow-content">
+        <h2 id="zed-cta-title">
+          برای مدیریت بهتر دارایی‌های سازمان خود آماده‌اید؟
+        </h2>
+        <p>
+          برای آشنایی بیشتر با ZED EAM و بررسی تناسب آن با فرآیندهای سازمان شما،
+          با کارشناسان دومان سامانه در ارتباط باشید.
+        </p>
+        <div class="actions">
+          <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+          <a class="text-link" href="/contact/"
+            >تماس با ما <span aria-hidden="true">←</span></a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .zed-hero,
+  .zed-cta {
+    background: var(--hero-product-background);
+    color: var(--color-white);
+  }
+
+  .zed-hero {
+    padding-block: clamp(4rem, 9vw, 8rem);
+  }
+  .zed-hero-grid {
+    display: grid;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 6rem);
+  }
+  .zed-hero-content {
+    min-width: 0;
+  }
+  .breadcrumb,
+  .text-link {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+  .breadcrumb {
+    display: inline-block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-accent-soft);
+  }
+  .zed-hero .text-link,
+  .zed-cta .text-link {
+    color: var(--color-accent-soft);
+  }
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-soft);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  h1 {
+    max-width: 18ch;
+    margin-block-end: var(--space-md);
+    font-size: clamp(2.3rem, 5vw, 4.3rem);
+    line-height: 1.25;
+  }
+  .hero-copy {
+    max-width: 40rem;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-on-dark);
+    font-size: 1.15rem;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .zed-hero-visual {
+    display: grid;
+    align-content: center;
+    gap: var(--space-lg);
+    min-height: 18rem;
+    padding: var(--space-lg);
+    border-block-start: 0.2rem solid var(--color-brand);
+    border-block-end: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  }
+  .zed-logo {
+    max-width: 14rem;
+    max-height: 4rem;
+  }
+  :global(.product-logo-fallback.zed-logo) {
+    color: var(--color-white);
+    font-size: 2rem;
+  }
+  .asset-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+  }
+  .asset-flow i {
+    width: 1.5rem;
+    height: 0.0625rem;
+    background: var(--color-brand);
+  }
+  .zed-hero-visual p {
+    margin: 0;
+    color: var(--color-text-on-dark);
+  }
+  .content-section {
+    padding-block: var(--space-xl);
+  }
+  .intro-section,
+  .lifecycle-section,
+  .audience-section,
+  .company-section {
+    background: var(--color-paper);
+  }
+  .benefits-section,
+  .capabilities-section,
+  .integration-section {
+    background: var(--color-surface);
+  }
+  .modules-section {
+    background: var(--color-surface);
+  }
+  .narrow-content {
+    max-width: 52rem;
+  }
+  .content-section > .container > p,
+  .narrow-content > p {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    line-height: 2;
+  }
+  .benefits-grid,
+  .capability-grid {
+    display: grid;
+    gap: var(--space-lg);
+  }
+  .benefit-item {
+    padding-block-start: var(--space-md);
+    border-block-start: 0.2rem solid var(--color-brand);
+  }
+  .benefit-item h3,
+  .capability-group h3 {
+    margin-block-end: var(--space-sm);
+    color: var(--color-primary);
+    font-size: 1.25rem;
+  }
+  .benefit-item p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.9;
+  }
+  .module-grid {
+    display: grid;
+    gap: var(--space-md);
+  }
+  .module-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 1rem;
+    padding: var(--space-md);
+    border-block-start: 0.2rem solid var(--color-primary);
+    background: var(--color-paper);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      border-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+  .module-item:hover,
+  .module-item:focus-visible {
+    border-color: var(--color-brand);
+    transform: translateY(-0.15rem);
+  }
+  .module-number {
+    grid-row: span 3;
+    color: var(--color-brand);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  .module-item h3 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+  }
+  .module-item p {
+    grid-column: 2;
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.8;
+  }
+  .module-link {
+    grid-column: 2;
+    margin-block-start: var(--space-xs);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  .capability-group {
+    padding: var(--space-md);
+    border: 0.0625rem solid var(--color-border);
+    border-block-start: 0.2rem solid var(--color-primary);
+    border-block-start-width: 0.2rem;
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+  }
+  .capability-group ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .capability-group li {
+    position: relative;
+    padding-inline-start: 1.25rem;
+    color: var(--color-muted);
+    line-height: 1.8;
+  }
+  .capability-group li::before {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.75rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--color-brand);
+    content: "";
+  }
+  .lifecycle-list {
+    display: grid;
+    gap: 0.65rem;
+    margin: var(--space-lg) 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: lifecycle;
+  }
+  .lifecycle-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+  }
+  .lifecycle-list span {
+    display: inline-grid;
+    width: 1.75rem;
+    height: 1.75rem;
+    place-items: center;
+    border: 0.0625rem solid var(--color-brand);
+    border-radius: 50%;
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+  }
+  .company-section .text-link,
+  .integration-section .text-link {
+    display: inline-block;
+    margin-block-start: var(--space-md);
+  }
+  .zed-cta {
+    padding-block: var(--space-xl);
+  }
+  .zed-cta h2 {
+    margin-block-end: var(--space-sm);
+    color: var(--color-white);
+    font-size: var(--font-size-h2);
+  }
+  .zed-cta p {
+    max-width: 42rem;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-on-dark);
+  }
+  @media (min-width: 48rem) {
+    .zed-hero-grid {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    }
+    .benefits-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .capability-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .lifecycle-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

@@ -4,23 +4,23 @@
 
 The website is a company-level corporate website that presents multiple products and services.
 
-GammaDesk is currently the primary product, but the content model must support additional products without requiring a structural redesign.
+GammaItsm is currently the primary product, but the content model must support additional products without requiring a structural redesign.
 
 Content should be separated from presentation whenever practical.
 
 The content model should make relationships between:
 
-* Company
-* Products
-* Product Features
-* Articles
-* Videos
-* ITIL Guides
-* FAQs
-* Customers
-* Certifications
-* Screenshots
-* Contact and Demo Requests
+- Company
+- Products
+- Product Features
+- Articles
+- Videos
+- ITIL Guides
+- FAQs
+- Customers
+- Certifications
+- Screenshots
+- Contact and Demo Requests
 
 explicit and maintainable.
 
@@ -34,22 +34,22 @@ The company is the root business entity of the website.
 
 Company-level content may include:
 
-* Name
-* Logo
-* Short description
-* Long description
-* Mission
-* Vision
-* Goals
-* History
-* Areas of activity
-* Customers
-* Certifications
-* Contact information
-* Social links
-* Company-level calls to action
+- Name
+- Logo
+- Short description
+- Long description
+- Mission
+- Vision
+- Goals
+- History
+- Areas of activity
+- Customers
+- Certifications
+- Contact information
+- Social links
+- Company-level calls to action
 
-Company content must not be tied specifically to GammaDesk.
+Company content must not be tied specifically to GammaItsm.
 
 ---
 
@@ -59,29 +59,29 @@ A product is a first-class entity.
 
 Each product should be able to have its own:
 
-* Name
-* Slug
-* Short description
-* Full description
-* Logo
-* Hero content
-* Product accent
-* Benefits
-* Features
-* Screenshots
-* Videos
-* Documentation
-* FAQs
-* Related articles
-* Related resources
-* CTA
-* Demo request
+- Name
+- Slug
+- Short description
+- Full description
+- Logo
+- Hero content
+- Product accent
+- Benefits
+- Features
+- Screenshots
+- Videos
+- Documentation
+- FAQs
+- Related articles
+- Related resources
+- CTA
+- Demo request
 
 Example:
 
 ```yaml
-name: GammaDesk
-slug: gammadesk
+name: GammaItsm
+slug: GammaItsm
 description: Enterprise IT service management platform
 ```
 
@@ -99,7 +99,7 @@ Example:
 
 ```text
 Product
-└── GammaDesk
+└── GammaItsm
     ├── Incident Management
     ├── Problem Management
     ├── Change Management
@@ -108,19 +108,19 @@ Product
 
 Each feature may contain:
 
-* Name
-* Slug
-* Short description
-* Full description
-* Benefits
-* Capabilities
-* Screenshots
-* Related features
-* Related articles
-* Related videos
-* Related ITIL documentation
-* FAQ
-* CTA
+- Name
+- Slug
+- Short description
+- Full description
+- Benefits
+- Capabilities
+- Screenshots
+- Related features
+- Related articles
+- Related videos
+- Related ITIL documentation
+- FAQ
+- CTA
 
 Features may have their own standalone pages.
 
@@ -132,11 +132,11 @@ Articles are company-level resources unless explicitly associated with a product
 
 An article may optionally reference:
 
-* One product
-* Multiple products
-* One or more features
-* ITIL concepts
-* Other articles
+- One product
+- Multiple products
+- One or more features
+- ITIL concepts
+- Other articles
 
 Suggested fields:
 
@@ -157,11 +157,11 @@ content:
 
 Articles should be designed for:
 
-* SEO
-* Knowledge sharing
-* Thought leadership
-* Product education
-* Internal linking
+- SEO
+- Knowledge sharing
+- Thought leadership
+- Product education
+- Internal linking
 
 ---
 
@@ -171,38 +171,38 @@ Videos are reusable content resources.
 
 A video may be associated with:
 
-* Company
-* Product
-* Feature
-* Article
-* ITIL topic
+- Company
+- Product
+- Feature
+- Article
+- ITIL topic
 
 Examples:
 
-* GammaDesk product introduction
-* Incident Management tutorial
-* ITIL training
-* Product demonstration
+- GammaItsm product introduction
+- Incident Management tutorial
+- ITIL training
+- Product demonstration
 
 Video metadata should include:
 
-* Title
-* Description
-* Thumbnail
-* URL or video source
-* Duration
-* Product
-* Feature
-* Category
-* Publication date
+- Title
+- Description
+- Thumbnail
+- URL or video source
+- Duration
+- Product
+- Feature
+- Category
+- Publication date
 
 ---
 
 ## ITIL Guide
 
-ITIL content should be modeled as a knowledge resource rather than as a GammaDesk feature.
+ITIL content should be modeled as a knowledge resource rather than as a GammaItsm feature.
 
-ITIL topics may link to relevant GammaDesk features.
+ITIL topics may link to relevant GammaItsm features.
 
 Example:
 
@@ -210,12 +210,12 @@ Example:
 ITIL Guide
 └── Incident Management
     ├── ITIL explanation
-    ├── Related GammaDesk feature
+    ├── Related GammaItsm feature
     ├── Related articles
     └── Related videos
 ```
 
-This allows the website to educate users independently of the product while naturally connecting concepts to GammaDesk.
+This allows the website to educate users independently of the product while naturally connecting concepts to GammaItsm.
 
 ---
 
@@ -256,16 +256,16 @@ Customers are company-level content.
 
 Customer information may include:
 
-* Name
-* Logo
-* Industry
-* Short description
-* Case study
-* Products used
+- Name
+- Logo
+- Industry
+- Short description
+- Case study
+- Products used
 
 A customer may use multiple company products.
 
-Therefore customer relationships should not assume that a customer belongs to GammaDesk only.
+Therefore customer relationships should not assume that a customer belongs to GammaItsm only.
 
 ---
 
@@ -336,7 +336,7 @@ Examples:
 ```text
 Incident Management
     ↓
-GammaDesk Incident Management
+GammaItsm Incident Management
     ↓
 Related Article
     ↓
@@ -353,30 +353,30 @@ Content should have clear ownership.
 
 ### Company-level
 
-* Company information
-* History
-* Mission and vision
-* Customers
-* Certifications
-* General articles
-* General contact information
+- Company information
+- History
+- Mission and vision
+- Customers
+- Certifications
+- General articles
+- General contact information
 
 ### Product-level
 
-* Product description
-* Product benefits
-* Product features
-* Product screenshots
-* Product videos
-* Product FAQs
+- Product description
+- Product benefits
+- Product features
+- Product screenshots
+- Product videos
+- Product FAQs
 
 ### Feature-level
 
-* Feature explanation
-* Feature capabilities
-* Feature screenshots
-* Related resources
-* Feature FAQs
+- Feature explanation
+- Feature capabilities
+- Feature screenshots
+- Related resources
+- Feature FAQs
 
 ---
 
@@ -384,12 +384,12 @@ Content should have clear ownership.
 
 Use Astro content collections or equivalent structured content for content that benefits from:
 
-* Schema validation
-* Type safety
-* Markdown/MDX
-* Frontmatter
-* Relationships
-* Static generation
+- Schema validation
+- Type safety
+- Markdown/MDX
+- Frontmatter
+- Relationships
+- Static generation
 
 Suggested structure:
 
@@ -422,17 +422,17 @@ The exact implementation may evolve with the project.
 
 Slugs must be:
 
-* lowercase
-* URL-safe
-* stable
-* descriptive
-* independent from display titles
+- lowercase
+- URL-safe
+- stable
+- descriptive
+- independent from display titles
 
 Examples:
 
 ```text
-/products/gammadesk
-/products/gammadesk/features/incident-management
+/products/GammaItsm
+/products/GammaItsm/features/incident-management
 /resources/articles/incident-management
 /resources/itil/incident-management
 ```
@@ -447,20 +447,20 @@ Do not duplicate content simply because it appears on multiple pages.
 
 Prefer:
 
-* References
-* Shared content
-* Components
-* Structured relationships
-* Related-content queries
+- References
+- Shared content
+- Components
+- Structured relationships
+- Related-content queries
 
-For example, a GammaDesk feature should be defined once and referenced from:
+For example, a GammaItsm feature should be defined once and referenced from:
 
-* Product page
-* Feature listing
-* Related articles
-* ITIL pages
-* Navigation
-* Search
+- Product page
+- Feature listing
+- Related articles
+- ITIL pages
+- Navigation
+- Search
 
 ---
 
@@ -468,14 +468,14 @@ For example, a GammaDesk feature should be defined once and referenced from:
 
 Every indexable content entity should support:
 
-* SEO title
-* Meta description
-* Canonical URL when required
-* Open Graph metadata
-* Structured data when appropriate
-* Descriptive slug
-* Proper heading hierarchy
-* Internal links
+- SEO title
+- Meta description
+- Canonical URL when required
+- Open Graph metadata
+- Structured data when appropriate
+- Descriptive slug
+- Proper heading hierarchy
+- Internal links
 
 SEO metadata should be separate from visual presentation.
 
@@ -504,4 +504,4 @@ The company is the root entity.
 
 Products are independent entities.
 
-GammaDesk is the current primary product, not the definition of the website.
+GammaItsm is the current primary product, not the definition of the website.

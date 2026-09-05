@@ -1,6 +1,6 @@
-# GammaDesk Website
+# GammaItsm Website
 
-Static corporate website for GammaDesk, built with Astro and TypeScript.
+Static corporate website for GammaItsm, built with Astro and TypeScript.
 
 ## Commands
 

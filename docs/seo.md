@@ -6,19 +6,19 @@ Build long-term organic search visibility for **دومان سامانه** and it
 
 The website represents a software company with multiple products:
 
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
+- GammaItsm
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
 SEO must therefore support both:
 
-* company-level searches
-* product-level searches
-* feature-level searches
-* educational/resource searches
+- company-level searches
+- product-level searches
+- feature-level searches
+- educational/resource searches
 
-GammaDesk is currently an important product, but the SEO architecture must not make the entire website appear to belong exclusively to GammaDesk.
+GammaItsm is currently an important product, but the SEO architecture must not make the entire website appear to belong exclusively to GammaItsm.
 
 ---
 
@@ -26,16 +26,16 @@ GammaDesk is currently an important product, but the SEO architecture must not m
 
 SEO must follow these principles:
 
-* Search intent first
-* Useful content first
-* Technical correctness
-* Clear information architecture
-* Strong internal linking
-* Unique content
-* Fast performance
-* Semantic HTML
-* Accessible content
-* No keyword stuffing
+- Search intent first
+- Useful content first
+- Technical correctness
+- Clear information architecture
+- Strong internal linking
+- Unique content
+- Fast performance
+- Semantic HTML
+- Accessible content
+- No keyword stuffing
 
 Do not create pages only for search engines.
 
@@ -47,18 +47,18 @@ Every indexable page must provide meaningful value to a user.
 
 Every indexable page must include:
 
-* unique `<title>`
-* unique meta description
-* canonical URL
-* Open Graph metadata
-* Twitter/X metadata where appropriate
-* semantic HTML
-* correct heading hierarchy
-* sitemap
-* robots.txt
-* appropriate language declaration
-* correct RTL/LTR direction
-* index/follow directives where appropriate
+- unique `<title>`
+- unique meta description
+- canonical URL
+- Open Graph metadata
+- Twitter/X metadata where appropriate
+- semantic HTML
+- correct heading hierarchy
+- sitemap
+- robots.txt
+- appropriate language declaration
+- correct RTL/LTR direction
+- index/follow directives where appropriate
 
 The generated HTML must be crawlable without requiring client-side JavaScript.
 
@@ -75,8 +75,8 @@ Do not append the same long marketing phrase to every page.
 Examples:
 
 ```text
-GammaDesk | سامانه مدیریت خدمات فناوری اطلاعات
-مدیریت رخداد | GammaDesk
+GammaItsm | سامانه مدیریت خدمات فناوری اطلاعات
+مدیریت رخداد | GammaItsm
 نرم افزار مدیریت دارایی سازمانی | ZED EAM
 نرم افزار حسابداری آنلاین لاندا | Landa
 Gamma.Kernel | Enterprise .NET Framework
@@ -92,11 +92,11 @@ Every indexable page should have a unique meta description.
 
 Meta descriptions must:
 
-* describe the actual page
-* communicate the primary value
-* be written for users
-* avoid keyword stuffing
-* avoid repeating the same text across pages
+- describe the actual page
+- communicate the primary value
+- be written for users
+- avoid keyword stuffing
+- avoid repeating the same text across pages
 
 Do not generate meaningless descriptions solely to satisfy a character count.
 
@@ -110,11 +110,11 @@ Canonical URLs must use the preferred public URL.
 
 Avoid duplicate URLs caused by:
 
-* query parameters
-* tracking parameters
-* alternate routes
-* trailing slash inconsistencies
-* duplicate content paths
+- query parameters
+- tracking parameters
+- alternate routes
+- trailing slash inconsistencies
+- duplicate content paths
 
 The canonical URL must represent the primary version of the page.
 
@@ -124,21 +124,21 @@ The canonical URL must represent the primary version of the page.
 
 URLs must be:
 
-* lowercase
-* stable
-* descriptive
-* readable
-* based on English slugs
-* independent of Persian text
-* independent of implementation details
+- lowercase
+- stable
+- descriptive
+- readable
+- based on English slugs
+- independent of Persian text
+- independent of implementation details
 
 Recommended structure:
 
 ```text
 /products
-/products/gammadesk
-/products/gammadesk/features
-/products/gammadesk/features/incident-management
+/products/GammaItsm
+/products/GammaItsm/features
+/products/GammaItsm/features/incident-management
 
 /products/zed-eam
 /products/zed-eam/features
@@ -179,20 +179,20 @@ Each product is an independent SEO entity.
 
 The four products are:
 
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
+- GammaItsm
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
 Each product should have:
 
-* unique title
-* unique description
-* unique landing page
-* unique keywords/search intent
-* product-specific content
-* product-specific internal links
-* appropriate structured data
+- unique title
+- unique description
+- unique landing page
+- unique keywords/search intent
+- product-specific content
+- product-specific internal links
+- appropriate structured data
 
 Do not create nearly identical product pages with only the product name changed.
 
@@ -207,22 +207,22 @@ Features belong to their products.
 For example:
 
 ```text
-/products/gammadesk/features/incident-management
-/products/gammadesk/features/problem-management
+/products/GammaItsm/features/incident-management
+/products/GammaItsm/features/problem-management
 ```
 
 A feature page should contain meaningful information such as:
 
-* what the feature does
-* who needs it
-* key capabilities
-* practical use cases
-* screenshots where appropriate
-* related features
-* related articles
-* related videos
-* relevant ITIL resources
-* product CTA
+- what the feature does
+- who needs it
+- key capabilities
+- practical use cases
+- screenshots where appropriate
+- related features
+- related articles
+- related videos
+- relevant ITIL resources
+- product CTA
 
 Do not create thin feature pages containing only a title and a few marketing sentences.
 
@@ -234,23 +234,23 @@ Content must satisfy search intent.
 
 Prefer:
 
-* useful explanations
-* specific terminology
-* real use cases
-* product expertise
-* technical credibility
-* practical examples
-* clear comparisons where appropriate
-* authoritative company knowledge
+- useful explanations
+- specific terminology
+- real use cases
+- product expertise
+- technical credibility
+- practical examples
+- clear comparisons where appropriate
+- authoritative company knowledge
 
 Avoid:
 
-* keyword stuffing
-* duplicated pages
-* doorway pages
-* meaningless SEO text
-* artificial keyword variations
-* automatically generated low-value pages
+- keyword stuffing
+- duplicated pages
+- doorway pages
+- meaningless SEO text
+- artificial keyword variations
+- automatically generated low-value pages
 
 ---
 
@@ -261,7 +261,7 @@ The current website is Persian-first.
 Use:
 
 ```html
-<html lang="fa-IR" dir="rtl">
+<html lang="fa-IR" dir="rtl"></html>
 ```
 
 Persian content must use natural Persian language.
@@ -278,11 +278,11 @@ must be written with a space, not:
 
 Persian and English product names should be written consistently:
 
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
-* دومان سامانه
+- GammaItsm
+- ZED EAM
+- Landa
+- Gamma.Kernel
+- دومان سامانه
 
 Do not create unnecessary variations of product names for SEO purposes.
 
@@ -304,10 +304,10 @@ The content architecture must not require rewriting the application architecture
 
 Persian and English should have:
 
-* separate metadata
-* appropriate language attributes
-* appropriate canonical URLs
-* appropriate alternate language relationships where implemented
+- separate metadata
+- appropriate language attributes
+- appropriate canonical URLs
+- appropriate alternate language relationships where implemented
 
 Do not create English pages until English content is actually available.
 
@@ -342,14 +342,14 @@ Use Schema.org structured data where genuinely applicable.
 
 Potential schemas include:
 
-* Organization
-* WebSite
-* SoftwareApplication
-* Product
-* Article
-* BreadcrumbList
-* FAQPage
-* VideoObject
+- Organization
+- WebSite
+- SoftwareApplication
+- Product
+- Article
+- BreadcrumbList
+- FAQPage
+- VideoObject
 
 Structured data must accurately represent visible page content.
 
@@ -357,13 +357,13 @@ Never add structured data simply because it may improve search appearance.
 
 Never:
 
-* invent ratings
-* invent reviews
-* invent prices
-* invent FAQs
-* mark hidden content as visible
-* claim unsupported features
-* claim certifications that are not displayed and valid
+- invent ratings
+- invent reviews
+- invent prices
+- invent FAQs
+- mark hidden content as visible
+- claim unsupported features
+- claim certifications that are not displayed and valid
 
 ---
 
@@ -381,13 +381,13 @@ The hierarchy is:
 
 ```text
 دومان سامانه
-├── GammaDesk
+├── GammaItsm
 ├── ZED EAM
 ├── Landa
 └── Gamma.Kernel
 ```
 
-Do not model GammaDesk as the parent organization.
+Do not model GammaItsm as the parent organization.
 
 ---
 
@@ -400,17 +400,17 @@ Example:
 ```text
 خانه
 → محصولات
-→ GammaDesk
+→ GammaItsm
 → قابلیت‌ها
 → مدیریت رخداد
 ```
 
 Breadcrumbs should:
 
-* reflect the actual information architecture
-* use valid URLs
-* be visible to users
-* support BreadcrumbList structured data where appropriate
+- reflect the actual information architecture
+- use valid URLs
+- be visible to users
+- support BreadcrumbList structured data where appropriate
 
 ---
 
@@ -423,9 +423,9 @@ Pages should link naturally to related content.
 Examples:
 
 ```text
-GammaDesk
+GammaItsm
     ↓
-GammaDesk Features
+GammaItsm Features
     ↓
 Incident Management
     ↓
@@ -438,13 +438,13 @@ Request Demo
 
 A feature page may link to:
 
-* related features
-* relevant articles
-* relevant videos
-* ITIL topics
-* FAQ
-* product page
-* demo/request page
+- related features
+- relevant articles
+- relevant videos
+- ITIL topics
+- FAQ
+- product page
+- demo/request page
 
 Avoid artificial networks of links.
 
@@ -460,16 +460,16 @@ For example:
 
 A company-level article about enterprise software may naturally reference:
 
-* GammaDesk
-* ZED EAM
+- GammaItsm
+- ZED EAM
 
 An SME accounting article may naturally reference:
 
-* Landa
+- Landa
 
 A technical engineering article may naturally reference:
 
-* Gamma.Kernel
+- Gamma.Kernel
 
 Do not force cross-links where there is no genuine relationship.
 
@@ -481,14 +481,14 @@ Articles should primarily target real user questions and search intent.
 
 Each article should have:
 
-* unique title
-* unique description
-* appropriate H1
-* meaningful body content
-* relevant internal links
-* relevant product relationships where applicable
-* appropriate image metadata
-* publication/update information where useful
+- unique title
+- unique description
+- appropriate H1
+- meaningful body content
+- relevant internal links
+- relevant product relationships where applicable
+- appropriate image metadata
+- publication/update information where useful
 
 Articles should not exist solely to target isolated keywords.
 
@@ -498,16 +498,16 @@ Articles should not exist solely to target isolated keywords.
 
 The ITIL Guide is an educational resource.
 
-It should be treated as a knowledge resource rather than a GammaDesk feature.
+It should be treated as a knowledge resource rather than a GammaItsm feature.
 
-ITIL pages may naturally link to relevant GammaDesk functionality where appropriate.
+ITIL pages may naturally link to relevant GammaItsm functionality where appropriate.
 
 Example:
 
 ```text
 ITIL Incident Management
         ↓
-GammaDesk Incident Management
+GammaItsm Incident Management
         ↓
 Request Demo
 ```
@@ -536,8 +536,8 @@ Example:
 
 ```html
 <img
-  src="/images/products/gammadesk/dashboard.webp"
-  alt="داشبورد سامانه GammaDesk"
+  src="/images/products/GammaItsm/dashboard.webp"
+  alt="داشبورد سامانه GammaItsm"
 />
 ```
 
@@ -557,12 +557,12 @@ Alt text must describe the meaningful purpose or content of the image.
 
 Images should:
 
-* use descriptive filenames
-* be optimized
-* use modern formats where appropriate
-* have appropriate dimensions
-* avoid unnecessary file size
-* support responsive layouts
+- use descriptive filenames
+- be optimized
+- use modern formats where appropriate
+- have appropriate dimensions
+- avoid unnecessary file size
+- support responsive layouts
 
 Example:
 
@@ -588,12 +588,12 @@ Performance is part of SEO and user experience.
 
 Avoid unnecessary:
 
-* JavaScript
-* third-party libraries
-* large images
-* web fonts
-* tracking scripts
-* client-side rendering
+- JavaScript
+- third-party libraries
+- large images
+- web fonts
+- tracking scripts
+- client-side rendering
 
 Prefer Astro's static rendering model.
 
@@ -607,11 +607,11 @@ Use Astro Islands only where interaction is actually required.
 
 JavaScript must not be required for:
 
-* primary navigation
-* reading page content
-* basic SEO metadata
-* core product information
-* important internal links
+- primary navigation
+- reading page content
+- basic SEO metadata
+- core product information
+- important internal links
 
 Avoid turning static content into client-rendered content without a clear reason.
 
@@ -623,12 +623,12 @@ Generate a valid XML sitemap containing only canonical, indexable URLs.
 
 Do not include:
 
-* redirects
-* noindex pages
-* duplicate URLs
-* development pages
-* internal utility pages
-* irrelevant query-string URLs
+- redirects
+- noindex pages
+- duplicate URLs
+- development pages
+- internal utility pages
+- irrelevant query-string URLs
 
 The sitemap should be automatically generated from the site's actual content structure where possible.
 
@@ -640,10 +640,10 @@ Provide a valid `robots.txt`.
 
 It should:
 
-* allow search engines to crawl public content
-* reference the sitemap
-* avoid blocking important CSS/JS/assets required for rendering
-* avoid exposing unnecessary internal routes
+- allow search engines to crawl public content
+- reference the sitemap
+- avoid blocking important CSS/JS/assets required for rendering
+- avoid exposing unnecessary internal routes
 
 Do not use robots.txt as a substitute for `noindex`.
 
@@ -655,12 +655,12 @@ The existing website may already have indexed URLs.
 
 When replacing or restructuring the old website:
 
-* identify important existing URLs
-* preserve URLs where practical
-* create 301 redirects when URLs change
-* do not intentionally break valuable indexed pages
-* avoid redirect chains
-* map old URLs to the most relevant new destination
+- identify important existing URLs
+- preserve URLs where practical
+- create 301 redirects when URLs change
+- do not intentionally break valuable indexed pages
+- avoid redirect chains
+- map old URLs to the most relevant new destination
 
 Never redirect every old URL to the homepage unless there is genuinely no relevant destination.
 
@@ -676,9 +676,9 @@ Do not create multiple pages targeting the same search intent with minimal wordi
 
 If two pages have essentially the same purpose:
 
-* merge them, or
-* establish one canonical page, or
-* change the content strategy so each page serves a distinct intent.
+- merge them, or
+- establish one canonical page, or
+- change the content strategy so each page serves a distinct intent.
 
 ---
 
@@ -686,13 +686,13 @@ If two pages have essentially the same purpose:
 
 The agent may improve:
 
-* HTML semantics
-* metadata structure
-* internal linking
-* accessibility
-* technical SEO
-* image metadata
-* structured data implementation
+- HTML semantics
+- metadata structure
+- internal linking
+- accessibility
+- technical SEO
+- image metadata
+- structured data implementation
 
 The agent must not invent business claims, customer relationships, certifications, pricing, product capabilities, or performance claims.
 
@@ -704,19 +704,19 @@ Business facts must come from authoritative company content.
 
 Before considering an SEO-related task complete, validate:
 
-* build succeeds
-* pages generate valid HTML
-* title exists
-* meta description exists
-* canonical exists
-* language and direction are correct
-* headings are structurally valid
-* internal links work
-* images have appropriate alt attributes
-* sitemap is generated
-* robots.txt exists
-* structured data matches visible content
-* no unintended duplicate routes were introduced
+- build succeeds
+- pages generate valid HTML
+- title exists
+- meta description exists
+- canonical exists
+- language and direction are correct
+- headings are structurally valid
+- internal links work
+- images have appropriate alt attributes
+- sitemap is generated
+- robots.txt exists
+- structured data matches visible content
+- no unintended duplicate routes were introduced
 
 ---
 
@@ -726,16 +726,16 @@ When an agent is working on a specific SEO task, modifications must remain withi
 
 For example:
 
-> Optimize GammaDesk Incident Management SEO.
+> Optimize GammaItsm Incident Management SEO.
 
 The agent must not automatically:
 
-* rewrite unrelated product pages
-* change company navigation
-* modify unrelated content
-* change the global brand
-* redesign the website
-* alter unrelated URLs
+- rewrite unrelated product pages
+- change company navigation
+- modify unrelated content
+- change the global brand
+- redesign the website
+- alter unrelated URLs
 
 unless the root cause proves that the change is necessary.
 

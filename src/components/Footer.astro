@@ -1,34 +1,261 @@
+---
+import { navigation } from "../data/navigation";
+import CompanyLogo from "./brand/CompanyLogo.astro";
+
+const productLinks =
+  navigation.find((item) => item.label === "محصولات")?.children ?? [];
+const companyLinks =
+  navigation.find((item) => item.label === "شرکت")?.children ?? [];
+const resourceLinks =
+  navigation.find((item) => item.label === "منابع")?.children ?? [];
+const contactHref =
+  navigation.find((item) => item.label === "تماس با ما")?.href ?? "/contact/";
+---
+
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>دومان سامانه</p>
-    <p>شرکت فناوری با تمرکز بر طراحی و توسعه محصولات نرم‌افزاری.</p>
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a class="footer-logo" href="/" aria-label="صفحه اصلی دومان سامانه">
+        <CompanyLogo />
+      </a>
+      <p>
+        دومان سامانه، توسعه‌دهنده راهکارهای نرم‌افزاری برای مدیریت خدمات و
+        فرایندهای سازمانی.
+      </p>
+    </div>
+
+    <nav class="footer-nav" aria-label="محصولات">
+      <h2>محصولات</h2>
+      <ul>
+        {
+          productLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <nav class="footer-nav" aria-label="شرکت">
+      <h2>شرکت</h2>
+      <ul>
+        {
+          companyLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <nav class="footer-nav" aria-label="منابع">
+      <h2>منابع</h2>
+      <ul>
+        {
+          resourceLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="footer-contact">
+      <h2>ارتباط با ما</h2>
+      <p>برای آشنایی بیشتر با راهکارهای دومان سامانه با ما در ارتباط باشید.</p>
+      <div class="footer-actions">
+        <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+        <a class="footer-contact-link" href={contactHref}
+          >تماس با ما <span aria-hidden="true">←</span></a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© {new Date().getFullYear()} دومان سامانه — تمامی حقوق محفوظ است.</p>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    border-top: 0.0625rem solid var(--color-line);
-    background: var(--color-ink);
-    color: white;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.12);
+    background: var(--color-brand-dark);
+    color: var(--color-white);
   }
 
-  .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-block: 1.5rem;
-    color: #d8e1df;
-    font-size: 0.875rem;
+  .footer-main {
+    display: grid;
+    grid-template-columns: minmax(14rem, 1.6fr) repeat(
+        3,
+        minmax(8rem, 1fr)
+      ) minmax(13rem, 1.25fr);
+    gap: var(--space-lg);
+    padding-block: clamp(3rem, 6vw, 5rem);
   }
 
-  .footer-inner p {
+  .footer-brand,
+  .footer-contact {
+    display: grid;
+    align-content: start;
+    gap: var(--space-md);
+  }
+
+  .footer-brand {
+    gap: var(--space-lg);
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0.45rem 0.65rem;
+    background: var(--color-white);
+  }
+
+  .footer-logo :global(.company-logo) {
+    width: 10.5rem;
+    height: auto;
+  }
+
+  .footer-brand p,
+  .footer-contact p {
+    max-width: 18rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: var(--font-size-sm);
+    line-height: 1.9;
+  }
+
+  .footer-nav,
+  .footer-contact {
+    min-width: 0;
+  }
+
+  .footer-nav h2,
+  .footer-contact h2 {
+    margin: 0 0 var(--space-md);
+    color: var(--color-white);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .footer-nav ul {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-nav a,
+  .footer-contact-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-nav a:hover,
+  .footer-nav a:focus-visible,
+  .footer-contact-link:hover,
+  .footer-contact-link:focus-visible {
+    color: var(--color-brand);
+  }
+
+  .footer-actions {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-sm);
+  }
+
+  .footer-contact-link span {
+    display: inline-block;
+    margin-inline-start: 0.25rem;
+    transition: transform var(--transition-fast);
+  }
+
+  .footer-contact-link:hover span,
+  .footer-contact-link:focus-visible span {
+    transform: translateX(-0.125rem);
+  }
+
+  .footer-bottom {
+    padding-block: var(--space-md);
+    border-block-start: 0.0625rem solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.58);
+    font-size: var(--font-size-xs);
+  }
+
+  .footer-bottom p {
     margin: 0;
   }
 
+  @media (max-width: 64rem) {
+    .footer-main {
+      grid-template-columns: minmax(14rem, 1.5fr) repeat(3, minmax(8rem, 1fr));
+    }
+
+    .footer-contact {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+    }
+
+    .footer-contact h2,
+    .footer-contact p {
+      grid-column: 1;
+    }
+
+    .footer-contact h2 {
+      margin-block-end: 0;
+    }
+
+    .footer-contact .footer-actions {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .footer-main {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+
+    .footer-contact {
+      grid-column: 1 / -1;
+    }
+  }
+
   @media (max-width: 35rem) {
-    .footer-inner {
-      align-items: flex-start;
-      flex-direction: column;
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .footer-brand,
+    .footer-contact {
+      grid-column: auto;
+    }
+
+    .footer-contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .footer-contact h2,
+    .footer-contact p,
+    .footer-contact .footer-actions {
+      grid-column: auto;
+      grid-row: auto;
     }
   }
 </style>

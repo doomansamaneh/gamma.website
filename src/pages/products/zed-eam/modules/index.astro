@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import SectionHeading from "../../../../components/common/SectionHeading.astro";
+import { zedEamModules } from "../../../../data/zed-eam-modules";
+---
+
+<BaseLayout
+  title="زیرسیستم‌های ZED EAM | دومان سامانه"
+  description="معرفی زیرسیستم‌های ZED EAM برای مدیریت دارایی‌ها، تجهیزات، نگهداری و فرآیندهای سازمانی."
+>
+  <main class="modules-page">
+    <section class="modules-hero">
+      <div class="container narrow-content">
+        <a class="breadcrumb" href="/products/zed-eam/">محصولات / ZED EAM</a>
+        <h1>زیرسیستم‌های ZED EAM</h1>
+        <p>
+          ZED EAM مجموعه‌ای از زیرسیستم‌های مرتبط را برای مدیریت دارایی‌ها و
+          فرآیندهای سازمانی در اختیار قرار می‌دهد.
+        </p>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="modules-title">
+      <div class="container">
+        <SectionHeading id="modules-title" title="ماژول‌ها و زیرسیستم‌ها" />
+        <div class="module-grid">
+          {
+            zedEamModules.map((module, index) => (
+              <a
+                class="module-item"
+                href={`/products/zed-eam/modules/${module.slug}/`}
+              >
+                <span class="module-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h2>{module.name}</h2>
+                <p>{module.shortDescription}</p>
+                <span class="module-link">
+                  مشاهده زیرسیستم <span aria-hidden="true">←</span>
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+    <section class="modules-cta">
+      <div class="container narrow-content">
+        <h2>معرفی کامل ZED EAM</h2>
+        <p>
+          برای مشاهده جایگاه این زیرسیستم‌ها در راهکار مدیریت دارایی سازمانی، به
+          صفحه معرفی ZED EAM بروید.
+        </p>
+        <a class="button button--accent" href="/products/zed-eam/"
+          >بازگشت به ZED EAM</a
+        >
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .modules-hero,
+  .modules-cta {
+    background: var(--hero-product-background);
+    color: var(--color-white);
+  }
+  .modules-hero {
+    padding-block: clamp(4rem, 9vw, 7rem);
+  }
+  .narrow-content {
+    max-width: 52rem;
+  }
+  .breadcrumb {
+    display: inline-block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-accent-soft);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+  h1 {
+    max-width: 18ch;
+    margin-block-end: var(--space-md);
+    font-size: clamp(2.35rem, 5vw, 4.5rem);
+    line-height: 1.25;
+  }
+  .modules-hero p,
+  .modules-cta p {
+    max-width: 42rem;
+    color: var(--color-text-on-dark);
+    font-size: 1.12rem;
+    line-height: 2;
+  }
+  .content-section {
+    padding-block: var(--space-xl);
+    background: var(--color-surface);
+  }
+  .module-grid {
+    display: grid;
+    gap: var(--space-md);
+  }
+  .module-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 1rem;
+    padding: var(--space-md);
+    border-block-start: 0.2rem solid var(--color-primary);
+    background: var(--color-paper);
+    text-decoration: none;
+    transition:
+      border-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+  .module-item:hover,
+  .module-item:focus-visible {
+    border-color: var(--color-brand);
+    transform: translateY(-0.15rem);
+  }
+  .module-number {
+    grid-row: span 2;
+    color: var(--color-brand);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  .module-item h2 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+  }
+  .module-item p {
+    grid-column: 2;
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.8;
+  }
+  .module-link {
+    grid-column: 2;
+    margin-block-start: var(--space-sm);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  .modules-cta {
+    padding-block: var(--space-xl);
+  }
+  .modules-cta h2 {
+    margin-block-end: var(--space-sm);
+    color: var(--color-white);
+    font-size: var(--font-size-h2);
+  }
+  .modules-cta p {
+    margin-block-end: var(--space-lg);
+  }
+</style>

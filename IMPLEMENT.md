@@ -1,1108 +1,1032 @@
-# Website Implementation Instructions
+# Full Website Design & UX Review — Doman Samaneh
 
-You are the implementation agent for the corporate website of **دومان سامانه**.
+## Objective
 
-The repository contains Version 1 of the website. Your job is to improve and evolve the existing implementation incrementally.
+Perform a complete design, UX, content presentation, layout, responsive, accessibility, and consistency review of the entire Astro website for **دومان سامانه**.
 
-**Do not rewrite the project blindly.**
+The website already has a working design direction and component architecture.
 
----
+**Do NOT rebuild the website from scratch.**
 
-## 1. Read the Documentation First
+First inspect the entire existing project and understand its current architecture, components, design tokens, pages, assets, content, and navigation.
 
-Before modifying anything, read these files in this exact order:
+Then identify inconsistencies and improve the site systematically.
 
-1. `AGENTS.md`
-2. `docs/architecture.md`
-3. `docs/brand.md`
-4. `docs/design-system.md`
-5. `docs/localization.md`
-6. `docs/content-model.md`
-7. `docs/navigation.md`
-8. `docs/assets.md`
-9. `docs/seo.md`
-10. `docs/roadmap.md`
-
-These documents are the source of truth.
-
-Do not begin implementation until you have read them.
-
-If a relevant file exists under `tasks/`, read that task as well.
+The goal is to make the website feel like a **mature enterprise software company website**, not a generic SaaS template.
 
 ---
 
-## 2. Audit Version 1 Before Making Changes
+# 1. Brand Identity — Preserve and Enforce
 
-Before changing code, inspect the existing project.
-
-Identify:
-
-* Astro architecture
-* project structure
-* routes
-* pages
-* layouts
-* components
-* content
-* content collections
-* images
-* logos
-* icons
-* fonts
-* existing design tokens
-* existing CSS
-* navigation
-* SEO metadata
-* existing JavaScript
-* external dependencies
-* reusable components
-* existing URLs
-* valuable existing content
-* existing functionality that already works
-
-Determine what should be:
-
-* Keep
-* Improve
-* Move
-* Merge
-* Remove
-* Create
-
-Do not replace working code without a reason.
-
-Do not perform a full rewrite simply because another implementation would be cleaner.
-
----
-
-## 3. Company Architecture
-
-The website represents:
+The primary company identity is:
 
 **دومان سامانه**
-
-The company is the root entity.
-
-The website is NOT a GammaDesk-only website.
-
-The current product portfolio is:
-
-```text
-دومان سامانه
-├── GammaDesk
-├── ZED EAM
-├── Landa
-└── Gamma.Kernel
-```
-
-GammaDesk is currently the primary product and may receive stronger visibility.
-
-However, GammaDesk must never become the architectural root.
-
-The architecture must allow additional products to be added later without changing the global information architecture.
-
----
-
-## 4. Products
-
-Treat every product as a first-class entity.
-
-### GammaDesk
-
-Enterprise IT service management / ITSM platform.
-
-### ZED EAM
-
-Enterprise Asset Management platform.
-
-### Landa
-
-Cloud accounting software for small and medium-sized businesses.
-
-### Gamma.Kernel
-
-Open-source software framework/library and engineering project.
-
-Do not invent product capabilities, features, customers, statistics, certifications or claims.
-
-Use authoritative existing content whenever available.
-
----
-
-## 5. Navigation
-
-Primary navigation:
-
-* Products
-* Resources
-* Company
-* Contact Us
-* Request Demo
-
-There must NOT be a top-level `Features` navigation item.
-
-Features belong to products.
-
-Example:
-
-```text
-Products
-└── GammaDesk
-    └── Features
-        └── Incident Management
-```
 
 Products:
 
-```text
-Products
-├── GammaDesk
-├── ZED EAM
-├── Landa
-└── Gamma.Kernel
-```
+- GammaDesk
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
-Resources:
+Brand colors:
 
 ```text
-Resources
-├── Articles
-├── Videos
-├── ITIL Guide
-└── FAQ
+Primary Orange: #EF3F23
+Dark:           #231F20
+White:          #FFFFFF
 ```
 
-Company:
-
-```text
-Company
-├── About Us
-├── Customers
-├── History
-├── Mission & Vision
-├── Areas of Activity
-├── Why Us
-└── Certifications
-```
-
----
-
-## 6. URL Structure
-
-Use these URLs where practical.
-
-### Products
-
-```text
-/products
-/products/gammadesk
-/products/gammadesk/features
-/products/gammadesk/features/[slug]
-
-/products/zed-eam
-/products/zed-eam/features
-
-/products/landa
-/products/landa/features
-
-/products/gamma-kernel
-```
-
-### Resources
-
-```text
-/resources/articles
-/resources/articles/[slug]
-
-/resources/videos
-/resources/videos/[slug]
-
-/resources/itil
-/resources/itil/[slug]
-
-/resources/faq
-```
-
-### Company
-
-```text
-/company/about
-/company/customers
-/company/history
-/company/mission
-/company/areas
-/company/why-us
-/company/certifications
-```
-
-### Contact
-
-```text
-/contact
-```
-
-Preserve existing URLs whenever practical.
-
-If a URL must change:
-
-1. Identify the old URL.
-2. Identify the new URL.
-3. Implement an appropriate redirect.
-4. Avoid redirect chains.
-5. Do not redirect unrelated pages to the homepage.
-
-Do not introduce unnecessary URL complexity.
-
----
-
-## 7. Content Architecture
-
-Products are first-class entities.
-
-Features belong to products.
-
-Articles, videos and FAQs may be associated with:
-
-* company
-* product
-* feature
-
-Avoid content duplication.
-
-Prefer structured relationships.
-
-A feature may reference:
-
-* related features
-* articles
-* videos
-* ITIL content
-* FAQs
-* screenshots
-* demo CTA
-
-Content should be separated from presentation whenever practical.
-
----
-
-## 8. Brand
-
-The company name is:
-
-**دومان سامانه**
-
-The brand is based primarily on:
-
-* Orange
-* Black
-* White and neutral supporting colors
-
-Use centralized design tokens.
-
-Do not hardcode brand colors throughout components.
-
-Do not assume an exact orange hex value unless it is explicitly defined in the project documentation or official assets.
-
-Official logos and assets are authoritative.
-
-Never:
-
-* redraw official logos
-* distort logos
-* invent logos
-* invent customer logos
-* invent certifications
-* invent product screenshots
-* invent company statistics
-* invent business claims
-
----
-
-## 9. Typography
-
-The primary Persian font is:
+Persian typography:
 
 **Vazirmatn**
 
-Use the local font assets when available.
+Use the existing official logos and assets.
 
-Current language:
+Never:
+
+- redraw logos
+- distort logos
+- recolor official logos
+- crop logos incorrectly
+- invent product logos
+- invent customer logos
+- invent certifications
+- invent statistics
+- invent awards
+- invent customer names
+- invent contact information
+
+Use the official assets as the source of truth.
+
+---
+
+# 2. First: Audit the Entire Website
+
+Before changing anything, inspect:
+
+- all pages
+- all layouts
+- all components
+- all CSS
+- all design tokens
+- navigation
+- footer
+- responsive behavior
+- product pages
+- company pages
+- resource pages
+- contact pages
+- CTA patterns
+- typography
+- spacing
+- buttons
+- cards
+- sections
+- breadcrumbs
+- forms
+- images
+- logos
+- SEO metadata
+- accessibility
+
+Create a mental map of the existing system before modifying it.
+
+Do not make isolated page-specific fixes that contradict the global design system.
+
+---
+
+# 3. Global Design Direction
+
+The design should communicate:
+
+- Enterprise
+- Professional
+- Technical
+- Reliable
+- Mature
+- Secure
+- Modern
+- Minimal
+- Trustworthy
+
+The design should NOT look:
+
+- like a generic SaaS template
+- overly colorful
+- playful
+- gaming-inspired
+- startup-like
+- overloaded with gradients
+- overloaded with cards
+- overly rounded
+- glassmorphic
+- dependent on decorative illustrations
+
+Prefer:
+
+- strong typography
+- whitespace
+- hierarchy
+- alignment
+- restrained use of orange
+- clear section rhythm
+- subtle borders
+- simple grids
+- high-quality spacing
+- strong visual hierarchy
+
+---
+
+# 4. Layout Philosophy
+
+Review every page for unnecessary multi-column layouts.
+
+### Important rule
+
+Do NOT use two columns simply because there is enough horizontal space.
+
+Use two-column layouts only when they improve comprehension.
+
+For informational sections, prefer:
 
 ```text
-fa-IR
+eyebrow
+heading
+description
+content
 ```
 
-Current direction:
+with a clear vertical reading flow.
+
+### Homepage
+
+The homepage should generally feel vertically structured.
+
+Preferred structure:
 
 ```text
-RTL
+Hero
+↓
+Products
+↓
+From Problem to Solution
+↓
+Trust / Company Context
+↓
+CTA
+↓
+Footer
 ```
 
-Use:
+The Hero may remain two-column because the product ecosystem visual provides a genuine reason for the split.
 
-```html
-<html lang="fa-IR" dir="rtl">
-```
+The following sections should generally use a single central content flow unless there is a strong UX reason otherwise.
 
-Use CSS logical properties where possible:
+---
 
-* `margin-inline`
-* `padding-inline`
-* `inset-inline`
-* `border-inline`
+# 5. Homepage Review
 
-Keep the implementation ready for future English/LTR content.
+Review the homepage carefully.
 
-In Persian website content, always use:
+Current Hero concept:
 
-**کسب و کار**
+- Company eyebrow
+- Main H1
+- Description
+- CTA buttons
+- Product ecosystem visual
+
+Keep this direction.
+
+The Hero visual should communicate the relationship between:
+
+- GammaDesk
+- ZED EAM
+- Landa
+- Gamma.Kernel
+
+Use official product logos.
+
+Do not use:
+
+- stock images
+- generic laptops
+- fake dashboards
+- generic SaaS illustrations
+- excessive floating cards
+- neon effects
+- 3D objects
+
+---
+
+## Homepage Products Section
+
+The products section should clearly communicate the four products.
+
+Keep the layout simple.
+
+Cards should not become overly decorative.
+
+Each product should communicate:
+
+- logo
+- name
+- short description
+- appropriate link
+
+GammaDesk can have stronger visual emphasis because it is currently the primary enterprise product, but the company architecture must remain:
+
+**Doman Samaneh → Products**
 
 not:
 
-**کسب‌وکار**
+**GammaDesk → Other Products**
 
 ---
 
-## 10. Visual Design
-
-Follow:
-
-`docs/design-system.md`
-
-The website should communicate:
-
-* Professional
-* Enterprise
-* Technical
-* Reliable
-* Modern
-* Secure
-* Mature
-* Trustworthy
-
-Avoid:
-
-* generic SaaS templates
-* excessive gradients
-* neon colors
-* excessive glassmorphism
-* excessive shadows
-* excessive rounded cards
-* decorative animations
-* visual clutter
-* gaming-style orange/black design
-
-Do not make every section a collection of cards.
+## Homepage "From Problem to Solution"
 
 Use:
 
-* typography
-* whitespace
-* hierarchy
-* alignment
-* spacing
-* restrained color
-* authentic product imagery
+### Eyebrow
 
-as primary design tools.
+`رویکرد ما`
 
-If an existing design pattern works, reuse it.
+### Heading
 
----
+`از مسئله تا راهکار`
 
-## 11. Company and Product Branding
+### Copy
 
-The company has one coherent visual identity.
+`هر یک از محصولات دومان سامانه برای حل مسئله‌ای مشخص طراحی شده است؛ راهکارهایی مستقل که در کنار یکدیگر، تجربه و توانمندی ما در توسعه نرم‌افزارهای تخصصی را شکل می‌دهند.`
 
-Products may have their own accent colors or visual characteristics.
+Prefer a centered single-column presentation.
 
-GammaDesk may receive stronger visual emphasis.
-
-However:
-
-**Do not make the entire website visually dependent on GammaDesk.**
-
-The architecture must support:
-
-```text
-Company Brand
-    ↓
-Product Identity
-    ↓
-Feature Identity
-```
-
-while maintaining overall consistency.
+Do not use unnecessary two-column layout here.
 
 ---
 
-## 12. Assets
+# 6. Navigation Review
 
-Before creating any asset:
+Review the entire navigation.
 
-1. Inspect existing assets.
-2. Check official company assets.
-3. Check official product assets.
-4. Reuse existing assets where appropriate.
-5. Create new assets only when necessary.
+Primary navigation:
 
-Prefer:
+- محصولات
+- منابع
+- شرکت
+- تماس با ما
+- درخواست دمو
 
-* real product screenshots
-* official logos
-* authentic company imagery
-* meaningful diagrams
+Products:
 
-Do not create fake:
+- GammaDesk
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
-* product interfaces
-* customers
-* certifications
-* awards
-* employees
-* statistics
+Resources:
 
-Follow `docs/assets.md`.
+- مقالات
+- ویدئوها
+- راهنمای ITIL
+- سوالات متداول
 
----
+Company:
 
-## 13. Components
+- درباره ما
+- مشتریان
+- ماموریت و چشم‌انداز
+- چرا ما
+- گواهی‌نامه‌ها
 
-Create reusable components when meaningful repetition exists.
+Navigation requirements:
 
-Examples:
+- Only one dropdown can be open at a time.
+- Products should use a professional mega-menu.
+- Company should use a clean vertical dropdown.
+- Dropdown triggers should have a visible chevron.
+- Chevron should rotate when open.
+- Clicking another menu closes the previous one.
+- Clicking the active menu closes it.
+- Clicking outside closes dropdown.
+- Escape closes dropdown.
+- Mobile navigation must remain simple and accessible.
+- Use proper buttons and ARIA attributes.
 
-* Header
-* Navigation
-* Footer
-* Button
-* Hero
-* Section
-* Card
-* ProductCard
-* FeatureCard
-* ArticleCard
-* CTA
-* Breadcrumb
-* FAQ
-* VideoCard
-* ScreenshotGallery
-* Form controls
-
-Do not create abstractions for trivial one-off markup.
-
-Prefer simple and maintainable components.
+Do not add unnecessary navigation items.
 
 ---
 
-## 14. Astro and JavaScript
+# 7. Footer Review
 
-Astro static generation is the default.
+Footer must be globally consistent across all pages.
 
-Prefer:
+Use:
 
-```text
-HTML + CSS
-```
+- company identity
+- products
+- company links
+- resources
+- contact
+- request demo
 
-over JavaScript whenever possible.
+Use the official Doman Samaneh logo.
 
-Before adding JavaScript, ask:
+Footer should be:
 
-> Can this be implemented with HTML and CSS?
+- dark
+- minimal
+- professional
+- clearly structured
+- easy to scan
 
-If yes, use HTML/CSS.
-
-Use JavaScript only when there is a genuine interaction requirement.
-
-Use Astro Islands only when client-side interaction is actually required.
-
-Do not turn the website into an SPA.
-
-Avoid unnecessary:
-
-* state management
-* client-side rendering
-* hydration
-* dependencies
-* third-party scripts
-
----
-
-## 15. Homepage
-
-The homepage represents the company first.
-
-It should communicate:
-
-1. Who دومان سامانه is
-2. What the company builds
-3. The product portfolio
-4. GammaDesk
-5. ZED EAM
-6. Landa
-7. Gamma.Kernel
-8. Why customers should trust the company
-9. Relevant resources
-10. A clear call to action
-
-GammaDesk should receive strong visibility because it is currently the primary product.
-
-However:
-
-**Do not turn the homepage into a giant list of GammaDesk features.**
-
-The company and product portfolio come first.
-
----
-
-## 16. GammaDesk
-
-GammaDesk has its own product area.
-
-At minimum:
-
-```text
-/products/gammadesk
-/products/gammadesk/features
-/products/gammadesk/features/[slug]
-```
-
-The GammaDesk product page should communicate, where authoritative content exists:
-
-* what GammaDesk is
-* who it is for
-* business value
-* major capabilities
-* screenshots
-* related resources
-* demo CTA
-
-Feature pages should contain substantive content.
-
-Where appropriate, feature pages should link to:
-
-* related features
-* articles
-* videos
-* ITIL content
-* FAQs
-* demo request
-
-Do not create thin pages merely for SEO.
-
----
-
-## 17. Other Products
-
-ZED EAM, Landa and Gamma.Kernel are first-class products.
-
-They do not need identical content depth.
-
-If authoritative content is not available, do not invent it.
-
-Build the architecture so each product can later receive:
-
-* overview
-* features
-* screenshots
-* resources
-* FAQs
-* documentation
-* SEO metadata
-* CTA
-
-without changing the global architecture.
-
----
-
-## 18. Resources
-
-Resources include:
-
-* Articles
-* Videos
-* ITIL Guide
-* FAQ
-
-ITIL is educational content.
-
-Do NOT model ITIL as a GammaDesk feature.
-
-ITIL content may reference GammaDesk where relevant.
-
-Resources should support internal linking between:
-
-* products
-* features
-* articles
-* videos
-* ITIL topics
-* FAQs
-
-Avoid duplicate content.
-
----
-
-## 19. Company Pages
-
-Company pages include:
-
-* About Us
-* Customers
-* History
-* Mission & Vision
-* Areas of Activity
-* Why Us
-* Certifications
-
-These are company-level entities.
-
-Do not incorrectly attach company information to GammaDesk.
-
-Use only authentic information.
+Avoid excessive columns and unnecessary text.
 
 Never invent:
 
-* customers
-* dates
-* certifications
-* awards
-* employee counts
-* revenue
-* market share
-* statistics
+- phone numbers
+- email addresses
+- addresses
+- social links
+
+Only use real existing information.
 
 ---
 
-## 20. SEO
+# 8. Product Pages
 
-Follow:
+Review all product pages for consistency.
 
-`docs/seo.md`
+Every product page should have a predictable hierarchy:
 
-Every indexable page should have appropriate:
+```text
+Product Hero
+↓
+Product Introduction
+↓
+Key Capabilities
+↓
+Features / Modules
+↓
+Product Screenshots or Visual Evidence
+↓
+Use Cases / Value
+↓
+FAQ when appropriate
+↓
+CTA
+```
 
-* title
-* meta description
-* canonical URL
-* heading hierarchy
-* Open Graph metadata
-* structured data where genuinely applicable
-* semantic HTML
+Do not force every product to have identical sections.
 
-Use descriptive URLs.
-
-Use meaningful internal linking.
-
-Avoid:
-
-* keyword stuffing
-* duplicate metadata
-* duplicate pages
-* fake structured data
-* invented ratings
-* invented reviews
-* invented prices
-* invented claims
-
-Each product is an independent SEO entity.
-
-Feature pages should be indexable only when they provide meaningful content.
+The structure should be consistent, but content should remain product-specific.
 
 ---
 
-## 21. Accessibility
+# 9. GammaDesk
 
-Accessibility is part of implementation.
+GammaDesk is an enterprise ITSM / Help Desk product.
 
-Ensure:
+The page should communicate:
 
-* semantic HTML
-* correct heading hierarchy
-* keyboard navigation
-* visible focus states
-* accessible forms
-* meaningful alt text
-* sufficient contrast
-* correct link/button semantics
-* accessible navigation
-* reduced-motion support
+- enterprise maturity
+- ITSM
+- Help Desk
+- ITIL-based design
+- structured service management
+- request and incident management
+- workflows
+- assets where applicable
+- organizational configurability
 
-Do not rely on visual appearance alone to communicate information.
+Avoid unsupported claims.
 
----
+Prefer:
 
-## 22. Performance
+`طراحی شده بر مبنای چارچوب ITIL`
 
-Optimize for:
+over claims that could imply official ITIL certification unless certification is explicitly verified.
 
-* minimal JavaScript
-* optimized images
-* modern image formats
-* local fonts
-* minimal external dependencies
-* fast loading
-* Core Web Vitals
+Review the existing Modules / Features section.
 
-Do not introduce external services unless clearly required.
+Improve:
 
-Do not add a library when HTML, CSS or Astro already provides the required functionality.
+- hierarchy
+- spacing
+- alignment
+- module grouping
+- arrow positioning
+- visual rhythm
+- excessive empty space
 
----
-
-## 23. Existing Content
-
-Evaluate existing content before removing it.
-
-Classify content as:
-
-* Keep
-* Improve
-* Move
-* Merge
-* Remove
-* Create
-
-Do not delete valuable content simply because the information architecture changes.
-
-Preserve useful information while improving:
-
-* structure
-* hierarchy
-* readability
-* navigation
-* SEO
-* presentation
+Do not turn it into a card-heavy SaaS section.
 
 ---
 
-## 24. Minimal-Scope Rule
+# 10. ZED EAM
 
-This is a critical rule.
+Review the ZED EAM page with the same enterprise standard.
 
-**Default behavior is minimal-scope modification.**
+The design should communicate:
 
-If a task concerns one page, component or feature, do not modify unrelated files.
+- Enterprise Asset Management
+- asset lifecycle
+- maintenance
+- organizational assets
+- operational visibility
+- structured processes
 
-Modify files outside the obvious scope only when:
-
-1. The task explicitly requires it, or
-2. The root cause proves the additional change is necessary.
-
-Do not:
-
-* refactor unrelated code
-* redesign unrelated pages
-* rename unrelated components
-* modify unrelated content
-* change unrelated design tokens
-* introduce unrelated architecture
-* replace working implementations without reason
-
-For a narrow task, execute only that task.
+Do not invent features that are not already present in the project/content.
 
 ---
 
-## 25. Implementation Order
+# 11. Landa
 
-Follow this order unless dependencies require otherwise.
-
-### Phase 1 — Audit
-
-Understand Version 1.
-
-### Phase 2 — Foundation
-
-Establish or refine:
-
-* layouts
-* design tokens
-* typography
-* Vazirmatn
-* global styles
-* RTL foundation
-* reusable primitives
-* Header
-* Footer
-* responsive navigation
-
-### Phase 3 — Information Architecture
-
-Implement:
-
-* navigation
-* routes
-* content structure
-* product structure
-* resource structure
-* company structure
-
-### Phase 4 — Homepage
-
-Build the company-oriented homepage.
-
-Show all four products.
-
-Give GammaDesk stronger visibility without making it the root entity.
-
-### Phase 5 — Products
-
-Implement:
-
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
-
-Build GammaDesk more deeply first where authoritative content exists.
-
-### Phase 6 — GammaDesk Features
-
-Implement:
-
-* feature index
-* feature pages
-* screenshots
-* related resources
-* cross-linking
-* demo CTA
-
-### Phase 7 — Resources
-
-Implement:
-
-* Articles
-* Videos
-* ITIL
-* FAQ
-
-### Phase 8 — Company
-
-Implement:
-
-* About
-* Customers
-* History
-* Mission & Vision
-* Areas of Activity
-* Why Us
-* Certifications
-
-### Phase 9 — Contact
-
-Implement:
-
-* Contact
-* Request Demo flow
-
-Keep the implementation simple and accessible.
-
-### Phase 10 — SEO
-
-Implement and validate `docs/seo.md`.
-
-### Phase 11 — Quality
+Landa should remain visually part of the Doman Samaneh ecosystem but can have its own product identity.
 
 Review:
 
-* SEO
-* accessibility
-* performance
-* responsive behavior
-* RTL
-* broken links
-* duplicate content
-* missing metadata
-* console errors
-* unnecessary JavaScript
-* image optimization
+- product positioning
+- hierarchy
+- CTA
+- screenshots
+- feature presentation
+- responsive layout
+
+Do not allow the Landa page to visually dominate the corporate site.
 
 ---
 
-## 26. Decision Rules
+# 12. Gamma.Kernel
 
-When making implementation decisions:
+Gamma.Kernel is different from the other products.
 
-1. Follow the documentation.
-2. Preserve valuable existing content.
-3. Prefer simple solutions.
-4. Prefer static HTML.
-5. Prefer reusable patterns.
-6. Avoid unnecessary dependencies.
-7. Avoid unnecessary JavaScript.
-8. Avoid over-engineering.
-9. Reuse existing visual patterns.
-10. Keep the architecture ready for future products.
-11. Prefer semantic HTML.
-12. Prefer accessibility by default.
-13. Prefer performance by default.
-14. Prefer authentic assets.
-15. Never invent business facts.
+Treat it as a technical/open-source project.
 
-If two approaches are possible, prefer the one that is:
+The page should emphasize:
 
-* simpler
-* more maintainable
-* more accessible
-* more performant
-* easier to extend
+- .NET
+- Clean Architecture
+- DDD
+- CQRS
+- extensibility
+- developer experience
+- technical architecture
+
+Do not force Gamma.Kernel into the same visual structure as commercial enterprise products.
+
+Use the existing official GitHub/project information only.
 
 ---
 
-## 27. Hard Constraints
+# 13. Company Pages
 
-Do NOT:
+Review:
 
-* turn the project into an SPA
-* introduce a backend unless required
-* introduce unnecessary CMS infrastructure
-* introduce unnecessary state management
-* add JavaScript for purely visual behavior
-* redesign everything without auditing first
-* remove content without evaluating it
-* make GammaDesk the architectural root
-* create a top-level Features navigation item
-* invent business claims
-* invent customers
-* invent certifications
-* invent statistics
-* invent product screenshots
-* replace official logos
-* introduce unnecessary dependencies
-* duplicate content merely to populate pages
+- About
+- Customers
+- Mission & Vision
+- Why Us
+- Certifications
 
----
+These pages should communicate **Doman Samaneh as the company**, not simply GammaDesk.
 
-## 28. Execution Behavior
+The hierarchy must remain:
 
-Do not ask for permission for every small implementation decision.
-
-Make reasonable engineering decisions yourself.
-
-Ask for clarification only when a decision materially affects:
-
-* business meaning
-* company/product positioning
-* information architecture
-* SEO strategy
-* irreversible content structure
-* user-facing functionality
-
-Otherwise proceed.
-
-When the correct implementation is clear from the documentation, implement it directly.
+```text
+Doman Samaneh
+    ↓
+Products
+    ├── GammaDesk
+    ├── ZED EAM
+    ├── Landa
+    └── Gamma.Kernel
+```
 
 ---
 
-## 29. Phase-Based Execution
+# 14. About Page
 
-Work incrementally.
+The About page should follow a logical narrative:
 
-After completing a meaningful phase:
+```text
+Hero
+↓
+Company Introduction
+↓
+History / Formation
+↓
+Areas of Activity
+↓
+Products / Solutions
+↓
+Experience / Capabilities
+↓
+Customers / Trust
+↓
+CTA
+```
 
-1. Validate the implementation.
-2. Run the appropriate build/checks.
-3. Review changed files.
-4. Report what was completed.
-5. Report remaining work.
-6. Do not silently expand the scope.
+History and areas of activity should be integrated into About.
 
-Do not implement the entire roadmap as one uncontrolled rewrite.
+Do not create unnecessary standalone pages such as:
 
-The goal is controlled evolution of Version 1.
+- `/company/history`
+- `/company/areas`
 
----
+unless the existing project has a strong reason.
 
-## 30. Validation
+Use real historical information from the existing source material.
 
-Before considering a phase complete:
+Do not migrate irrelevant legacy WordPress content.
 
-* Run the production build.
-* Fix build errors.
-* Check affected routes.
-* Check internal links.
-* Check responsive layouts.
-* Check RTL behavior.
-* Check accessibility basics.
-* Check SEO metadata.
-* Check image paths.
-* Check image optimization.
-* Check console errors.
-* Check unnecessary JavaScript.
-* Check that unrelated functionality was not broken.
-
-Before final completion, additionally verify:
-
-* all important routes
-* navigation
-* breadcrumbs
-* canonical URLs
-* sitemap
-* robots.txt
-* structured data
-* broken links
-* duplicate metadata
-* missing alt text
-* mobile navigation
-* keyboard navigation
-* reduced motion
-* future product extensibility
-
-Never claim a validation was performed unless it was actually performed.
+In particular, do not migrate spam, suspicious links, unrelated posts, or obsolete website content.
 
 ---
 
-## 31. Final Report
+# 15. Customers Page
 
-After implementation, report:
+The Customers page is company-level.
 
-### Changed
+It should communicate real enterprise experience.
 
-What was changed.
+Use only verified customer information available in the project/source material.
 
-### Created
+Possible structure:
 
-New pages, routes, components, content structures and assets.
+```text
+Hero
+↓
+Customer Introduction
+↓
+Industries / Sectors
+↓
+Customer Logos / Names
+↓
+Enterprise Project Experience
+↓
+CTA
+```
 
-### Migrated
+Do not invent logos.
 
-What was moved or reorganized.
+Do not present unsupported customer-product relationships.
 
-### Removed
-
-What was removed and why.
-
-### Preserved
-
-Important existing content and functionality that was retained.
-
-### Technical Notes
-
-Important architectural and implementation decisions.
-
-### Validation
-
-Build and quality checks that were actually performed.
-
-### Remaining Work
-
-Anything intentionally left for the next phase.
+Do not copy old technical implementation details such as obsolete development tools into the customer page unless they are genuinely relevant.
 
 ---
 
-# Core Principle
+# 16. Mission & Vision
 
-**Build a company website that currently presents GammaDesk.**
+Review the existing source content and redesign it as a concise corporate page.
 
-**Do NOT build a GammaDesk website that happens to contain a company section.**
+Focus on:
 
-The company is:
+- why the company exists
+- what it values
+- where it is going
+- product philosophy
+- long-term direction
 
-**دومان سامانه**
+Avoid generic corporate clichés.
 
-The current product portfolio is:
+---
 
-**GammaDesk · ZED EAM · Landa · Gamma.Kernel**
+# 17. Why Us
 
-Build the architecture so the company can grow without rebuilding the website.
+This page should answer:
+
+**Why should an organization choose Doman Samaneh?**
+
+Use evidence where available:
+
+- experience
+- enterprise projects
+- product maturity
+- domain expertise
+- technical capability
+- support
+- configurability
+- long-term development
+
+Do not invent statistics.
+
+Avoid empty claims such as:
+
+- best company
+- number one
+- most powerful
+- market leader
+
+unless explicitly supported by verified evidence.
+
+---
+
+# 18. Resources
+
+Review:
+
+- Articles
+- Videos
+- ITIL Guide
+- FAQ
+
+Resources should feel like part of the same design system.
+
+Avoid excessive card grids.
+
+Use strong typography and clear metadata.
+
+Article pages should prioritize readability.
+
+---
+
+# 19. CTA Consistency
+
+Create a consistent CTA strategy.
+
+Primary CTA:
+
+`درخواست دمو`
+
+Secondary CTA:
+
+`تماس با ما`
+
+Do not create many competing CTA styles.
+
+CTA components should use the existing design tokens.
+
+---
+
+# 20. Typography
+
+Review all typography globally.
+
+Use:
+
+**Vazirmatn**
+
+Check:
+
+- H1
+- H2
+- H3
+- body
+- captions
+- buttons
+- navigation
+- metadata
+
+Avoid:
+
+- unnecessary uppercase transformations for Persian
+- excessive font weights
+- overly large headings
+- awkward line breaks
+- forced `<br>`
+- `nowrap` on Persian headings
+
+Headings should wrap naturally.
+
+---
+
+# 21. Spacing
+
+Audit vertical spacing across every page.
+
+Look specifically for:
+
+- excessive empty areas
+- sections that are too compressed
+- inconsistent top/bottom padding
+- inconsistent card padding
+- inconsistent heading spacing
+- orphaned content
+- large visual gaps without purpose
+
+Create a consistent section rhythm using the existing design tokens.
+
+Do not solve spacing problems with random page-specific pixel values.
+
+---
+
+# 22. Cards
+
+Reduce unnecessary card usage.
+
+A card should exist only when it provides:
+
+- grouping
+- hierarchy
+- interaction
+- scanning benefit
+
+Avoid:
+
+- cards inside cards
+- excessive shadows
+- excessive rounded corners
+- decorative cards
+- every piece of text being placed inside a box
+
+Prefer borders, whitespace, typography, and alignment.
+
+---
+
+# 23. Colors
+
+Use the centralized design tokens.
+
+Primary:
+
+```text
+#EF3F23
+```
+
+Dark:
+
+```text
+#231F20
+```
+
+Orange should be an accent, not the dominant background everywhere.
+
+Avoid:
+
+- neon orange
+- large orange surfaces without purpose
+- random gradients
+- unrelated colors
+
+If gradients are used, they must be extremely subtle and serve a real visual purpose.
+
+---
+
+# 24. Responsive Design
+
+Test every page at:
+
+- 320px
+- 375px
+- 768px
+- 1024px
+- 1280px
+- 1440px+
+
+Pay special attention to:
+
+- navigation
+- Hero
+- headings
+- product cards
+- grids
+- tables
+- images
+- CTA
+- footer
+- forms
+
+Mobile should not simply be a compressed desktop version.
+
+It should have deliberate spacing and hierarchy.
+
+---
+
+# 25. Accessibility
+
+Review:
+
+- semantic HTML
+- heading hierarchy
+- button vs link usage
+- focus states
+- keyboard navigation
+- ARIA attributes
+- color contrast
+- alt text
+- form labels
+- interactive states
+
+Do not sacrifice accessibility for visual effects.
+
+---
+
+# 26. Performance
+
+Preserve Astro's static/content-first architecture.
+
+Do not introduce unnecessary JavaScript.
+
+Do not add large UI frameworks.
+
+Avoid unnecessary dependencies.
+
+Use:
+
+- optimized images
+- SVG logos
+- lazy loading where appropriate
+- minimal client-side JavaScript
+- CSS instead of JavaScript when possible
+
+---
+
+# 27. Component Architecture
+
+Improve components only when there is a real reuse benefit.
+
+Use meaningful components such as:
+
+```text
+SiteHeader
+SiteFooter
+ProductHero
+ProductLogo
+FeatureGrid
+FeatureList
+ScreenshotGallery
+FAQSection
+SectionHeading
+CTA
+CustomerLogoGrid
+```
+
+Avoid meaningless micro-components such as:
+
+```text
+Title
+Text
+Description
+Arrow
+Wrapper
+```
+
+unless they genuinely improve reuse.
+
+Keep content/data separate from presentation where practical.
+
+---
+
+# 28. SEO
+
+Review every page for:
+
+- unique title
+- meta description
+- one clear H1
+- logical H2/H3 hierarchy
+- canonical URL where appropriate
+- descriptive URLs
+- image alt text
+- internal linking
+- Open Graph metadata where existing architecture supports it
+
+Do not keyword-stuff.
+
+Persian content should remain natural.
+
+Use:
+
+`کسب و کار`
+
+not:
+
+`کسب‌وکار`
+
+---
+
+# 29. Important Constraint — Do Not Rewrite Content Blindly
+
+The goal is not to replace all existing copy.
+
+For each page:
+
+1. Understand the current purpose.
+2. Identify weak or repetitive content.
+3. Preserve factual information.
+4. Improve wording only where necessary.
+5. Avoid invented claims.
+6. Keep the company's actual history and product capabilities accurate.
+
+---
+
+# 30. Implementation Strategy
+
+Work in this order:
+
+### Phase 1 — Audit
+
+Inspect the entire website.
+
+Identify:
+
+- visual inconsistencies
+- layout problems
+- duplicate patterns
+- weak hierarchy
+- responsive issues
+- component duplication
+- design-token violations
+- content problems
+
+### Phase 2 — Global System
+
+Fix:
+
+- tokens
+- typography
+- container
+- spacing
+- buttons
+- links
+- navigation
+- footer
+- common components
+
+### Phase 3 — Homepage
+
+Refine the homepage.
+
+Do not radically redesign it.
+
+### Phase 4 — Product Pages
+
+Review all four products.
+
+### Phase 5 — Company Pages
+
+Review About, Customers, Mission, Why Us, Certifications.
+
+### Phase 6 — Resources
+
+Review Articles, Videos, ITIL and FAQ.
+
+### Phase 7 — Contact / Demo
+
+Review forms and CTA flow.
+
+### Phase 8 — Responsive / Accessibility / SEO
+
+Run a final global review.
+
+---
+
+# 31. Critical Rule
+
+**Do not make the entire website visually identical.**
+
+Consistency means:
+
+- same design language
+- same typography
+- same spacing system
+- same buttons
+- same navigation
+- same footer
+- same brand identity
+
+It does NOT mean every page must have:
+
+- the same Hero
+- the same card layout
+- the same number of columns
+- the same section structure
+
+Each page should have a layout appropriate to its content.
+
+---
+
+# 32. Final Acceptance Criteria
+
+The final website should feel:
+
+**Corporate + Technical + Minimal + Mature + Trustworthy**
+
+A visitor should immediately understand:
+
+1. This is Doman Samaneh.
+2. These are its four products.
+3. Each product solves a different problem.
+4. The company has real enterprise experience.
+5. The website is structured and trustworthy.
+6. There is a clear path to learn more or request a demo.
+
+Before finishing, check every page for:
+
+- alignment
+- spacing
+- typography
+- responsive behavior
+- navigation
+- CTA consistency
+- accessibility
+- SEO
+- design-token compliance
+- unnecessary visual complexity
+
+Do not finish after making only cosmetic changes.
+
+Make the site feel like **one coherent enterprise product ecosystem**, while preserving the individual identity and purpose of each page.

@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 interface Props {
   title?: string;
@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = 'دومان سامانه | محصولات نرم‌افزاری سازمانی',
-  description = 'دومان سامانه یک شرکت فناوری است که محصولات نرم‌افزاری برای حوزه‌های سازمانی و تخصصی توسعه می‌دهد.',
+  title = "دومان سامانه | محصولات نرم‌افزاری سازمانی",
+  description = "دومان سامانه یک شرکت فناوری است که محصولات نرم‌افزاری برای حوزه‌های سازمانی و تخصصی توسعه می‌دهد.",
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 ---

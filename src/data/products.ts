@@ -9,11 +9,11 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    name: 'GammaDesk',
-    slug: 'gammadesk',
+    name: 'GammaItsm',
+    slug: 'gammaitsm',
     category: 'مدیریت خدمات فناوری اطلاعات سازمانی',
     description: 'سامانه مدیریت خدمات فناوری اطلاعات برای سازمان‌ها.',
-    href: '/products/gammadesk/',
+    href: '/products/gammaitsm/',
     primary: true,
   },
   {

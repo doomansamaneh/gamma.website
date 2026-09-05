@@ -1,0 +1,279 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "./common/SectionHeading.astro";
+import { zedEamModules } from "../data/zed-eam-modules";
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const module = zedEamModules.find((item) => item.slug === slug);
+
+if (!module) {
+  throw new Error(`Unknown ZED EAM module: ${slug}`);
+}
+
+const relatedModules = zedEamModules
+  .filter((item) => item.slug !== module.slug)
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title={`${module.name} | ZED EAM | دومان سامانه`}
+  description={`${module.name} در ZED EAM؛ ${module.shortDescription}`}
+>
+  <main>
+    <section class="module-hero">
+      <div class="container module-hero-content">
+        <a class="breadcrumb" href="/products/zed-eam/modules/"
+          >خانه / محصولات / ZED EAM / {module.name}</a
+        >
+        <p class="eyebrow">ZED EAM</p>
+        <h1>{module.name}</h1>
+        <p class="hero-copy">{module.shortDescription}</p>
+        <div class="actions">
+          <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+          <a
+            class="text-link"
+            href="https://zedcore.ir/"
+            target="_blank"
+            rel="noopener noreferrer">اطلاعات بیشتر درباره ZED ↗</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="intro-title">
+      <div class="container narrow-content">
+        <SectionHeading id="intro-title" title={`معرفی ${module.name}`} />
+        <p>{module.description}</p>
+        <h2 id="problem-title">این زیرسیستم چه مسئله‌ای را حل می‌کند؟</h2>
+        <p>{module.problem}</p>
+      </div>
+    </section>
+
+    <section
+      class="content-section section--surface"
+      aria-labelledby="capabilities-title"
+    >
+      <div class="container">
+        <SectionHeading
+          id="capabilities-title"
+          title={`قابلیت‌های ${module.name}`}
+        />
+        <ul class="capability-list">
+          {module.features.map((feature) => <li>{feature}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="process-title">
+      <div class="container narrow-content">
+        <SectionHeading id="process-title" title="فرآیند و خروجی زیرسیستم" />
+        <h3>فرآیند</h3>
+        <p>{module.process}</p>
+        <h3>اطلاعات و خروجی‌ها</h3>
+        <p>{module.output}</p>
+      </div>
+    </section>
+
+    <section
+      class="content-section section--surface"
+      aria-labelledby="architecture-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading id="architecture-title" title="جایگاه در ZED EAM" />
+        <p>
+          {module.name} بخشی از ساختار ZED EAM است و اطلاعات و فرآیندهای آن در کنار
+          سایر زیرسیستم‌های مدیریت دارایی سازمانی قرار می‌گیرد.
+        </p>
+        <a class="text-link" href="/products/zed-eam/"
+          >بازگشت به معرفی ZED EAM ←</a
+        >
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="users-title">
+      <div class="container narrow-content">
+        <SectionHeading
+          id="users-title"
+          title="این زیرسیستم برای چه واحدهایی کاربرد دارد؟"
+        />
+        <p>{module.users}</p>
+      </div>
+    </section>
+
+    <section
+      class="content-section section--surface"
+      aria-labelledby="related-title"
+    >
+      <div class="container narrow-content">
+        <SectionHeading id="related-title" title="ماژول‌های مرتبط" />
+        <div class="related-links">
+          {
+            relatedModules.map((related) => (
+              <a href={`/products/zed-eam/modules/${related.slug}/`}>
+                <>
+                  <span>{related.name}</span>
+                  <span aria-hidden="true">←</span>
+                </>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="module-cta" aria-labelledby="cta-title">
+      <div class="container narrow-content">
+        <h2 id="cta-title">برای آشنایی بیشتر با ZED EAM</h2>
+        <p>
+          برای بررسی تناسب این زیرسیستم با فرآیندهای سازمان شما، با کارشناسان
+          دومان سامانه در ارتباط باشید.
+        </p>
+        <div class="actions">
+          <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+          <a
+            class="text-link"
+            href="https://zedcore.ir/"
+            target="_blank"
+            rel="noopener noreferrer">مشاهده سایت تخصصی ZED ↗</a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .module-hero,
+  .module-cta {
+    background: var(--hero-product-background);
+    color: var(--color-white);
+  }
+  .module-hero {
+    padding-block: clamp(4rem, 9vw, 8rem);
+  }
+  .module-hero-content,
+  .narrow-content {
+    max-width: 52rem;
+  }
+  .breadcrumb,
+  .text-link {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+  .breadcrumb {
+    display: inline-block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-accent-soft);
+  }
+  .module-hero .text-link,
+  .module-cta .text-link {
+    color: var(--color-accent-soft);
+  }
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-soft);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  h1 {
+    max-width: 22ch;
+    margin-block-end: var(--space-md);
+    font-size: clamp(2.35rem, 5vw, 4.5rem);
+    line-height: 1.25;
+  }
+  .hero-copy {
+    max-width: 40rem;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-on-dark);
+    font-size: 1.15rem;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .content-section {
+    padding-block: var(--space-xl);
+    background: var(--color-paper);
+  }
+  .section--surface {
+    background: var(--color-surface);
+  }
+  .content-section p {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    line-height: 2;
+  }
+  .content-section h2 {
+    margin-block: var(--space-lg) var(--space-sm);
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+  }
+  .content-section h3 {
+    margin-block: var(--space-lg) var(--space-xs);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+  }
+  .capability-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .capability-list li {
+    padding: var(--space-md);
+    border: 0.0625rem solid var(--color-border);
+    border-block-start: 0.2rem solid var(--color-primary);
+    border-radius: var(--radius-md);
+    color: var(--color-muted);
+  }
+  .capability-list li::before {
+    margin-inline-end: 0.5rem;
+    color: var(--color-brand);
+    content: "•";
+  }
+  .related-links {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .related-links a {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0.8rem;
+    border-block-start: 0.0625rem solid var(--color-border);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+  .related-links a:hover,
+  .related-links a:focus-visible {
+    color: var(--color-brand);
+  }
+  .module-cta {
+    padding-block: var(--space-xl);
+  }
+  .module-cta h2 {
+    margin-block-end: var(--space-sm);
+    color: var(--color-white);
+    font-size: var(--font-size-h2);
+  }
+  .module-cta p {
+    max-width: 42rem;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-on-dark);
+  }
+  @media (max-width: 47.99rem) {
+    .capability-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

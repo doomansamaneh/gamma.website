@@ -1,6 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { products } from '../data/products';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductLogo from "./brand/ProductLogo.astro";
+import { products } from "../data/products";
 
 interface Props {
   slug: string;
@@ -14,18 +15,30 @@ if (!product) {
 }
 ---
 
-<BaseLayout title={`${product.name} | دومان سامانه`} description={`${product.name}؛ ${product.description}`}>
+<BaseLayout
+  title={`${product.name} | دومان سامانه`}
+  description={`${product.name}؛ ${product.description}`}
+>
   <section class="product-page" data-product={product.slug}>
     <div class="container">
       <a class="breadcrumb" href="/products/">محصولات / {product.name}</a>
       <p class="eyebrow">محصول مستقل دومان سامانه</p>
+      <div class="product-branding">
+        <ProductLogo product={product.slug} class="product-branding__logo" />
+      </div>
       <h1>{product.name}</h1>
       <p class="category">{product.category}</p>
       <p class="description">{product.description}</p>
       <p class="pending">محتوای کامل این محصول در حال آماده‌سازی است.</p>
       <div class="actions">
         <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
-        {product.slug === 'gammadesk' && <a class="text-link" href="/products/gammadesk/features/">مشاهده قابلیت‌ها ←</a>}
+        {
+          product.slug === "gammaitsm" && (
+            <a class="text-link" href="/products/gammaitsm/features/">
+              مشاهده قابلیت‌ها ←
+            </a>
+          )
+        }
       </div>
     </div>
   </section>
@@ -38,7 +51,7 @@ if (!product) {
     background: var(--color-paper);
   }
 
-  .product-page[data-product='gammadesk'] {
+  .product-page[data-product="gammaitsm"] {
     border-block-start: 0.35rem solid var(--color-accent);
   }
 
@@ -60,6 +73,15 @@ if (!product) {
     color: var(--color-accent-dark);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
+  }
+
+  .product-branding {
+    margin-block-end: var(--space-md);
+  }
+
+  .product-branding__logo {
+    max-width: 13rem;
+    max-height: 4rem;
   }
 
   h1 {

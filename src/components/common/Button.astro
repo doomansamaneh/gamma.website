@@ -1,0 +1,45 @@
+---
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "accent";
+  class?: string;
+}
+
+const { href = "#", variant = "primary", class: className = "" } = Astro.props;
+---
+
+<a class:list={["button", `button--${variant}`, className]} href={href}
+  ><slot /></a
+>
+
+<style>
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.625rem 1rem;
+    border: 0.0625rem solid transparent;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    transition:
+      background-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .button:hover {
+    background: var(--color-secondary);
+    transform: translateY(-0.0625rem);
+  }
+
+  .button--accent {
+    background: var(--color-accent);
+  }
+
+  .button--accent:hover {
+    background: var(--color-accent-dark);
+  }
+</style>

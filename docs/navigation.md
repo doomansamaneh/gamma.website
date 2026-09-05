@@ -6,7 +6,7 @@ The website represents the company and its products.
 
 Navigation must therefore be company-first and product-aware.
 
-GammaDesk is currently the primary product, but the navigation must allow additional products to be added without redesigning the information architecture.
+GammaItsm is currently the primary product, but the navigation must allow additional products to be added without redesigning the information architecture.
 
 Navigation should remain simple, predictable, and scalable.
 
@@ -34,7 +34,7 @@ Products are the primary commercial entities.
 
 ```text
 Products
-├── GammaDesk
+├── GammaItsm
 │   ├── Overview
 │   ├── Features
 │   │   ├── Incident Management
@@ -48,20 +48,20 @@ Products
 └── Other Products
 ```
 
-The navigation must not assume GammaDesk is the only product.
+The navigation must not assume GammaItsm is the only product.
 
 When additional products are introduced, they should be added under `Products`.
 
 ---
 
-## GammaDesk Navigation
+## GammaItsm Navigation
 
-GammaDesk should have a product-level navigation structure.
+GammaItsm should have a product-level navigation structure.
 
 Recommended structure:
 
 ```text
-GammaDesk
+GammaItsm
 ├── Overview
 ├── Features
 ├── Screenshots
@@ -95,7 +95,7 @@ Correct:
 ```text
 Home
 Products
-  └── GammaDesk
+  └── GammaItsm
       └── Features
           ├── Incident Management
           ├── Problem Management
@@ -131,7 +131,7 @@ For example:
 Resources
 └── ITIL Guide
     └── Incident Management
-        └── Related GammaDesk Feature
+        └── Related GammaItsm Feature
 ```
 
 ---
@@ -153,7 +153,7 @@ Company
 └── Certifications
 ```
 
-These pages must describe the company rather than GammaDesk specifically.
+These pages must describe the company rather than GammaItsm specifically.
 
 ---
 
@@ -163,14 +163,14 @@ Contact should be a dedicated top-level navigation item.
 
 Possible content:
 
-* Contact information
-* Contact form
-* Sales inquiry
-* Support information
-* Location
-* Email
-* Phone
-* Social links
+- Contact information
+- Contact form
+- Sales inquiry
+- Support information
+- Location
+- Email
+- Phone
+- Social links
 
 Support-specific navigation should not be confused with the corporate contact page.
 
@@ -182,11 +182,11 @@ Support-specific navigation should not be confused with the corporate contact pa
 
 It may appear:
 
-* In the header
-* In product hero sections
-* At the end of feature pages
-* At the end of articles
-* In the footer
+- In the header
+- In product hero sections
+- At the end of feature pages
+- At the end of articles
+- In the footer
 
 The CTA should normally lead to a single consistent demo-request flow.
 
@@ -214,11 +214,11 @@ URLs should reflect the information architecture.
 
 ```text
 /products
-/products/gammadesk
-/products/gammadesk/features
-/products/gammadesk/features/incident-management
-/products/gammadesk/features/problem-management
-/products/gammadesk/features/change-management
+/products/GammaItsm
+/products/GammaItsm/features
+/products/GammaItsm/features/incident-management
+/products/GammaItsm/features/problem-management
+/products/GammaItsm/features/change-management
 ```
 
 Future products should follow the same pattern:
@@ -253,7 +253,7 @@ Example:
 ```text
 Home
 › Products
-› GammaDesk
+› GammaItsm
 › Features
 › Incident Management
 ```
@@ -275,7 +275,7 @@ Example:
 ```text
 ITIL Incident Management
         ↓
-GammaDesk Incident Management
+GammaItsm Incident Management
         ↓
 Related Features
         ↓
@@ -286,12 +286,12 @@ Request Demo
 
 A feature page should link to relevant:
 
-* Related features
-* Articles
-* Videos
-* ITIL topics
-* FAQs
-* Demo CTA
+- Related features
+- Articles
+- Videos
+- ITIL topics
+- FAQs
+- Demo CTA
 
 An article should link back to relevant products or features when appropriate.
 
@@ -313,7 +313,7 @@ Contact
 Within a product:
 
 ```text
-GammaDesk
+GammaItsm
 ├── Overview
 ├── Features       active
 ├── Screenshots
@@ -333,7 +333,7 @@ Recommended behavior:
 ```text
 Menu
 ├── Products
-│   └── GammaDesk
+│   └── GammaItsm
 │       └── Features
 ├── Resources
 ├── Company
@@ -349,7 +349,7 @@ Use progressive disclosure for deep product hierarchies.
 
 ## Navigation Rules
 
-1. Navigation must represent the company, not only GammaDesk.
+1. Navigation must represent the company, not only GammaItsm.
 2. Products are first-class navigation entities.
 3. Product features belong under their product.
 4. Company information belongs under Company.
@@ -373,7 +373,7 @@ The initial implementation should use:
 
 ```text
 Products
-  └── GammaDesk
+  └── GammaItsm
       └── Features
 
 Resources
@@ -404,4 +404,4 @@ Additional products can be added later without changing the global information a
 
 Build the navigation for the company we want to become, not only the product we currently have.
 
-GammaDesk should have a strong and complete product presence while remaining one product inside the company's broader architecture.
+GammaItsm should have a strong and complete product presence while remaining one product inside the company's broader architecture.

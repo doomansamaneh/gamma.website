@@ -6,10 +6,10 @@ This document defines how visual and static assets are managed across the Doman 
 
 The website represents the company **دومان سامانه** and its product portfolio:
 
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
+- GammaItsm
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
 Assets must preserve the company's professional, technical, trustworthy, and enterprise-oriented identity.
 
@@ -37,27 +37,27 @@ If an official asset exists, do not replace it with a generated or redesigned ve
 
 The following assets are considered authoritative:
 
-* Doman Samaneh logo
-* Doman Samaneh wordmark
-* Company favicon
-* Official product logos
-* Official product icons
-* Official customer logos
-* Official certification logos
-* Official screenshots
-* Official company photographs
-* Official product illustrations
+- Doman Samaneh logo
+- Doman Samaneh wordmark
+- Company favicon
+- Official product logos
+- Official product icons
+- Official customer logos
+- Official certification logos
+- Official screenshots
+- Official company photographs
+- Official product illustrations
 
 Do not:
 
-* redraw the company logo
-* redesign product logos
-* distort logos
-* change logo proportions
-* apply arbitrary effects to logos
-* generate fake company/customer/certification logos
-* replace real product screenshots with generic SaaS mockups
-* invent product capabilities through imagery
+- redraw the company logo
+- redesign product logos
+- distort logos
+- change logo proportions
+- apply arbitrary effects to logos
+- generate fake company/customer/certification logos
+- replace real product screenshots with generic SaaS mockups
+- invent product capabilities through imagery
 
 If an asset is missing, use a neutral layout or placeholder rather than inventing an official-looking asset.
 
@@ -132,23 +132,23 @@ public/images/company/
 
 Examples:
 
-* company logo
-* company photographs
-* office photographs
-* team photographs
-* corporate illustrations
-* company presentation imagery
+- company logo
+- company photographs
+- office photographs
+- team photographs
+- corporate illustrations
+- company presentation imagery
 
 Company assets should be usable across:
 
-* Homepage
-* About Us
-* History
-* Mission & Vision
-* Areas of Activity
-* Why Us
-* Contact
-* Company-level articles
+- Homepage
+- About Us
+- History
+- Mission & Vision
+- Areas of Activity
+- Why Us
+- Contact
+- Company-level articles
 
 ---
 
@@ -159,7 +159,7 @@ Each product is a first-class entity.
 Products:
 
 ```text
-GammaDesk
+GammaItsm
 ZED EAM
 Landa
 Gamma.Kernel
@@ -170,7 +170,7 @@ Each product should have its own asset namespace.
 Example:
 
 ```text
-public/images/products/gammadesk/
+public/images/products/GammaItsm/
 public/images/products/zed-eam/
 public/images/products/landa/
 public/images/products/gamma-kernel/
@@ -178,15 +178,15 @@ public/images/products/gamma-kernel/
 
 Product assets may include:
 
-* product logo
-* hero image
-* dashboard screenshot
-* feature screenshots
-* product UI screenshots
-* diagrams
-* product-specific illustrations
-* promotional imagery
-* documentation imagery
+- product logo
+- hero image
+- dashboard screenshot
+- feature screenshots
+- product UI screenshots
+- diagrams
+- product-specific illustrations
+- promotional imagery
+- documentation imagery
 
 Product assets must never be confused with company-level assets.
 
@@ -198,19 +198,19 @@ Use the official product logo whenever available.
 
 Product names must remain exactly:
 
-* **GammaDesk**
-* **ZED EAM**
-* **Landa**
-* **Gamma.Kernel**
+- **GammaItsm**
+- **ZED EAM**
+- **Landa**
+- **Gamma.Kernel**
 
 Do not create alternative spellings such as:
 
-* Gamma Helpdesk
-* Gamma Help Desk
-* Gamma Kernel
-* Zed
-* ZED
-* Landa Accounting
+- Gamma Helpdesk
+- Gamma Help Desk
+- Gamma Kernel
+- Zed
+- ZED
+- Landa Accounting
 
 unless explicitly required by a documented SEO/content rule.
 
@@ -226,23 +226,23 @@ Screenshots should be used to demonstrate actual functionality.
 
 Recommended uses:
 
-* Product hero
-* Product overview
-* Feature pages
-* Product capabilities
-* Product comparisons
-* Articles
-* Documentation
-* Product-specific landing pages
+- Product hero
+- Product overview
+- Feature pages
+- Product capabilities
+- Product comparisons
+- Articles
+- Documentation
+- Product-specific landing pages
 
 Screenshots should:
 
-* represent the current product UI where possible
-* be high resolution
-* be cropped intentionally
-* preserve important UI context
-* have meaningful filenames
-* include appropriate alternative text
+- represent the current product UI where possible
+- be high resolution
+- be cropped intentionally
+- preserve important UI context
+- have meaningful filenames
+- include appropriate alternative text
 
 Avoid using screenshots merely as decoration when they do not communicate product value.
 
@@ -306,12 +306,12 @@ All production images should be optimized.
 
 Requirements:
 
-* avoid unnecessarily large dimensions
-* avoid unnecessarily large file sizes
-* use responsive image sizes where appropriate
-* use lazy loading for below-the-fold images
-* prioritize loading of important hero images
-* provide explicit dimensions where possible to reduce layout shift
+- avoid unnecessarily large dimensions
+- avoid unnecessarily large file sizes
+- use responsive image sizes where appropriate
+- use lazy loading for below-the-fold images
+- prioritize loading of important hero images
+- provide explicit dimensions where possible to reduce layout shift
 
 Do not sacrifice visual quality for aggressive compression.
 
@@ -325,8 +325,8 @@ Examples:
 
 ```html
 <img
-  src="/images/products/gammadesk/dashboard.webp"
-  alt="داشبورد سامانه GammaDesk"
+  src="/images/products/GammaItsm/dashboard.webp"
+  alt="داشبورد سامانه GammaItsm"
 />
 ```
 
@@ -355,11 +355,11 @@ public/images/certifications/
 
 Do not:
 
-* invent customer logos
-* recreate customer logos
-* alter certification logos
-* imply a certification that the company does not hold
-* imply a customer relationship that does not exist
+- invent customer logos
+- recreate customer logos
+- alter certification logos
+- imply a certification that the company does not hold
+- imply a customer relationship that does not exist
 
 Customer logos should normally be presented in a restrained and professional manner.
 
@@ -371,11 +371,11 @@ Company photography should prioritize authenticity.
 
 Preferred:
 
-* real team photographs
-* real office photographs
-* real events
-* real product development environments
-* real customer/project imagery where authorized
+- real team photographs
+- real office photographs
+- real events
+- real product development environments
+- real customer/project imagery where authorized
 
 Avoid generic stock photography whenever a real company asset is available.
 
@@ -389,15 +389,15 @@ Generated imagery may be used only for decorative or conceptual purposes.
 
 Generated imagery must not represent:
 
-* official company logos
-* official product logos
-* real customers
-* certifications
-* real product UI
-* fake customer testimonials
-* fake employees
-* fake offices presented as real
-* unsupported product functionality
+- official company logos
+- official product logos
+- real customers
+- certifications
+- real product UI
+- fake customer testimonials
+- fake employees
+- fake offices presented as real
+- unsupported product functionality
 
 When real product screenshots are available, they always take priority over generated UI imagery.
 
@@ -464,7 +464,7 @@ Components should reference canonical assets rather than copying files.
 For example:
 
 ```text
-/products/gammadesk/dashboard.webp
+/products/GammaItsm/dashboard.webp
 ```
 
 should remain the single source for that screenshot.
@@ -490,9 +490,9 @@ Important images should support responsive layouts.
 
 Consider:
 
-* desktop
-* tablet
-* mobile
+- desktop
+- tablet
+- mobile
 
 For complex screenshots, a mobile-specific crop may be preferable to simply shrinking the desktop image.
 
@@ -513,34 +513,34 @@ Only create a separate mobile asset when it materially improves the user experie
 
 Prioritize:
 
-* company identity
-* product portfolio
-* strongest GammaDesk imagery
-* selected ZED EAM imagery
-* selected Landa imagery
-* Gamma.Kernel identity
-* company credibility assets
+- company identity
+- product portfolio
+- strongest GammaItsm imagery
+- selected ZED EAM imagery
+- selected Landa imagery
+- Gamma.Kernel identity
+- company credibility assets
 
-Do not make the homepage visually belong exclusively to GammaDesk.
+Do not make the homepage visually belong exclusively to GammaItsm.
 
 ### Product Pages
 
 Prioritize:
 
-* product logo
-* product hero
-* actual product UI
-* key capabilities
-* relevant screenshots
-* product-specific resources
+- product logo
+- product hero
+- actual product UI
+- key capabilities
+- relevant screenshots
+- product-specific resources
 
 ### Feature Pages
 
 Prioritize:
 
-* feature-specific screenshots
-* diagrams where useful
-* related product imagery
+- feature-specific screenshots
+- diagrams where useful
+- related product imagery
 
 ### Articles
 
@@ -550,10 +550,10 @@ Use only imagery relevant to the article topic.
 
 Prioritize:
 
-* authentic company imagery
-* customer logos
-* certifications
-* company history visuals
+- authentic company imagery
+- customer logos
+- certifications
+- company history visuals
 
 ---
 
@@ -579,30 +579,30 @@ When modifying the website:
 
 ### MUST
 
-* reuse existing official assets
-* preserve official logos
-* use Vazirmatn for Persian content
-* use descriptive filenames
-* optimize production images
-* provide meaningful alt text
-* keep product assets separated
-* preserve the company/product hierarchy
-* reuse canonical assets
-* inspect existing assets before creating new ones
+- reuse existing official assets
+- preserve official logos
+- use Vazirmatn for Persian content
+- use descriptive filenames
+- optimize production images
+- provide meaningful alt text
+- keep product assets separated
+- preserve the company/product hierarchy
+- reuse canonical assets
+- inspect existing assets before creating new ones
 
 ### MUST NOT
 
-* invent official logos
-* invent customer logos
-* invent certifications
-* replace real screenshots with fake UI
-* delete existing official assets without explicit reason
-* duplicate assets unnecessarily
-* introduce random stock imagery
-* change logo proportions
-* create a new visual identity for individual pages
-* use arbitrary fonts
-* add decorative imagery that conflicts with the enterprise brand
+- invent official logos
+- invent customer logos
+- invent certifications
+- replace real screenshots with fake UI
+- delete existing official assets without explicit reason
+- duplicate assets unnecessarily
+- introduce random stock imagery
+- change logo proportions
+- create a new visual identity for individual pages
+- use arbitrary fonts
+- add decorative imagery that conflicts with the enterprise brand
 
 ---
 
@@ -630,22 +630,113 @@ For example:
 
 If the task is:
 
-> Fix the GammaDesk hero image on the product page.
+> Fix the GammaItsm hero image on the product page.
 
 The agent must not automatically:
 
-* replace all product images
-* rename the entire asset directory
-* redesign all product cards
-* change company logos
-* change fonts
-* modify unrelated pages
+- replace all product images
+- rename the entire asset directory
+- redesign all product cards
+- change company logos
+- change fonts
+- modify unrelated pages
 
 unless the root cause proves that such changes are necessary.
 
 ---
 
-# 26. Final Principle
+# 26. Logo Usage Rules
+
+Official logos must be used as provided.
+
+Do not:
+
+redraw or recreate logos
+replace logo typography with HTML text
+change logo colors
+apply gradients to logos
+apply filters to logos
+distort the aspect ratio
+stretch or squash logos
+crop logos
+add decorative effects
+add shadows unless an approved brand asset explicitly includes them
+modify the internal spacing or proportions of the logo
+Logo Sizing
+
+Logo assets must not be permanently resized or modified.
+
+Display dimensions must be controlled through CSS while preserving the original aspect ratio.
+
+Prefer:
+
+.logo {
+width: auto;
+height: 40px;
+max-width: 220px;
+object-fit: contain;
+}
+
+For product logos, use responsive constraints rather than forcing every logo into identical dimensions.
+
+For example:
+
+.product-logo {
+width: auto;
+height: auto;
+max-width: 180px;
+max-height: 56px;
+object-fit: contain;
+}
+
+Hero sections may use a larger variant of the same asset through CSS constraints.
+
+The visual size of different logos may legitimately differ because their original proportions are different. Do not distort a logo simply to make all logos occupy exactly the same width or height.
+
+Responsive Behavior
+
+Logos must remain visually clear on:
+
+desktop
+tablet
+mobile
+
+Use CSS constraints and responsive sizing rather than creating separate manually resized image files unless a genuinely different approved logo variant is required.
+
+Logo Components
+
+Logo rendering should be handled by reusable components where appropriate.
+
+Examples:
+
+CompanyLogo
+ProductLogo
+BrandLogo
+
+The component should accept appropriate properties such as:
+
+variant
+size
+class
+alt
+
+The component controls presentation while the actual logo asset remains unchanged.
+
+Source of Truth
+
+The asset hierarchy is:
+
+Official company logo assets
+Official product logo assets
+Approved brand documentation
+Existing project assets
+New assets only when necessary
+
+Never invent or approximate an official logo.
+
+If an official asset is missing, do not generate a replacement without explicit approval.
+
+# 27. Final Principle
 
 **Authentic assets first. Reuse before creation. Company identity before decoration.**
 
@@ -653,10 +744,10 @@ The website must present Doman Samaneh as a professional software company with a
 
 Visual assets should strengthen:
 
-* trust
-* product understanding
-* technical credibility
-* enterprise maturity
-* brand recognition
+- trust
+- product understanding
+- technical credibility
+- enterprise maturity
+- brand recognition
 
 They should never become decoration that competes with the actual products and content.

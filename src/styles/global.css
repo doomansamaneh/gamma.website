@@ -63,6 +63,10 @@ h3 {
   line-height: var(--line-height-heading);
 }
 
+h1 {
+  max-width: 18ch;
+}
+
 a {
   color: inherit;
 }
@@ -103,6 +107,20 @@ a {
 
 .button--accent:hover {
   background: var(--color-accent-dark);
+}
+
+.button--secondary,
+.button-secondary {
+  border-color: var(--color-border);
+  background: var(--color-white);
+  color: var(--color-brand-dark);
+}
+
+.button--secondary:hover,
+.button-secondary:hover {
+  border-color: var(--color-brand);
+  background: var(--color-white);
+  color: var(--color-brand);
 }
 
 .sr-only {

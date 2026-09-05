@@ -1,5 +1,7 @@
 # Brand Guidelines — Doman Samaneh
 
+The official Doman Samaneh logo defines the primary visual identity. The company's primary UI palette is dark charcoal/black and the official orange-red brand color #EF3F23.
+
 ## 1. Company Identity
 
 ### Company Name
@@ -10,7 +12,7 @@ The website represents **دومان سامانه** as the company.
 
 The company name must not be replaced by a product name.
 
-**GammaDesk is a product of دومان سامانه, not the company itself.**
+**GammaItsm is a product of دومان سامانه, not the company itself.**
 
 ### English Company Name
 
@@ -32,7 +34,7 @@ The website must communicate the company as a **product-oriented software compan
 
 The current product portfolio includes:
 
-1. GammaDesk
+1. GammaItsm
 2. ZED EAM
 3. Landa
 4. Gamma.Kernel
@@ -42,7 +44,7 @@ The relationship is:
 ```text
 دومان سامانه
 │
-├── GammaDesk
+├── GammaItsm
 ├── ZED EAM
 ├── Landa
 └── Gamma.Kernel
@@ -54,25 +56,25 @@ This hierarchy must be reflected consistently throughout the website.
 
 # 3. Products
 
-## GammaDesk
+## GammaItsm
 
-**GammaDesk** is an enterprise IT Service Management (ITSM) platform.
+**GammaItsm** is an enterprise IT Service Management (ITSM) platform.
 
 It is designed for organizations that need structured IT service management and ITIL-aligned processes.
 
-GammaDesk is currently the primary enterprise product of دومان سامانه.
+GammaItsm is currently the primary enterprise product of دومان سامانه.
 
 Typical capabilities include:
 
-* Incident Management
-* Problem Management
-* Change Management
-* Service Request Management
-* Knowledge Management
-* Asset Management
-* ITIL-related processes and capabilities
+- Incident Management
+- Problem Management
+- Change Management
+- Service Request Management
+- Knowledge Management
+- Asset Management
+- ITIL-related processes and capabilities
 
-GammaDesk must have its own product identity and product area.
+GammaItsm must have its own product identity and product area.
 
 ---
 
@@ -82,7 +84,7 @@ GammaDesk must have its own product identity and product area.
 
 ZED EAM is an independent product of دومان سامانه.
 
-It must never be presented as a GammaDesk module or feature.
+It must never be presented as a GammaItsm module or feature.
 
 Use the product name consistently as:
 
@@ -96,7 +98,7 @@ Use the product name consistently as:
 
 Landa is an independent product of دومان سامانه.
 
-It must never be presented as a GammaDesk or ZED EAM module.
+It must never be presented as a GammaItsm or ZED EAM module.
 
 Use the product name consistently as:
 
@@ -135,12 +137,12 @@ Company Brand
       ↓
 Product Identity
       ↓
-GammaDesk / ZED EAM / Landa / Gamma.Kernel
+GammaItsm / ZED EAM / Landa / Gamma.Kernel
 ```
 
 Do not create four visually unrelated brands.
 
-Do not make GammaDesk's visual identity dominate the entire company website.
+Do not make GammaItsm's visual identity dominate the entire company website.
 
 The company website must feel coherent even when moving between products.
 
@@ -148,10 +150,17 @@ The company website must feel coherent even when moving between products.
 
 # 5. Primary Brand Colors
 
-The primary company colors are:
+- Brand Orange/Red: #EF3F23
+- Brand Dark: #231F20
+- White: #FFFFFF
 
-* **Orange**
-* **Black**
+The official company visual identity is based primarily
+on black/dark charcoal and the brand orange-red.
+
+The exact brand orange is defined as #EF3F23 based on the
+current approved company/product visual identity.
+
+Do not introduce arbitrary orange shades as primary brand colors.
 
 These are the core brand colors of دومان سامانه.
 
@@ -167,14 +176,14 @@ Orange is the primary brand accent.
 
 Use orange selectively for:
 
-* Primary CTA buttons
-* Important links
-* Active navigation states
-* Highlights
-* Key UI accents
-* Icons where appropriate
-* Product/company emphasis
-* Interactive states
+- Primary CTA buttons
+- Important links
+- Active navigation states
+- Highlights
+- Key UI accents
+- Icons where appropriate
+- Product/company emphasis
+- Interactive states
 
 Orange should provide energy and recognition without overwhelming the interface.
 
@@ -188,12 +197,12 @@ Black is a primary brand and structural color.
 
 Use black for:
 
-* Primary text
-* Strong headings
-* Navigation
-* Brand elements
-* High-contrast sections
-* Important visual anchors
+- Primary text
+- Strong headings
+- Navigation
+- Brand elements
+- High-contrast sections
+- Important visual anchors
 
 Black may also be used as a background for selected sections when it improves visual hierarchy.
 
@@ -205,11 +214,11 @@ Do not make the entire website black.
 
 The primary palette may be supported by:
 
-* White
-* Neutral grays
-* Light surfaces
-* Borders
-* Subtle status colors
+- White
+- Neutral grays
+- Light surfaces
+- Borders
+- Subtle status colors
 
 Supporting colors exist to improve usability and readability.
 
@@ -252,10 +261,10 @@ However:
 
 Product-specific colors must:
 
-* remain visually compatible with the company brand
-* not replace the company colors
-* not create unrelated visual systems
-* be used consistently within that product area
+- remain visually compatible with the company brand
+- not replace the company colors
+- not create unrelated visual systems
+- be used consistently within that product area
 
 The product color hierarchy should be:
 
@@ -296,21 +305,21 @@ Use the required font weights according to the design system.
 
 Typography must support:
 
-* Persian
-* Latin
-* Mixed Persian/Latin text
-* Product names
-* Technical terminology
-* Numbers
-* URLs
-* Code-like identifiers
+- Persian
+- Latin
+- Mixed Persian/Latin text
+- Product names
+- Technical terminology
+- Numbers
+- URLs
+- Code-like identifiers
 
 Product names such as:
 
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
+- GammaItsm
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
 must render correctly alongside Persian text.
 
@@ -332,7 +341,7 @@ RTL
 Persian pages must use:
 
 ```html
-<html lang="fa-IR" dir="rtl">
+<html lang="fa-IR" dir="rtl"></html>
 ```
 
 The site must use natural Persian typography and spacing.
@@ -372,15 +381,15 @@ Use CSS logical properties where appropriate.
 
 دومان سامانه should feel:
 
-* Professional
-* Enterprise
-* Technical
-* Reliable
-* Modern
-* Secure
-* Mature
-* Confident
-* Trustworthy
+- Professional
+- Enterprise
+- Technical
+- Reliable
+- Modern
+- Secure
+- Mature
+- Confident
+- Trustworthy
 
 The brand should communicate technical competence without appearing overly complex.
 
@@ -392,29 +401,29 @@ The visual identity should feel like an established software technology company.
 
 Prefer:
 
-* Strong typography
-* Clear hierarchy
-* Generous whitespace
-* Structured layouts
-* High-quality screenshots
-* Authentic product imagery
-* Real company assets
-* Restrained use of color
-* Consistent components
-* Subtle visual details
+- Strong typography
+- Clear hierarchy
+- Generous whitespace
+- Structured layouts
+- High-quality screenshots
+- Authentic product imagery
+- Real company assets
+- Restrained use of color
+- Consistent components
+- Subtle visual details
 
 Avoid:
 
-* Generic SaaS templates
-* Excessive gradients
-* Neon colors
-* Excessive glassmorphism
-* Excessive rounded cards
-* Excessive shadows
-* Excessive animations
-* Decorative UI without purpose
-* Gaming-style orange/black treatment
-* Overly playful visual language
+- Generic SaaS templates
+- Excessive gradients
+- Neon colors
+- Excessive glassmorphism
+- Excessive rounded cards
+- Excessive shadows
+- Excessive animations
+- Decorative UI without purpose
+- Gaming-style orange/black treatment
+- Overly playful visual language
 
 The goal is:
 
@@ -428,12 +437,12 @@ The official دومان سامانه logo is the authoritative company logo.
 
 If an official logo asset exists in the project:
 
-* use it
-* do not redraw it
-* do not replace it
-* do not distort it
-* do not change its proportions
-* do not apply arbitrary effects
+- use it
+- do not redraw it
+- do not replace it
+- do not distort it
+- do not change its proportions
+- do not apply arbitrary effects
 
 Recommended location:
 
@@ -461,7 +470,7 @@ Recommended structure:
 
 ```text
 public/images/products/
-├── gammadesk/
+├── GammaItsm/
 ├── zed-eam/
 ├── landa/
 └── gamma-kernel/
@@ -477,14 +486,14 @@ Do not replace official product logos with text unless an official logo is unava
 
 The following are considered authoritative company/product assets when supplied:
 
-* Company logo
-* Product logos
-* Product screenshots
-* Application screenshots
-* Customer logos
-* Certification images
-* Official photographs
-* Official product illustrations
+- Company logo
+- Product logos
+- Product screenshots
+- Application screenshots
+- Customer logos
+- Certification images
+- Official photographs
+- Official product illustrations
 
 Do not replace these with stock imagery.
 
@@ -518,12 +527,12 @@ Products should be visually presented as independent products belonging to the s
 
 The homepage should introduce:
 
-* GammaDesk
-* ZED EAM
-* Landa
-* Gamma.Kernel
+- GammaItsm
+- ZED EAM
+- Landa
+- Gamma.Kernel
 
-GammaDesk may receive greater prominence because it is currently the primary enterprise product.
+GammaItsm may receive greater prominence because it is currently the primary enterprise product.
 
 However, the other products must have equal architectural status.
 
@@ -534,7 +543,7 @@ However, the other products must have equal architectural status.
 Always use the following product names exactly:
 
 ```text
-GammaDesk
+GammaItsm
 ZED EAM
 Landa
 Gamma.Kernel
@@ -563,7 +572,7 @@ The company name is:
 and should not be replaced with:
 
 ```text
-GammaDesk
+GammaItsm
 Gamma
 Doman
 Doman System
@@ -577,30 +586,30 @@ unless specifically referring to the product or an official English company name
 
 The written brand voice should be:
 
-* Professional
-* Clear
-* Confident
-* Technical when appropriate
-* Business-oriented
-* Trustworthy
-* Evidence-based
+- Professional
+- Clear
+- Confident
+- Technical when appropriate
+- Business-oriented
+- Trustworthy
+- Evidence-based
 
 Avoid:
 
-* exaggerated marketing claims
-* empty superlatives
-* aggressive sales language
-* unnecessary buzzwords
-* vague claims without evidence
+- exaggerated marketing claims
+- empty superlatives
+- aggressive sales language
+- unnecessary buzzwords
+- vague claims without evidence
 
 Prefer explaining:
 
-* what the product does
-* who it is for
-* what problem it solves
-* how it works
-* why it is useful
-* evidence of experience and capability
+- what the product does
+- who it is for
+- what problem it solves
+- how it works
+- why it is useful
+- evidence of experience and capability
 
 ---
 
@@ -627,7 +636,7 @@ When implementing the website:
 5. Do not change the primary Persian font from Vazirmatn.
 6. Do not invent product names.
 7. Do not merge products into each other.
-8. Do not treat GammaDesk as the company.
+8. Do not treat GammaItsm as the company.
 9. Do not replace official assets with generated or stock assets.
 10. Centralize brand colors in design tokens.
 11. Keep product identities compatible with the company identity.
@@ -655,7 +664,7 @@ If the existing implementation conflicts with this document, update the implemen
 
 **دومان سامانه is the brand.**
 
-**GammaDesk, ZED EAM, Landa and Gamma.Kernel are products/projects of دومان سامانه.**
+**GammaItsm, ZED EAM, Landa and Gamma.Kernel are products/projects of دومان سامانه.**
 
 The visual identity is built on:
 

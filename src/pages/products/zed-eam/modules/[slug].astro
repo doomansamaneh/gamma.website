@@ -1,0 +1,15 @@
+---
+import ZedEamModulePage from "../../../../components/ZedEamModulePage.astro";
+import { zedEamModules } from "../../../../data/zed-eam-modules";
+
+export function getStaticPaths() {
+  return zedEamModules.map((module) => ({
+    params: { slug: module.slug },
+    props: { slug: module.slug },
+  }));
+}
+
+const { slug } = Astro.props;
+---
+
+<ZedEamModulePage slug={slug} />

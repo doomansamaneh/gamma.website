@@ -4,461 +4,1384 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Gamma.Kernel | چارچوب توسعه سازمانی .NET"
-  description="Gamma.Kernel، هسته و چارچوب متن‌باز دومان سامانه برای توسعه نرم‌افزارهای سازمانی مبتنی بر .NET."
+  description="Gamma.Kernel یک هسته سبک و opinionated برای توسعه نرم‌افزارهای سازمانی مبتنی بر .NET با معماری Clean Architecture، DDD و CQRS است."
 >
   <article class="kernel-page">
     <section class="kernel-hero" id="overview">
-      <div class="container hero-grid">
-        <div>
-          <a class="breadcrumb" href="/products/">محصولات / Gamma.Kernel</a>
-          <p class="eyebrow">پروژه متن‌باز دومان سامانه</p>
+      <div class="container kernel-hero-grid">
+        <div class="kernel-hero-content">
+          <a class="breadcrumb" href="/products/"> محصولات </a>
+
+          <p class="eyebrow">Open Source · .NET 10+</p>
+
           <h1>Gamma.Kernel</h1>
-          <p class="hero-subtitle">Enterprise Application Framework for .NET</p>
-          <p class="hero-copy">
-            هسته‌ای برای ساخت نرم‌افزارهای سازمانی مدرن، ماژولار و قابل توسعه با
-            .NET.
+
+          <p class="kernel-hero-subtitle">
+            Enterprise Application Framework for .NET
           </p>
-          <div class="actions">
+
+          <p class="kernel-hero-description">
+            یک هسته سبک و قابل استفاده مجدد برای توسعه نرم‌افزارهای سازمانی
+            مبتنی بر Clean Architecture، DDD و CQRS؛ با تمرکز بر ساده‌سازی منطق
+            زیرساختی و دغدغه‌های مشترک سیستم‌های بزرگ.
+          </p>
+
+          <p class="kernel-hero-detail">
+            Gamma.Kernel مدیریت Command و Query، مجوزها، تراکنش‌ها، Unit of
+            Work، Audit و دسترسی به داده را در یک هسته کوچک و قابل توسعه متمرکز
+            می‌کند.
+          </p>
+
+          <div class="kernel-hero-actions">
             <a
-              class="button button--accent"
+              class="button button-primary"
               href="https://github.com/doomansamaneh/Gamma.Kernel"
               target="_blank"
-              rel="noreferrer">مشاهده در GitHub</a
+              rel="noopener noreferrer"
             >
-            <a class="text-link" href="#architecture">مشاهده معماری ←</a>
+              مشاهده در GitHub
+            </a>
+
+            <a class="button button-secondary" href="#architecture"> معماری </a>
           </div>
         </div>
-        <div
-          class="code-visual"
-          aria-label="محل نمایش ساختار واقعی کد Gamma.Kernel"
-        >
-          <span class="code-line"><i>namespace</i> Gamma.Kernel;</span>
-          <span class="code-line"><i>public</i> <b>class</b> Application</span>
-          <span class="code-line indent"
-            >{}
-            <span class="code-line indent-2">// source visual pending</span>
-            <span class="code-line indent"></span></span
-          >
+
+        <div class="kernel-code-visual" aria-hidden="true">
+          <div class="code-line">
+            <span class="code-keyword">ICommand</span>
+            <span>&lt;Response&gt;</span>
+          </div>
+
+          <div class="code-line">
+            <span class="code-keyword">IQuery</span>
+            <span>&lt;Response&gt;</span>
+          </div>
+
+          <div class="code-divider"></div>
+
+          <div class="code-line">
+            <span class="code-keyword">Handler</span>
+            <span>→</span>
+            <span>Authorization</span>
+          </div>
+
+          <div class="code-line">
+            <span class="code-keyword">Handler</span>
+            <span>→</span>
+            <span>UnitOfWork</span>
+          </div>
+
+          <div class="code-line">
+            <span class="code-keyword">Handler</span>
+            <span>→</span>
+            <span>Audit</span>
+          </div>
         </div>
       </div>
     </section>
 
     <nav class="kernel-nav" aria-label="ناوبری Gamma.Kernel">
-      <div class="container kernel-nav-inner">
-        <a href="#overview">معرفی</a>
-        <a href="#technology">فناوری</a>
-        <a href="#architecture">معماری</a>
-        <a href="#concepts">مفاهیم</a>
-        <a href="#code">کد</a>
-        <a href="#resources">منابع</a>
-        <a
-          class="nav-cta"
-          href="https://github.com/doomansamaneh/Gamma.Kernel"
-          target="_blank"
-          rel="noreferrer">GitHub</a
-        >
+      <div class="container">
+        <div class="kernel-nav-inner">
+          <a href="#overview">معرفی</a>
+          <a href="#technology">فناوری</a>
+          <a href="#why">چرا Gamma.Kernel</a>
+          <a href="#architecture">معماری</a>
+          <a href="#capabilities">قابلیت‌ها</a>
+          <a href="#concepts">مفاهیم</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#code">کد</a>
+          <a href="#use-cases">کاربردها</a>
+          <a href="#structure">ساختار پروژه</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#faq">FAQ</a>
+          <a href="#github">GitHub</a>
+        </div>
       </div>
     </nav>
 
-    <section class="section" id="technology" aria-labelledby="technology-title">
-      <div class="container narrow-content">
-        <p class="eyebrow">Technical Foundation</p>
-        <h2 id="technology-title">برای ساخت نرم‌افزارهای سازمانی با .NET</h2>
-        <p>
-          Gamma.Kernel به‌عنوان چارچوب و هسته توسعه نرم‌افزارهای سازمانی مبتنی
-          بر .NET معرفی می‌شود. جزئیات نسخه‌ها و فناوری‌های استفاده‌شده باید از
-          repository رسمی استخراج و در این بخش تکمیل شوند.
-        </p>
-        <div class="technology-list" aria-label="مفاهیم فنی مستندشده">
-          <span>.NET</span><span>Clean Architecture</span><span>DDD</span><span
-            >CQRS</span
-          >
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--surface" aria-labelledby="why-title">
-      <div class="container narrow-content">
-        <p class="eyebrow">Why Gamma.Kernel</p>
-        <h2 id="why-title">یک پایه مشترک برای توسعه سازمانی</h2>
-        <p>
-          Gamma.Kernel برای ایجاد یک پایه قابل استفاده مجدد در پروژه‌های
-          نرم‌افزاری سازمانی معرفی شده است. نحوه پیاده‌سازی معماری، Domain و
-          Application Layer باید با بررسی کد واقعی پروژه مستند شود.
-        </p>
-      </div>
-    </section>
-
-    <section
-      class="section"
-      id="architecture"
-      aria-labelledby="architecture-title"
-    >
+    <section class="kernel-section" id="technology">
       <div class="container">
-        <p class="eyebrow">Architecture</p>
-        <h2 id="architecture-title">معماری پروژه</h2>
-        <div
-          class="architecture-placeholder"
-          role="img"
-          aria-label="محل نمودار معماری واقعی Gamma.Kernel"
-        >
-          <span>محل نمودار معماری واقعی Gamma.Kernel</span>
-          <small
-            >نمودار نهایی پس از بررسی ساختار repository رسمی تکمیل می‌شود.</small
-          >
+        <div class="section-heading">
+          <p class="eyebrow">Technology</p>
+
+          <h2>بر پایه فناوری‌های شناخته‌شده .NET</h2>
+
+          <p>
+            Gamma.Kernel به جای ارائه یک پلتفرم سنگین، مجموعه‌ای از
+            abstractionها و رفتارهای مشخص را برای ساخت نرم‌افزارهای سازمانی
+            فراهم می‌کند.
+          </p>
+        </div>
+
+        <div class="technology-grid">
+          <article class="technology-item">
+            <span class="technology-number">01</span>
+            <h3>.NET 10+</h3>
+            <p>قابل استفاده در برنامه‌های مدرن مبتنی بر .NET 10 و بالاتر.</p>
+          </article>
+
+          <article class="technology-item">
+            <span class="technology-number">02</span>
+            <h3>Clean Architecture</h3>
+            <p>جداسازی مسئولیت‌ها و کاهش وابستگی لایه‌های اصلی سیستم.</p>
+          </article>
+
+          <article class="technology-item">
+            <span class="technology-number">03</span>
+            <h3>DDD</h3>
+            <p>
+              ساختار مناسب برای مدل‌سازی Domain و نگهداری منطق کسب و کار در هسته
+              سیستم.
+            </p>
+          </article>
+
+          <article class="technology-item">
+            <span class="technology-number">04</span>
+            <h3>CQRS</h3>
+            <p>
+              تفکیک مسیرهای Command و Query و امکان اعمال رفتارهای مشترک در
+              Pipeline.
+            </p>
+          </article>
+
+          <article class="technology-item">
+            <span class="technology-number">05</span>
+            <h3>Dapper</h3>
+            <p>
+              دسترسی سبک و مستقیم به داده با استفاده از Dapper و Repositoryهای
+              عمومی CUD.
+            </p>
+          </article>
+
+          <article class="technology-item">
+            <span class="technology-number">06</span>
+            <h3>SQL Server</h3>
+            <p>پشتیبانی از سناریوهای مبتنی بر SQL Server در لایه داده.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section
-      class="section section--surface"
-      id="concepts"
-      aria-labelledby="concepts-title"
-    >
+    <section class="kernel-section kernel-section-alt" id="why">
       <div class="container">
-        <p class="eyebrow">Core Concepts</p>
-        <h2 id="concepts-title">مفاهیم اصلی</h2>
-        <div class="concept-grid">
-          <article>
-            <h3>Architecture</h3><p>
-              Clean Architecture و ساختاردهی لایه‌های نرم‌افزار، بر اساس مستندات
-              رسمی پروژه.
+        <div class="section-heading">
+          <p class="eyebrow">Why Gamma.Kernel</p>
+
+          <h2>برای کنترل پیچیدگی نرم‌افزارهای سازمانی</h2>
+
+          <p>
+            در پروژه‌های بزرگ، بخش قابل توجهی از پیچیدگی نرم‌افزار مربوط به منطق
+            مشترکی است که در بسیاری از بخش‌های سیستم تکرار می‌شود. Gamma.Kernel
+            این مسئولیت‌ها را در یک هسته کوچک و مشخص متمرکز می‌کند.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-item">
+            <h3>تمرکز بر Domain</h3>
+            <p>منطق اصلی کسب و کار را از جزئیات زیرساختی جدا نگه دارید.</p>
+          </article>
+
+          <article class="why-item">
+            <h3>کاهش کد تکراری</h3>
+            <p>
+              رفتارهای مشترک مانند Audit، Authorization و Transaction در سطح
+              Pipeline و Infrastructure مدیریت می‌شوند.
             </p>
           </article>
-          <article>
-            <h3>Domain</h3><p>
-              مفاهیم DDD در مسیر توسعه نرم‌افزارهای سازمانی، با جزئیات قابل
-              تکمیل از روی کد.
+
+          <article class="why-item">
+            <h3>قابل استفاده مجدد</h3>
+            <p>
+              Kernel را در پروژه‌های مختلف سازمانی و SaaS استفاده کنید بدون
+              اینکه به یک پلتفرم سنگین وابسته شوید.
             </p>
           </article>
-          <article>
-            <h3>Application</h3><p>
-              CQRS و تفکیک مسئولیت‌ها در لایه Application، در صورت تأیید
-              repository.
-            </p>
-          </article>
-          <article>
-            <h3>Infrastructure</h3><p>
-              زیرساخت‌های قابل استفاده مجدد پروژه پس از بررسی واقعی مستند خواهند
-              شد.
+
+          <article class="why-item">
+            <h3>Opinionated اما انعطاف‌پذیر</h3>
+            <p>
+              ساختار و الگوهای مشخص ارائه می‌شود، اما Kernel شما را به یک
+              Framework یا Database خاص محدود نمی‌کند.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="code" aria-labelledby="code-title">
-      <div class="container narrow-content">
-        <p class="eyebrow">See it in Code</p>
-        <h2 id="code-title">کد واقعی پروژه</h2>
-        <p>
-          برای حفظ دقت فنی، snippet کد در این بخش پس از اتصال repository رسمی
-          Gamma.Kernel اضافه می‌شود. هیچ کد نمونه‌ای به‌عنوان کد واقعی پروژه
-          نمایش داده نشده است.
-        </p>
-        <a
-          class="text-link"
-          href="https://github.com/doomansamaneh/Gamma.Kernel"
-          target="_blank"
-          rel="noreferrer">مشاهده کد در GitHub ←</a
-        >
+    <section class="kernel-section" id="architecture">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Architecture</p>
+
+          <h2>ساختار ساده برای معماری پیچیده</h2>
+
+          <p>
+            Gamma.Kernel تلاش می‌کند مرزهای معماری را روشن نگه دارد و دغدغه‌های
+            Cross-Cutting را از منطق اصلی برنامه جدا کند.
+          </p>
+        </div>
+
+        <div class="architecture-diagram">
+          <div class="architecture-node architecture-api">
+            <span>01</span>
+            <strong>API / Endpoints</strong>
+            <small>ورودی سیستم</small>
+          </div>
+
+          <div class="architecture-arrow">↓</div>
+
+          <div class="architecture-node">
+            <span>02</span>
+            <strong>Commands / Queries</strong>
+            <small>Application Layer</small>
+          </div>
+
+          <div class="architecture-arrow">↓</div>
+
+          <div class="architecture-node architecture-domain">
+            <span>03</span>
+            <strong>Domain</strong>
+            <small>Business Logic</small>
+          </div>
+
+          <div class="architecture-support">
+            <div class="architecture-support-item">
+              <strong>Authorization</strong>
+              <span>ABAC / Policies</span>
+            </div>
+
+            <div class="architecture-support-item">
+              <strong>Unit of Work</strong>
+              <span>Transactions</span>
+            </div>
+
+            <div class="architecture-support-item">
+              <strong>Audit</strong>
+              <span>Audit Helpers</span>
+            </div>
+
+            <div class="architecture-support-item">
+              <strong>Repository</strong>
+              <span>Dapper / Data</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section
-      class="section section--surface"
-      id="resources"
-      aria-labelledby="resources-title"
-    >
-      <div class="container narrow-content">
-        <p class="eyebrow">Resources</p>
-        <h2 id="resources-title">منابع Gamma.Kernel</h2>
-        <p>
-          مستندات اختصاصی و راهنمای شروع پس از آماده شدن منابع رسمی پروژه در این
-          بخش قرار می‌گیرند.
+    <section class="kernel-section kernel-section-alt" id="capabilities">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+
+          <h2>قابلیت‌های اصلی Gamma.Kernel</h2>
+
+          <p>
+            اجزای Kernel برای حل مسائل تکرارشونده در نرم‌افزارهای سازمانی طراحی
+            شده‌اند.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          <article class="capability">
+            <span class="capability-index">01</span>
+            <h3>CQRS Pipeline</h3>
+            <p>
+              تعریف Command و Query و اجرای Handlerها از طریق Pipelineهای قابل
+              توسعه.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">02</span>
+            <h3>Authorization</h3>
+            <p>
+              اعمال کنترل دسترسی و Authorization در مسیر اجرای درخواست‌ها، از
+              جمله سناریوهای ABAC.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">03</span>
+            <h3>Unit of Work</h3>
+            <p>
+              مدیریت Context تراکنش و هماهنگ‌سازی عملیات داده در یک واحد کاری
+              مشخص.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">04</span>
+            <h3>Audit</h3>
+            <p>
+              فراهم کردن helperهای سبک برای ثبت تغییرات و رویدادهای مرتبط با
+              Entityها.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">05</span>
+            <h3>Dapper Integration</h3>
+            <p>
+              Repositoryهای عمومی CUD، mapping مبتنی بر attribute و پشتیبانی از
+              عملیات تراکنشی.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">06</span>
+            <h3>Entity Helpers</h3>
+            <p>
+              Attributeهای کمکی مانند Identity، InsertOnly و RowVersion برای
+              مدیریت رفتار Entityها.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">07</span>
+            <h3>Infrastructure Abstractions</h3>
+            <p>
+              abstractionهایی مانند IClock و ICurrentUser برای کاهش وابستگی
+              Domain و Application به زیرساخت.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-index">08</span>
+            <h3>Framework Agnostic</h3>
+            <p>
+              هسته‌ای سبک که بدون تحمیل یک Framework یا Database خاص در ساختار
+              برنامه قرار می‌گیرد.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kernel-section" id="concepts">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Concepts</p>
+
+          <h2>مفاهیمی که Kernel بر پایه آن‌ها ساخته شده است</h2>
+        </div>
+
+        <div class="concepts-grid">
+          <article class="concept">
+            <div class="concept-label">01</div>
+            <h3>Clean Architecture</h3>
+            <p>
+              وابستگی‌ها باید به سمت داخل معماری حرکت کنند و Domain نباید به
+              جزئیات زیرساخت وابسته باشد.
+            </p>
+          </article>
+
+          <article class="concept">
+            <div class="concept-label">02</div>
+            <h3>Domain-Driven Design</h3>
+            <p>
+              Domain محل اصلی منطق کسب و کار است و سایر لایه‌ها باید در خدمت آن
+              قرار بگیرند.
+            </p>
+          </article>
+
+          <article class="concept">
+            <div class="concept-label">03</div>
+            <h3>CQRS</h3>
+            <p>
+              عملیات خواندن و تغییر وضعیت سیستم در مسیرهای جداگانه مدل می‌شوند.
+            </p>
+          </article>
+
+          <article class="concept">
+            <div class="concept-label">04</div>
+            <h3>Cross-Cutting Concerns</h3>
+            <p>
+              موضوعاتی مانند Authorization، Audit و Transaction از منطق اصلی
+              درخواست جدا می‌شوند.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kernel-section kernel-section-alt" id="pipeline">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Request Pipeline</p>
+
+          <h2>مسیر اجرای یک درخواست</h2>
+
+          <p>
+            Pipelineها امکان اعمال رفتارهای مشترک را بدون قراردادن آن‌ها در منطق
+            هر Handler فراهم می‌کنند.
+          </p>
+        </div>
+
+        <div class="pipeline">
+          <div class="pipeline-step">
+            <span>01</span>
+            <strong>Request</strong>
+            <small>Command / Query</small>
+          </div>
+
+          <div class="pipeline-connector"></div>
+
+          <div class="pipeline-step">
+            <span>02</span>
+            <strong>Authorization</strong>
+            <small>Access Control</small>
+          </div>
+
+          <div class="pipeline-connector"></div>
+
+          <div class="pipeline-step">
+            <span>03</span>
+            <strong>Handler</strong>
+            <small>Application Logic</small>
+          </div>
+
+          <div class="pipeline-connector"></div>
+
+          <div class="pipeline-step">
+            <span>04</span>
+            <strong>Unit of Work</strong>
+            <small>Transaction</small>
+          </div>
+
+          <div class="pipeline-connector"></div>
+
+          <div class="pipeline-step">
+            <span>05</span>
+            <strong>Audit</strong>
+            <small>Cross-Cutting</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kernel-section" id="code">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Code</p>
+
+          <h2>کدی ساده، ساختاری مشخص</h2>
+
+          <p>
+            یکی از اهداف Gamma.Kernel این است که معماری پیچیده را بدون اضافه
+            کردن abstractionهای غیرضروری قابل استفاده نگه دارد.
+          </p>
+        </div>
+
+        <div class="code-example">
+          <div class="code-example-header">
+            <span>Gamma.Kernel</span>
+            <span>.NET 10+</span>
+          </div>
+
+          <pre><code>public interface IUnitOfWork
+          &#123;
+            IDbConnection Connection &#123; get; &#125;
+            IDbTransaction? Transaction &#123; get; &#125;
+          void OnCommitted(
+              Func&lt;CancellationToken, Task&gt; action);
+          IDbTransaction BeginTransactionIfNeeded();
+          &#125;</code></pre>
+        </div>
+
+        <p class="code-note">
+          نمونه بالا بخشی از قرارداد واقعی `IUnitOfWork` در Repository رسمی
+          Gamma.Kernel است.
         </p>
-        <div class="resource-links">
+      </div>
+    </section>
+
+    <section class="kernel-section kernel-section-alt" id="use-cases">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Use Cases</p>
+
+          <h2>برای چه پروژه‌هایی مناسب است؟</h2>
+        </div>
+
+        <div class="use-cases-grid">
+          <article class="use-case">
+            <span>01</span>
+            <h3>نرم‌افزارهای سازمانی</h3>
+            <p>
+              سیستم‌هایی که Domain پیچیده، تراکنش‌های متعدد و نیاز به کنترل
+              دسترسی دارند.
+            </p>
+          </article>
+
+          <article class="use-case">
+            <span>02</span>
+            <h3>محصولات SaaS</h3>
+            <p>
+              برنامه‌هایی که باید در طول زمان توسعه پیدا کنند و ساختار معماری
+              آن‌ها قابل نگهداری باقی بماند.
+            </p>
+          </article>
+
+          <article class="use-case">
+            <span>03</span>
+            <h3>سیستم‌های CQRS / DDD</h3>
+            <p>
+              پروژه‌هایی که از Command و Query جداگانه و مدل‌سازی Domain استفاده
+              می‌کنند.
+            </p>
+          </article>
+
+          <article class="use-case">
+            <span>04</span>
+            <h3>Codebaseهای بلندمدت</h3>
+            <p>نرم‌افزارهایی که قرار است برای سال‌ها توسعه و نگهداری شوند.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kernel-section" id="structure">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Project Structure</p>
+
+          <h2>یک ساختار پیشنهادی برای پروژه</h2>
+        </div>
+
+        <div class="project-structure">
+          <pre><code>/src
+  ├─ Gamma.Kernel
+  │   ├─ Abstractions
+  │   ├─ Behaviors
+  │   ├─ Transactions
+  │   └─ Common
+  │
+  ├─ MyApp.Domain
+  │   ├─ Entities
+  │   ├─ ValueObjects
+  │   └─ DomainServices
+  │
+  ├─ MyApp.Application
+  │   ├─ Commands
+  │   ├─ Queries
+  │   └─ DTOs
+  │
+  ├─ MyApp.Infra
+  │   ├─ Data
+  │   ├─ Logging
+  │   └─ Services
+  │
+  └─ MyApp.Api
+      └─ EndPoints</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="kernel-section kernel-section-alt" id="roadmap">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+
+          <h2>مسیر توسعه Gamma.Kernel</h2>
+
+          <p>
+            موارد زیر بخشی از مسیر توسعه آینده پروژه هستند و نباید به عنوان
+            قابلیت‌های فعلی Kernel معرفی شوند.
+          </p>
+        </div>
+
+        <div class="roadmap">
+          <div class="roadmap-item">
+            <span>01</span>
+            <div>
+              <h3>Domain Events</h3>
+              <p>افزودن abstraction برای Domain Events.</p>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <span>02</span>
+            <div>
+              <h3>Outbox Pattern</h3>
+              <p>فراهم کردن زیرساخت مناسب برای سناریوهای Outbox.</p>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <span>03</span>
+            <div>
+              <h3>Observability</h3>
+              <p>توسعه hookهای بهتر برای Metrics، Logging و Tracing.</p>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <span>04</span>
+            <div>
+              <h3>Application Generator</h3>
+              <p>تولید بخش‌هایی از Application بر اساس Entityها.</p>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <span>05</span>
+            <div>
+              <h3>CQRS Pipeline Extensions</h3>
+              <p>توسعه قابلیت‌های بیشتر برای Pipelineهای CQRS.</p>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <span>06</span>
+            <div>
+              <h3>Test Harnesses</h3>
+              <p>نمونه‌ها و ابزارهای بهتر برای تست و توسعه.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kernel-section kernel-github" id="github">
+      <div class="container">
+        <div class="github-content">
+          <p class="eyebrow">Open Source</p>
+
+          <h2>Gamma.Kernel را در GitHub ببینید</h2>
+
+          <p>
+            کد منبع، مستندات، نمونه‌ها و مسیر توسعه پروژه در Repository رسمی
+            Gamma.Kernel قرار دارد.
+          </p>
+
           <a
+            class="button button-primary"
             href="https://github.com/doomansamaneh/Gamma.Kernel"
             target="_blank"
-            rel="noreferrer">مخزن GitHub <span>↗</span></a
+            rel="noopener noreferrer"
           >
-          <a href="/products/">سایر محصولات دومان سامانه <span>←</span></a>
+            GitHub Repository
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="faq-title">
-      <div class="container narrow-content">
-        <p class="eyebrow">FAQ</p>
-        <h2 id="faq-title">پرسش‌های متداول</h2>
-        <p>
-          پاسخ‌های فنی درباره نسخه .NET، نحوه استفاده، قابلیت‌ها و مستندات
-          Gamma.Kernel پس از بررسی repository و منابع رسمی منتشر خواهند شد.
-        </p>
+    <section class="kernel-section kernel-faq" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+
+          <h2>سؤالات متداول</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Gamma.Kernel چیست؟</summary>
+            <p>
+              Gamma.Kernel یک هسته سبک و opinionated برای ساخت برنامه‌های .NET
+              با استفاده از CQRS، Clean Architecture و DDD است.
+            </p>
+          </details>
+
+          <details>
+            <summary>Gamma.Kernel برای چه نسخه‌ای از .NET است؟</summary>
+            <p>نسخه فعلی پروژه برای .NET 10+ طراحی شده است.</p>
+          </details>
+
+          <details>
+            <summary>آیا Gamma.Kernel یک Framework کامل است؟</summary>
+            <p>
+              خیر. Kernel مجموعه‌ای سبک از abstractionها، behaviorها و ابزارهای
+              زیرساختی است و قرار نیست تمام معماری برنامه را به یک Framework خاص
+              وابسته کند.
+            </p>
+          </details>
+
+          <details>
+            <summary>آیا Gamma.Kernel متن‌باز است؟</summary>
+            <p>بله. Repository رسمی پروژه در GitHub در دسترس است.</p>
+          </details>
+
+          <details>
+            <summary>آیا Gamma.Kernel از Dapper استفاده می‌کند؟</summary>
+            <p>
+              بله. Kernel یکپارچه‌سازی با Dapper و Repositoryهای عمومی برای
+              عملیات CUD را فراهم می‌کند.
+            </p>
+          </details>
+        </div>
       </div>
     </section>
 
     <section class="kernel-cta">
-      <div class="container narrow-content">
-        <h2>Gamma.Kernel را در GitHub بررسی کنید</h2>
-        <p>کد، معماری و ساختار داخلی پروژه را از منبع رسمی مشاهده کنید.</p>
-        <a
-          class="button button--accent"
-          href="https://github.com/doomansamaneh/Gamma.Kernel"
-          target="_blank"
-          rel="noreferrer">مشاهده در GitHub</a
-        >
+      <div class="container">
+        <div class="kernel-cta-inner">
+          <div>
+            <p class="eyebrow">Gamma.Kernel</p>
+
+            <h2>یک هسته کوچک برای نرم‌افزارهای بزرگ</h2>
+
+            <p>
+              اگر روی یک سیستم سازمانی مبتنی بر .NET کار می‌کنید، Gamma.Kernel
+              می‌تواند بخشی از مسئولیت‌های تکرارشونده معماری را در یک هسته قابل
+              استفاده مجدد متمرکز کند.
+            </p>
+          </div>
+
+          <div class="kernel-cta-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/doomansamaneh/Gamma.Kernel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              مشاهده پروژه در GitHub
+            </a>
+
+            <a class="button button-secondary" href="/company/about/">
+              درباره دومان سامانه
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </article>
 </BaseLayout>
 
 <style>
-  .kernel-hero {
-    padding-block: clamp(4rem, 9vw, 8rem);
-    background: var(--color-primary);
-    color: white;
+  .kernel-page {
+    background: var(--color-background, #ffffff);
+    color: var(--color-text, #231f20);
   }
+
   .container {
-    width: min(calc(100% - 2rem), var(--container-width));
+    width: min(1180px, calc(100% - 40px));
     margin-inline: auto;
   }
-  .hero-grid {
+
+  .kernel-hero {
+    background: var(--hero-product-background);
+    color: var(--color-white);
+    padding: 110px 0 100px;
+  }
+
+  .kernel-hero-grid {
     display: grid;
-    gap: var(--space-lg);
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
     align-items: center;
+    gap: 80px;
   }
-  .narrow-content {
-    max-width: 52rem;
-  }
+
   .breadcrumb {
-    display: inline-block;
-    margin-block-end: var(--space-lg);
-    color: var(--color-accent-soft);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
+    display: inline-flex;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
-  }
-  .eyebrow {
-    margin-block-end: var(--space-sm);
-    color: var(--color-accent-dark);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-  }
-  .kernel-hero .eyebrow {
-    color: var(--color-accent-soft);
-  }
-  h1 {
-    margin-block-end: 0.5rem;
-    font-size: var(--font-size-h1);
-    line-height: 1.1;
-    direction: ltr;
-    text-align: start;
-  }
-  h2 {
-    margin-block-end: var(--space-md);
-    color: var(--color-primary);
-    font-size: var(--font-size-h2);
-  }
-  .kernel-hero h1,
-  .kernel-cta h2 {
-    color: white;
-  }
-  .hero-subtitle {
-    margin-block-end: var(--space-md);
-    color: var(--color-accent-soft);
-    direction: ltr;
-    font-size: 1.15rem;
-    font-weight: var(--font-weight-bold);
-  }
-  .hero-copy {
-    max-width: 40rem;
-    margin-block-end: var(--space-lg);
-    color: #eee;
-    font-size: 1.15rem;
-  }
-  .actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-  }
-  .text-link {
-    color: var(--color-secondary);
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
-  }
-  .kernel-hero .text-link,
-  .kernel-cta .text-link {
-    color: var(--color-accent-soft);
-  }
-  .code-visual {
-    display: grid;
-    min-height: 17rem;
-    align-content: center;
-    gap: 0.65rem;
-    padding: 2rem;
-    border-inline-start: 0.25rem solid var(--color-accent);
-    background: #1c1c1c;
-    color: #d8d8d8;
-    direction: ltr;
-    font-family: Consolas, monospace;
     font-size: 0.9rem;
-    overflow: auto;
   }
-  .code-visual i {
-    color: var(--color-accent);
-    font-style: normal;
+
+  .breadcrumb:hover {
+    color: #ffffff;
   }
-  .code-visual b {
-    color: #f3c98b;
-    font-weight: 400;
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: #ef3f23;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
-  .indent {
-    padding-inline-start: 2rem;
+
+  .kernel-hero h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 5.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
   }
-  .indent-2 {
-    padding-inline-start: 4rem;
-    color: #888;
+
+  .kernel-hero-subtitle {
+    margin: 22px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 600;
   }
+
+  .kernel-hero-description {
+    max-width: 680px;
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.15rem;
+    line-height: 2;
+  }
+
+  .kernel-hero-detail {
+    max-width: 680px;
+    margin: 16px 0 0;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.9;
+  }
+
+  .kernel-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease;
+  }
+
+  .button-primary {
+    background: var(--color-brand);
+    color: var(--color-white);
+  }
+
+  .button-primary:hover {
+    background: var(--color-brand-hover);
+  }
+
+  .button-secondary {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .button-secondary:hover {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+  }
+
+  .kernel-code-visual {
+    position: relative;
+    padding: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.035);
+    border-radius: 8px;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+  }
+
+  .code-line {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 16px 0;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .code-keyword {
+    color: #ef3f23;
+    font-weight: 700;
+  }
+
+  .code-divider {
+    height: 1px;
+    margin: 26px 0;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
   .kernel-nav {
     position: sticky;
-    inset-block-start: 0;
-    z-index: 5;
-    border-block-end: 0.0625rem solid var(--color-line);
-    background: var(--color-surface);
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid #e5e5e5;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
   }
+
   .kernel-nav-inner {
     display: flex;
-    gap: 1.1rem;
+    gap: 26px;
     overflow-x: auto;
-    padding-block: 0.85rem;
+    scrollbar-width: none;
+  }
+
+  .kernel-nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .kernel-nav a {
+    flex: 0 0 auto;
+    padding: 18px 0;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
     white-space: nowrap;
   }
-  .kernel-nav a {
-    color: var(--color-muted);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
+
+  .kernel-nav a:hover {
+    color: #ef3f23;
   }
-  .kernel-nav a:hover,
-  .kernel-nav a:focus-visible {
-    color: var(--color-accent-dark);
+
+  .kernel-section {
+    padding: 110px 0;
   }
-  .kernel-nav .nav-cta {
-    margin-inline-start: auto;
-    color: var(--color-accent-dark);
+
+  .kernel-section-alt {
+    background: #f7f7f7;
   }
-  .section {
-    padding-block: var(--space-xl);
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 58px;
   }
-  .section--surface {
-    background: var(--color-surface);
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.25;
+    letter-spacing: -0.025em;
   }
-  .section p {
-    color: var(--color-muted);
+
+  .section-heading > p:last-child {
+    max-width: 680px;
+    margin: 22px 0 0;
+    color: #666666;
+    font-size: 1.05rem;
+    line-height: 2;
   }
-  .technology-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-block-start: var(--space-lg);
-  }
-  .technology-list span {
-    padding: 0.5rem 0.75rem;
-    border: 0.0625rem solid var(--color-line);
-    color: var(--color-primary);
-    direction: ltr;
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-  }
-  .architecture-placeholder {
+
+  .technology-grid,
+  .why-grid,
+  .capabilities-grid,
+  .concepts-grid,
+  .use-cases-grid {
     display: grid;
-    min-height: 18rem;
-    place-items: center;
-    gap: 0.5rem;
-    border: 0.1rem dashed var(--color-line);
-    background: var(--color-paper);
-    color: var(--color-secondary);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  .technology-item,
+  .why-item,
+  .capability,
+  .concept,
+  .use-case {
+    min-height: 0;
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+  }
+
+  .technology-number,
+  .capability-index,
+  .concept-label,
+  .use-case > span {
+    display: block;
+    margin-bottom: 42px;
+    color: #ef3f23;
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .technology-item h3,
+  .why-item h3,
+  .capability h3,
+  .concept h3,
+  .use-case h3 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  .technology-item p,
+  .why-item p,
+  .capability p,
+  .concept p,
+  .use-case p {
+    margin: 14px 0 0;
+    color: #666666;
+    line-height: 1.9;
+  }
+
+  .architecture-diagram {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .architecture-node {
+    padding: 28px 34px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
     text-align: center;
   }
-  .architecture-placeholder small {
-    color: var(--color-muted);
+
+  .architecture-node span {
+    display: block;
+    margin-bottom: 8px;
+    color: #ef3f23;
+    font-family: monospace;
+    font-size: 0.8rem;
   }
-  .concept-grid {
+
+  .architecture-node strong {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .architecture-node small {
+    display: block;
+    margin-top: 6px;
+    color: #777777;
+  }
+
+  .architecture-api {
+    border-top: 3px solid #ef3f23;
+  }
+
+  .architecture-domain {
+    border-bottom: 3px solid #ef3f23;
+  }
+
+  .architecture-arrow {
+    padding: 12px;
+    color: #ef3f23;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .architecture-support {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 12px;
+    margin-top: 32px;
   }
-  .concept-grid article {
-    padding-block: 1.25rem;
-    border-block-start: 0.2rem solid var(--color-primary);
+
+  .architecture-support-item {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    background: #f7f7f7;
   }
-  .concept-grid article:first-child {
-    border-color: var(--color-accent);
+
+  .architecture-support-item strong,
+  .architecture-support-item span {
+    display: block;
   }
-  .concept-grid h3 {
-    margin-block-end: 0.5rem;
-    color: var(--color-primary);
-    direction: ltr;
+
+  .architecture-support-item span {
+    margin-top: 6px;
+    color: #777777;
+    font-size: 0.85rem;
   }
-  .concept-grid p {
-    margin: 0;
-    font-size: var(--font-size-small);
-    line-height: 1.8;
+
+  .pipeline {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
   }
-  .resource-links {
-    display: grid;
-    gap: 0.25rem;
-    margin-block-start: var(--space-md);
+
+  .pipeline-step {
+    flex: 1;
+    padding: 28px 20px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
   }
-  .resource-links a {
+
+  .pipeline-step span {
+    display: block;
+    margin-bottom: 28px;
+    color: #ef3f23;
+    font-family: monospace;
+  }
+
+  .pipeline-step strong,
+  .pipeline-step small {
+    display: block;
+  }
+
+  .pipeline-step small {
+    margin-top: 6px;
+    color: #777777;
+  }
+
+  .pipeline-connector {
+    width: 24px;
+    flex: 0 0 24px;
+    background: #ef3f23;
+    align-self: center;
+    height: 2px;
+  }
+
+  .code-example,
+  .project-structure {
+    overflow: hidden;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    background: #231f20;
+  }
+
+  .code-example-header {
     display: flex;
     justify-content: space-between;
-    padding-block: 0.75rem;
-    border-block-start: 0.0625rem solid var(--color-line);
-    color: var(--color-ink);
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: monospace;
+    font-size: 0.8rem;
   }
-  .resource-links a:hover {
-    color: var(--color-accent-dark);
+
+  .code-example pre,
+  .project-structure pre {
+    margin: 0;
+    padding: 32px;
+    overflow-x: auto;
+    color: #ffffff;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.9;
+    direction: ltr;
+    text-align: left;
   }
-  .resource-links span {
-    color: var(--color-accent);
+
+  .code-note {
+    margin: 18px 0 0;
+    color: #777777;
+    font-size: 0.85rem;
+    line-height: 1.8;
   }
+
+  .roadmap {
+    max-width: 900px;
+    margin-inline: auto;
+    border-top: 1px solid #dddddd;
+  }
+
+  .roadmap-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .roadmap-item > span {
+    color: #ef3f23;
+    font-family: monospace;
+    font-weight: 700;
+  }
+
+  .roadmap-item h3 {
+    margin: 0;
+  }
+
+  .roadmap-item p {
+    margin: 8px 0 0;
+    color: #666666;
+    line-height: 1.8;
+  }
+
+  .kernel-github {
+    background: #231f20;
+    color: #ffffff;
+  }
+
+  .github-content {
+    max-width: 720px;
+  }
+
+  .github-content h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .github-content p {
+    margin: 20px 0 30px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 2;
+  }
+
+  .faq-list {
+    max-width: 900px;
+    border-top: 1px solid #dddddd;
+  }
+
+  .faq-list details {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .faq-list summary {
+    cursor: pointer;
+    padding: 24px 0;
+    font-weight: 700;
+  }
+
+  .faq-list details p {
+    max-width: 760px;
+    margin: 0 0 24px;
+    color: #666666;
+    line-height: 1.9;
+  }
+
   .kernel-cta {
-    padding-block: var(--space-xl);
-    background: var(--color-primary);
-    color: white;
+    padding: 90px 0;
+    background: #f7f7f7;
   }
-  .kernel-cta p {
-    margin-block-end: var(--space-lg);
-    color: #eee;
+
+  .kernel-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 54px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
   }
-  @media (min-width: 48rem) {
-    .container {
-      width: min(calc(100% - 4rem), var(--container-width));
+
+  .kernel-cta-inner h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .kernel-cta-inner p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 18px 0 0;
+    color: #666666;
+    line-height: 2;
+  }
+
+  .kernel-cta-actions {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .kernel-cta .button-secondary {
+    border-color: var(--color-border);
+    background: var(--color-white);
+    color: var(--color-brand-dark);
+  }
+
+  .kernel-cta .button-secondary:hover {
+    border-color: #ef3f23;
+    color: #ef3f23;
+  }
+
+  @media (max-width: 960px) {
+    .kernel-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
     }
-    .hero-grid {
-      grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.8fr);
+
+    .technology-grid,
+    .why-grid,
+    .capabilities-grid,
+    .concepts-grid,
+    .use-cases-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-  }
-  @media (max-width: 60rem) {
-    .concept-grid {
+
+    .architecture-support {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .pipeline-connector {
+      width: 2px;
+      height: 20px;
+      justify-self: center;
+    }
+
+    .kernel-cta-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
-  @media (max-width: 47.99rem) {
-    .concept-grid {
+
+  @media (max-width: 640px) {
+    .container {
+      width: min(100% - 28px, 1180px);
+    }
+
+    .kernel-hero {
+      padding: 76px 0 70px;
+    }
+
+    .kernel-hero h1 {
+      font-size: 3.2rem;
+    }
+
+    .kernel-code-visual {
+      padding: 24px;
+      font-size: 0.8rem;
+    }
+
+    .kernel-section {
+      padding: 76px 0;
+    }
+
+    .technology-grid,
+    .why-grid,
+    .capabilities-grid,
+    .concepts-grid,
+    .use-cases-grid {
       grid-template-columns: 1fr;
     }
-    .kernel-nav-inner {
-      gap: 0.85rem;
+
+    .architecture-support {
+      grid-template-columns: 1fr;
     }
-    .kernel-nav .nav-cta {
-      margin-inline-start: 0;
+
+    .technology-item,
+    .why-item,
+    .capability,
+    .concept,
+    .use-case {
+      min-height: auto;
+    }
+
+    .technology-number,
+    .capability-index,
+    .concept-label,
+    .use-case > span {
+      margin-bottom: 26px;
+    }
+
+    .kernel-cta {
+      padding: 60px 0;
+    }
+
+    .kernel-cta-inner {
+      padding: 30px 24px;
+    }
+
+    .kernel-hero-actions,
+    .kernel-cta-actions {
+      width: 100%;
+    }
+
+    .kernel-hero-actions .button,
+    .kernel-cta-actions .button {
+      width: 100%;
+    }
+
+    .roadmap-item {
+      grid-template-columns: 45px 1fr;
+      gap: 14px;
     }
   }
 </style>

@@ -1,9 +1,293 @@
 ---
-import InfoPage from "../../../components/InfoPage.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SectionHeading from "../../../components/common/SectionHeading.astro";
+import CTA from "../../../components/common/CTA.astro";
 ---
 
-<InfoPage
-  title="مشتریان"
-  description="اطلاعات تأییدشده درباره مشتریان دومان سامانه در این بخش ارائه خواهد شد."
-  eyebrow="شرکت / مشتریان"
-/>
+<BaseLayout
+  title="مشتریان | دومان سامانه"
+  description="تجربه دومان سامانه با مشتریان سازمانی، پروژه‌های بزرگ و حوزه‌های مختلف کسب‌وکار و دولت."
+>
+  <section class="customers-hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>مشتریان دومان سامانه</h1>
+        <p class="hero-copy">
+          تجربه سال‌ها همکاری با سازمان‌ها و کسب‌وکارهای مختلف، بخشی از مسیر
+          دومان سامانه در توسعه و استقرار راهکارهای نرم‌افزاری سازمانی است.
+        </p>
+        <div class="actions">
+          <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+          <a class="text-link" href="/company/about/"
+            >درباره ما <span aria-hidden="true">←</span></a
+          >
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="سابقه مشتریان دومان سامانه">
+        <div class="panel-label">سابقه</div>
+        <ul>
+          <li>شروع فعالیت: ۱۳۸۶</li>
+          <li>اولین همکاری: بانک رفاه</li>
+          <li>استقرار گسترده: بیش از ۱۵۰ سازمان</li>
+          <li>کاربر در پروژه اولیه: بیش از ۱۲٬۰۰۰</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="industries">
+    <div class="container">
+      <SectionHeading
+        title="تجربه در صنایع و سازمان‌های مختلف"
+        description="رشته‌های متنوع همکاری دومان سامانه نشان می‌دهد که راهکارهای این شرکت در محیط‌های متفاوت و با نیازهای واقعی سازمان‌های مختلف توسعه یافته‌اند."
+      />
+
+      <div class="industry-grid">
+        <article class="industry-card">
+          <h3>بانک‌ها</h3>
+          <p>
+            تجربه همکاری با سازمان‌های مالی و بانکی در توسعه و استقرار سیستم‌های
+            سازمانی.
+          </p>
+        </article>
+        <article class="industry-card">
+          <h3>نفت، گاز و پتروشیمی</h3>
+          <p>
+            کاربرد در محیط‌های صنعتی و زیرساختی با نیازهای پیچیده‌ی عملیاتی و
+            مدیریتی.
+          </p>
+        </article>
+        <article class="industry-card">
+          <h3>سازمان‌های وابسته به وزارت نیرو</h3>
+          <p>
+            استفاده در حوزه‌های خدماتی و زیرساختی با تمرکز بر نظم، کنترل و
+            گزارش‌گیری.
+          </p>
+        </article>
+        <article class="industry-card">
+          <h3>شرکت‌های خصوصی و پیمانکاری</h3>
+          <p>
+            پشتیبانی از کسب‌وکارهای خصوصی با فرایندهای اجرایی و مدیریتی متنوع.
+          </p>
+        </article>
+        <article class="industry-card">
+          <h3>دانشگاه‌ها و دانشگاه‌های علوم پزشکی</h3>
+          <p>تأمین نیازهای سازمانی و خدماتی در محیط‌های آموزشی و درمانی.</p>
+        </article>
+        <article class="industry-card">
+          <h3>سازمان‌های دولتی</h3>
+          <p>
+            نظارت، گردش کار و مدیریت خدمات در ساختارهای رسمی و سازمانی با
+            نیازهای مشخص.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="customers-list">
+    <div class="container">
+      <SectionHeading title="برخی از مشتریان ما" />
+
+      <div class="customer-grid">
+        <div class="customer-item">بانک رفاه</div>
+        <div class="customer-item">
+          سازمان صنایع کوچک و شهرک‌های صنعتی ایران
+        </div>
+        <div class="customer-item">سازمان‌های وابسته به وزارت نیرو</div>
+        <div class="customer-item">شرکت‌های خصوصی و پیمانکاری</div>
+        <div class="customer-item">دانشگاه‌ها و دانشگاه‌های علوم پزشکی</div>
+        <div class="customer-item">سازمان‌های دولتی</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-message">
+    <div class="container narrow-content">
+      <h2>تجربه‌ای که در کنار مشتری شکل گرفته است</h2>
+      <p>
+        دومان سامانه در طول سال‌ها فعالیت، تجربه خود را از همکاری با سازمان‌ها و
+        صنایع مختلف به توسعه راهکارهای نرم‌افزاری و شناخت بهتر نیازهای واقعی
+        مشتریان منتقل کرده است.
+      </p>
+    </div>
+  </section>
+
+  <CTA
+    title="درباره راهکارهای دومان سامانه بیشتر بدانید"
+    text="اگر به دنبال راهکارهای نرم‌افزاری برای مدیریت و بهبود فرایندهای سازمانی خود هستید، با ما در ارتباط باشید."
+    primaryHref="/contact/"
+    primaryLabel="ارتباط با ما"
+    secondaryHref="/products/"
+    secondaryLabel="مشاهده محصولات"
+    compact
+  />
+</BaseLayout>
+
+<style>
+  .customers-hero {
+    padding-block: clamp(4rem, 8vw, 7rem);
+    background: var(--hero-corporate-background);
+    color: var(--color-white);
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-soft);
+    font-size: var(--font-size-sm);
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 16ch;
+    margin-block-end: var(--space-md);
+    font-size: var(--font-size-h1);
+    line-height: 1.2;
+  }
+
+  .hero-copy {
+    max-width: 38rem;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-on-dark);
+    font-size: 1.125rem;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .text-link {
+    color: var(--color-white);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .text-link span {
+    display: inline-block;
+    transition: transform var(--transition-fast);
+  }
+
+  .text-link:hover span {
+    transform: translateX(-0.25rem);
+  }
+
+  .hero-panel {
+    padding: var(--space-lg);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-md);
+  }
+
+  .panel-label {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-soft);
+    font-size: var(--font-size-sm);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .hero-panel ul {
+    margin: 0;
+    padding-inline-start: 1.25rem;
+    color: var(--color-text-on-dark);
+    line-height: 2;
+  }
+
+  .trust,
+  .industries,
+  .customers-list,
+  .case-study,
+  .trust-message {
+    padding-block: var(--space-xl);
+  }
+
+  .stats-grid,
+  .industry-grid,
+  .customer-grid {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .stat-card,
+  .industry-card,
+  .customer-item {
+    padding: var(--space-md);
+    background: var(--color-paper);
+    border: 0.0625rem solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .stat-year,
+  .stat-number {
+    display: block;
+    margin-block-end: 0.5rem;
+    color: var(--color-accent-dark);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+  }
+
+  .stat-card h3,
+  .industry-card h3 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+  }
+
+  .industry-card p,
+  .case-copy p,
+  .trust-message p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 2;
+  }
+
+  .customer-item {
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .case-grid {
+    display: grid;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .case-grid h2,
+  .trust-message h2 {
+    margin-block-end: 0;
+    color: var(--color-primary);
+    font-size: var(--font-size-h2);
+  }
+
+  .narrow-content {
+    max-width: 44rem;
+  }
+
+  @media (min-width: 48rem) {
+    .hero-grid,
+    .case-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+
+    .stats-grid,
+    .industry-grid,
+    .customer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

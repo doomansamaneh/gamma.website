@@ -136,7 +136,7 @@ Avoid:
 * Excessive technical jargon
 * Inconsistent terminology
 
-Technical product names such as `GammaDesk`, `ITIL`, `API`, and similar established terms may remain in English where appropriate.
+Technical product names such as `GammaItsm`, `ITIL`, `API`, and similar established terms may remain in English where appropriate.
 
 ---
 
@@ -147,8 +147,8 @@ The website will contain mixed-direction content.
 Examples:
 
 ```text
-GammaDesk IT Service Management
-Incident Management در GammaDesk
+GammaItsm IT Service Management
+Incident Management در GammaItsm
 ITIL 4
 API Documentation
 ```
@@ -179,7 +179,7 @@ Do not globally transform numbers without a clear content requirement.
 Technical and business identifiers should normally remain Latin:
 
 ```text
-GammaDesk 5.0
+GammaItsm 5.0
 ITIL 4
 API v2
 2026
@@ -275,15 +275,15 @@ Translations should preserve the relationship between equivalent pages.
 For example:
 
 ```text
-/fa/products/gammadesk
-/en/products/gammadesk
+/fa/products/GammaItsm
+/en/products/GammaItsm
 ```
 
 and:
 
 ```text
-/fa/products/gammadesk/features/incident-management
-/en/products/gammadesk/features/incident-management
+/fa/products/GammaItsm/features/incident-management
+/en/products/GammaItsm/features/incident-management
 ```
 
 A translated page should refer to the same logical product or feature.
@@ -297,8 +297,8 @@ Use stable, language-neutral slugs where practical.
 Preferred:
 
 ```text
-/products/gammadesk
-/products/gammadesk/features/incident-management
+/products/GammaItsm
+/products/GammaItsm/features/incident-management
 ```
 
 Avoid Persian URLs unless there is a specific SEO or business reason to use them.
@@ -306,8 +306,8 @@ Avoid Persian URLs unless there is a specific SEO or business reason to use them
 If localized URL prefixes are introduced later, use a predictable structure such as:
 
 ```text
-/fa/products/gammadesk
-/en/products/gammadesk
+/fa/products/GammaItsm
+/en/products/GammaItsm
 ```
 
 The URL strategy must be decided consistently before multilingual pages are published.

@@ -1,759 +1,831 @@
-# Implement Gamma.Kernel Product Page in Astro
+You are working on the Astro corporate website for Doman Samaneh (دومان سامانه).
 
-## Objective
+Your task is to REVIEW, IMPROVE, AND COMPLETE the existing Gamma.Kernel product page.
 
-در کنار صفحه GammaDesk، صفحه مستقل محصول **Gamma.Kernel** را نیز در سایت دومان سامانه پیاده‌سازی کن.
+IMPORTANT:
+Do NOT blindly rewrite the page from scratch.
+First inspect the existing implementation, project structure, components, design tokens, assets, and the current Gamma.Kernel page.
+Preserve good existing work and improve it where necessary.
 
-Gamma.Kernel یک محصول/پروژه فنی از دومان سامانه است و باید به‌عنوان یکی از چهار محصول اصلی شرکت نمایش داده شود.
+==================================================
 
-ساختار Portfolio:
+1. PRODUCT CONTEXT
+   ==================================================
 
-```text
-دومان سامانه
-│
-├── GammaDesk
-├── ZED EAM
-├── Landa
-└── Gamma.Kernel
-```
+Gamma.Kernel is an open-source .NET kernel/framework developed by Doman Samaneh.
 
-Gamma.Kernel نباید در سایت صرفاً به‌عنوان یک پروژه GitHub کوچک یا لینک خارجی نمایش داده شود.
+Official repository:
 
-باید یک **Product / Technology Landing Page** مستقل و حرفه‌ای داشته باشد.
+https://github.com/doomansamaneh/Gamma.Kernel
 
----
+Before implementing the page, inspect the repository README and relevant source files.
 
-# 1. URL
+Use the repository as the primary source of truth for CURRENT technical capabilities.
 
-صفحه:
+Do NOT invent features.
 
-```text
-/products/gamma-kernel
-```
+Clearly distinguish:
 
-اگر این URL از قبل وجود دارد، حفظ شود.
+- Current capabilities
+- Architecture concepts
+- Roadmap / future capabilities
 
----
+Do not present roadmap items as existing functionality.
 
-# 2. Positioning
+Gamma.Kernel positioning:
 
-Gamma.Kernel را به‌عنوان:
+A lightweight, opinionated .NET kernel for applications built around:
 
-**چارچوب و هسته توسعه نرم‌افزارهای سازمانی مبتنی بر .NET**
+- CQRS
+- Clean Architecture
+- Domain-Driven Design
+- Cross-cutting concerns
+- Unit of Work
+- Authorization
+- Auditing
+- Dapper-based data access
 
-معرفی کن.
+The product is aimed primarily at:
 
-پیام اصلی صفحه باید روی این مفاهیم باشد:
+- Software developers
+- Software architects
+- Technical leads
+- CTOs
+- Teams building enterprise applications
+- Teams building SaaS systems
+- Long-lived .NET codebases
 
-* .NET
-* Clean Architecture
-* Domain-Driven Design
-* CQRS
-* Enterprise Application Development
-* Reusable Infrastructure
-* Modular Architecture
-* Developer Experience
+This is a TECHNICAL product page.
 
-اما فقط قابلیت‌هایی را بیان کن که واقعاً در repository و مستندات Gamma.Kernel وجود دارند.
+Do not make it look like a generic SaaS landing page.
 
-**هیچ Feature فنی بدون بررسی repository اضافه نکن.**
+================================================== 2. CORE MESSAGE
+===============
 
----
+The page should communicate this idea clearly:
 
-# 3. Hero
+"Gamma.Kernel provides a small, reusable foundation for building modern enterprise .NET applications without forcing the application into a heavy framework."
 
-Hero باید از GammaDesk متفاوت باشد.
+The visitor should understand within a few seconds:
 
-ساختار پیشنهادی:
+1. What Gamma.Kernel is
+2. Who it is for
+3. What problems it solves
+4. How it fits into an application architecture
+5. What capabilities it provides
+6. Where to see the source code
 
-```text
+================================================== 3. PAGE STRUCTURE
+=================
+
+Build the page around this logical narrative:
+
+1. Hero
+2. What is Gamma.Kernel?
+3. Why Gamma.Kernel?
+4. Technology / Foundations
+5. Architecture
+6. Capabilities
+7. Request Pipeline
+8. Code / Developer Experience
+9. Project Structure
+10. Use Cases
+11. Roadmap
+12. FAQ
+13. GitHub CTA
+
+Do NOT make every section visually identical.
+
+The page should feel like a serious developer/product page rather than a marketing template.
+
+================================================== 4. HERO
+=======
+
+Improve the existing Hero.
+
+Use:
+
+Eyebrow:
+Open Source · .NET 10+
+
+H1:
 Gamma.Kernel
 
+Subtitle:
 Enterprise Application Framework for .NET
 
-هسته‌ای برای ساخت نرم‌افزارهای سازمانی مدرن،
-ماژولار و قابل توسعه با .NET
+Supporting message should explain that it is a lightweight and reusable kernel for modern enterprise applications based on Clean Architecture, DDD and CQRS.
 
-[مشاهده در GitHub]
-[مشاهده مستندات]
+Mention the main cross-cutting concerns it helps centralize:
 
-             [Architecture / Code Visual]
-```
+- Command / Query handling
+- Authorization
+- Transactions
+- Unit of Work
+- Audit
+- Data access
 
-CTA اصلی:
+Primary CTA:
 
-**مشاهده در GitHub**
+"مشاهده در GitHub"
 
-CTA دوم:
+Link:
 
-**مستندات**
+https://github.com/doomansamaneh/Gamma.Kernel
 
-اگر Documentation هنوز وجود ندارد، لینک جعلی نساز.
+Secondary CTA:
 
----
+"معماری"
 
-# 4. Technical Identity
+Scroll to the architecture section.
 
-بعد از Hero یک بخش کوتاه برای معرفی Technical Foundation:
+Hero must have a strong technical visual on the opposite side.
 
-```text
-.NET
+Do NOT use:
+
+- Stock image
+- Laptop mockup
+- Generic SaaS illustration
+- Fake dashboard
+- 3D graphics
+- Glassmorphism
+- Neon effects
+
+Prefer a restrained developer-oriented visual showing concepts such as:
+
+Command
+Query
+Handler
+Authorization
+Unit of Work
+Audit
+
+This visual can be implemented with typography, code-style elements, or a simple architecture representation.
+
+================================================== 5. WHAT IS GAMMA.KERNEL?
+========================
+
+Create a clear introductory section.
+
+Explain:
+
+Gamma.Kernel centralizes common infrastructure and cross-cutting concerns that otherwise become scattered throughout enterprise applications.
+
+Mention concepts such as:
+
+- CQRS request handling
+- Authorization
+- Transactions
+- Unit of Work
+- Auditing
+- Data access
+- Infrastructure abstractions
+
+Keep the language technically accurate.
+
+Do not claim that Gamma.Kernel automatically solves all architectural problems.
+
+================================================== 6. WHY GAMMA.KERNEL?
+====================
+
+Explain the motivation behind the project.
+
+Use the actual repository README as source.
+
+Important concepts:
+
+Enterprise applications often accumulate repeated infrastructure logic around:
+
+- Authorization and permissions
+- Transactions and Unit of Work
+- Command / Query handling
+- Auditing and logging
+
+Gamma.Kernel provides a minimal reusable kernel for these concerns.
+
+Create 3–4 strong points, for example:
+
+- Focus on Domain
+- Less repetitive infrastructure code
+- Reusable across applications
+- Opinionated but framework-agnostic
+
+Do not turn this into generic marketing copy.
+
+================================================== 7. TECHNOLOGY / FOUNDATIONS
+===========================
+
+Create a technical foundation section.
+
+Use only technologies/concepts actually supported by the repository.
+
+Relevant concepts include:
+
+.NET 10+
 Clean Architecture
 DDD
 CQRS
 Dapper
 SQL Server
-MediatR / Mediator
-...
-```
 
-فقط تکنولوژی‌ها و الگوهایی را نمایش بده که واقعاً در Gamma.Kernel استفاده شده‌اند.
+Present them as a clean technical grid.
 
-اگر نسخه یا تکنولوژی خاصی در repository مشخص شده، همان اطلاعات را مبنا قرار بده.
+Do not create fake technology badges.
 
----
+Do not use logos unless official assets exist.
 
-# 5. Why Gamma.Kernel
+================================================== 8. ARCHITECTURE
+===============
 
-این بخش نباید صرفاً Feature List باشد.
+This is one of the most important sections.
 
-توضیح بده Gamma.Kernel چه مسئله‌ای را برای تیم‌های توسعه حل می‌کند.
+Create a clear architecture visualization based on the actual repository architecture.
 
-محورهای احتمالی:
+The conceptual flow should communicate something similar to:
 
-### Architecture
-
-ایجاد ساختار معماری منظم و قابل توسعه برای نرم‌افزارهای سازمانی.
-
-### Domain
-
-کمک به پیاده‌سازی Domain Model و اصول DDD.
-
-### CQRS
-
-تفکیک Command و Query و ایجاد ساختار مشخص برای Application Layer.
-
-### Infrastructure
-
-ارائه abstraction و infrastructureهای reusable برای پروژه‌های سازمانی.
-
-### Consistency
-
-ایجاد الگوهای مشترک در پروژه‌های مختلف.
-
-اما تمام این موارد را با repository واقعی تطبیق بده.
-
----
-
-# 6. Architecture Section
-
-یک بخش مهم با عنوان:
-
-**Architecture**
-
-ایجاد کن.
-
-نمایش مفهومی:
-
-```text
-Presentation
-      ↓
-Application
-      ↓
+API / Endpoints
+↓
+Commands / Queries
+↓
+Handlers
+↓
 Domain
-      ↓
-Infrastructure
-```
 
-اگر معماری واقعی Gamma.Kernel متفاوت است، **معماری واقعی repository را نمایش بده، نه این نمونه را.**
+And supporting infrastructure:
 
-می‌توانی از:
+Authorization
+Unit of Work / Transactions
+Audit
+Repositories / Data Access
 
-* Diagram
-* Code structure
-* Layer visualization
-* Architecture cards
+Use a clean diagram-like UI.
 
-استفاده کنی.
+Do not create an inaccurate architecture diagram.
 
-این بخش باید یکی از قوی‌ترین بخش‌های صفحه باشد.
+Inspect the repository before finalizing the exact terminology.
 
----
+The architecture section should be understandable for a software architect.
 
-# 7. Core Concepts
+================================================== 9. CAPABILITIES
+===============
 
-قابلیت‌ها/مفاهیم Gamma.Kernel را دسته‌بندی کن.
+Create a detailed but clean capabilities section.
 
-مثلاً:
+Verify each capability against the repository.
 
-## Architecture
+Relevant capabilities include:
 
-* Clean Architecture
-* DDD
-* CQRS
+- ICommand / IQuery
+- Command and Query handlers
+- Handler pipelines
+- Authorization / ABAC
+- Unit of Work
+- Transaction management
+- Audit helpers
+- Dapper integration
+- Generic CUD repositories
+- Attribute-based entity helpers
+- Identity
+- InsertOnly
+- RowVersion
+- IClock
+- ICurrentUser
 
-## Application
+Do not expose internal implementation details unless they are useful to developers.
 
-* Commands
-* Queries
-* Handlers
-* Pipelines
+Do not claim features that are only in the roadmap.
 
-## Domain
+================================================== 10. REQUEST PIPELINE
+====================
 
-* Entities
-* Value Objects
-* Domain Services
-* Domain Events
+Create a dedicated section showing how a request flows through the system.
 
-## Infrastructure
+Use the actual implementation to verify terminology.
 
-* Repository
-* Unit of Work
-* Persistence
-* Audit
+The conceptual flow may be represented as:
 
-## Cross-Cutting Concerns
+Request
+→ Authorization
+→ Handler
+→ Unit of Work
+→ Audit
+→ Persistence
 
-* Authorization
-* Auditing
-* Identity
-* Transactions
-* Logging
+But verify the exact behavior against the current repository before presenting it as fact.
 
-اما:
+This section should be visually strong but simple.
 
-**قبل از نمایش هر مورد repository را بررسی کن.**
+Use code/developer aesthetics, not decorative UI.
 
----
+================================================== 11. CODE SECTION
+================
 
-# 8. Technical Feature Cards
+Create a code-oriented section.
 
-برای هر مفهوم یک Card کوچک:
+Use REAL code from the repository whenever possible.
 
-```text
-[Icon]
+Do NOT invent interface signatures.
 
-CQRS
+If the current page contains placeholder code, replace it with verified code from the repository.
 
-تفکیک Command و Query برای ساختاردهی بهتر
-لایه Application.
+Show a small, meaningful example rather than a large code dump.
 
-مشاهده جزئیات →
-```
+Possible areas:
 
-اگر مستندات اختصاصی برای Feature وجود ندارد، لینک جعلی نساز.
+- ICommand
+- IQuery
+- Handler
+- Pipeline
+- UnitOfWork
 
-در صورت نبود صفحه مستقل، Card می‌تواند توضیح کوتاه بدون لینک داشته باشد.
+But verify exact signatures from the current source.
 
----
+The code block must:
 
-# 9. Code Example
+- Be readable
+- Use LTR direction
+- Use monospace font
+- Work well on mobile
+- Not overflow the page horizontally except inside its code container
 
-برای Gamma.Kernel یک بخش بسیار مهم:
+================================================== 12. PROJECT STRUCTURE
+=====================
 
-**See it in Code**
+Show the recommended/project structure from the repository.
 
-ایجاد کن.
+The repository currently describes a structure conceptually similar to:
 
-نمایش یک یا چند snippet واقعی از repository.
+/src
+├─ Gamma.Kernel
+│ ├─ Abstractions
+│ ├─ Behaviors
+│ ├─ Transactions
+│ └─ Common
+│
+├─ MyApp.Domain
+│ ├─ Entities
+│ ├─ ValueObjects
+│ └─ DomainServices
+│
+├─ MyApp.Application
+│ ├─ Commands
+│ ├─ Queries
+│ └─ DTOs
+│
+├─ MyApp.Infra
+│ ├─ Data
+│ ├─ Logging
+│ └─ Services
+│
+└─ MyApp.Api
+└─ EndPoints
 
-مثلاً:
+Verify the current repository before publishing this.
 
-```csharp
-public interface ICommand<TResult>
-{
-}
-```
+================================================== 13. USE CASES
+=============
 
-یا نمونه‌ای از:
+Explain where Gamma.Kernel makes sense.
 
-* Command
-* Query
-* Handler
-* Entity
-* Pipeline
+Use cases:
 
-اما **کد باید از repository واقعی Gamma.Kernel گرفته شود.**
+- Enterprise applications
+- SaaS applications
+- Long-lived .NET systems
+- DDD-based systems
+- CQRS-based systems
+- Transaction-heavy applications
 
-کد ساختگی برای نمایش UI تولید نکن.
+Avoid generic claims such as:
 
-Syntax highlighting سبک باشد.
+"perfect for every project"
 
-Copy button فقط در صورت نیاز و با JavaScript بسیار کم.
+"the best .NET framework"
 
----
+"the most powerful framework"
 
-# 10. Architecture Diagram
+================================================== 14. ROADMAP
+===========
 
-یک Visual Architecture Section ایجاد کن.
+Create a clearly separated roadmap section.
 
-ترجیحاً:
+Important:
 
-```text
-             Application
-                  │
-       ┌──────────┴──────────┐
-       │                     │
-   Commands               Queries
-       │                     │
-    Handlers              Handlers
-       │                     │
-       └──────────┬──────────┘
-                  │
-               Domain
-                  │
-          Infrastructure
-```
+These are FUTURE items and must NOT be presented as current capabilities.
 
-اما این diagram فقط در صورتی استفاده شود که با معماری واقعی پروژه مطابقت داشته باشد.
+Current roadmap includes concepts such as:
 
-اگر architecture واقعی متفاوت است، repository را source of truth قرار بده.
+- Domain Events abstraction
+- Outbox pattern
+- Improved diagnostics / observability hooks
+- Application generator from entities
+- CQRS pipeline extensions
+- Test harnesses / examples
 
----
+Label the section clearly as:
 
-# 11. GitHub
+Roadmap
 
-GitHub باید یکی از CTAهای اصلی باشد.
+or
 
-Repository:
+در مسیر توسعه
 
-```text
+Make it visually distinct from current capabilities.
+
+================================================== 15. FAQ
+=======
+
+Create a concise technical FAQ.
+
+Potential questions:
+
+What is Gamma.Kernel?
+
+What version of .NET does Gamma.Kernel target?
+
+Is Gamma.Kernel a full framework?
+
+Is Gamma.Kernel open source?
+
+Does Gamma.Kernel use Dapper?
+
+Who should use Gamma.Kernel?
+
+Do not write answers that contradict the repository.
+
+================================================== 16. GITHUB CTA
+==============
+
+Finish with a strong but simple developer CTA.
+
+Example concept:
+
+"کد منبع Gamma.Kernel را در GitHub ببینید."
+
+Primary button:
+
+"مشاهده Repository در GitHub"
+
+Use:
+
 https://github.com/doomansamaneh/Gamma.Kernel
-```
 
-این لینک باید به شکل واضح نمایش داده شود:
+Open external links safely with:
 
-**View Gamma.Kernel on GitHub**
+target="_blank"
+rel="noopener noreferrer"
 
-و یک بخش کوچک:
+Do not invent documentation URLs.
 
-```text
-Open Source
-.NET
-Enterprise Architecture
-DDD
+================================================== 17. DESIGN SYSTEM
+=================
+
+Follow the existing Doman Samaneh design system.
+
+Brand colors:
+
+Orange:
+#EF3F23
+
+Dark:
+#231F20
+
+White:
+#FFFFFF
+
+Use orange as an accent.
+
+Do NOT make the entire page orange.
+
+The page should feel:
+
+- Technical
+- Enterprise
+- Mature
+- Minimal
+- Professional
+- Trustworthy
+
+Avoid:
+
+- Excessive gradients
+- Neon
+- Glassmorphism
+- Excessive shadows
+- Excessively rounded cards
+- Huge decorative icons
+- Generic SaaS illustrations
+- Excessive animations
+
+Use restrained borders and spacing.
+
+Cards should not all look like floating rounded boxes.
+
+Prefer editorial layouts, technical grids, diagrams, code blocks and structured sections.
+
+================================================== 18. TYPOGRAPHY
+==============
+
+Use Vazirmatn for Persian content.
+
+Code must use a suitable monospace font.
+
+Maintain proper RTL layout.
+
+English technical terms such as:
+
 CQRS
-```
-
-اگر اطلاعاتی مانند Stars، Downloads یا Contributors نمایش داده می‌شود، آن را hard-code نکن مگر اینکه از منبع معتبر و به‌روز گرفته شود.
-
----
-
-# 12. Documentation
-
-اگر Documentation موجود است:
-
-```text
-Documentation
-Getting Started
-Architecture
-Guides
-API Reference
-Examples
-```
-
-نمایش داده شود.
-
-اگر Documentation هنوز کامل نشده:
-
-یک CTA ساده:
-
-**Explore the source code**
-
-قرار بده.
-
-صفحه‌ای با محتوای ساختگی ایجاد نکن.
-
----
-
-# 13. Getting Started
-
-اگر پروژه برای استفاده توسط Developerها آماده است، یک بخش:
-
-**Getting Started**
-
-ایجاد کن.
-
-مراحل واقعی را از repository استخراج کن.
-
-مثلاً:
-
-```text
-1. Install
-2. Configure
-3. Create Application
-4. Add Gamma.Kernel
-5. Run
-```
-
-اما این مراحل را فقط در صورت وجود واقعی در پروژه بنویس.
-
-اگر اطلاعات کافی وجود ندارد، این بخش را به شکل teaser نگه دار.
-
----
-
-# 14. Ecosystem / Products
-
-یک بخش جذاب برای ارتباط Gamma.Kernel با Portfolio دومان سامانه:
-
-**Technology Behind Our Products**
-
-اگر واقعاً Gamma.Kernel در محصولات شرکت استفاده می‌شود، با دقت و بر اساس واقعیت نمایش بده.
-
-مثلاً:
-
-```text
-Gamma.Kernel
-     │
-     ├── GammaDesk
-     ├── ZED EAM
-     └── Other Enterprise Applications
-```
-
-اگر رابطه محصول با Gamma.Kernel قابل اثبات نیست، آن را ادعا نکن.
-
-هدف این بخش می‌تواند نشان دادن فلسفه فنی دومان سامانه باشد، نه تبلیغ ساختگی.
-
----
-
-# 15. Resources
-
-منابع مرتبط:
-
-* GitHub
-* Documentation
-* Articles
-* Architecture articles
-* DDD articles
-* CQRS articles
-* .NET articles
-
-محتوای مرتبط را از Content Collectionهای موجود استخراج کن.
-
----
-
-# 16. FAQ
-
-FAQهای فنی:
-
-* Gamma.Kernel چیست؟
-* Gamma.Kernel برای چه نوع پروژه‌هایی مناسب است؟
-* آیا Open Source است؟
-* از چه نسخه‌ای از .NET استفاده می‌کند؟
-* آیا از Clean Architecture پشتیبانی می‌کند؟
-* آیا CQRS دارد؟
-* چگونه می‌توان آن را در پروژه استفاده کرد؟
-* Documentation آن کجاست؟
-
-پاسخ‌ها باید فقط بر اساس repository و مستندات واقعی باشند.
-
----
-
-# 17. Final CTA
-
-CTA نهایی:
-
-```text
-Gamma.Kernel را در GitHub بررسی کنید
-
-کد، معماری و ساختار داخلی Gamma.Kernel را ببینید.
-
-[مشاهده در GitHub]
-```
-
----
-
-# 18. Design Direction
-
-صفحه Gamma.Kernel باید از GammaDesk کمی متفاوت باشد.
-
-GammaDesk:
-
-**Enterprise Business Product**
-
-Gamma.Kernel:
-
-**Enterprise Developer Technology**
-
-بنابراین طراحی Gamma.Kernel می‌تواند کمی technical‌تر باشد، اما همچنان با Brand System دومان سامانه هماهنگ بماند.
-
-استایل:
-
-* Professional
-* Technical
-* Minimal
-* Developer-focused
-* Enterprise
-* Open Source
-
-از:
-
-* Neon
-* Cyberpunk
-* Dark hacker aesthetic
-* excessive code decoration
-* Gradient-heavy design
-
-استفاده نکن.
-
-Orange + Black همچنان رنگ‌های اصلی برند هستند.
-
----
-
-# 19. Typography
-
-Vazirmatn برای محتوای فارسی.
-
-برای Code:
-
-یک monospace font مناسب سیستم یا font موجود پروژه.
-
-Mixed content مانند:
-
-```text
-.NET
 DDD
-CQRS
 Clean Architecture
+Unit of Work
+Authorization
+Repository
+Pipeline
+Handler
+Dapper
+
+may remain in English where technically appropriate.
+
+Do not awkwardly translate established software architecture terminology.
+
+================================================== 19. CONTENT LANGUAGE
+====================
+
+Write professional Persian content.
+
+Use:
+
+"کسب و کار"
+
+NOT:
+
+"کسب‌وکار"
+
+Avoid exaggerated marketing language.
+
+Avoid unsupported claims.
+
+Do not say:
+
+- بهترین
+- قدرتمندترین
+- شماره یک
+- بدون رقیب
+- استاندارد جهانی
+
+unless there is actual evidence and the claim is explicitly supported.
+
+================================================== 20. COMPONENT ARCHITECTURE
+==========================
+
+Do not keep the entire page as one giant Astro component if the existing project architecture supports reusable components.
+
+Use meaningful components.
+
+Suggested structure:
+
+src/components/gamma-kernel/
+
+GammaKernelHero.astro
+GammaKernelIntro.astro
+GammaKernelFoundations.astro
+GammaKernelArchitecture.astro
+GammaKernelCapabilities.astro
+GammaKernelPipeline.astro
+GammaKernelCode.astro
+GammaKernelStructure.astro
+GammaKernelUseCases.astro
+GammaKernelRoadmap.astro
+GammaKernelFaq.astro
+GammaKernelCTA.astro
+
+Do not create unnecessary micro-components.
+
+Separate data from presentation where practical.
+
+For example:
+
+src/data/products/gamma-kernel.ts
+
+can contain:
+
+- product metadata
+- technologies
+- capabilities
+- use cases
+- roadmap
+- FAQ
+
+Use existing project conventions if they differ.
+
+Do not introduce a new architecture unnecessarily.
+
+================================================== 21. SEO
+=======
+
+Improve the page SEO.
+
+Use a clear title such as:
+
+Gamma.Kernel | چارچوب توسعه سازمانی .NET
+
+Create a useful meta description.
+
+The page should naturally contain relevant concepts such as:
+
 Gamma.Kernel
-```
+.NET
+CQRS
+DDD
+Clean Architecture
+Enterprise Application
+Dapper
+Unit of Work
+Authorization
 
-باید بدون شکستن نامناسب render شود.
+Do not keyword-stuff.
 
----
+Use only one H1.
 
-# 20. Responsive
+Use semantic H2/H3 hierarchy.
+
+================================================== 22. ACCESSIBILITY
+=================
+
+Ensure:
+
+- semantic HTML
+- accessible buttons/links
+- proper heading hierarchy
+- sufficient contrast
+- keyboard accessibility
+- visible focus states
+- meaningful aria labels where needed
+- code blocks are readable
+- mobile navigation works correctly
+
+Do not rely solely on color to communicate meaning.
+
+================================================== 23. RESPONSIVE DESIGN
+=====================
 
 Desktop:
 
-```text
-Hero
-Architecture
-Feature Grid
-Code Example
-GitHub
-Documentation
-```
+Use the available width intelligently.
+
+Hero can be two-column.
+
+Technical diagrams can use horizontal layouts.
+
+Tablet:
+
+Collapse grids intelligently.
 
 Mobile:
 
-* تمام sections تک‌ستونه شوند.
-* Code blocks horizontal scroll کنترل‌شده داشته باشند.
-* Diagram responsive باشد.
-* هیچ horizontal overflow در کل صفحه ایجاد نشود.
-* CTAها touch-friendly باشند.
+Everything must become single-column where appropriate.
 
----
+Do not simply shrink desktop layouts.
 
-# 21. SEO
+Code blocks must remain horizontally scrollable when necessary.
 
-Metadata اختصاصی:
+Architecture diagrams must remain understandable on small screens.
 
-* Title
-* Description
-* Canonical
-* Open Graph
+The page must work correctly from approximately 320px width upward.
 
-Schema در صورت مناسب بودن:
+================================================== 24. PERFORMANCE
+===============
 
-* SoftwareApplication
-* Organization
-* BreadcrumbList
+Do not add heavy JavaScript.
 
-محتوای صفحه باید برای مفاهیم مرتبط با:
+Do not add a new dependency for decorative effects.
 
-* .NET Enterprise Framework
-* Clean Architecture
-* DDD
-* CQRS
-* Enterprise Software Architecture
+Prefer:
 
-ساختار semantic مناسبی داشته باشد.
+HTML
+CSS
+Astro
 
-از Keyword stuffing خودداری کن.
+Use JavaScript only if truly necessary.
 
----
+Do not use large images unless they materially improve the page.
 
-# 22. Architecture / Content Model
+================================================== 25. EXISTING SITE CONSISTENCY
+=============================
 
-Gamma.Kernel باید در مدل Product موجود سایت یک Product First-Class باشد.
+Before editing:
 
-مثلاً:
+Inspect:
 
-```text
-Product
-├── GammaDesk
-├── ZED EAM
-├── Landa
-└── Gamma.Kernel
-```
+- BaseLayout
+- Header
+- Footer
+- global CSS
+- design tokens
+- typography
+- existing product pages
+- existing Gamma.Kernel page
+- existing reusable components
 
-اگر schema/data model محصول موجود است، از همان استفاده کن.
+The new page must look like part of the Doman Samaneh website.
 
-برای Gamma.Kernel یک مدل جدا و ناسازگار با سایر محصولات نساز.
+It must NOT look like a separate standalone template.
 
----
+================================================== 26. IMPORTANT: VERIFY AGAINST REPOSITORY
+========================================
 
-# 23. Navigation
+Before final implementation:
 
-در Mega Menu محصولات:
+Inspect:
 
-```text
-Products
+https://github.com/doomansamaneh/Gamma.Kernel
 
-GammaDesk
-IT Service Management & Help Desk
+Read:
 
-ZED EAM
-Enterprise Asset Management
+README
+solution structure
+relevant interfaces
+behaviors/pipelines
+transactions
+authorization
+audit
+data/repository implementation
+attributes
+infrastructure abstractions
 
-Landa
-Cloud Accounting for SMEs
+Use actual terminology and capabilities.
 
-Gamma.Kernel
-.NET Enterprise Application Framework
-```
+If the existing page contains technically inaccurate information, correct it.
 
-Gamma.Kernel باید دقیقاً مانند سه محصول دیگر قابل مشاهده و دسترسی باشد.
+If the repository has evolved beyond the README, prefer the actual implementation.
 
----
+================================================== 27. DO NOT INVENT
+=================
 
-# 24. Assets
+Never invent:
 
-قبل از ایجاد هر asset:
+- Features
+- APIs
+- Code
+- Screenshots
+- Customers
+- Certifications
+- Performance numbers
+- GitHub statistics
+- Downloads
+- Adoption numbers
+- Enterprise customers
+- Testimonials
+- Awards
 
-* repository را بررسی کن.
-* Logo رسمی Gamma.Kernel را پیدا کن.
-* GitHub assets را بررسی کن.
-* Architecture diagrams موجود را بررسی کن.
-* Screenshots یا code visuals موجود را بررسی کن.
+If something is unknown, omit it.
 
-از ساخت لوگوی جدید یا جعلی خودداری کن.
+================================================== 28. FINAL QUALITY CHECK
+=======================
 
----
-
-# 25. Important — Do Not Invent
-
-برای Gamma.Kernel این قانون بسیار جدی است.
-
-هیچ‌کدام از موارد زیر بدون evidence اضافه نشود:
-
-* Performance claims
-* Number of projects
-* Number of GitHub stars
-* Downloads
-* Contributors
-* Production usage
-* Certifications
-* Benchmarks
-* Supported databases
-* Supported .NET versions
-* Features
-* Architecture claims
-
-**Repository و documentation source of truth هستند.**
-
----
-
-# 26. Reusable Product Template
-
-در صورت امکان معماری Product Page را reusable طراحی کن.
-
-مثلاً:
-
-```text
-ProductPageLayout
-ProductHero
-ProductNavigation
-ProductCapabilities
-ProductArchitecture
-ProductResources
-ProductFAQ
-ProductCTA
-```
-
-اما Gamma.Kernel باید بتواند بخش‌های مخصوص خودش را نیز داشته باشد.
-
-نباید Gamma.Kernel را مجبور کنیم دقیقاً ساختار GammaDesk را داشته باشد.
-
----
-
-# 27. Product Page Comparison
-
-در نهایت سایت باید این چهار Product Page را داشته باشد:
-
-```text
-/products/gammadesk
-/products/zed-eam
-/products/landa
-/products/gamma-kernel
-```
-
-همه آنها:
-
-* Layout foundation مشترک
-* Header مشترک
-* Footer مشترک
-* Typography مشترک
-* Design tokens مشترک
-* CTA system مشترک
-
-داشته باشند.
-
-ولی محتوای Product Sectionها باید متناسب با ماهیت محصول باشد.
-
----
-
-# 28. Final QA
-
-بررسی کن:
-
-* [ ] `/products/gamma-kernel` فعال است.
-* [ ] Gamma.Kernel در Products Mega Menu وجود دارد.
-* [ ] Hero واضح است.
-* [ ] GitHub CTA کار می‌کند.
-* [ ] Documentation فقط در صورت وجود لینک دارد.
-* [ ] Architecture واقعی نمایش داده شده.
-* [ ] Featureها واقعی هستند.
-* [ ] Code snippets واقعی هستند.
-* [ ] FAQ واقعی است.
-* [ ] هیچ claim ساختگی وجود ندارد.
-* [ ] Mobile responsive است.
-* [ ] RTL صحیح است.
-* [ ] SEO metadata صحیح است.
-* [ ] Accessibility رعایت شده.
-* [ ] JavaScript حداقلی است.
-* [ ] هیچ dependency غیرضروری اضافه نشده.
-
----
-
-# 29. Final Principle
-
-Gamma.Kernel نباید شبیه یک صفحه تبلیغاتی معمولی SaaS باشد.
-
-صفحه باید به یک Developer یا Software Architect این احساس را بدهد:
-
-> «این یک پروژه واقعی است؛ می‌توانم معماری، کد و نحوه استفاده از آن را ببینم.»
-
-بنابراین اولویت صفحه:
-
-```text
-Architecture
-     ↓
-Technology
-     ↓
-Capabilities
-     ↓
-Real Code
-     ↓
-Documentation
-     ↓
-GitHub
-```
-
-است.
-
-هدف نهایی:
-
-**Gamma.Kernel باید در سایت دومان سامانه به‌عنوان یک Technology Product واقعی و Open Source معرفی شود، نه صرفاً یک لینک به GitHub.**
+Before finishing, verify:
+
+[ ] Page is complete
+[ ] No placeholder text remains
+[ ] No lorem ipsum
+[ ] No fake screenshots
+[ ] No invented features
+[ ] Roadmap is clearly separated
+[ ] Code examples are verified
+[ ] GitHub link works
+[ ] One H1 only
+[ ] SEO metadata exists
+[ ] RTL works
+[ ] Mobile layout works
+[ ] No horizontal page overflow
+[ ] Existing header/footer still work
+[ ] Brand colors are correct
+[ ] Vazirmatn is used
+[ ] No unnecessary dependencies
+[ ] Page feels technical and enterprise
+[ ] Page is visually consistent with the rest of the Doman Samaneh website
+
+================================================== 29. IMPLEMENTATION APPROACH
+===========================
+
+Do the work in this order:
+
+1. Inspect existing Gamma.Kernel page.
+2. Inspect the existing site architecture.
+3. Inspect the official Gamma.Kernel repository.
+4. Identify reusable existing components.
+5. Identify inaccurate/placeholder content.
+6. Design the improved page structure.
+7. Implement/reuse components.
+8. Implement responsive styling.
+9. Verify all technical claims against the repository.
+10. Run the project/build.
+11. Fix TypeScript/Astro/CSS/build errors.
+12. Inspect the final rendered page.
+13. Make final visual corrections.
+
+Do not stop after generating code.
+
+Actually validate the implementation.
+
+The final result should be a polished, technically credible Gamma.Kernel product page that looks like it belongs to Doman Samaneh's corporate website.

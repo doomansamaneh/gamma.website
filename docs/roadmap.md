@@ -8,7 +8,7 @@ The website must represent the company as a multi-product software company:
 
 ```text
 دومان سامانه
-├── GammaDesk
+├── GammaItsm
 ├── ZED EAM
 ├── Landa
 └── Gamma.Kernel
@@ -26,29 +26,29 @@ Before making major changes, inspect the current Version 1 implementation.
 
 Review:
 
-* project structure
-* Astro configuration
-* TypeScript configuration
-* existing pages
-* components
-* layouts
-* CSS
-* assets
-* fonts
-* navigation
-* responsive behavior
-* SEO metadata
-* existing content
-* existing URLs
+- project structure
+- Astro configuration
+- TypeScript configuration
+- existing pages
+- components
+- layouts
+- CSS
+- assets
+- fonts
+- navigation
+- responsive behavior
+- SEO metadata
+- existing content
+- existing URLs
 
 Identify:
 
-* what should be kept
-* what should be improved
-* what should be moved
-* what should be merged
-* what should be removed
-* what needs to be created
+- what should be kept
+- what should be improved
+- what should be moved
+- what should be merged
+- what should be removed
+- what needs to be created
 
 Do not rewrite working code simply because a different implementation is possible.
 
@@ -62,28 +62,28 @@ Establish the technical foundation of the website.
 
 Tasks:
 
-* Configure Astro
-* Configure TypeScript
-* Establish project structure
-* Establish centralized design tokens
-* Establish global CSS
-* Configure RTL/Persian defaults
-* Configure Vazirmatn
-* Create base layout
-* Create Header
-* Create Footer
-* Create responsive navigation
-* Establish reusable UI components
-* Establish asset conventions
-* Establish content conventions
+- Configure Astro
+- Configure TypeScript
+- Establish project structure
+- Establish centralized design tokens
+- Establish global CSS
+- Configure RTL/Persian defaults
+- Configure Vazirmatn
+- Create base layout
+- Create Header
+- Create Footer
+- Create responsive navigation
+- Establish reusable UI components
+- Establish asset conventions
+- Establish content conventions
 
 The foundation must follow:
 
-* `architecture.md`
-* `brand.md`
-* `assets.md`
-* `design-system.md`
-* `localization.md`
+- `architecture.md`
+- `brand.md`
+- `assets.md`
+- `design-system.md`
+- `localization.md`
 
 ---
 
@@ -104,13 +104,13 @@ Request Demo
 Products:
 
 ```text
-GammaDesk
+GammaItsm
 ZED EAM
 Landa
 Gamma.Kernel
 ```
 
-GammaDesk:
+GammaItsm:
 
 ```text
 Overview
@@ -149,7 +149,7 @@ Features belong to their respective products.
 
 # Phase 3 — Corporate Homepage
 
-Build the homepage as a **Doman Samaneh corporate homepage**, not a GammaDesk-only homepage.
+Build the homepage as a **Doman Samaneh corporate homepage**, not a GammaItsm-only homepage.
 
 The homepage should communicate:
 
@@ -163,13 +163,13 @@ The homepage should communicate:
 The homepage should prominently present the product portfolio:
 
 ```text
-GammaDesk
+GammaItsm
 ZED EAM
 Landa
 Gamma.Kernel
 ```
 
-GammaDesk may receive greater visual emphasis if appropriate, but the homepage must clearly establish Doman Samaneh as the parent company.
+GammaItsm may receive greater visual emphasis if appropriate, but the homepage must clearly establish Doman Samaneh as the parent company.
 
 Use authentic company/product assets.
 
@@ -185,7 +185,7 @@ Every product is a first-class entity.
 
 Required products:
 
-### GammaDesk
+### GammaItsm
 
 Enterprise IT service management / help desk platform.
 
@@ -203,16 +203,16 @@ Open-source software framework/library.
 
 Each product should have:
 
-* product identity
-* logo
-* description
-* hero
-* benefits
-* capabilities
-* screenshots
-* related resources
-* CTA
-* SEO metadata
+- product identity
+- logo
+- description
+- hero
+- benefits
+- capabilities
+- screenshots
+- related resources
+- CTA
+- SEO metadata
 
 Do not force identical content or layout where the products have different purposes.
 
@@ -227,7 +227,7 @@ Features must belong to products.
 Example:
 
 ```text
-GammaDesk
+GammaItsm
 └── Features
     ├── Incident Management
     ├── Problem Management
@@ -239,21 +239,21 @@ Feature pages should be independently addressable where useful.
 Example:
 
 ```text
-/products/gammadesk/features/incident-management
+/products/GammaItsm/features/incident-management
 ```
 
 Feature pages should support:
 
-* feature description
-* business value
-* capabilities
-* screenshots
-* related features
-* related articles
-* related videos
-* ITIL resources where applicable
-* FAQ where applicable
-* Request Demo CTA
+- feature description
+- business value
+- capabilities
+- screenshots
+- related features
+- related articles
+- related videos
+- ITIL resources where applicable
+- FAQ where applicable
+- Request Demo CTA
 
 Avoid thin pages created solely for SEO.
 
@@ -299,7 +299,7 @@ ITIL Article
     ↓
 ITIL Guide
     ↓
-GammaDesk Feature
+GammaItsm Feature
 ```
 
 Do not duplicate the same content across multiple sections.
@@ -320,18 +320,18 @@ Implement company-level pages:
 /company/certifications
 ```
 
-These pages must represent **دومان سامانه**, not GammaDesk.
+These pages must represent **دومان سامانه**, not GammaItsm.
 
 Use authentic company information and approved assets.
 
 Do not invent:
 
-* customers
-* certifications
-* company history
-* statistics
-* partnerships
-* awards
+- customers
+- certifications
+- company history
+- statistics
+- partnerships
+- awards
 
 ---
 
@@ -359,11 +359,11 @@ Product-specific demo requests should identify the relevant product when appropr
 
 The CTA should work consistently across:
 
-* homepage
-* product pages
-* feature pages
-* relevant articles
-* company pages
+- homepage
+- product pages
+- feature pages
+- relevant articles
+- company pages
 
 ---
 
@@ -373,23 +373,23 @@ Implement the SEO strategy defined in `seo.md`.
 
 Tasks:
 
-* unique page titles
-* unique meta descriptions
-* canonical URLs
-* Open Graph metadata
-* Twitter/X metadata where appropriate
-* semantic HTML
-* heading hierarchy
-* sitemap
-* robots.txt
-* Schema.org structured data
-* BreadcrumbList
-* appropriate product/application schema
-* Article schema where applicable
-* FAQPage only where genuinely applicable
-* search-engine crawlability
-* existing URL preservation
-* 301 redirects where required
+- unique page titles
+- unique meta descriptions
+- canonical URLs
+- Open Graph metadata
+- Twitter/X metadata where appropriate
+- semantic HTML
+- heading hierarchy
+- sitemap
+- robots.txt
+- Schema.org structured data
+- BreadcrumbList
+- appropriate product/application schema
+- Article schema where applicable
+- FAQPage only where genuinely applicable
+- search-engine crawlability
+- existing URL preservation
+- 301 redirects where required
 
 SEO must be implemented as part of the architecture rather than added as an afterthought.
 
@@ -401,14 +401,14 @@ Because this website replaces an existing website, identify important existing U
 
 Tasks:
 
-* inventory existing public URLs
-* identify valuable indexed pages
-* map old URLs to new URLs
-* preserve URLs where practical
-* create 301 redirects where necessary
-* avoid redirect chains
-* avoid redirecting unrelated pages to the homepage
-* verify important redirects
+- inventory existing public URLs
+- identify valuable indexed pages
+- map old URLs to new URLs
+- preserve URLs where practical
+- create 301 redirects where necessary
+- avoid redirect chains
+- avoid redirecting unrelated pages to the homepage
+- verify important redirects
 
 The migration must minimize unnecessary loss of existing search visibility.
 
@@ -420,18 +420,18 @@ Optimize the production website.
 
 Tasks:
 
-* optimize images
-* use modern image formats
-* optimize font loading
-* use local Vazirmatn files
-* minimize JavaScript
-* minimize third-party dependencies
-* lazy-load appropriate images
-* prioritize critical content
-* prevent layout shift
-* optimize CSS
-* review Astro Islands
-* remove unnecessary client-side hydration
+- optimize images
+- use modern image formats
+- optimize font loading
+- use local Vazirmatn files
+- minimize JavaScript
+- minimize third-party dependencies
+- lazy-load appropriate images
+- prioritize critical content
+- prevent layout shift
+- optimize CSS
+- review Astro Islands
+- remove unnecessary client-side hydration
 
 The website should remain primarily static and server-rendered/generated.
 
@@ -443,18 +443,18 @@ Do not introduce JavaScript without a clear user-facing reason.
 
 Validate:
 
-* keyboard navigation
-* semantic HTML
-* heading hierarchy
-* accessible navigation
-* visible focus states
-* color contrast
-* meaningful alt text
-* decorative image handling
-* form labels
-* button/link semantics
-* reduced-motion behavior
-* mobile accessibility
+- keyboard navigation
+- semantic HTML
+- heading hierarchy
+- accessible navigation
+- visible focus states
+- color contrast
+- meaningful alt text
+- decorative image handling
+- form labels
+- button/link semantics
+- reduced-motion behavior
+- mobile accessibility
 
 Accessibility must be considered during implementation, not only during final testing.
 
@@ -478,17 +478,17 @@ Small screens and touch-first navigation.
 
 Check:
 
-* navigation
-* typography
-* spacing
-* cards
-* images
-* tables
-* forms
-* buttons
-* CTA sections
-* screenshots
-* horizontal overflow
+- navigation
+- typography
+- spacing
+- cards
+- images
+- tables
+- forms
+- buttons
+- CTA sections
+- screenshots
+- horizontal overflow
 
 Do not create a separate mobile website.
 
@@ -502,29 +502,29 @@ Before production release, audit:
 
 ### Content
 
-* duplicate content
-* incorrect product names
-* outdated information
-* inconsistent terminology
-* missing descriptions
-* placeholder text
-* broken references
+- duplicate content
+- incorrect product names
+- outdated information
+- inconsistent terminology
+- missing descriptions
+- placeholder text
+- broken references
 
 ### Assets
 
-* missing images
-* broken images
-* incorrect logos
-* duplicated assets
-* oversized images
-* missing alt text
-* incorrect product assets
+- missing images
+- broken images
+- incorrect logos
+- duplicated assets
+- oversized images
+- missing alt text
+- incorrect product assets
 
 Follow:
 
-* `content-model.md`
-* `assets.md`
-* `brand.md`
+- `content-model.md`
+- `assets.md`
+- `brand.md`
 
 ---
 
@@ -534,27 +534,27 @@ Perform a complete production review.
 
 Check:
 
-* Desktop
-* Tablet
-* Mobile
-* RTL
-* Accessibility
-* SEO
-* Performance
-* Internal links
-* External links
-* Broken links
-* Missing images
-* Missing assets
-* Console errors
-* Build errors
-* Sitemap
-* robots.txt
-* Canonical URLs
-* Structured data
-* Metadata
-* Redirects
-* Production build
+- Desktop
+- Tablet
+- Mobile
+- RTL
+- Accessibility
+- SEO
+- Performance
+- Internal links
+- External links
+- Broken links
+- Missing images
+- Missing assets
+- Console errors
+- Build errors
+- Sitemap
+- robots.txt
+- Canonical URLs
+- Structured data
+- Metadata
+- Redirects
+- Production build
 
 Run the final production build.
 
@@ -566,19 +566,19 @@ The project must build successfully without errors.
 
 Before release, verify:
 
-* no development-only content remains
-* no placeholder text remains
-* no fake assets remain
-* no fake company claims remain
-* no debug output remains
-* no unnecessary console errors remain
-* all important routes are accessible
-* all important assets load correctly
-* metadata is complete
-* sitemap is valid
-* robots.txt is valid
-* responsive layouts work
-* production build succeeds
+- no development-only content remains
+- no placeholder text remains
+- no fake assets remain
+- no fake company claims remain
+- no debug output remains
+- no unnecessary console errors remain
+- all important routes are accessible
+- all important assets load correctly
+- metadata is complete
+- sitemap is valid
+- robots.txt is valid
+- responsive layouts work
+- production build succeeds
 
 ---
 
@@ -601,17 +601,17 @@ The agent must:
 
 The agent must not:
 
-* rebuild the entire project unnecessarily
-* redesign unrelated pages
-* invent content
-* invent assets
-* invent product functionality
-* change the brand identity without instruction
-* introduce unnecessary dependencies
-* create unnecessary JavaScript
-* create duplicate content
-* create duplicate assets
-* modify unrelated files during a focused task
+- rebuild the entire project unnecessarily
+- redesign unrelated pages
+- invent content
+- invent assets
+- invent product functionality
+- change the brand identity without instruction
+- introduce unnecessary dependencies
+- create unnecessary JavaScript
+- create duplicate content
+- create duplicate assets
+- modify unrelated files during a focused task
 
 ---
 

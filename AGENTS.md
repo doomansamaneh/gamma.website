@@ -1,15 +1,15 @@
-# GammaDesk Website — Agent Instructions
+# GammaItsm Website — Agent Instructions
 
 ## Project
 
-This repository contains the public corporate website for GammaDesk, an enterprise IT Service Management (ITSM) platform.
+This repository contains the public corporate website for GammaItsm, an enterprise IT Service Management (ITSM) platform.
 
 The website must be a modern, fast, professional and SEO-friendly static website.
 
 ## Primary Goals
 
-1. Present GammaDesk as an enterprise-grade software company.
-2. Clearly explain the GammaDesk ITSM platform.
+1. Present GammaItsm as an enterprise-grade software company.
+2. Clearly explain the GammaItsm ITSM platform.
 3. Present products and capabilities professionally.
 4. Generate qualified leads.
 5. Provide strong technical credibility.
@@ -56,7 +56,7 @@ Prefer static HTML whenever possible.
 
 ## Design Direction
 
-GammaDesk is an enterprise software company.
+GammaItsm is an enterprise software company.
 
 The visual language should communicate:
 

@@ -1,0 +1,15 @@
+---
+import GammaItsmFeaturePage from "../../../../components/GammaItsmFeaturePage.astro";
+import { GammaItsmFeatures } from "../../../../data/gammaitsm";
+
+export function getStaticPaths() {
+  return GammaItsmFeatures.map((feature) => ({
+    params: { slug: feature.slug },
+    props: { slug: feature.slug },
+  }));
+}
+
+const { slug } = Astro.props;
+---
+
+<GammaItsmFeaturePage slug={slug} />

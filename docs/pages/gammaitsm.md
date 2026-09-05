@@ -1,21 +1,21 @@
-# Implement GammaDesk Product Page in Astro
+# Implement GammaItsm Product Page in Astro
 
 ## Objective
 
-صفحه محصول **GammaDesk** را در سایت شرکتی «دومان سامانه» پیاده‌سازی کن.
+صفحه محصول **GammaItsm** را در سایت شرکتی «دومان سامانه» پیاده‌سازی کن.
 
-GammaDesk یکی از محصولات دومان سامانه است و صفحه آن باید یک **Product Landing Page حرفه‌ای، Enterprise، کامل و قابل توسعه** باشد.
+GammaItsm یکی از محصولات دومان سامانه است و صفحه آن باید یک **Product Landing Page حرفه‌ای، Enterprise، کامل و قابل توسعه** باشد.
 
-هدف صفحه این نیست که صرفاً یک معرفی کوتاه از GammaDesk باشد.
+هدف صفحه این نیست که صرفاً یک معرفی کوتاه از GammaItsm باشد.
 
 هدف این است که کاربر بتواند:
 
-1. در چند ثانیه بفهمد GammaDesk چیست.
+1. در چند ثانیه بفهمد GammaItsm چیست.
 2. ارزش و کاربرد اصلی محصول را درک کند.
 3. تمام حوزه‌های اصلی قابلیت‌های محصول را ببیند.
 4. هر قابلیت مهم را به صفحه اختصاصی خودش دنبال کند.
 5. تصاویر و محیط واقعی محصول را ببیند.
-6. ارتباط GammaDesk با ITIL را بفهمد.
+6. ارتباط GammaItsm با ITIL را بفهمد.
 7. منابع آموزشی و محتوای مرتبط را پیدا کند.
 8. در نهایت برای Demo یا تماس اقدام کند.
 
@@ -25,36 +25,37 @@ GammaDesk یکی از محصولات دومان سامانه است و صفحه 
 
 قبل از نوشتن یا تغییر کد:
 
-* ساختار فعلی پروژه Astro را بررسی کن.
-* `AGENTS.md` را بخوان.
-* `run.md` را بخوان.
-* تمام فایل‌های زیر `docs/` را بخوان، مخصوصاً:
+- ساختار فعلی پروژه Astro را بررسی کن.
+- `AGENTS.md` را بخوان.
+- `run.md` را بخوان.
+- تمام فایل‌های زیر `docs/` را بخوان، مخصوصاً:
 
-  * `docs/architecture.md`
-  * `docs/brand.md`
-  * `docs/design-system.md`
-  * `docs/content-model.md`
-  * `docs/navigation.md`
-  * `docs/assets.md`
-  * `docs/seo.md`
-  * `docs/localization.md`
-  * `docs/roadmap.md`
-* Header و Footer فعلی را بررسی کن.
-* Layoutهای موجود را بررسی کن.
-* Componentهای موجود را بررسی کن.
-* سیستم Typography و CSS فعلی را بررسی کن.
-* assetهای موجود را بررسی کن.
-* اگر محتوای قبلی GammaDesk وجود دارد، آن را پیدا و بررسی کن.
-* اگر Screenshot واقعی GammaDesk وجود دارد، از همان استفاده کن.
+  - `docs/architecture.md`
+  - `docs/brand.md`
+  - `docs/design-system.md`
+  - `docs/content-model.md`
+  - `docs/navigation.md`
+  - `docs/assets.md`
+  - `docs/seo.md`
+  - `docs/localization.md`
+  - `docs/roadmap.md`
+
+- Header و Footer فعلی را بررسی کن.
+- Layoutهای موجود را بررسی کن.
+- Componentهای موجود را بررسی کن.
+- سیستم Typography و CSS فعلی را بررسی کن.
+- assetهای موجود را بررسی کن.
+- اگر محتوای قبلی GammaItsm وجود دارد، آن را پیدا و بررسی کن.
+- اگر Screenshot واقعی GammaItsm وجود دارد، از همان استفاده کن.
 
 ### مهم
 
 قبل از پیاده‌سازی، ابتدا مشخص کن:
 
-* چه چیزی از قبل وجود دارد؟
-* چه چیزی باید reuse شود؟
-* چه چیزی باید اضافه شود؟
-* چه چیزی نباید تغییر کند؟
+- چه چیزی از قبل وجود دارد؟
+- چه چیزی باید reuse شود؟
+- چه چیزی باید اضافه شود؟
+- چه چیزی نباید تغییر کند؟
 
 **نسخه فعلی سایت را بدون دلیل بازنویسی نکن.**
 
@@ -64,26 +65,26 @@ GammaDesk یکی از محصولات دومان سامانه است و صفحه 
 
 محصول:
 
-**GammaDesk**
+**GammaItsm**
 
 نام فارسی در صورت نیاز:
 
 **گاما دسک**
 
-GammaDesk باید به‌عنوان یک محصول مستقل از شرکت نمایش داده شود، اما همچنان زیر برند:
+GammaItsm باید به‌عنوان یک محصول مستقل از شرکت نمایش داده شود، اما همچنان زیر برند:
 
 **دومان سامانه**
 
 قرار دارد.
 
-GammaDesk نباید به‌عنوان خود شرکت معرفی شود.
+GammaItsm نباید به‌عنوان خود شرکت معرفی شود.
 
 ساختار مفهومی:
 
 ```text
 دومان سامانه
     │
-    ├── GammaDesk
+    ├── GammaItsm
     ├── ZED EAM
     ├── Landa
     └── Gamma.Kernel
@@ -96,30 +97,30 @@ GammaDesk نباید به‌عنوان خود شرکت معرفی شود.
 صفحه اصلی محصول:
 
 ```text
-/products/gammadesk
+/products/GammaItsm
 ```
 
 اگر این URL از قبل وجود دارد، آن را حفظ کن.
 
 اگر URL دیگری در Version 1 وجود دارد:
 
-* آن را بررسی کن.
-* بدون دلیل URL را تغییر نده.
-* در صورت تغییر URL، redirect مناسب در نظر بگیر.
-* redirect chain ایجاد نکن.
+- آن را بررسی کن.
+- بدون دلیل URL را تغییر نده.
+- در صورت تغییر URL، redirect مناسب در نظر بگیر.
+- redirect chain ایجاد نکن.
 
 ---
 
 # 4. Page Architecture
 
-صفحه GammaDesk باید این ساختار کلی را داشته باشد:
+صفحه GammaItsm باید این ساختار کلی را داشته باشد:
 
 ```text
 Hero
 ↓
 Product Navigation
 ↓
-Why GammaDesk
+Why GammaItsm
 ↓
 Capabilities Overview
 ↓
@@ -147,13 +148,13 @@ Hero باید اولین و مهم‌ترین بخش صفحه باشد.
 ساختار:
 
 ```text
-GammaDesk
+GammaItsm
 
 راهکار جامع مدیریت خدمات فناوری اطلاعات
 
 [توضیح کوتاه درباره محصول]
 
-[درخواست دموی GammaDesk]
+[درخواست دموی GammaItsm]
 [مشاهده قابلیت‌ها]
 
                          [Screenshot واقعی محصول]
@@ -161,21 +162,21 @@ GammaDesk
 
 ### Hero Rules
 
-* H1 فقط یک مورد باشد.
-* H1 نباید با `<br>` دستی شکسته شود.
-* wrapping باید طبیعی باشد.
-* در Desktop تا حد امکان یک خط یا حداکثر دو خط متعادل باشد.
-* در Mobile شکست طبیعی مجاز است.
-* از `white-space: nowrap` استفاده نکن.
-* Screenshot واقعی GammaDesk را در صورت وجود استفاده کن.
-* تصویر تزئینی را جایگزین Screenshot واقعی نکن.
-* اگر Screenshot واقعی وجود ندارد، placeholder ساختاری مناسب ایجاد کن و تصویر جعلی از UI محصول تولید نکن.
+- H1 فقط یک مورد باشد.
+- H1 نباید با `<br>` دستی شکسته شود.
+- wrapping باید طبیعی باشد.
+- در Desktop تا حد امکان یک خط یا حداکثر دو خط متعادل باشد.
+- در Mobile شکست طبیعی مجاز است.
+- از `white-space: nowrap` استفاده نکن.
+- Screenshot واقعی GammaItsm را در صورت وجود استفاده کن.
+- تصویر تزئینی را جایگزین Screenshot واقعی نکن.
+- اگر Screenshot واقعی وجود ندارد، placeholder ساختاری مناسب ایجاد کن و تصویر جعلی از UI محصول تولید نکن.
 
 ### CTA
 
 CTA اصلی:
 
-**درخواست دموی GammaDesk**
+**درخواست دموی GammaItsm**
 
 CTA ثانویه:
 
@@ -189,7 +190,7 @@ CTAها باید به مسیرهای واقعی سایت متصل باشند.
 
 # 6. Product Navigation
 
-بلافاصله بعد از Hero یک navigation مخصوص GammaDesk ایجاد کن.
+بلافاصله بعد از Hero یک navigation مخصوص GammaItsm ایجاد کن.
 
 در Desktop ترجیحاً sticky شود.
 
@@ -208,17 +209,17 @@ ITIL
 
 ### Behavior
 
-* Smooth scroll در صورت مناسب بودن.
-* Active section در صورت امکان.
-* Mobile-friendly.
-* بدون JavaScript غیرضروری.
-* اگر برای active section از JS استفاده می‌کنی، بسیار محدود و progressive enhancement باشد.
+- Smooth scroll در صورت مناسب بودن.
+- Active section در صورت امکان.
+- Mobile-friendly.
+- بدون JavaScript غیرضروری.
+- اگر برای active section از JS استفاده می‌کنی، بسیار محدود و progressive enhancement باشد.
 
 ---
 
-# 7. Why GammaDesk
+# 7. Why GammaItsm
 
-یک بخش کوتاه برای توضیح اینکه GammaDesk چه مسئله‌ای را حل می‌کند.
+یک بخش کوتاه برای توضیح اینکه GammaItsm چه مسئله‌ای را حل می‌کند.
 
 هدف این بخش:
 
@@ -235,13 +236,13 @@ Workflow
 
 روی ارزش محصول تمرکز کن:
 
-* مدیریت متمرکز خدمات فناوری اطلاعات
-* استانداردسازی فرایندهای Service Desk
-* کنترل درخواست‌ها و رخدادها
-* مدیریت SLA
-* گردش کار
-* گزارش‌گیری و کنترل عملکرد
-* ایجاد دید مدیریتی نسبت به خدمات IT
+- مدیریت متمرکز خدمات فناوری اطلاعات
+- استانداردسازی فرایندهای Service Desk
+- کنترل درخواست‌ها و رخدادها
+- مدیریت SLA
+- گردش کار
+- گزارش‌گیری و کنترل عملکرد
+- ایجاد دید مدیریتی نسبت به خدمات IT
 
 اما فقط مواردی را بنویس که واقعاً توسط محصول پشتیبانی می‌شوند.
 
@@ -253,7 +254,7 @@ Workflow
 
 این مهم‌ترین بخش صفحه است.
 
-همه قابلیت‌های GammaDesk باید در قالب **دسته‌بندی‌های منطقی** نمایش داده شوند.
+همه قابلیت‌های GammaItsm باید در قالب **دسته‌بندی‌های منطقی** نمایش داده شوند.
 
 از لیست طولانی ۳۰ یا ۴۰ موردی پرهیز کن.
 
@@ -261,64 +262,64 @@ Workflow
 
 ## Service Management
 
-* Incident Management
-* Service Request Management
-* Problem Management
-* Change Management
-* Service Catalog
-* Knowledge Management
+- Incident Management
+- Service Request Management
+- Problem Management
+- Change Management
+- Service Catalog
+- Knowledge Management
 
 ## SLA & Service Level
 
-* SLA Management
-* Service Level Monitoring
-* Escalation
-* Service Performance
+- SLA Management
+- Service Level Monitoring
+- Escalation
+- Service Performance
 
 ## Workflow & Automation
 
-* Workflow
-* Business Rules
-* Notifications
-* Automation
-* Approval
+- Workflow
+- Business Rules
+- Notifications
+- Automation
+- Approval
 
 ## Asset & Configuration
 
-* Asset Management
-* Configuration Management
-* CMDB
-* Relationships
+- Asset Management
+- Configuration Management
+- CMDB
+- Relationships
 
 ## Organization & Access
 
-* Users
-* Organizations
-* Roles
-* Permissions
-* Departments
+- Users
+- Organizations
+- Roles
+- Permissions
+- Departments
 
 ## Reporting & Dashboard
 
-* Dashboards
-* Reports
-* KPI
-* Operational Reporting
-* Management Reporting
+- Dashboards
+- Reports
+- KPI
+- Operational Reporting
+- Management Reporting
 
 ## User Interaction
 
-* Self Service Portal
-* Request Registration
-* Notifications
-* Communication Channels
+- Self Service Portal
+- Request Registration
+- Notifications
+- Communication Channels
 
 ## Integration
 
-* API
-* Email
-* Directory Services
-* External Systems
+- API
+- Email
+- Directory Services
+- External Systems
 
 ### بسیار مهم
 
@@ -326,11 +327,11 @@ Workflow
 
 قبل از اضافه کردن هر Feature:
 
-* Repository
-* Content
-* Existing GammaDesk information
-* Documentation
-* Existing pages
+- Repository
+- Content
+- Existing GammaItsm information
+- Documentation
+- Existing pages
 
 را بررسی کن.
 
@@ -356,13 +357,13 @@ Workflow
 
 کارت‌ها:
 
-* ساده
-* Enterprise
-* خوانا
-* بدون Shadow سنگین
-* بدون Glassmorphism
-* بدون Gradient تزئینی
-* بدون animation غیرضروری
+- ساده
+- Enterprise
+- خوانا
+- بدون Shadow سنگین
+- بدون Glassmorphism
+- بدون Gradient تزئینی
+- بدون animation غیرضروری
 
 باشند.
 
@@ -372,7 +373,7 @@ Workflow
 
 # 10. Feature Explorer
 
-بعد از Capability Overview یک بخش تعاملی یا نیمه‌تعاملی ایجاد کن که به کاربر کمک کند قابلیت‌های GammaDesk را بهتر کشف کند.
+بعد از Capability Overview یک بخش تعاملی یا نیمه‌تعاملی ایجاد کن که به کاربر کمک کند قابلیت‌های GammaItsm را بهتر کشف کند.
 
 مثلاً:
 
@@ -403,11 +404,11 @@ Workflow
 
 ### Accessibility
 
-* keyboard accessible
-* focus visible
-* aria مناسب
-* reduced motion
-* بدون وابستگی به hover
+- keyboard accessible
+- focus visible
+- aria مناسب
+- reduced motion
+- بدون وابستگی به hover
 
 ---
 
@@ -418,19 +419,19 @@ Workflow
 ساختار:
 
 ```text
-/products/gammadesk/features
-/products/gammadesk/features/[feature]
+/products/GammaItsm/features
+/products/GammaItsm/features/[feature]
 ```
 
 مثال:
 
 ```text
-/products/gammadesk/features/incident-management
-/products/gammadesk/features/problem-management
-/products/gammadesk/features/change-management
-/products/gammadesk/features/sla-management
-/products/gammadesk/features/asset-management
-/products/gammadesk/features/workflow
+/products/GammaItsm/features/incident-management
+/products/GammaItsm/features/problem-management
+/products/GammaItsm/features/change-management
+/products/GammaItsm/features/sla-management
+/products/GammaItsm/features/asset-management
+/products/GammaItsm/features/workflow
 ```
 
 ### نکته
@@ -456,7 +457,7 @@ Hero
 ↓
 Problem
 ↓
-GammaDesk Solution
+GammaItsm Solution
 ↓
 Key Capabilities
 ↓
@@ -473,7 +474,7 @@ FAQ
 CTA
 ```
 
-این Template باید برای تمام Featureهای GammaDesk قابل reuse باشد.
+این Template باید برای تمام Featureهای GammaItsm قابل reuse باشد.
 
 ---
 
@@ -481,13 +482,13 @@ CTA
 
 بخش جداگانه‌ای برای:
 
-**GammaDesk و ITIL**
+**GammaItsm و ITIL**
 
 ایجاد کن.
 
 هدف:
 
-توضیح رابطه GammaDesk با IT Service Management و ITIL.
+توضیح رابطه GammaItsm با IT Service Management و ITIL.
 
 فرایندهای واقعی و supported را نمایش بده.
 
@@ -504,11 +505,11 @@ Service Level Management
 
 اما:
 
-**ITIL را Feature GammaDesk معرفی نکن.**
+**ITIL را Feature GammaItsm معرفی نکن.**
 
 ITIL یک framework / practice framework است.
 
-GammaDesk یک محصول ITSM است که می‌تواند برای پیاده‌سازی و مدیریت فرایندهای مرتبط با ITIL استفاده شود.
+GammaItsm یک محصول ITSM است که می‌تواند برای پیاده‌سازی و مدیریت فرایندهای مرتبط با ITIL استفاده شود.
 
 ---
 
@@ -526,8 +527,8 @@ GammaDesk یک محصول ITSM است که می‌تواند برای پیاده
 
 اگر صفحات هنوز وجود ندارند:
 
-* structure را آماده کن
-* لینک را فقط در صورت وجود صفحه فعال قرار بده
+- structure را آماده کن
+- لینک را فقط در صورت وجود صفحه فعال قرار بده
 
 ---
 
@@ -535,7 +536,7 @@ GammaDesk یک محصول ITSM است که می‌تواند برای پیاده
 
 یک بخش اختصاصی:
 
-**محیط GammaDesk**
+**محیط GammaItsm**
 
 ایجاد کن.
 
@@ -556,13 +557,13 @@ Reports
 
 ### Rules
 
-* فقط Screenshot واقعی استفاده کن.
-* تصاویر باید optimized باشند.
-* WebP/AVIF در صورت مناسب بودن.
-* alt text مناسب فارسی.
-* Lazy loading برای تصاویر خارج از viewport.
-* تصویر Hero می‌تواند eager/high priority باشد.
-* از تصویر stock به‌عنوان screenshot محصول استفاده نکن.
+- فقط Screenshot واقعی استفاده کن.
+- تصاویر باید optimized باشند.
+- WebP/AVIF در صورت مناسب بودن.
+- alt text مناسب فارسی.
+- Lazy loading برای تصاویر خارج از viewport.
+- تصویر Hero می‌تواند eager/high priority باشد.
+- از تصویر stock به‌عنوان screenshot محصول استفاده نکن.
 
 اگر Screenshotهای واقعی در repository وجود دارند، ابتدا آنها را پیدا کن.
 
@@ -572,11 +573,11 @@ Reports
 
 Gallery باید:
 
-* responsive باشد.
-* keyboard accessible باشد.
-* روی Mobile usable باشد.
-* از modal سنگین فقط در صورت نیاز استفاده کند.
-* JavaScript حداقلی داشته باشد.
+- responsive باشد.
+- keyboard accessible باشد.
+- روی Mobile usable باشد.
+- از modal سنگین فقط در صورت نیاز استفاده کند.
+- JavaScript حداقلی داشته باشد.
 
 اگر gallery ساده با لینک/تصویر قابل پیاده‌سازی است، از راهکار ساده استفاده کن.
 
@@ -584,7 +585,7 @@ Gallery باید:
 
 # 17. Integrations
 
-اگر GammaDesk دارای Integration است، بخش:
+اگر GammaItsm دارای Integration است، بخش:
 
 **یکپارچه‌سازی**
 
@@ -605,9 +606,9 @@ External Systems
 
 برای هر Integration:
 
-* نام
-* توضیح کوتاه
-* در صورت وجود مستندات → لینک
+- نام
+- توضیح کوتاه
+- در صورت وجود مستندات → لینک
 
 هیچ Logo یا Integration جعلی نساز.
 
@@ -617,21 +618,21 @@ External Systems
 
 بخش:
 
-**منابع GammaDesk**
+**منابع GammaItsm**
 
 شامل:
 
-* مقالات
-* ویدئوها
-* راهنمای ITIL
-* FAQ
-* مستندات
+- مقالات
+- ویدئوها
+- راهنمای ITIL
+- FAQ
+- مستندات
 
 باشد.
 
 از Content Collectionهای موجود استفاده کن.
 
-اگر Article یا Video به GammaDesk مرتبط است، رابطه را در data/content model حفظ کن.
+اگر Article یا Video به GammaItsm مرتبط است، رابطه را در data/content model حفظ کن.
 
 از duplicate content جلوگیری کن.
 
@@ -639,19 +640,19 @@ External Systems
 
 # 19. FAQ
 
-یک FAQ اختصاصی برای GammaDesk ایجاد کن.
+یک FAQ اختصاصی برای GammaItsm ایجاد کن.
 
 سؤالات باید واقعی و کاربردی باشند.
 
 مثلاً موضوعات:
 
-* GammaDesk چیست؟
-* GammaDesk برای چه سازمان‌هایی مناسب است؟
-* GammaDesk چه فرایندهای ITSM را پوشش می‌دهد؟
-* آیا GammaDesk از SLA پشتیبانی می‌کند؟
-* آیا Workflow دارد؟
-* آیا امکان Integration وجود دارد؟
-* آیا Portal دارد؟
+- GammaItsm چیست؟
+- GammaItsm برای چه سازمان‌هایی مناسب است؟
+- GammaItsm چه فرایندهای ITSM را پوشش می‌دهد؟
+- آیا GammaItsm از SLA پشتیبانی می‌کند؟
+- آیا Workflow دارد؟
+- آیا امکان Integration وجود دارد؟
+- آیا Portal دارد؟
 
 اما پاسخ‌ها باید بر اساس اطلاعات واقعی محصول باشند.
 
@@ -670,12 +671,12 @@ FAQ باید semantic و accessible باشد.
 در پایان صفحه:
 
 ```text
-GammaDesk را از نزدیک ببینید
+GammaItsm را از نزدیک ببینید
 
-برای آشنایی با امکانات GammaDesk و بررسی نیازهای سازمان خود،
+برای آشنایی با امکانات GammaItsm و بررسی نیازهای سازمان خود،
 برای دریافت Demo با ما در ارتباط باشید.
 
-[درخواست دموی GammaDesk]
+[درخواست دموی GammaItsm]
 [تماس با ما]
 ```
 
@@ -692,7 +693,7 @@ GammaDesk را از نزدیک ببینید
 /
 محصولات
 /
-GammaDesk
+GammaItsm
 ```
 
 برای Feature:
@@ -702,7 +703,7 @@ GammaDesk
 /
 محصولات
 /
-GammaDesk
+GammaItsm
 /
 قابلیت‌ها
 /
@@ -717,19 +718,19 @@ Incident Management
 
 Page باید SEO-ready باشد.
 
-برای GammaDesk:
+برای GammaItsm:
 
-* title اختصاصی
-* meta description اختصاصی
-* canonical
-* Open Graph
-* semantic HTML
-* یک H1
-* H2/H3 hierarchy صحیح
-* sitemap inclusion
-* robots قابل index
-* breadcrumb schema
-* Product / SoftwareApplication schema در صورت مناسب بودن
+- title اختصاصی
+- meta description اختصاصی
+- canonical
+- Open Graph
+- semantic HTML
+- یک H1
+- H2/H3 hierarchy صحیح
+- sitemap inclusion
+- robots قابل index
+- breadcrumb schema
+- Product / SoftwareApplication schema در صورت مناسب بودن
 
 ### مهم
 
@@ -737,12 +738,12 @@ Schema نباید اطلاعاتی را ادعا کند که روی صفحه و�
 
 از:
 
-* Rating جعلی
-* Review جعلی
-* قیمت جعلی
-* تعداد مشتری جعلی
-* Award جعلی
-* Certification جعلی
+- Rating جعلی
+- Review جعلی
+- قیمت جعلی
+- تعداد مشتری جعلی
+- Award جعلی
+- Certification جعلی
 
 استفاده نکن.
 
@@ -750,11 +751,11 @@ Schema نباید اطلاعاتی را ادعا کند که روی صفحه و�
 
 # 23. Internal Linking
 
-صفحه GammaDesk باید به شکل طبیعی به این بخش‌ها لینک بدهد:
+صفحه GammaItsm باید به شکل طبیعی به این بخش‌ها لینک بدهد:
 
 ```text
 /products
-/products/gammadesk/features
+/products/GammaItsm/features
 /resources/articles
 /resources/videos
 /resources/itil
@@ -764,14 +765,14 @@ Schema نباید اطلاعاتی را ادعا کند که روی صفحه و�
 
 و Feature Pageها نیز باید به:
 
-* GammaDesk
-* Features
-* Related Features
-* Articles
-* Videos
-* ITIL
-* FAQ
-* Demo
+- GammaItsm
+- Features
+- Related Features
+- Articles
+- Videos
+- ITIL
+- FAQ
+- Demo
 
 لینک داشته باشند.
 
@@ -789,12 +790,12 @@ Schema نباید اطلاعاتی را ادعا کند که روی صفحه و�
 
 طراحی باید:
 
-* Enterprise
-* Professional
-* Technical
-* Modern
-* Trustworthy
-* Mature
+- Enterprise
+- Professional
+- Technical
+- Modern
+- Trustworthy
+- Mature
 
 باشد.
 
@@ -806,10 +807,10 @@ Schema نباید اطلاعاتی را ادعا کند که روی صفحه و�
 
 Orange را برای:
 
-* CTA
-* Accent
-* Active state
-* مهم‌ترین highlightها
+- CTA
+- Accent
+- Active state
+- مهم‌ترین highlightها
 
 استفاده کن.
 
@@ -817,13 +818,13 @@ Orange را برای:
 
 از موارد زیر پرهیز کن:
 
-* Neon
-* Glassmorphism
-* Gradient-heavy design
-* Shadow-heavy cards
-* Excessive rounded corners
-* Decorative animations
-* Generic SaaS template appearance
+- Neon
+- Glassmorphism
+- Gradient-heavy design
+- Shadow-heavy cards
+- Excessive rounded corners
+- Decorative animations
+- Generic SaaS template appearance
 
 ---
 
@@ -847,7 +848,7 @@ Mixed Persian/English content باید درست render شود.
 برای عبارت‌های Latin مانند:
 
 ```text
-GammaDesk
+GammaItsm
 ITSM
 ITIL
 SLA
@@ -867,10 +868,10 @@ API
 
 صفحه کامل با:
 
-* Hero دو ستونه
-* Product Navigation
-* Capability Grid
-* Screenshot Gallery
+- Hero دو ستونه
+- Product Navigation
+- Capability Grid
+- Screenshot Gallery
 
 ### Tablet
 
@@ -880,20 +881,20 @@ Gridها adaptive شوند.
 
 همه بخش‌ها:
 
-* تک ستونه یا دو ستونه مناسب
-* بدون horizontal overflow
-* touch-friendly
-* readable
+- تک ستونه یا دو ستونه مناسب
+- بدون horizontal overflow
+- touch-friendly
+- readable
 
 باشند.
 
 به‌خصوص:
 
-* Hero H1
-* Mega/Product navigation
-* Feature Explorer
-* Gallery
-* CTA
+- Hero H1
+- Mega/Product navigation
+- Feature Explorer
+- Gallery
+- CTA
 
 را تست کن.
 
@@ -981,23 +982,23 @@ feature:
 
 1. `public/images/`
 2. product assets
-3. existing GammaDesk assets
+3. existing GammaItsm assets
 4. brand assets
 
 را بررسی کن.
 
 Logo:
 
-**GammaDesk logo رسمی موجود در repository**
+**GammaItsm logo رسمی موجود در repository**
 
 را استفاده کن.
 
 هرگز:
 
-* Logo را redraw نکن.
-* نسبت logo را تغییر نده.
-* رنگ logo را بدون دلیل تغییر نده.
-* Logo جعلی نساز.
+- Logo را redraw نکن.
+- نسبت logo را تغییر نده.
+- رنگ logo را بدون دلیل تغییر نده.
+- Logo جعلی نساز.
 
 برای Screenshot نیز فقط تصاویر واقعی استفاده شود.
 
@@ -1011,25 +1012,25 @@ Logo:
 
 به‌خصوص:
 
-* تعداد مشتریان
-* تعداد کاربران
-* سال تأسیس
-* Certification
-* استاندارد
-* Integration
-* Feature
-* قیمت
-* Award
-* KPI
-* Performance
-* Security certification
+- تعداد مشتریان
+- تعداد کاربران
+- سال تأسیس
+- Certification
+- استاندارد
+- Integration
+- Feature
+- قیمت
+- Award
+- KPI
+- Performance
+- Security certification
 
 نباید ساخته شود.
 
 در صورت نبود اطلاعات، آن بخش را:
 
-* حذف کن
-* یا placeholder ساختاری مناسب ایجاد کن
+- حذف کن
+- یا placeholder ساختاری مناسب ایجاد کن
 
 ولی محتوای جعلی تولید نکن.
 
@@ -1037,7 +1038,7 @@ Logo:
 
 # 32. Homepage / Global Navigation
 
-این Task فقط صفحه GammaDesk است.
+این Task فقط صفحه GammaItsm است.
 
 Header و Navigation global را فقط در صورتی تغییر بده که برای اتصال صحیح صفحه لازم باشد.
 
@@ -1054,13 +1055,13 @@ Request Demo
 Products:
 
 ```text
-GammaDesk
+GammaItsm
 ZED EAM
 Landa
 Gamma.Kernel
 ```
 
-GammaDesk نباید به root company تبدیل شود.
+GammaItsm نباید به root company تبدیل شود.
 
 ---
 
@@ -1070,62 +1071,62 @@ GammaDesk نباید به root company تبدیل شود.
 
 ## Structure
 
-* [ ] `/products/gammadesk` فعال است.
-* [ ] Header صحیح است.
-* [ ] Footer صحیح است.
-* [ ] Breadcrumb صحیح است.
-* [ ] Product Navigation وجود دارد.
-* [ ] تمام بخش‌های اصلی وجود دارند.
+- [ ] `/products/GammaItsm` فعال است.
+- [ ] Header صحیح است.
+- [ ] Footer صحیح است.
+- [ ] Breadcrumb صحیح است.
+- [ ] Product Navigation وجود دارد.
+- [ ] تمام بخش‌های اصلی وجود دارند.
 
 ## Content
 
-* [ ] GammaDesk به‌عنوان محصول دومان سامانه معرفی شده.
-* [ ] Capabilities دسته‌بندی شده‌اند.
-* [ ] Featureهای واقعی استفاده شده‌اند.
-* [ ] ادعای ساختگی وجود ندارد.
-* [ ] ITIL از Featureها تفکیک شده.
-* [ ] Resources مرتبط وجود دارند.
-* [ ] FAQ وجود دارد.
+- [ ] GammaItsm به‌عنوان محصول دومان سامانه معرفی شده.
+- [ ] Capabilities دسته‌بندی شده‌اند.
+- [ ] Featureهای واقعی استفاده شده‌اند.
+- [ ] ادعای ساختگی وجود ندارد.
+- [ ] ITIL از Featureها تفکیک شده.
+- [ ] Resources مرتبط وجود دارند.
+- [ ] FAQ وجود دارد.
 
 ## UX
 
-* [ ] CTAها واضح هستند.
-* [ ] Featureها قابل کشف هستند.
-* [ ] Feature Explorer قابل استفاده است.
-* [ ] Screenshotها قابل مشاهده هستند.
-* [ ] Mobile navigation درست است.
-* [ ] هیچ horizontal overflow وجود ندارد.
+- [ ] CTAها واضح هستند.
+- [ ] Featureها قابل کشف هستند.
+- [ ] Feature Explorer قابل استفاده است.
+- [ ] Screenshotها قابل مشاهده هستند.
+- [ ] Mobile navigation درست است.
+- [ ] هیچ horizontal overflow وجود ندارد.
 
 ## Accessibility
 
-* [ ] Semantic HTML
-* [ ] H1 واحد
-* [ ] Heading hierarchy
-* [ ] Keyboard navigation
-* [ ] Focus visible
-* [ ] ARIA در موارد لازم
-* [ ] Alt text
-* [ ] Reduced motion
+- [ ] Semantic HTML
+- [ ] H1 واحد
+- [ ] Heading hierarchy
+- [ ] Keyboard navigation
+- [ ] Focus visible
+- [ ] ARIA در موارد لازم
+- [ ] Alt text
+- [ ] Reduced motion
 
 ## SEO
 
-* [ ] Title
-* [ ] Meta description
-* [ ] Canonical
-* [ ] Open Graph
-* [ ] Schema
-* [ ] Breadcrumb
-* [ ] Internal links
-* [ ] Sitemap
-* [ ] No accidental noindex
+- [ ] Title
+- [ ] Meta description
+- [ ] Canonical
+- [ ] Open Graph
+- [ ] Schema
+- [ ] Breadcrumb
+- [ ] Internal links
+- [ ] Sitemap
+- [ ] No accidental noindex
 
 ## Performance
 
-* [ ] Minimal JS
-* [ ] Optimized images
-* [ ] Lazy loading
-* [ ] No unnecessary dependencies
-* [ ] No unnecessary hydration
+- [ ] Minimal JS
+- [ ] Optimized images
+- [ ] Lazy loading
+- [ ] No unnecessary dependencies
+- [ ] No unnecessary hydration
 
 ---
 
@@ -1146,7 +1147,7 @@ GammaDesk نباید به root company تبدیل شود.
 کاربر باید بعد از دیدن صفحه بتواند پاسخ این سؤال‌ها را پیدا کند:
 
 ```text
-GammaDesk چیست؟
+GammaItsm چیست؟
 
 برای چه سازمانی است؟
 
@@ -1269,14 +1270,14 @@ Known limitations:
 
 ## Final Principle
 
-**GammaDesk Product Page باید یک Product Hub باشد، نه فقط یک Landing Page.**
+**GammaItsm Product Page باید یک Product Hub باشد، نه فقط یک Landing Page.**
 
-صفحه اصلی GammaDesk باید تمام قابلیت‌های محصول را در سطح Overview قابل مشاهده کند، اما جزئیات هر قابلیت در صفحات مستقل قرار بگیرد.
+صفحه اصلی GammaItsm باید تمام قابلیت‌های محصول را در سطح Overview قابل مشاهده کند، اما جزئیات هر قابلیت در صفحات مستقل قرار بگیرد.
 
 معماری نهایی:
 
 ```text
-GammaDesk
+GammaItsm
 │
 ├── Overview
 │
@@ -1311,4 +1312,4 @@ GammaDesk
 └── Request Demo
 ```
 
-این معماری را مبنای توسعه آینده GammaDesk قرار بده و آن را طوری پیاده‌سازی کن که بعداً افزودن Featureهای جدید، Article، Video، FAQ و Screenshot بدون بازنویسی صفحه اصلی امکان‌پذیر باشد.
+این معماری را مبنای توسعه آینده GammaItsm قرار بده و آن را طوری پیاده‌سازی کن که بعداً افزودن Featureهای جدید، Article، Video، FAQ و Screenshot بدون بازنویسی صفحه اصلی امکان‌پذیر باشد.

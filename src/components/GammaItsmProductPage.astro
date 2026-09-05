@@ -1,0 +1,464 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { GammaItsmCapabilityGroups } from "../data/gammaitsm";
+---
+
+<BaseLayout
+  title="GammaItsm | مدیریت خدمات فناوری اطلاعات"
+  description="نرم‌افزار Help Desk گاما یک راهکار سازمانی تحت وب برای مدیریت خدمات فناوری اطلاعات است که درخواست‌ها، رخدادها، فرایندها و خدمات IT را ساختاریافته و یکپارچه مدیریت می‌کند."
+>
+  <section class="product-hero" id="overview">
+    <div class="container hero-grid">
+      <div>
+        <a class="breadcrumb" href="/products/">محصولات / GammaItsm</a>
+        <p class="eyebrow">محصول دومان سامانه</p>
+        <h1>نرم‌افزار Help Desk گاما</h1>
+        <p class="hero-copy">
+          یک راهکار سازمانی تحت وب برای مدیریت خدمات فناوری اطلاعات است که به
+          سازمان‌ها کمک می‌کند درخواست‌ها، رخدادها، فرایندها و خدمات IT را
+          ساختاریافته و یکپارچه مدیریت کنند.
+        </p>
+        <div class="actions">
+          <a class="button button--accent" href="/contact/demo/"
+            >درخواست دموی GammaItsm</a
+          >
+          <a class="text-link" href="#capabilities">مشاهده قابلیت‌ها ←</a>
+        </div>
+      </div>
+      <div
+        class="screenshot-placeholder"
+        aria-label="محل Screenshot واقعی GammaItsm"
+      >
+        محل تصویر واقعی GammaItsm
+      </div>
+    </div>
+  </section>
+
+  <nav class="product-nav" aria-label="ناوبری GammaItsm">
+    <div class="container product-nav-inner">
+      <a href="#overview">معرفی</a><a href="#capabilities">قابلیت‌ها</a><a
+        href="#itil">ITIL</a
+      ><a href="#screenshots">تصاویر محیط</a><a href="#integrations"
+        >یکپارچه‌سازی</a
+      ><a href="#resources">منابع</a><a href="#faq">سوالات متداول</a><a
+        class="nav-cta"
+        href="/contact/demo/">درخواست دمو</a
+      >
+    </div>
+  </nav>
+
+  <section class="content-section" aria-labelledby="why-title">
+    <div class="container narrow-content">
+      <p class="eyebrow">GammaItsm</p>
+      <h2 id="why-title">طراحی‌شده بر مبنای ITIL</h2>
+      <p>
+        گاما بر مبنای ITIL طراحی شده و با قابلیت پیکربندی متناسب با نیاز سازمان،
+        بستری برای بهبود کیفیت خدمات، افزایش بهره‌وری و مدیریت بهتر فرایندهای
+        فناوری اطلاعات فراهم می‌کند.
+      </p>
+    </div>
+  </section>
+
+  <section
+    class="content-section capabilities"
+    id="capabilities"
+    aria-labelledby="capabilities-title"
+  >
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow eyebrow--dark">قابلیت‌ها</p>
+        <h2 id="capabilities-title">ماژول‌ها و امکانات اصلی GammaItsm</h2>
+      </div>
+
+      <div class="capability-grid">
+        {
+          GammaItsmCapabilityGroups.map((group) => (
+            <article class="capability-group">
+              <div class="module-header">
+                <h3>{group.name}</h3>
+                <p>{group.description}</p>
+              </div>
+              <ul class="feature-list">
+                {group.features.map((feature) => (
+                  <li class="feature-item">
+                    <a href={`/products/gammaitsm/features/${feature.slug}/`}>
+                      <span>{feature.name}</span>
+                      <span class="arrow" aria-hidden="true">
+                        ←
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section itil" id="itil" aria-labelledby="itil-title">
+    <div class="container narrow-content">
+      <h2 id="itil-title">GammaItsm و ITIL</h2><p>
+        ITIL یک چارچوب و مجموعه‌ای از روش‌های مدیریت خدمات فناوری اطلاعات است.
+        GammaItsm محصول ITSM دومان سامانه است و می‌تواند برای پیاده‌سازی و
+        مدیریت فرایندهای مرتبط با ITIL به کار رود.
+      </p><a class="text-link" href="/resources/itil/">مشاهده راهنمای ITIL ←</a>
+    </div>
+  </section>
+
+  <section
+    class="content-section"
+    id="screenshots"
+    aria-labelledby="screenshots-title"
+  >
+    <div class="container">
+      <h2 id="screenshots-title">تصاویر محیط محصول</h2><div
+        class="gallery-placeholder"
+      >
+        <span>محل Screenshotهای واقعی محصول</span><small
+          >تصاویر رسمی GammaItsm پس از تأمین asset در این بخش قرار می‌گیرند.</small
+        >
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="content-section"
+    id="integrations"
+    aria-labelledby="integrations-title"
+  >
+    <div class="container narrow-content">
+      <h2 id="integrations-title">ارتباط با سیستم‌های دیگر</h2><p>
+        جزئیات یکپارچه‌سازی‌های GammaItsm پس از دریافت مستندات رسمی محصول در این
+        بخش منتشر خواهد شد.
+      </p>
+    </div>
+  </section>
+
+  <section
+    class="content-section"
+    id="resources"
+    aria-labelledby="resources-title"
+  >
+    <div class="container narrow-content">
+      <h2 id="resources-title">مطالعه بیشتر</h2><div class="resource-links">
+        <a href="/resources/articles/">مقالات</a><a href="/resources/videos/"
+          >ویدئوها</a
+        ><a href="/resources/itil/">راهنمای ITIL</a><a href="/resources/faq/"
+          >پرسش‌های متداول</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="faq" aria-labelledby="faq-title">
+    <div class="container narrow-content">
+      <h2 id="faq-title">پرسش‌های متداول GammaItsm</h2><p>
+        پرسش‌ها و پاسخ‌های رسمی محصول پس از تأیید محتوای مربوط به GammaItsm در
+        این بخش اضافه خواهند شد.
+      </p>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container narrow-content">
+      <h2>GammaItsm را از نزدیک ببینید</h2>
+      <p>
+        برای آشنایی با GammaItsm و بررسی نیازهای سازمان خود، با دومان سامانه در
+        ارتباط باشید.
+      </p><div class="actions">
+        <a class="button button--accent" href="/contact/demo/"
+          >درخواست دموی GammaItsm</a
+        ><a class="text-link" href="/contact/">تماس با ما ←</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .product-hero {
+    padding-block: clamp(4rem, 9vw, 8rem);
+    background: var(--hero-product-background);
+    color: white;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .breadcrumb,
+  .text-link {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+
+  .product-hero .breadcrumb,
+  .product-hero .text-link {
+    color: var(--color-accent-soft);
+  }
+
+  .breadcrumb {
+    display: inline-block;
+    margin-block-end: var(--space-lg);
+  }
+
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .product-hero .eyebrow {
+    color: var(--color-accent-soft);
+  }
+
+  .eyebrow--dark {
+    color: var(--color-accent-dark);
+  }
+
+  h1 {
+    max-width: 18ch;
+    margin-block-end: var(--space-md);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.2;
+  }
+
+  .hero-copy {
+    max-width: 42rem;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-on-dark);
+    font-size: 1.15rem;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .screenshot-placeholder,
+  .gallery-placeholder {
+    display: grid;
+    min-height: 19rem;
+    place-items: center;
+    border: 0.1rem dashed var(--color-line);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--color-muted);
+    text-align: center;
+  }
+
+  .screenshot-placeholder {
+    border-color: rgba(253, 228, 213, 0.45);
+    color: var(--color-accent-soft);
+  }
+
+  .product-nav {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 5;
+    border-block-end: 0.0625rem solid var(--color-line);
+    background: var(--color-surface);
+  }
+
+  .product-nav-inner {
+    display: flex;
+    gap: 1.1rem;
+    overflow-x: auto;
+    padding-block: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .product-nav a {
+    color: var(--color-muted);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+
+  .product-nav a:hover,
+  .product-nav a:focus-visible {
+    color: var(--color-accent-dark);
+  }
+
+  .product-nav .nav-cta {
+    margin-inline-start: auto;
+    color: var(--color-accent-dark);
+  }
+
+  .content-section {
+    padding-block: var(--space-xl);
+  }
+
+  .content-section:nth-of-type(even) {
+    background: var(--color-surface);
+  }
+
+  .narrow-content {
+    max-width: 52rem;
+  }
+
+  .section-header {
+    margin-block-end: var(--space-lg);
+  }
+
+  h2 {
+    margin-block-end: 0;
+    color: var(--color-primary);
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+  }
+
+  .capability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .capability-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1.25rem 1.2rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: var(--radius-md);
+    border-block-start: 0.25rem solid var(--color-primary);
+    background: var(--color-paper);
+  }
+
+  .module-header {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .capability-group h3 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1.35rem;
+  }
+
+  .capability-group p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.8;
+  }
+
+  .feature-list {
+    display: grid;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .feature-item {
+    min-width: 0;
+  }
+
+  .feature-item a,
+  .resource-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+    padding-block: 0.4rem;
+    color: var(--color-ink);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+
+  .feature-item a {
+    border-radius: var(--radius-sm);
+    transition:
+      color var(--transition-fast),
+      background-color var(--transition-fast);
+  }
+
+  .feature-item a:hover,
+  .feature-item a:focus-visible,
+  .resource-links a:hover,
+  .resource-links a:focus-visible {
+    color: var(--color-accent-dark);
+  }
+
+  .feature-item a span:first-child {
+    min-width: 0;
+    color: var(--color-ink);
+    line-height: 1.7;
+  }
+
+  .feature-item .arrow {
+    color: var(--color-accent);
+    font-weight: 800;
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+  }
+
+  .feature-item a:hover .arrow,
+  .feature-item a:focus-visible .arrow {
+    transform: translateX(-0.125rem);
+  }
+
+  .gallery-placeholder {
+    min-height: 14rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--color-paper);
+  }
+
+  .gallery-placeholder small {
+    color: var(--color-muted);
+  }
+
+  .resource-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+  }
+
+  .final-cta {
+    padding-block: var(--space-xl);
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .final-cta h2 {
+    color: white;
+  }
+
+  .final-cta p {
+    color: #eee;
+  }
+
+  .final-cta .text-link {
+    color: var(--color-accent-soft);
+  }
+
+  @media (min-width: 48rem) {
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
+    }
+  }
+
+  @media (max-width: 47.99rem) {
+    .capability-grid,
+    .resource-links {
+      grid-template-columns: 1fr;
+    }
+
+    .product-nav-inner {
+      gap: 0.85rem;
+    }
+
+    .product-nav .nav-cta {
+      margin-inline-start: 0;
+    }
+  }
+</style>

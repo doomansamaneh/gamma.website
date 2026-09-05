@@ -1,0 +1,85 @@
+---
+interface Props {
+  title: string;
+  text?: string;
+  primaryHref?: string;
+  primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+  compact?: boolean;
+}
+
+const {
+  title,
+  text,
+  primaryHref = "/contact/demo/",
+  primaryLabel = "درخواست دمو",
+  secondaryHref,
+  secondaryLabel,
+  compact = false,
+} = Astro.props;
+---
+
+<section class:list={["cta", { "cta--compact": compact }]}>
+  <div class="container narrow-content">
+    <h2>{title}</h2>
+    {text && <p>{text}</p>}
+    <div class="actions">
+      <a class="button button--accent" href={primaryHref}>{primaryLabel}</a>
+      {
+        secondaryHref && secondaryLabel && (
+          <a class="text-link" href={secondaryHref}>
+            {secondaryLabel} <span aria-hidden="true">←</span>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    padding-block: var(--space-xl);
+    background: var(--color-surface);
+  }
+
+  .cta--compact {
+    padding-block: var(--space-lg);
+  }
+
+  .narrow-content {
+    max-width: 44rem;
+  }
+
+  .cta h2 {
+    margin-block-end: var(--space-sm);
+    font-size: var(--font-size-h2);
+  }
+
+  .cta p {
+    margin-block-end: var(--space-lg);
+    color: var(--color-muted);
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .text-link {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .text-link span {
+    display: inline-block;
+    transition: transform var(--transition-fast);
+  }
+
+  .text-link:hover span {
+    transform: translateX(-0.25rem);
+  }
+</style>

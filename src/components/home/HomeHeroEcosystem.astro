@@ -1,0 +1,263 @@
+---
+import ProductLogo from "../brand/ProductLogo.astro";
+import { products } from "../../data/products";
+
+const ecosystemProducts = products.map((product) => ({
+  ...product,
+  logoKey: product.name === "GammaItsm" ? product.name : product.slug,
+}));
+---
+
+<div class="ecosystem" aria-label="محصولات دومان سامانه">
+  <span class="ecosystem-line ecosystem-line--vertical" aria-hidden="true"
+  ></span>
+  <span class="ecosystem-line ecosystem-line--horizontal" aria-hidden="true"
+  ></span>
+  <span class="ecosystem-node ecosystem-node--center" aria-hidden="true"></span>
+
+  {
+    ecosystemProducts.map((product, index) => (
+      <a
+        class:list={[
+          "ecosystem-product",
+          `ecosystem-product--${index}`,
+          { "ecosystem-product--primary": product.primary },
+        ]}
+        href={product.href}
+        aria-label={`مشاهده ${product.name}`}
+      >
+        <span class="ecosystem-node" aria-hidden="true" />
+        <ProductLogo
+          product={product.logoKey}
+          compact
+          class="ecosystem-product__logo"
+        />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .ecosystem {
+    position: relative;
+    width: min(100%, 34rem);
+    aspect-ratio: 1.15;
+    margin-inline: auto;
+    direction: ltr;
+  }
+
+  .ecosystem-line {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .ecosystem-line--vertical {
+    top: 14%;
+    bottom: 14%;
+    left: 50%;
+    width: 0.0625rem;
+    transform: translateX(-50%);
+  }
+
+  .ecosystem-line--horizontal {
+    top: 50%;
+    right: 17%;
+    left: 17%;
+    height: 0.0625rem;
+    transform: translateY(-50%);
+  }
+
+  .ecosystem-node {
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    border: 0.0625rem solid var(--color-brand);
+    border-radius: 50%;
+    background: var(--color-brand-dark);
+  }
+
+  .ecosystem-node--center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: var(--color-brand);
+    transform: translate(-50%, -50%);
+  }
+
+  .ecosystem-product {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 8rem;
+    min-height: 3.75rem;
+    padding: 0.7rem 1rem;
+    color: var(--color-white);
+    text-decoration: none;
+    transition:
+      color var(--transition-fast),
+      opacity var(--transition-fast);
+  }
+
+  .ecosystem-product::before {
+    position: absolute;
+    inset: 0;
+    border-block-end: 0.0625rem solid transparent;
+    content: "";
+  }
+
+  .ecosystem-product:hover,
+  .ecosystem-product:focus-visible {
+    color: var(--color-brand);
+    opacity: 0.9;
+  }
+
+  .ecosystem-product:focus-visible {
+    outline: 0.125rem solid var(--color-brand);
+    outline-offset: 0.25rem;
+  }
+
+  .ecosystem-product .ecosystem-node {
+    position: absolute;
+  }
+
+  .ecosystem-product--0 {
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ecosystem-product--0 .ecosystem-node {
+    bottom: -0.15rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ecosystem-product--1 {
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+  }
+
+  .ecosystem-product--1 .ecosystem-node {
+    right: -0.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .ecosystem-product--2 {
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+  }
+
+  .ecosystem-product--2 .ecosystem-node {
+    left: -0.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .ecosystem-product--3 {
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ecosystem-product--3 .ecosystem-node {
+    top: -0.15rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ecosystem-product--primary {
+    min-width: 10rem;
+    min-height: 4.25rem;
+    font-size: 1.05rem;
+  }
+
+  .ecosystem-product__logo {
+    max-width: 8.5rem;
+    max-height: 2.5rem;
+    color: var(--color-white);
+  }
+
+  :global(.product-logo-fallback.ecosystem-product__logo) {
+    color: var(--color-white);
+  }
+
+  @media (max-width: 47.99rem) {
+    .ecosystem {
+      width: min(100%, 27rem);
+      aspect-ratio: 1.25;
+    }
+
+    .ecosystem-product {
+      min-width: 6.5rem;
+      min-height: 3.25rem;
+      padding: 0.5rem;
+    }
+
+    .ecosystem-product--primary {
+      min-width: 8rem;
+      min-height: 3.5rem;
+    }
+
+    .ecosystem-product__logo {
+      max-width: 7rem;
+      max-height: 2rem;
+    }
+
+    .ecosystem-line--vertical {
+      top: 17%;
+      bottom: 17%;
+    }
+
+    .ecosystem-line--horizontal {
+      right: 12%;
+      left: 12%;
+    }
+  }
+
+  @media (max-width: 35rem) {
+    .ecosystem {
+      width: min(100%, 22rem);
+      aspect-ratio: 1.05;
+      margin-block-start: var(--space-lg);
+    }
+
+    .ecosystem-line--vertical {
+      top: 13%;
+      bottom: 13%;
+    }
+
+    .ecosystem-line--horizontal {
+      right: 4%;
+      left: 4%;
+    }
+
+    .ecosystem-product {
+      min-width: 5.75rem;
+      min-height: 2.8rem;
+      padding-inline: 0.35rem;
+    }
+
+    .ecosystem-product--primary {
+      min-width: 7rem;
+      min-height: 3.1rem;
+    }
+
+    .ecosystem-product__logo {
+      max-width: 5.8rem;
+      max-height: 1.7rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ecosystem-product {
+      transition: none;
+    }
+  }
+</style>

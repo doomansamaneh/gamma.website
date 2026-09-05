@@ -1,0 +1,58 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  dark?: boolean;
+  class?: string;
+  id?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  dark = false,
+  class: className = "",
+  id,
+} = Astro.props;
+---
+
+<div
+  class:list={["section-heading", { "section-heading--dark": dark }, className]}
+>
+  {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <h2 id={id}>{title}</h2>
+  {description && <p>{description}</p>}
+</div>
+
+<style>
+  .section-heading {
+    max-width: 42rem;
+    margin-block-end: var(--space-lg);
+  }
+
+  .section-heading h2 {
+    margin-block-end: 0;
+    color: var(--color-primary);
+    font-size: var(--font-size-h2);
+  }
+
+  .section-heading p:last-child {
+    margin-block-end: 0;
+    color: var(--color-muted);
+  }
+
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-soft);
+    font-size: var(--font-size-sm);
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .section-heading--dark .eyebrow {
+    color: var(--color-accent-dark);
+  }
+</style>
