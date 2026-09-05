@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>دومان سامانه</p>
+    <p>شرکت فناوری با تمرکز بر طراحی و توسعه محصولات نرم‌افزاری.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 0.0625rem solid var(--color-line);
+    background: var(--color-ink);
+    color: white;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.5rem;
+    color: #d8e1df;
+    font-size: 0.875rem;
+  }
+
+  .footer-inner p {
+    margin: 0;
+  }
+
+  @media (max-width: 35rem) {
+    .footer-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { products } from '../data/products';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const product = products.find((item) => item.slug === slug);
+
+if (!product) {
+  throw new Error(`Unknown product: ${slug}`);
+}
+---
+
+<BaseLayout title={`${product.name} | دومان سامانه`} description={`${product.name}؛ ${product.description}`}>
+  <section class="product-page" data-product={product.slug}>
+    <div class="container">
+      <a class="breadcrumb" href="/products/">محصولات / {product.name}</a>
+      <p class="eyebrow">محصول مستقل دومان سامانه</p>
+      <h1>{product.name}</h1>
+      <p class="category">{product.category}</p>
+      <p class="description">{product.description}</p>
+      <p class="pending">محتوای کامل این محصول در حال آماده‌سازی است.</p>
+      <div class="actions">
+        <a class="button button--accent" href="/contact/demo/">درخواست دمو</a>
+        {product.slug === 'gammadesk' && <a class="text-link" href="/products/gammadesk/features/">مشاهده قابلیت‌ها ←</a>}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .product-page {
+    min-height: min(38rem, calc(100vh - 9.5rem));
+    padding-block: clamp(4rem, 10vw, 8rem);
+    background: var(--color-paper);
+  }
+
+  .product-page[data-product='gammadesk'] {
+    border-block-start: 0.35rem solid var(--color-accent);
+  }
+
+  .breadcrumb,
+  .text-link {
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+  }
+
+  .breadcrumb {
+    display: inline-block;
+    margin-block-end: var(--space-xl);
+  }
+
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h1 {
+    margin-block-end: 0.5rem;
+    color: var(--color-primary);
+    font-size: var(--font-size-h1);
+    direction: ltr;
+    text-align: start;
+  }
+
+  .category {
+    margin-block-end: var(--space-md);
+    color: var(--color-accent-dark);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .description {
+    max-width: 40rem;
+    margin-block-end: var(--space-sm);
+    color: var(--color-muted);
+    font-size: 1.2rem;
+  }
+
+  .pending {
+    margin-block-end: var(--space-lg);
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+</style>

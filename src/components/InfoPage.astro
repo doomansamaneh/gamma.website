@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow?: string;
+}
+
+const { title, description, eyebrow = "دومان سامانه" } = Astro.props;
+---
+
+<BaseLayout title={`${title} | دومان سامانه`} description={description}>
+  <section class="info-page">
+    <div class="container info-inner">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="description">{description}</p>
+      <p class="pending">
+        محتوای این بخش پس از آماده‌سازی و تأیید اطلاعات منتشر خواهد شد.
+      </p>
+      <a class="button button--accent" href="/contact/">تماس با ما</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .info-page {
+    min-height: min(36rem, calc(100vh - 9.5rem));
+    padding-block: clamp(4rem, 10vw, 8rem);
+    background: var(--color-paper);
+  }
+
+  .info-inner {
+    max-width: 52rem;
+  }
+
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h1 {
+    max-width: 18ch;
+    margin-block-end: var(--space-md);
+    color: var(--color-primary);
+    font-size: var(--font-size-h1);
+  }
+
+  .description {
+    max-width: 42rem;
+    margin-block-end: var(--space-sm);
+    color: var(--color-muted);
+    font-size: 1.125rem;
+  }
+
+  .pending {
+    margin-block-end: var(--space-lg);
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+  }
+</style>

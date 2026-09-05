@@ -1,0 +1,60 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+const { eyebrow, title, description, ctaLabel = 'تماس با ما', ctaHref = '/contact/' } = Astro.props;
+---
+
+<section class="placeholder-page">
+  <div class="container placeholder-inner">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="description">{description}</p>
+    <p class="pending">محتوای این بخش در حال آماده‌سازی است.</p>
+    <a class="button button--accent" href={ctaHref}>{ctaLabel}</a>
+  </div>
+</section>
+
+<style>
+  .placeholder-page {
+    min-height: min(36rem, calc(100vh - 9.5rem));
+    padding-block: clamp(4rem, 10vw, 8rem);
+    background: var(--color-paper);
+  }
+
+  .placeholder-inner {
+    max-width: 52rem;
+  }
+
+  .eyebrow {
+    margin-block-end: var(--space-sm);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h1 {
+    max-width: 18ch;
+    margin-block-end: var(--space-md);
+    color: var(--color-primary);
+    font-size: var(--font-size-h1);
+  }
+
+  .description {
+    max-width: 42rem;
+    margin-block-end: var(--space-sm);
+    color: var(--color-muted);
+    font-size: 1.125rem;
+  }
+
+  .pending {
+    margin-block-end: var(--space-lg);
+    color: var(--color-secondary);
+    font-size: var(--font-size-small);
+  }
+</style>

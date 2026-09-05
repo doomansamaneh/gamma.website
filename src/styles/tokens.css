@@ -1,0 +1,38 @@
+:root {
+  --color-primary: #121212;
+  --color-secondary: #3f3f3f;
+  --color-product: #f26a21;
+  --color-ink: #171717;
+  --color-muted: #5e6264;
+  --color-paper: #f5f4f1;
+  --color-surface: #ffffff;
+  --color-line: #d9d7d2;
+  --color-accent: #f26a21;
+  --color-accent-dark: #c74e0d;
+  --color-accent-soft: #fde4d5;
+  --color-success: #39735b;
+  --color-warning: #aa761e;
+  --color-error: #a53f45;
+  --color-info: #356d8b;
+  --font-family-sans: "Vazirmatn", Tahoma, "Segoe UI", sans-serif;
+  --font-sans: var(--font-family-sans);
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-h1: clamp(2.5rem, 7vw, 5.25rem);
+  --font-size-h2: clamp(2rem, 4vw, 3.25rem);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-body: 1.9;
+  --line-height-heading: 1.25;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
+  --container-width: 72rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --shadow-soft: 0 0.75rem 2rem rgba(23, 40, 45, 0.08);
+  --transition-fast: 160ms ease;
+}

@@ -1,0 +1,683 @@
+# Localization
+
+## Overview
+
+The website is currently a Persian-first corporate website.
+
+The primary language is Persian (`fa`), and the primary text direction is right-to-left (`RTL`).
+
+The architecture must, however, be designed so that English (`en`) can be added later without requiring a major redesign of the application, content model, URL structure, or components.
+
+Localization should remain simple until additional languages are actually required.
+
+---
+
+## Current Language
+
+The current production language is:
+
+```text
+Language: Persian
+Locale: fa-IR
+Direction: RTL
+```
+
+All current public-facing content should be written in Persian.
+
+Do not introduce English placeholder content simply to demonstrate multilingual support.
+
+---
+
+## Future Language
+
+The architecture should be capable of supporting:
+
+```text
+Persian: fa-IR
+English: en
+```
+
+English is a future requirement, not necessarily part of the initial implementation.
+
+Do not build a complex runtime translation system unless it becomes necessary.
+
+The current website is primarily a static Astro website, so localization should take advantage of Astro's static generation model.
+
+---
+
+## Direction
+
+Persian pages must use:
+
+```html
+<html lang="fa" dir="rtl">
+```
+
+English pages must use:
+
+```html
+<html lang="en" dir="ltr">
+```
+
+The document language and direction must be set at the page/layout level.
+
+Do not hardcode `dir="rtl"` into individual components.
+
+Components must work correctly in both RTL and LTR layouts.
+
+---
+
+## RTL Requirements
+
+The UI must be designed for RTL from the beginning.
+
+Avoid assumptions such as:
+
+```css
+margin-left: ...
+padding-right: ...
+left: 0;
+right: 0;
+text-align: left;
+```
+
+when the intention is related to logical layout direction.
+
+Prefer CSS logical properties:
+
+```css
+margin-inline-start
+margin-inline-end
+padding-inline-start
+padding-inline-end
+inset-inline-start
+inset-inline-end
+text-align: start
+border-start-start-radius
+```
+
+Use logical properties wherever practical.
+
+This allows the same components to work in both RTL and LTR.
+
+---
+
+## Typography
+
+Persian and Latin text must render correctly.
+
+The design system should support:
+
+* Persian typography
+* Latin typography
+* Persian/Latin mixed content
+* Numbers
+* URLs
+* Email addresses
+* Code snippets
+* Product names
+* Technical terminology
+
+The font stack should be centralized in the design system.
+
+Do not specify fonts independently inside individual components.
+
+---
+
+## Persian Content Rules
+
+All current marketing and informational content should be written in natural, professional Persian.
+
+Avoid:
+
+* Machine-translated language
+* Unnecessary English words
+* Literal translations
+* Excessive technical jargon
+* Inconsistent terminology
+
+Technical product names such as `GammaDesk`, `ITIL`, `API`, and similar established terms may remain in English where appropriate.
+
+---
+
+## Mixed Persian and English Content
+
+The website will contain mixed-direction content.
+
+Examples:
+
+```text
+GammaDesk IT Service Management
+Incident Management در GammaDesk
+ITIL 4
+API Documentation
+```
+
+The UI must handle mixed Persian and English text without visual corruption.
+
+For isolated LTR content, use appropriate direction handling rather than changing the direction of the entire page.
+
+Examples include:
+
+* Email addresses
+* URLs
+* Domain names
+* Product names
+* Version numbers
+* Technical identifiers
+* Code
+* English quotations
+
+---
+
+## Numbers
+
+The application may contain both Persian and Latin numbers.
+
+Do not globally transform numbers without a clear content requirement.
+
+Technical and business identifiers should normally remain Latin:
+
+```text
+GammaDesk 5.0
+ITIL 4
+API v2
+2026
+```
+
+Persian prose may use the site's preferred Persian number style where appropriate.
+
+The choice should be consistent across the website.
+
+---
+
+## Dates
+
+Dates displayed to Persian users should follow the site's chosen Persian date convention.
+
+If date localization is implemented, it should be centralized rather than implemented independently in components.
+
+For example:
+
+```text
+Published: ۱۲ شهریور ۱۴۰۵
+```
+
+The underlying content data should remain structured and machine-readable.
+
+Do not store formatted dates as the primary data representation.
+
+---
+
+## Currency and Regional Formatting
+
+If the website displays prices or other localized values, formatting must be separated from the underlying data.
+
+Do not hardcode formatted values inside reusable components.
+
+Example:
+
+```text
+Raw value → localized presentation
+```
+
+The formatting strategy should be centralized so that future locales can use different conventions.
+
+---
+
+## Content Structure
+
+Content should not contain unnecessary language-specific markup.
+
+Prefer structured content such as:
+
+```yaml
+title:
+description:
+content:
+```
+
+rather than embedding language-specific UI directly into components.
+
+When multilingual content is introduced, content should be capable of representing translations cleanly.
+
+---
+
+## Content Localization Strategy
+
+The preferred future model is to associate localized content with the same logical entity.
+
+Conceptually:
+
+```text
+Product
+├── fa
+│   ├── title
+│   ├── description
+│   └── content
+│
+└── en
+    ├── title
+    ├── description
+    └── content
+```
+
+The exact Astro implementation may evolve.
+
+Do not duplicate an entire application for each language.
+
+---
+
+## Translation Relationships
+
+Translations should preserve the relationship between equivalent pages.
+
+For example:
+
+```text
+/fa/products/gammadesk
+/en/products/gammadesk
+```
+
+and:
+
+```text
+/fa/products/gammadesk/features/incident-management
+/en/products/gammadesk/features/incident-management
+```
+
+A translated page should refer to the same logical product or feature.
+
+---
+
+## URLs
+
+Use stable, language-neutral slugs where practical.
+
+Preferred:
+
+```text
+/products/gammadesk
+/products/gammadesk/features/incident-management
+```
+
+Avoid Persian URLs unless there is a specific SEO or business reason to use them.
+
+If localized URL prefixes are introduced later, use a predictable structure such as:
+
+```text
+/fa/products/gammadesk
+/en/products/gammadesk
+```
+
+The URL strategy must be decided consistently before multilingual pages are published.
+
+Do not mix multiple URL localization strategies.
+
+---
+
+## SEO and Localization
+
+Each language must have independent SEO metadata.
+
+Localized pages should support:
+
+* `lang`
+* Canonical URL
+* Localized title
+* Localized meta description
+* Open Graph metadata
+* Appropriate structured data
+* Language-specific content
+* `hreflang` relationships when multiple languages are published
+
+Do not copy Persian SEO metadata into English pages.
+
+---
+
+## Language Switcher
+
+A language switcher should only be displayed when another language is actually available.
+
+Do not display:
+
+```text
+فارسی | English
+```
+
+if the English version does not exist.
+
+When English becomes available, the language switcher should:
+
+1. Clearly identify the current language.
+2. Link to the equivalent page in the other language when available.
+3. Preserve the user's current content context where possible.
+4. Work correctly with RTL/LTR layouts.
+5. Be accessible by keyboard and screen readers.
+
+---
+
+## Navigation Localization
+
+Navigation labels are content and must be localizable.
+
+For example:
+
+```text
+Persian:
+محصولات
+منابع
+شرکت
+تماس با ما
+
+English:
+Products
+Resources
+Company
+Contact Us
+```
+
+Do not hardcode translated navigation labels inside multiple components.
+
+Navigation data should be centralized.
+
+---
+
+## Component Requirements
+
+Reusable components must not assume Persian text length.
+
+Components should handle:
+
+* Longer translated headings
+* Different button widths
+* Different navigation label lengths
+* Different paragraph lengths
+* RTL/LTR layout
+* Mixed-direction content
+
+Do not solve translation-specific layout problems by hardcoding widths.
+
+Avoid:
+
+```css
+width: 120px;
+```
+
+when the width exists only to fit a particular Persian label.
+
+Prefer content-driven sizing.
+
+---
+
+## Icons and Direction
+
+Directional icons must respect document direction.
+
+Examples:
+
+* Arrow left
+* Arrow right
+* Back
+* Forward
+* Previous
+* Next
+* Breadcrumb separators
+
+An icon that communicates direction should either:
+
+* Automatically adapt to RTL/LTR, or
+* Explicitly indicate its intended direction.
+
+Do not assume that `left` always means "back".
+
+---
+
+## Images
+
+Images containing text should be treated carefully.
+
+Avoid embedding important marketing or informational text directly into images.
+
+If an image contains language-specific text, provide localized versions when necessary.
+
+Prefer HTML text over text baked into images.
+
+---
+
+## Accessibility
+
+Localization must preserve accessibility.
+
+Requirements include:
+
+* Correct `lang` attribute
+* Correct `dir` attribute
+* Semantic HTML
+* Accessible navigation
+* Accessible language switcher
+* Correct heading hierarchy
+* Keyboard navigation
+* Visible focus states
+* Meaningful alternative text
+* Proper handling of mixed-direction content
+
+Screen readers must receive the correct language information.
+
+---
+
+## Content Fallback
+
+When multiple languages exist, a missing translation must not silently produce an unrelated-language page.
+
+Preferred behavior:
+
+1. Show the requested language when available.
+2. If a translation is intentionally unavailable, handle the page according to the site's defined fallback policy.
+3. Do not pretend that untranslated content is translated.
+4. Avoid duplicate indexable pages containing identical content under different language URLs.
+
+The fallback policy must be explicit before multilingual publishing.
+
+---
+
+## Current Implementation
+
+For the initial version:
+
+* Persian is the only public language.
+* All pages use `fa-IR`.
+* All pages use RTL.
+* Content is written in Persian.
+* Components must be RTL-safe.
+* CSS should use logical properties where practical.
+* No complex translation framework is required.
+* No language switcher is required.
+* No English content needs to be created yet.
+
+The codebase should nevertheless avoid architectural decisions that make adding English difficult later.
+
+---
+
+## Recommended Astro Structure
+
+The exact implementation may evolve, but the project should be able to support a structure similar to:
+
+```text
+src/
+├── components/
+├── layouts/
+├── pages/
+├── content/
+├── data/
+├── styles/
+└── utils/
+```
+
+If localized routes are introduced later, Astro may use a structure such as:
+
+```text
+src/pages/
+├── fa/
+│   ├── index.astro
+│   ├── products/
+│   ├── resources/
+│   └── company/
+│
+└── en/
+    ├── index.astro
+    ├── products/
+    ├── resources/
+    └── company/
+```
+
+However, do not introduce this structure prematurely if the current single-language implementation does not require it.
+
+---
+
+## Translation Keys
+
+Do not introduce large numbers of abstract translation keys for marketing content prematurely.
+
+Avoid turning normal content into structures such as:
+
+```text
+home.hero.title
+home.hero.description
+home.hero.button.primary
+```
+
+unless there is a real multilingual requirement.
+
+For the current Persian-only site, content should remain readable and maintainable.
+
+Translation keys are more appropriate for:
+
+* UI labels
+* System messages
+* Reusable interface terminology
+* Navigation
+* Accessibility labels
+* Form messages
+
+Long-form marketing content should remain content, not become a giant translation-key dictionary.
+
+---
+
+## Language-Agnostic Components
+
+Components should receive content as data rather than embedding Persian text internally.
+
+Prefer:
+
+```astro
+<Button>{label}</Button>
+```
+
+over:
+
+```astro
+<Button>درخواست دمو</Button>
+```
+
+This is especially important for:
+
+* Buttons
+* Navigation
+* Breadcrumbs
+* Forms
+* Cards
+* Pagination
+* Search
+* FAQ
+* Footer
+* Accessibility labels
+
+---
+
+## Localization and Design System
+
+Localization requirements are part of the design system.
+
+The design system must support:
+
+* RTL
+* LTR
+* Persian typography
+* Latin typography
+* Mixed-direction content
+* Variable text lengths
+* Logical spacing
+* Direction-aware icons
+* Responsive navigation
+
+Visual decisions must not make Persian support an afterthought.
+
+---
+
+## Localization and Performance
+
+Localization must not unnecessarily increase JavaScript or client-side processing.
+
+Because the website is primarily static:
+
+* Prefer build-time localization.
+* Generate localized pages statically.
+* Avoid client-side translation.
+* Avoid runtime translation libraries unless required.
+* Do not load unused language resources on every page.
+
+Localization should preserve the performance characteristics of the static Astro architecture.
+
+---
+
+## Localization and Maintainability
+
+The localization architecture should make it easy to:
+
+* Add English later
+* Update Persian content
+* Keep translations synchronized
+* Identify missing translations
+* Maintain SEO metadata
+* Maintain navigation
+* Maintain content relationships
+
+Do not optimize for a large number of languages that the business does not currently need.
+
+---
+
+## Rules for the Agent
+
+When implementing the website:
+
+1. Treat Persian as the current primary language.
+2. Use `fa-IR` for the current site.
+3. Use RTL for Persian pages.
+4. Keep components language-agnostic where practical.
+5. Prefer CSS logical properties.
+6. Do not hardcode direction assumptions into reusable components.
+7. Do not create English content unless requested.
+8. Do not add a language switcher until another language exists.
+9. Do not introduce a complex i18n framework without a real requirement.
+10. Keep content separate from presentation.
+11. Keep navigation labels centralized.
+12. Keep localization-aware formatting centralized.
+13. Make directional icons RTL/LTR aware.
+14. Ensure SEO metadata can be localized later.
+15. Avoid Persian text baked into images whenever possible.
+16. Ensure accessibility works correctly in RTL.
+17. Do not create duplicate application structures merely to support future languages.
+18. Prefer static/build-time localization over client-side translation.
+19. Do not compromise the current Persian UX merely to support hypothetical future languages.
+20. When English is introduced, preserve the same information architecture and content relationships.
+
+---
+
+## Core Principle
+
+Persian is the product language today.
+
+Internationalization is an architectural capability for tomorrow, not a feature that should complicate today's implementation.
+
+Build the website so that English can be added cleanly later, while keeping the current Persian experience simple, fast, natural, and fully native.
