@@ -62,144 +62,132 @@ const notifications = [
   title="مدیریت درخواست‌های خدماتی | Gamma Help Desk"
   description="مدیریت درخواست‌های خدماتی و Request Fulfillment در Gamma Help Desk؛ از کاتالوگ خدمات و ثبت درخواست تا ارجاع، پیگیری، SLA و گزارش‌گیری."
 >
-  <main class="request-page">
-    <!-- Breadcrumb -->
-    <div class="container">
-      <nav class="breadcrumb" aria-label="مسیر صفحه">
-        <a href="/">خانه</a>
-        <span>/</span>
-        <a href="/products/">محصولات</a>
-        <span>/</span>
-        <a href="/products/gammaitsm/">Gamma Help Desk</a>
-        <span>/</span>
-        <span>مدیریت درخواست</span>
-      </nav>
-    </div>
-
+  <main class="page">
     <!-- Hero -->
-    <section class="feature-hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1>
-            مدیریت درخواست‌های خدماتی،
-            <strong class="">از ثبت تا انجام</strong>
-          </h1>
+   <section class="hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="مسیر صفحه">
+      <a href="/">خانه</a>
+      <span>/</span>
+      <a href="/products/">محصولات</a>
+      <span>/</span>
+      <a href="/products/gammaitsm/">Gamma Help Desk</a>
+      <span>/</span>
+      <span>مدیریت درخواست</span>
+    </nav>
 
-          <p class="hero-description">
-            فرایند Request Fulfillment در ITIL برای مدیریت و برآورده کردن
-            درخواست‌های خدماتی کاربران طراحی شده است؛ از درخواست‌های ساده‌ای
-            مانند تغییر گذرواژه تا خدمات پیچیده‌تر سازمانی.
-          </p>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <h1>
+          مدیریت درخواست‌های خدماتی،
+          <span class="accent-text">از ثبت تا انجام</span>
+        </h1>
 
-          <div class="hero-actions">
-            <a href="/products/gamma-help-desk/" class="button button--accent">
-              مشاهده Gamma Help Desk
-            </a>
+        <p class="hero-lead">
+          فرایند Request Fulfillment در ITIL برای مدیریت و برآورده کردن
+          درخواست‌های خدماتی کاربران طراحی شده است؛ از درخواست‌های ساده‌ای
+          مانند تغییر گذرواژه تا خدمات پیچیده‌تر سازمانی.
+        </p>
 
-            <a href="/contact/" class="button button--outline">
-              درخواست دمو
-              <span>←</span>
-            </a>
+        <div class="hero-meta">
+          <div>
+            <strong>Request Fulfillment</strong>
+            <span>مدیریت چرخه درخواست</span>
           </div>
 
-          <div class="hero-meta">
-            <div>
-              <strong>Request Fulfillment</strong>
-              <span>مدیریت چرخه درخواست</span>
-            </div>
+          <div>
+            <strong>Service Catalog</strong>
+            <span>کاتالوگ خدمات سازمان</span>
+          </div>
 
-            <div>
-              <strong>Service Catalog</strong>
-              <span>کاتالوگ خدمات سازمان</span>
-            </div>
-
-            <div>
-              <strong>SLA</strong>
-              <span>کنترل مهلت رسیدگی</span>
-            </div>
+          <div>
+            <strong>SLA</strong>
+            <span>کنترل مهلت رسیدگی</span>
           </div>
         </div>
+      </div>
 
-        <div class="hero-visual">
-          <div class="dashboard-window">
-            <div class="window-header">
-              <div class="window-dots">
-                <i></i>
-                <i></i>
-                <i></i>
-              </div>
-
-              <span>Gamma Help Desk</span>
+      <div class="hero-visual">
+        <div class="dashboard-window">
+          <div class="window-header">
+            <div class="window-dots">
+              <i></i>
+              <i></i>
+              <i></i>
             </div>
 
-            <div class="dashboard-body">
-              <div class="dashboard-top">
-                <div>
-                  <small>درخواست‌های خدماتی</small>
-                  <strong>128</strong>
-                </div>
+            <span>Gamma Help Desk</span>
+          </div>
 
-                <div class="status-pill">● در حال پردازش</div>
+          <div class="dashboard-body">
+            <div class="dashboard-top">
+              <div>
+                <small>درخواست‌های خدماتی</small>
+                <strong>128</strong>
               </div>
 
-              <div class="request-item">
-                <div class="request-icon">▦</div>
+              <div class="status-pill">● در حال پردازش</div>
+            </div>
 
-                <div class="request-info">
-                  <strong>درخواست دسترسی به سامانه</strong>
-                  <span>واحد منابع انسانی</span>
-                </div>
+            <div class="request-item">
+              <div class="request-icon">▦</div>
 
-                <div class="request-status">در حال بررسی</div>
+              <div class="request-info">
+                <strong>درخواست دسترسی به سامانه</strong>
+                <span>واحد منابع انسانی</span>
               </div>
 
-              <div class="request-item">
-                <div class="request-icon">✓</div>
+              <div class="request-status">در حال بررسی</div>
+            </div>
 
-                <div class="request-info">
-                  <strong>تغییر گذرواژه</strong>
-                  <span>واحد مالی</span>
-                </div>
+            <div class="request-item">
+              <div class="request-icon">✓</div>
 
-                <div class="request-status request-status--success">
-                  انجام شد
-                </div>
+              <div class="request-info">
+                <strong>تغییر گذرواژه</strong>
+                <span>واحد مالی</span>
               </div>
 
-              <div class="request-item">
-                <div class="request-icon">◷</div>
+              <div class="request-status request-status--success">
+                انجام شد
+              </div>
+            </div>
 
-                <div class="request-info">
-                  <strong>درخواست نصب نرم‌افزار</strong>
-                  <span>واحد فروش</span>
-                </div>
+            <div class="request-item">
+              <div class="request-icon">◷</div>
 
-                <div class="request-status request-status--warning">
-                  نزدیک به SLA
-                </div>
+              <div class="request-info">
+                <strong>درخواست نصب نرم‌افزار</strong>
+                <span>واحد فروش</span>
               </div>
 
-              <div class="mini-chart">
-                <div class="chart-label">
-                  <span>حجم درخواست‌ها</span>
-                  <strong>این ماه</strong>
-                </div>
+              <div class="request-status request-status--warning">
+                نزدیک به SLA
+              </div>
+            </div>
 
-                <div class="chart-bars">
-                  <i style="height: 34%"></i>
-                  <i style="height: 52%"></i>
-                  <i style="height: 43%"></i>
-                  <i style="height: 76%"></i>
-                  <i style="height: 61%"></i>
-                  <i style="height: 90%"></i>
-                  <i style="height: 68%"></i>
-                </div>
+            <div class="mini-chart">
+              <div class="chart-label">
+                <span>حجم درخواست‌ها</span>
+                <strong>این ماه</strong>
+              </div>
+
+              <div class="chart-bars">
+                <i style="height: 34%"></i>
+                <i style="height: 52%"></i>
+                <i style="height: 43%"></i>
+                <i style="height: 76%"></i>
+                <i style="height: 61%"></i>
+                <i style="height: 90%"></i>
+                <i style="height: 68%"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Process -->
     <section class="process-section">
@@ -686,11 +674,13 @@ const notifications = [
           </p>
 
           <div class="cta-actions">
-            <a href="/products/gamma-help-desk/" class="button button--accent">
+            <!-- <a href="/products/gammaitsm/" class="button button--accent">
               مشاهده Gamma Help Desk
-            </a>
+            </a> -->
 
-            <a href="/contact/" class="button button--light"> درخواست دمو </a>
+            <a href="/contact/demo" class="button button--light">
+              درخواست دمو
+            </a>
           </div>
         </div>
       </div>
@@ -699,7 +689,7 @@ const notifications = [
 </BaseLayout>
 
 <style>
-  .request-page {
+  .page {
     --feature-border: rgba(20, 24, 30, 0.1);
     --feature-muted: #66707c;
     --feature-dark: #101318;
@@ -707,81 +697,10 @@ const notifications = [
     overflow: hidden;
   }
 
-  .container {
+  /* .container {
     width: min(1180px, calc(100% - 40px));
     margin-inline: auto;
-  }
-
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    padding: 1.25rem 0;
-    color: var(--feature-muted);
-    font-size: 0.82rem;
-  }
-
-  .breadcrumb a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .breadcrumb a:hover {
-    color: var(--feature-accent);
-  }
-
-  /* Hero */
-
-  .feature-hero {
-    padding: 5rem 0 6rem;
-    background:
-      radial-gradient(
-        circle at 80% 20%,
-        rgba(244, 123, 32, 0.09),
-        transparent 28%
-      ),
-      linear-gradient(180deg, #fff, #fafafa);
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
-    align-items: center;
-    gap: 5rem;
-  }
-
-  .hero-content h1 {
-    max-width: 760px;
-    margin: 0;
-    color: var(--feature-dark);
-    font-size: clamp(2.4rem, 5vw, 4.3rem);
-    font-weight: 800;
-    line-height: 1.25;
-    letter-spacing: -0.04em;
-  }
-
-  .hero-content h1 strong {
-    display: block;
-    color: var(--feature-accent);
-    font-weight: 800;
-  }
-
-  .hero-description {
-    max-width: 680px;
-    margin: 1.8rem 0 0;
-    color: var(--feature-muted);
-    font-size: 1.12rem;
-    line-height: 2.05;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 2rem;
-  }
+  } */
 
   .button {
     display: inline-flex;
@@ -821,7 +740,7 @@ const notifications = [
     color: var(--feature-dark);
   }
 
-  .hero-meta {
+  /* .hero-meta {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -838,14 +757,14 @@ const notifications = [
   }
 
   .hero-meta strong {
-    color: var(--feature-dark);
+    color: var(--feature-light);
     font-size: 0.82rem;
   }
 
   .hero-meta span {
     color: var(--feature-muted);
     font-size: 0.76rem;
-  }
+  } */
 
   /* Dashboard */
 
@@ -1774,7 +1693,6 @@ const notifications = [
   /* Responsive */
 
   @media (max-width: 1000px) {
-    .hero-grid,
     .feature-grid,
     .types-grid,
     .workload-grid {
@@ -1827,22 +1745,10 @@ const notifications = [
       width: min(100% - 28px, 1180px);
     }
 
-    .feature-hero {
-      padding: 3rem 0 4rem;
-    }
-
-    .hero-grid {
-      gap: 3rem;
-    }
-
-    .hero-content h1 {
-      font-size: 2.35rem;
-    }
-
-    .hero-meta {
+    /* .hero-meta {
       grid-template-columns: 1fr;
       gap: 1rem;
-    }
+    } */
 
     .dashboard-window {
       transform: none;

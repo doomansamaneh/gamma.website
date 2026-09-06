@@ -1,274 +1,769 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { GammaItsmCapabilityGroups } from "../../../data/gammaitsm";
+import { GammaItsmModules } from "../../../data/gammaitsm";
 ---
 
 <BaseLayout
-  title="GammaItsm | مدیریت خدمات فناوری اطلاعات"
-  description="نرم‌افزار Help Desk گاما یک راهکار سازمانی تحت وب برای مدیریت خدمات فناوری اطلاعات است که درخواست‌ها، رخدادها، فرایندها و خدمات IT را ساختاریافته و یکپارچه مدیریت می‌کند."
+  title="GammaItsm | نرم‌افزار مدیریت خدمات فناوری اطلاعات و Help Desk"
+  description="GammaItsm نرم‌افزار مدیریت خدمات فناوری اطلاعات و Help Desk سازمانی است که درخواست‌ها، رخدادها، مشکلات، تغییرات، دارایی‌ها، انبار و گردش‌های کاری را یکپارچه مدیریت می‌کند."
 >
-  <section class="product-hero" id="overview">
-    <div class="container hero-grid">
-      <div>
-        <a class="breadcrumb" href="/products/">محصولات / GammaItsm</a>
-        <h1>نرم‌افزار Help Desk گاما</h1>
-        <p class="hero-copy">
-          یک راهکار سازمانی تحت وب برای مدیریت خدمات فناوری اطلاعات است که به
-          سازمان‌ها کمک می‌کند درخواست‌ها، رخدادها، فرایندها و خدمات IT را
-          ساختاریافته و یکپارچه مدیریت کنند.
+  <main class="page">
+  <!-- Hero -->
+ <section class="hero" id="overview">
+  <div class="container">
+
+    <nav class="breadcrumb" aria-label="مسیر صفحه">
+      <a href="/">خانه</a>
+      <span>/</span>
+      <a href="/products/">محصولات</a>
+      <span>/</span>
+      <span>Gamma Help Desk</span>
+    </nav>
+
+    <div class="hero-content">
+
+      <div class="hero-copy">
+        <h1>
+          مدیریت یکپارچه
+          <span class="accent-text">خدمات فناوری اطلاعات</span>
+        </h1>
+
+        <p class="hero-lead">
+          GammaItsm یک راهکار سازمانی تحت وب برای مدیریت خدمات فناوری اطلاعات
+          است که درخواست‌ها، رخدادها، مشکلات، دارایی‌ها، فرایندها و خدمات IT را
+          در یک بستر یکپارچه مدیریت می‌کند.
         </p>
-        <div class="actions">
-          <a class="button button--accent" href="/contact/demo/"
-            >درخواست دموی GammaItsm</a
-          >
-          <a class="text-link" href="#capabilities">مشاهده قابلیت‌ها ←</a>
+
+        <div class="hero-actions">
+          <a class="button button--accent" href="/contact/demo/">
+            درخواست دموی GammaItsm
+          </a>
+
+          <a class="button button--secondary" href="#modules">
+            مشاهده ماژول‌ها
+          </a>
+        </div>
+
+        <div class="hero-points">
+          <span>مبتنی بر ITIL</span>
+          <span>گردش کار قابل پیکربندی</span>
+          <span>تحت وب</span>
         </div>
       </div>
-      <div
-        class="screenshot-placeholder"
-        aria-label="محل Screenshot واقعی GammaItsm"
-      >
-        محل تصویر واقعی GammaItsm
-      </div>
-    </div>
-  </section>
 
+      <div class="hero-visual" aria-label="نمای محصول GammaItsm">
+        <div class="product-window">
+
+          <div class="window-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="window-body">
+
+            <div class="window-sidebar">
+              <div class="sidebar-line sidebar-line--active"></div>
+              <div class="sidebar-line"></div>
+              <div class="sidebar-line"></div>
+              <div class="sidebar-line"></div>
+              <div class="sidebar-line"></div>
+            </div>
+
+            <div class="window-main">
+              <div class="window-title"></div>
+
+              <div class="dashboard-grid">
+                <div class="dashboard-card">
+                  <strong>درخواست‌ها</strong>
+                  <span>مدیریت درخواست‌های خدمات</span>
+                </div>
+
+                <div class="dashboard-card">
+                  <strong>رخدادها</strong>
+                  <span>مدیریت و پیگیری رخدادها</span>
+                </div>
+
+                <div class="dashboard-card">
+                  <strong>دارایی‌ها</strong>
+                  <span>کنترل چرخه عمر دارایی</span>
+                </div>
+
+                <div class="dashboard-card">
+                  <strong>گردش کار</strong>
+                  <span>فرایندهای قابل پیکربندی</span>
+                </div>
+              </div>
+
+              <div class="window-list">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Product navigation -->
   <nav class="product-nav" aria-label="ناوبری GammaItsm">
     <div class="container product-nav-inner">
       <a href="#overview">معرفی</a>
-      <a href="#capabilities">قابلیت‌ها</a>
-      <a href="#itil">ITIL</a><a href="#screenshots">تصاویر محیط</a>
+      <a href="#modules">ماژول‌ها</a>
+      <a href="#workflow">گردش کار</a>
+      <a href="#itil">ITIL</a>
+      <a href="#screenshots">محیط محصول</a>
       <a href="#integrations">یکپارچه‌سازی</a>
-      <a href="#resources">منابع</a><a href="#faq">سوالات متداول</a>
-      <a class="nav-cta" href="/contact/demo/">درخواست دمو</a>
+      <a href="#faq">سوالات متداول</a>
+
+      <a class="nav-cta" href="/contact/demo/"> درخواست دمو </a>
     </div>
   </nav>
 
-  <section class="content-section" aria-labelledby="why-title">
-    <div class="container narrow-content">
-      <!-- <p class="eyebrow">GammaItsm</p> -->
-      <h2 id="why-title">طراحی‌شده بر مبنای ITIL</h2>
-      <p>
-        گاما بر مبنای ITIL طراحی شده و با قابلیت پیکربندی متناسب با نیاز سازمان،
-        بستری برای بهبود کیفیت خدمات، افزایش بهره‌وری و مدیریت بهتر فرایندهای
-        فناوری اطلاعات فراهم می‌کند.
-      </p>
+  <!-- Introduction -->
+  <section class="content-section intro-section">
+    <div class="container intro-grid">
+      <div>
+        <h2>میز خدمت فقط ثبت تیکت نیست</h2>
+      </div>
+
+      <div class="intro-copy">
+        <p>
+          مدیریت خدمات فناوری اطلاعات زمانی اثربخش است که درخواست‌ها، رخدادها،
+          مشکلات، تغییرات، دارایی‌ها و فرایندهای مرتبط با یکدیگر دیده شوند.
+        </p>
+
+        <p>
+          GammaItsm این فرایندها را در یک محیط یکپارچه قرار می‌دهد تا سازمان
+          بتواند خدمات IT را از زمان ثبت درخواست تا انجام، کنترل و گزارش‌گیری
+          مدیریت کند.
+        </p>
+      </div>
     </div>
   </section>
 
-  <section
-    class="content-section capabilities"
-    id="capabilities"
-    aria-labelledby="capabilities-title"
-  >
+  <!-- Value -->
+  <section class="content-section value-section">
     <div class="container">
-      <div class="section-header">
-        <!-- <p class="eyebrow eyebrow--dark">قابلیت‌ها</p> -->
-        <h2 id="capabilities-title">ماژول‌ها و امکانات اصلی GammaItsm</h2>
+      <div class="section-heading">
+        <h2>یک بستر برای مدیریت کل خدمات IT</h2>
+        <p>
+          GammaItsm به جای مدیریت جداگانه فعالیت‌ها، ارتباط میان فرایندها و
+          اطلاعات سازمان را حفظ می‌کند.
+        </p>
       </div>
 
-      <div class="capability-grid">
+      <div class="value-grid">
+        <article class="value-card">
+          <div class="value-icon">01</div>
+          <h3>یکپارچگی فرایندها</h3>
+          <p>
+            درخواست، رخداد، مشکل، تغییر، دارایی و سایر فعالیت‌های مرتبط در یک
+            محیط مدیریت می‌شوند.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">02</div>
+          <h3>گردش کار قابل پیکربندی</h3>
+          <p>
+            برای هر نوع خدمت یا درخواست می‌توان فرایند، تأییدها، مسئولیت‌ها و
+            مراحل اجرای متفاوت تعریف کرد.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">03</div>
+          <h3>کنترل سطح خدمت</h3>
+          <p>
+            SLA و زمان‌های مورد انتظار در کنار فرایندهای خدماتی قابل مدیریت و
+            پیگیری هستند.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">04</div>
+          <h3>دید مدیریتی</h3>
+          <p>
+            اطلاعات عملیاتی خدمات IT به داده‌هایی قابل تحلیل برای تصمیم‌گیری
+            مدیریتی تبدیل می‌شوند.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modules -->
+  <section
+    class="content-section modules-section"
+    id="modules"
+    aria-labelledby="modules-title"
+  >
+    <div class="container">
+      <div class="section-heading">
+        <h2 id="modules-title">ماژول‌های GammaItsm</h2>
+
+        <p>
+          اجزای مختلف GammaItsm برای پوشش فرایندهای اصلی مدیریت خدمات فناوری
+          اطلاعات طراحی شده‌اند و می‌توانند متناسب با ساختار سازمان پیکربندی
+          شوند.
+        </p>
+      </div>
+
+      <div class="modules-grid">
         {
-          GammaItsmCapabilityGroups.map((group) => (
-            <article class="capability-group">
-              <div class="module-header">
-                <h3>{group.name}</h3>
-                <p>{group.description}</p>
+          GammaItsmModules.map((module) => (
+            <a
+              class="module-card"
+              href={`/products/gammaitsm/modules/${module.slug}/`}
+            >
+              <div class="module-card-content">
+                <h3>{module.name}</h3>
+
+                <p>{module.description}</p>
+
+                {module.capabilities.length > 0 && (
+                  <div class="module-capabilities">
+                    {module.capabilities.slice(0, 4).map((capability) => (
+                      <span>{capability}</span>
+                    ))}
+                  </div>
+                )}
               </div>
-              <ul class="feature-list">
-                {group.features.map((feature) => (
-                  <li class="feature-item">
-                    <a href={`/products/gammaitsm/features/${feature.slug}/`}>
-                      <span>{feature.name}</span>
-                      <span class="arrow" aria-hidden="true">
-                        ←
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </article>
+
+              <span class="module-link">مشاهده ماژول</span>
+            </a>
           ))
         }
       </div>
     </div>
   </section>
 
-  <section class="content-section itil" id="itil" aria-labelledby="itil-title">
-    <div class="container narrow-content">
-      <h2 id="itil-title">GammaItsm و ITIL</h2><p>
-        ITIL یک چارچوب و مجموعه‌ای از روش‌های مدیریت خدمات فناوری اطلاعات است.
-        GammaItsm محصول ITSM دومان سامانه است و می‌تواند برای پیاده‌سازی و
-        مدیریت فرایندهای مرتبط با ITIL به کار رود.
-      </p><a class="text-link" href="/resources/itil/">مشاهده راهنمای ITIL ←</a>
+  <!-- Workflow -->
+  <section
+    class="content-section workflow-section"
+    id="workflow"
+    aria-labelledby="workflow-title"
+  >
+    <div class="container">
+      <div class="section-heading">
+        <h2 id="workflow-title">فرایندها را به شکل دلخواه خود اجرا کنید</h2>
+
+        <p>
+          یکی از نقاط قوت GammaItsm امکان طراحی گردش کار متناسب با نوع خدمت،
+          ساختار سازمان و سطح دسترسی افراد است.
+        </p>
+      </div>
+
+      <div class="workflow-layout">
+        <div class="workflow-intro">
+          <h3>یک نمونه: درخواست کالا</h3>
+
+          <p>
+            یک درخواست ساده می‌تواند از ثبت توسط کاربر شروع شود و پس از تأیید،
+            بررسی موجودی، انجام عملیات و تحویل کالا به پایان برسد.
+          </p>
+
+          <p>
+            در هر مرحله مسئول مشخص است و وضعیت درخواست برای افراد مرتبط قابل
+            مشاهده و پیگیری خواهد بود.
+          </p>
+        </div>
+
+        <div class="request-timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker">۱</div>
+
+            <div class="timeline-card">
+              <div class="timeline-card-top">
+                <span class="timeline-label">کاربر</span>
+                <span class="timeline-status">ثبت درخواست</span>
+              </div>
+
+              <h3>درخواست کالا</h3>
+
+              <p>
+                کاربر کالای مورد نیاز خود را از طریق پرتال یا فرایند تعریف‌شده
+                ثبت می‌کند.
+              </p>
+
+              <div class="timeline-meta">
+                <span>ثبت در کارپوشه</span>
+                <span>اعلان خودکار</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker">۲</div>
+
+            <div class="timeline-card">
+              <div class="timeline-card-top">
+                <span class="timeline-label">راهبر</span>
+                <span class="timeline-status">تأیید</span>
+              </div>
+
+              <h3>بررسی و تأیید درخواست</h3>
+
+              <p>
+                درخواست برای مسئول یا راهبر مربوط ارسال می‌شود و پس از تأیید
+                وارد مرحله بعد خواهد شد.
+              </p>
+
+              <div class="timeline-meta">
+                <span>تأیید مرحله‌ای</span>
+                <span>کنترل دسترسی</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker">۳</div>
+
+            <div class="timeline-card">
+              <div class="timeline-card-top">
+                <span class="timeline-label">انبار</span>
+                <span class="timeline-status">بررسی موجودی</span>
+              </div>
+
+              <h3>بررسی موجودی کالا</h3>
+
+              <p>
+                مسئول انبار موجودی کالا را بررسی کرده و در صورت وجود، درخواست
+                برای انجام عملیات خروج آماده می‌شود.
+              </p>
+
+              <div class="timeline-meta">
+                <span>کنترل موجودی</span>
+                <span>انتخاب انبار</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker">4</div>
+
+            <div class="timeline-card">
+              <div class="timeline-card-top">
+                <span class="timeline-label">انبار</span>
+                <span class="timeline-status">تحویل</span>
+              </div>
+
+              <h3>صدور و تحویل کالا</h3>
+
+              <p>
+                حواله خروج ثبت می‌شود و کالا به فرد یا واحد درخواست‌کننده تحویل
+                داده می‌شود.
+              </p>
+
+              <div class="timeline-meta">
+                <span>ثبت حواله</span>
+                <span>ثبت تحویل</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker">۵</div>
+
+            <div class="timeline-card">
+              <div class="timeline-card-top">
+                <span class="timeline-label">سیستم</span>
+                <span class="timeline-status">خاتمه</span>
+              </div>
+
+              <h3>ثبت نتیجه و خاتمه فرایند</h3>
+
+              <p>
+                نتیجه عملیات ثبت شده و درخواست پس از تکمیل مراحل به صورت
+                ساختاریافته خاتمه پیدا می‌کند.
+              </p>
+
+              <div class="timeline-meta">
+                <span>ثبت سوابق</span>
+                <span>گزارش‌گیری</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Scenarios -->
+  <section class="content-section scenarios-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>فرایندها به یکدیگر متصل هستند</h2>
+
+        <p>
+          اطلاعات یک فعالیت می‌تواند مبنای اجرای فعالیت دیگری قرار گیرد و ارتباط
+          میان فرایندها حفظ شود.
+        </p>
+      </div>
+
+      <div class="scenario-grid">
+        <article class="scenario-card">
+          <div class="scenario-flow">
+            <span>درخواست کالا</span>
+            <span>تأیید</span>
+            <span>انبار</span>
+            <span>تحویل</span>
+            <span>مصرف</span>
+          </div>
+
+          <h3>از درخواست تا مصرف</h3>
+
+          <p>
+            درخواست کالا می‌تواند وارد فرایند تأیید شود، از موجودی انبار استفاده
+            کند و نتیجه نهایی آن در سوابق ثبت شود.
+          </p>
+        </article>
+
+        <article class="scenario-card">
+          <div class="scenario-flow">
+            <span>رخداد</span>
+            <span>دارایی</span>
+            <span>تعمیر</span>
+            <span>قطعه</span>
+          </div>
+
+          <h3>رخداد و دارایی</h3>
+
+          <p>
+            اطلاعات دارایی، رخدادهای مرتبط و عملیات انجام‌شده می‌توانند در کنار
+            یکدیگر قرار گیرند تا سابقه کامل خدمات حفظ شود.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ITIL -->
   <section
-    class="content-section"
+    class="content-section itil-section"
+    id="itil"
+    aria-labelledby="itil-title"
+  >
+    <div class="container itil-grid">
+      <div>
+        <h2 id="itil-title">GammaItsm و ITIL</h2>
+      </div>
+
+      <div>
+        <p>
+          ITIL یک چارچوب و مجموعه‌ای از روش‌های مدیریت خدمات فناوری اطلاعات است.
+          GammaItsm محصول ITSM دومان سامانه است و می‌تواند برای پیاده‌سازی و
+          مدیریت فرایندهای مرتبط با ITIL به کار رود.
+        </p>
+
+        <a class="text-link dark-link" href="/resources/itil/">
+          راهنمای ITIL
+        </a>
+      </div>
+    </div>
+
+    <div class="container itil-processes">
+      <article>
+        <strong>Incident</strong>
+        <span>مدیریت رخدادها</span>
+      </article>
+
+      <article>
+        <strong>Request</strong>
+        <span>مدیریت درخواست‌های خدمات</span>
+      </article>
+
+      <article>
+        <strong>Problem</strong>
+        <span>مدیریت مشکلات</span>
+      </article>
+
+      <article>
+        <strong>Change</strong>
+        <span>مدیریت تغییرات</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section
+    class="content-section screenshots-section"
     id="screenshots"
     aria-labelledby="screenshots-title"
   >
     <div class="container">
-      <h2 id="screenshots-title">تصاویر محیط محصول</h2><div
-        class="gallery-placeholder"
-      >
-        <span>محل Screenshotهای واقعی محصول</span>
+      <div class="section-heading">
+        <h2 id="screenshots-title">محیط محصول</h2>
+
+        <p>
+          تصاویر واقعی محیط GammaItsm می‌توانند در این بخش قرار بگیرند تا
+          کاربران پیش از درخواست دمو با فضای نرم‌افزار آشنا شوند.
+        </p>
+      </div>
+
+      <div class="gallery-placeholder">
+        <span>محل تصاویر واقعی GammaItsm</span>
         <small>
-          تصاویر رسمی GammaItsm پس از تأمین asset در این بخش قرار می‌گیرند.
+          تصاویر رسمی محصول پس از تأمین asset در این بخش قرار می‌گیرند.
         </small>
       </div>
     </div>
   </section>
 
+  <!-- Integrations -->
   <section
-    class="content-section"
+    class="content-section integrations-section"
     id="integrations"
     aria-labelledby="integrations-title"
   >
-    <div class="container narrow-content">
-      <h2 id="integrations-title">ارتباط با سیستم‌های دیگر</h2><p>
-        جزئیات یکپارچه‌سازی‌های GammaItsm پس از دریافت مستندات رسمی محصول در این
-        بخش منتشر خواهد شد.
-      </p>
-    </div>
-  </section>
+    <div class="container integration-grid">
+      <div>
+        <h2 id="integrations-title">یکپارچه‌سازی با سیستم‌های دیگر</h2>
+      </div>
 
-  <section
-    class="content-section"
-    id="resources"
-    aria-labelledby="resources-title"
-  >
-    <div class="container narrow-content">
-      <h2 id="resources-title">مطالعه بیشتر</h2><div class="resource-links">
-        <a href="/resources/articles/">مقالات</a>
-        <a href="/resources/videos/">ویدئوها</a>
-        <a href="/resources/itil/">راهنمای ITIL</a>
-        <a href="/resources/faq/">پرسش‌های متداول</a>
+      <div>
+        <p>
+          GammaItsm می‌تواند در معماری نرم‌افزاری سازمان در کنار سایر سیستم‌ها
+          قرار گیرد و اطلاعات مورد نیاز فرایندهای خدمات IT را دریافت یا منتقل
+          کند.
+        </p>
+
+        <div class="integration-items">
+          <span>API</span>
+          <span>سرویس‌های سازمانی</span>
+          <span>Directory Services</span>
+          <span>سیستم‌های خارجی</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="content-section" id="faq" aria-labelledby="faq-title">
+  <!-- FAQ -->
+  <section
+    class="content-section faq-section"
+    id="faq"
+    aria-labelledby="faq-title"
+  >
     <div class="container narrow-content">
-      <h2 id="faq-title">پرسش‌های متداول GammaItsm</h2><p>
-        پرسش‌ها و پاسخ‌های رسمی محصول پس از تأیید محتوای مربوط به GammaItsm در
-        این بخش اضافه خواهند شد.
-      </p>
+      <div class="section-heading">
+        <h2 id="faq-title">پرسش‌های متداول GammaItsm</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>GammaItsm برای چه سازمان‌هایی مناسب است؟</summary>
+
+          <p>
+            GammaItsm برای سازمان‌هایی طراحی شده است که نیاز به مدیریت
+            ساختاریافته خدمات فناوری اطلاعات، درخواست‌ها، رخدادها و فرایندهای
+            مرتبط دارند.
+          </p>
+        </details>
+
+        <details>
+          <summary>آیا فرایندها قابل تغییر و پیکربندی هستند؟</summary>
+
+          <p>
+            بله. گردش کار، مراحل تأیید، مسئولیت‌ها و اقدامات فرایندها می‌توانند
+            متناسب با نیاز سازمان تعریف و پیکربندی شوند.
+          </p>
+        </details>
+
+        <details>
+          <summary>آیا GammaItsm فقط برای ثبت تیکت است؟</summary>
+
+          <p>
+            خیر. مدیریت رخداد، درخواست، مشکل، تغییر، دارایی، انبار، SLA و
+            گردش‌های کاری بخشی از قابلیت‌های راهکار GammaItsm هستند.
+          </p>
+        </details>
+
+        <details>
+          <summary>آیا GammaItsm بر مبنای ITIL طراحی شده است؟</summary>
+
+          <p>
+            GammaItsm به عنوان یک راهکار ITSM می‌تواند برای پیاده‌سازی و مدیریت
+            فرایندهای مرتبط با چارچوب ITIL مورد استفاده قرار گیرد.
+          </p>
+        </details>
+      </div>
     </div>
   </section>
 
+  <!-- Final CTA -->
   <section class="final-cta">
     <div class="container narrow-content">
       <h2>GammaItsm را از نزدیک ببینید</h2>
+
       <p>
-        برای آشنایی با GammaItsm و بررسی نیازهای سازمان خود، با دومان سامانه در
-        ارتباط باشید.
-      </p><div class="actions">
-        <a class="button button--accent" href="/contact/demo/"
-          >درخواست دموی GammaItsm</a
-        ><a class="text-link" href="/contact/">تماس با ما ←</a>
+        برای آشنایی با امکانات GammaItsm و بررسی نیازهای سازمان خود، با دومان
+        سامانه در ارتباط باشید.
+      </p>
+
+      <div class="actions">
+        <a class="button button--accent" href="/contact/demo/">
+          درخواست دموی GammaItsm
+        </a>
+
+        <a class="text-link" href="/contact/"> تماس با ما </a>
       </div>
     </div>
   </section>
+</main>
 </BaseLayout>
 
 <style>
-  .product-hero {
-    padding-block: clamp(4rem, 9vw, 8rem);
-    background: var(--hero-product-background);
-    color: white;
-  }
-
-  .hero-grid {
-    display: grid;
-    gap: var(--space-lg);
-    align-items: center;
-  }
-
-  .breadcrumb,
-  .text-link {
-    color: var(--color-secondary);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
-  }
-
-  .product-hero .breadcrumb,
-  .product-hero .text-link {
-    color: var(--color-accent-soft);
-  }
-
-  .breadcrumb {
-    display: inline-block;
-    margin-block-end: var(--space-lg);
-  }
-
-  .eyebrow {
-    margin-block-end: var(--space-sm);
-    color: var(--color-accent-dark);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-  }
-
-  .product-hero .eyebrow {
-    color: var(--color-accent-soft);
-  }
-
-  .eyebrow--dark {
-    color: var(--color-accent-dark);
-  }
-
-  h1 {
-    max-width: 18ch;
-    margin-block-end: var(--space-md);
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    line-height: 1.2;
-  }
-
-  .hero-copy {
-    max-width: 42rem;
-    margin-block-end: var(--space-lg);
-    color: var(--color-text-on-dark);
-    font-size: 1.15rem;
-  }
-
-  .actions {
+  .hero-points {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: 0.65rem 1.5rem;
+    margin-block-start: 2rem;
+    color: #bfc5c4;
+    font-size: var(--font-size-small);
   }
 
-  .screenshot-placeholder,
-  .gallery-placeholder {
+  .hero-points span {
+    position: relative;
+    padding-inline-start: 1rem;
+  }
+
+  .hero-points span::before {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.65em;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--color-brand);
+    content: "";
+  }
+
+  .product-window {
+    width: min(100%, 34rem);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.055);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(10px);
+  }
+
+  .window-header {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.9rem 1rem;
+    border-block-end: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .window-header span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .window-body {
     display: grid;
-    min-height: 19rem;
-    place-items: center;
-    border: 0.1rem dashed var(--color-line);
-    background: rgba(255, 255, 255, 0.04);
-    color: var(--color-muted);
-    text-align: center;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    min-height: 22rem;
   }
 
-  .screenshot-placeholder {
-    border-color: rgba(253, 228, 213, 0.45);
-    color: var(--color-accent-soft);
+  .window-sidebar {
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+    padding: 1.1rem 0.8rem;
+    border-inline-end: 1px solid rgba(255, 255, 255, 0.08);
   }
+
+  .sidebar-line {
+    height: 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.11);
+  }
+
+  .sidebar-line--active {
+    background: rgba(239, 63, 35, 0.8);
+  }
+
+  .window-main {
+    padding: 1.2rem;
+  }
+
+  .window-title {
+    width: 45%;
+    height: 0.7rem;
+    margin-block-end: 1.2rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .dashboard-card {
+    min-height: 6rem;
+    padding: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.055);
+  }
+
+  .dashboard-card strong,
+  .dashboard-card span {
+    display: block;
+  }
+
+  .dashboard-card strong {
+    margin-block-end: 0.4rem;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.8rem;
+  }
+
+  .dashboard-card span {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.65rem;
+    line-height: 1.7;
+  }
+
+  .window-list {
+    display: grid;
+    gap: 0.55rem;
+    margin-block-start: 1rem;
+  }
+
+  .window-list div {
+    height: 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Navigation */
 
   .product-nav {
     position: sticky;
     inset-block-start: 0;
-    z-index: 5;
-    border-block-end: 0.0625rem solid var(--color-line);
-    background: var(--color-surface);
+    z-index: 10;
+    border-block-end: 1px solid var(--color-line);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
   }
 
   .product-nav-inner {
     display: flex;
-    gap: 1.1rem;
+    gap: 1.25rem;
     overflow-x: auto;
-    padding-block: 0.85rem;
+    padding-block: 0.9rem;
     white-space: nowrap;
   }
 
@@ -289,173 +784,675 @@ import { GammaItsmCapabilityGroups } from "../../../data/gammaitsm";
     color: var(--color-accent-dark);
   }
 
+  /* Generic sections */
+
   .content-section {
-    padding-block: var(--space-xl);
+    padding-block: clamp(4.5rem, 8vw, 7rem);
   }
 
   .content-section:nth-of-type(even) {
     background: var(--color-surface);
   }
 
-  .narrow-content {
-    max-width: 52rem;
+  .section-heading {
+    max-width: 48rem;
+    margin-block-end: 3rem;
   }
 
-  .section-header {
-    margin-block-end: var(--space-lg);
-  }
-
-  h2 {
-    margin-block-end: 0;
+  .section-heading h2 {
+    margin-block-end: 1rem;
     color: var(--color-primary);
-    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.25;
   }
 
-  .capability-grid {
+  .section-heading p {
+    max-width: 44rem;
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.9;
+  }
+
+  /* Introduction */
+
+  .intro-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .intro-grid h2 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.3;
+  }
+
+  .intro-copy {
+    max-width: 48rem;
+  }
+
+  .intro-copy p {
+    margin-block-end: 1.25rem;
+    color: var(--color-text-secondary);
+    line-height: 2;
+  }
+
+  .intro-copy p:last-child {
+    margin-block-end: 0;
+  }
+
+  /* Value */
+
+  .value-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    align-items: start;
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    background: var(--color-line);
   }
 
-  .capability-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem 1.25rem 1.2rem;
-    border: 0.0625rem solid var(--color-border);
-    border-radius: var(--radius-md);
-    border-block-start: 0.25rem solid var(--color-primary);
+  .value-card {
+    min-width: 0;
+    padding: 2rem;
     background: var(--color-paper);
   }
 
-  .module-header {
-    display: grid;
-    gap: 0.5rem;
+  .value-icon {
+    margin-block-end: 1.5rem;
+    color: var(--color-brand);
+    font-size: 0.78rem;
+    font-weight: var(--font-weight-bold);
   }
 
-  .capability-group h3 {
+  .value-card h3 {
+    margin-block-end: 0.7rem;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+  }
+
+  .value-card p {
     margin: 0;
+    color: var(--color-muted);
+    line-height: 1.85;
+  }
+
+  /* Modules */
+
+  .modules-section {
+    background: var(--color-paper);
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .module-card {
+    display: flex;
+    min-width: 0;
+    min-height: 18rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.7rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      border-color var(--transition-normal),
+      transform var(--transition-normal),
+      box-shadow var(--transition-normal);
+  }
+
+  .module-card:hover,
+  .module-card:focus-visible {
+    border-color: rgba(239, 63, 35, 0.45);
+    transform: translateY(-0.2rem);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .module-card h3 {
+    margin-block-end: 0.8rem;
     color: var(--color-primary);
     font-size: 1.35rem;
   }
 
-  .capability-group p {
+  .module-card p {
     margin: 0;
     color: var(--color-muted);
     line-height: 1.8;
   }
 
-  .feature-list {
-    display: grid;
-    gap: 0.4rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .feature-item {
-    min-width: 0;
-  }
-
-  .feature-item a,
-  .resource-links a {
+  .module-capabilities {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    width: 100%;
-    padding-block: 0.4rem;
-    color: var(--color-ink);
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-block-start: 1.25rem;
   }
 
-  .feature-item a {
+  .module-capabilities span {
+    padding: 0.35rem 0.55rem;
+    border: 1px solid var(--color-line);
     border-radius: var(--radius-sm);
-    transition:
-      color var(--transition-fast),
-      background-color var(--transition-fast);
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 
-  .feature-item a:hover,
-  .feature-item a:focus-visible,
-  .resource-links a:hover,
-  .resource-links a:focus-visible {
+  .module-link {
+    align-self: flex-start;
+    margin-block-start: 1.5rem;
     color: var(--color-accent-dark);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
   }
 
-  .feature-item a span:first-child {
+  /* Workflow */
+
+  .workflow-section {
+    background: var(--color-surface);
+  }
+
+  .workflow-layout {
+    display: grid;
+    gap: 4rem;
+  }
+
+  .workflow-intro {
+    max-width: 43rem;
+  }
+
+  .workflow-intro h3 {
+    margin-block-end: 1rem;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+  }
+
+  .workflow-intro p {
+    margin-block-end: 1rem;
+    color: var(--color-muted);
+    line-height: 1.9;
+  }
+
+  .request-timeline {
+    position: relative;
+    display: grid;
+    gap: 1.25rem;
+    direction: rtl;
+  }
+
+  .request-timeline::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    right: 1.25rem;
+    width: 1px;
+    background: var(--color-line);
+  }
+
+  .timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .timeline-marker {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-accent-dark);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .timeline-card {
     min-width: 0;
-    color: var(--color-ink);
-    line-height: 1.7;
-  }
-
-  .feature-item .arrow {
-    color: var(--color-accent);
-    font-weight: 800;
-    transition: transform var(--transition-fast);
-    flex-shrink: 0;
-  }
-
-  .feature-item a:hover .arrow,
-  .feature-item a:focus-visible .arrow {
-    transform: translateX(-0.125rem);
-  }
-
-  .gallery-placeholder {
-    min-height: 14rem;
-    flex-direction: column;
-    gap: 0.5rem;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
     background: var(--color-paper);
   }
 
+  .timeline-card-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-block-end: 0.8rem;
+  }
+
+  .timeline-label,
+  .timeline-status {
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .timeline-label {
+    color: var(--color-secondary);
+  }
+
+  .timeline-status {
+    color: var(--color-accent-dark);
+  }
+
+  .timeline-card h3 {
+    margin-block-end: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.15rem;
+  }
+
+  .timeline-card p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.8;
+  }
+
+  .timeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-start: 1rem;
+  }
+
+  .timeline-meta span {
+    padding: 0.3rem 0.55rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-secondary);
+    font-size: 0.72rem;
+  }
+
+  .workflow-features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-block-start: 3rem;
+  }
+
+  .workflow-features > div {
+    padding-block-start: 1rem;
+    border-block-start: 2px solid var(--color-brand);
+  }
+
+  .workflow-features strong,
+  .workflow-features span {
+    display: block;
+  }
+
+  .workflow-features strong {
+    margin-block-end: 0.4rem;
+    color: var(--color-primary);
+  }
+
+  .workflow-features span {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  /* Scenarios */
+
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .scenario-card {
+    padding: 2rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+  }
+
+  .scenario-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-block-end: 2rem;
+  }
+
+  .scenario-flow span {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+  }
+
+  .scenario-card h3 {
+    margin-block-end: 0.7rem;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+  }
+
+  .scenario-card p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.85;
+  }
+
+  /* ITIL */
+
+  .itil-section {
+    background: var(--color-primary);
+  }
+
+  .itil-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .itil-grid h2 {
+    margin: 0;
+    color: var(--color-white);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .itil-grid p {
+    max-width: 45rem;
+    margin-block-end: 1.5rem;
+    color: var(--color-text-on-dark);
+    line-height: 1.95;
+  }
+
+  .dark-link {
+    color: var(--color-accent-soft);
+  }
+
+  .itil-processes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-block-start: 4rem;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .itil-processes article {
+    min-height: 8rem;
+    padding: 1.5rem;
+    background: var(--color-primary);
+  }
+
+  .itil-processes strong,
+  .itil-processes span {
+    display: block;
+  }
+
+  .itil-processes strong {
+    margin-block-end: 0.5rem;
+    color: var(--color-white);
+  }
+
+  .itil-processes span {
+    color: #aeb5b3;
+    font-size: 0.85rem;
+  }
+
+  /* Feature strip */
+
+  .feature-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--color-line);
+  }
+
+  .feature-strip article {
+    min-height: 10rem;
+    padding: 1.5rem;
+    background: var(--color-paper);
+  }
+
+  .feature-strip h3 {
+    margin-block-end: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+  }
+
+  .feature-strip p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  /* Screenshots */
+
+  .gallery-placeholder {
+    display: grid;
+    min-height: 22rem;
+    place-items: center;
+    padding: 2rem;
+    border: 1px dashed var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+    text-align: center;
+  }
+
+  .gallery-placeholder span,
   .gallery-placeholder small {
+    display: block;
+  }
+
+  .gallery-placeholder span {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .gallery-placeholder small {
+    margin-block-start: 0.5rem;
     color: var(--color-muted);
   }
 
-  .resource-links {
+  /* Integrations */
+
+  .integration-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 2rem;
+    gap: 3rem;
   }
 
+  .integration-grid h2 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .integration-grid p {
+    max-width: 45rem;
+    margin-block-end: 1.5rem;
+    color: var(--color-muted);
+    line-height: 1.9;
+  }
+
+  .integration-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .integration-items span {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-sm);
+    background: var(--color-paper);
+    color: var(--color-secondary);
+    font-size: 0.8rem;
+  }
+
+  /* FAQ */
+
+  .faq-list {
+    border-block-start: 1px solid var(--color-line);
+  }
+
+  .faq-list details {
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .faq-list summary {
+    padding-block: 1.25rem;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    list-style: none;
+  }
+
+  .faq-list summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-list p {
+    max-width: 48rem;
+    margin: 0;
+    padding-block-end: 1.5rem;
+    color: var(--color-muted);
+    line-height: 1.9;
+  }
+
+  /* Final CTA */
+
   .final-cta {
-    padding-block: var(--space-xl);
+    padding-block: clamp(4.5rem, 8vw, 7rem);
     background: var(--color-primary);
-    color: white;
+    color: var(--color-white);
   }
 
   .final-cta h2 {
-    color: white;
+    margin-block-end: 1rem;
+    color: var(--color-white);
+    font-size: clamp(2rem, 4vw, 3.2rem);
   }
 
   .final-cta p {
-    color: #eee;
+    max-width: 44rem;
+    margin-block-end: 2rem;
+    color: #d1d5d4;
+    line-height: 1.9;
   }
 
   .final-cta .text-link {
     color: var(--color-accent-soft);
   }
 
+  /* Responsive */
+
   @media (min-width: 48rem) {
     .hero-grid {
-      grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
+      grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+    }
+
+    .intro-grid {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      align-items: start;
+    }
+
+    .itil-grid {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      align-items: start;
+    }
+
+    .integration-grid {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      align-items: start;
     }
   }
 
-  @media (max-width: 47.99rem) {
-    .capability-grid,
-    .resource-links {
+  @media (max-width: 64rem) {
+    .modules-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .workflow-features {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .itil-processes {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .hero-grid,
+    .modules-grid,
+    .value-grid,
+    .scenario-grid,
+    .feature-strip {
       grid-template-columns: 1fr;
     }
 
+    .window-body {
+      grid-template-columns: 4rem minmax(0, 1fr);
+    }
+
     .product-nav-inner {
-      gap: 0.85rem;
+      gap: 1rem;
     }
 
     .product-nav .nav-cta {
       margin-inline-start: 0;
+    }
+
+    .workflow-features {
+      grid-template-columns: 1fr;
+    }
+
+    .itil-processes {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 36rem) {
+    .product-hero {
+      padding-block: 3.5rem;
+    }
+
+    .product-hero h1 {
+      font-size: 2.4rem;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .window-sidebar {
+      padding-inline: 0.6rem;
+    }
+
+    .timeline-item {
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+
+    .timeline-marker {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .request-timeline::before {
+      inset-inline-end: 1rem;
+    }
+
+    .timeline-card {
+      padding: 1.15rem;
     }
   }
 </style>

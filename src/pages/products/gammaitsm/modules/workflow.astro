@@ -6,90 +6,90 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   title="مدیریت گردش کار | Gamma ITSM"
   description="گردش‌های کاری Gamma ITSM را برای خودکارسازی فرایندهای خدمات فناوری اطلاعات، ارجاع درخواست‌ها، تأییدها، شرایط، زمان‌سنج و اعلان‌ها طراحی و اجرا کنید."
 >
-  <main class="workflow-page">
+  <main class="page">
     <!-- Hero -->
-    <section class="workflow-hero">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="مسیر صفحه">
-          <a href="/">خانه</a>
-          <span>/</span>
-          <a href="/products/">محصولات</a>
-          <span>/</span>
-          <a href="/products/gammaitsm/">Gamma Help Desk</a>
-          <span>/</span>
-          <span>گردش کار</span>
-        </nav>
+   <section class="hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="مسیر صفحه">
+      <a href="/">خانه</a>
+      <span>/</span>
+      <a href="/products/">محصولات</a>
+      <span>/</span>
+      <a href="/products/gammaitsm/">Gamma Help Desk</a>
+      <span>/</span>
+      <span>گردش کار</span>
+    </nav>
 
-        <div class="hero-grid">
-          <div class="hero-content">
-            <h1>
-              گردش‌های کاری سازمان خود را
-              <span class="accent-text">مکانیزه کنید</span>
-            </h1>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <h1>
+          گردش‌های کاری سازمان خود را
+          <span class="accent-text">مکانیزه کنید</span>
+        </h1>
 
-            <p class="hero-description">
-              مدیریت درخواست‌ها و خدمات فناوری اطلاعات بدون داشتن گردش کاری
-              قدرتمند، ارزش چندانی نخواهد داشت. Gamma ITSM به شما امکان می‌دهد
-              برای انواع درخواست‌ها و خدمات، گردش‌های کاری متفاوت و قابل کنترل
-              تعریف کنید.
-            </p>
+        <p class="hero-lead">
+          مدیریت درخواست‌ها و خدمات فناوری اطلاعات بدون داشتن گردش کاری
+          قدرتمند، ارزش چندانی نخواهد داشت. Gamma ITSM به شما امکان می‌دهد
+          برای انواع درخواست‌ها و خدمات، گردش‌های کاری متفاوت و قابل کنترل
+          تعریف کنید.
+        </p>
 
-            <div class="hero-actions">
-              <a class="button button--accent" href="/contact/demo/">
-                درخواست دموی Gamma ITSM
-              </a>
+        <div class="hero-actions">
+          <a class="button button--accent" href="/contact/demo/">
+            درخواست دموی Gamma ITSM
+          </a>
 
-              <a class="button button--secondary" href="/products/gammaitsm/">
-                معرفی Gamma ITSM
-              </a>
-            </div>
+          <a class="button button--secondary" href="/products/gammaitsm/">
+            معرفی Gamma ITSM
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="نمونه گردش کار">
+        <div class="workflow-window">
+          <div class="workflow-window__header">
+            <span>Workflow</span>
+            <span class="workflow-status">فعال</span>
           </div>
 
-          <div class="workflow-visual" aria-label="نمونه گردش کار">
-            <div class="workflow-window">
-              <div class="workflow-window__header">
-                <span>Workflow</span>
-                <span class="workflow-status">فعال</span>
-              </div>
+          <div class="workflow-canvas">
+            <div class="workflow-node workflow-node--start">
+              <small>شروع</small>
+              <strong>ثبت درخواست</strong>
+            </div>
 
-              <div class="workflow-canvas">
-                <div class="workflow-node workflow-node--start">
-                  <small>شروع</small>
-                  <strong>ثبت درخواست</strong>
-                </div>
+            <div class="workflow-connector">
+              <span></span>
+            </div>
 
-                <div class="workflow-connector">
-                  <span></span>
-                </div>
+            <div class="workflow-node">
+              <small>تأیید</small>
+              <strong>تأیید مدیر</strong>
+            </div>
 
-                <div class="workflow-node">
-                  <small>تأیید</small>
-                  <strong>تأیید مدیر</strong>
-                </div>
+            <div class="workflow-connector">
+              <span></span>
+            </div>
 
-                <div class="workflow-connector">
-                  <span></span>
-                </div>
+            <div class="workflow-node workflow-node--accent">
+              <small>اقدام</small>
+              <strong>کارشناس IT</strong>
+            </div>
 
-                <div class="workflow-node workflow-node--accent">
-                  <small>اقدام</small>
-                  <strong>کارشناس IT</strong>
-                </div>
+            <div class="workflow-branch">
+              <div class="workflow-branch__line"></div>
 
-                <div class="workflow-branch">
-                  <div class="workflow-branch__line"></div>
-
-                  <div class="workflow-node workflow-node--small">
-                    <small>شرط</small>
-                    <strong>نیاز به تأیید؟</strong>
-                  </div>
-                </div>
+              <div class="workflow-node workflow-node--small">
+                <small>شرط</small>
+                <strong>نیاز به تأیید؟</strong>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Example -->
     <section class="example-section">
@@ -583,85 +583,21 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
-  .workflow-page {
-    --workflow-dark: var(--color-brand-dark);
-    --workflow-accent: var(--color-brand);
-    --workflow-surface: var(--color-surface);
-    --workflow-surface-alt: var(--color-surface-alt);
-    --workflow-border: var(--color-border);
-    --workflow-muted: var(--color-text-secondary);
-  }
-
-  .container {
-    width: min(100% - 2rem, var(--container-width));
-    margin-inline: auto;
-  }
-
-  .workflow-hero {
-    padding-block: clamp(4rem, 9vw, 8rem);
-    color: var(--color-white);
-    background: var(--hero-product-background);
-  }
-
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    padding: 1.25rem 0;
-    color: var(--feature-muted);
-    font-size: 0.82rem;
-  }
-
-  .breadcrumb a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .breadcrumb a:hover {
-    color: var(--feature-accent);
-  }
-
-  .hero-grid {
+  /* .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
     align-items: center;
     gap: clamp(3rem, 7vw, 7rem);
-  }
+  } */
 
-  h1,
-  h2 {
-    margin: 0;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-heading);
-  }
-
-  h1 {
-    max-width: 850px;
-    font-size: var(--font-size-h1);
-    letter-spacing: -0.03em;
-  }
-
-  h1 span,
-  h2 span {
-    color: var(--workflow-accent);
-  }
-
-  .hero-description {
+  /* .hero-description {
     max-width: 700px;
     margin: var(--space-lg) 0 0;
     color: var(--color-text-on-dark);
     font-size: var(--font-size-lg);
     line-height: var(--line-height-body);
-  }
+  } */
 
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-lg);
-  }
 
   .button {
     display: inline-flex;

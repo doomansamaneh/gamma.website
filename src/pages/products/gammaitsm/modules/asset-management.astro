@@ -6,102 +6,103 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   title="مدیریت دارایی و تجهیزات | Gamma Help Desk"
   description="مدیریت تجهیزات و دارایی‌های سازمان با Gamma Help Desk؛ از ساختار درخت کالا و شناسنامه تجهیزات تا کنترل جابه‌جایی، هزینه‌ها، سوابق و گزارش‌های مدیریتی."
 >
-  <main class="asset-page">
+  <main class="page">
     <!-- Hero -->
-    <section class="asset-hero">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="مسیر صفحه">
-          <a href="/">خانه</a>
-          <span>/</span>
-          <a href="/products/">محصولات</a>
-          <span>/</span>
-          <a href="/products/gammaitsm/">Gamma Help Desk</a>
-          <span>/</span>
-          <span>مدیریت دارایی</span>
-        </nav>
+  <section class="hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="مسیر صفحه">
+      <a href="/">خانه</a>
+      <span>/</span>
+      <a href="/products/">محصولات</a>
+      <span>/</span>
+      <a href="/products/gammaitsm/">Gamma Help Desk</a>
+      <span>/</span>
+      <span>مدیریت دارایی</span>
+    </nav>
 
-        <div class="hero-grid">
-          <div class="hero-content_">
-            <h1>
-              داراییهای سازمان را
-              <span class="accent-text">ساختار یافته و دقیق</span>مدیریت کنید
-            </h1>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <h1>
+          دارایی‌های سازمان را
+          <span class="accent-text">ساختاریافته و دقیق</span>
+          مدیریت کنید
+        </h1>
 
-            <p class="hero-description">
-              تمام چرخه عمر تجهیزات سازمان را از زمان ورود و تخصیص تا جابه‌جایی،
-              تعمیر، نگهداری و اسقاط مدیریت کنید و همیشه شناسنامه، سوابق،
-              هزینه‌ها و وضعیت دارایی‌ها را در اختیار داشته باشید.
-            </p>
+        <p class="hero-lead">
+          تمام چرخه عمر تجهیزات سازمان را از زمان ورود و تخصیص تا جابه‌جایی،
+          تعمیر، نگهداری و اسقاط مدیریت کنید و همیشه شناسنامه، سوابق،
+          هزینه‌ها و وضعیت دارایی‌ها را در اختیار داشته باشید.
+        </p>
 
-            <div class="hero-actions">
-              <a class="button button--accent" href="/contact/demo/">
-                درخواست دموی Gamma Help Desk
-              </a>
+        <div class="hero-actions">
+          <a class="button button--accent" href="/contact/demo/">
+            درخواست دموی Gamma Help Desk
+          </a>
 
-              <a class="button button--secondary" href="/products/gammaitsm/">
-                معرفی Gamma Help Desk
-              </a>
+          <a class="button button--secondary" href="/products/gammaitsm/">
+            معرفی Gamma Help Desk
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="hero-visual"
+        aria-label="ساختار مدیریت دارایی در Gamma Help Desk"
+      >
+        <div class="asset-window">
+          <div class="asset-window__header">
+            <span>Asset Management</span>
+            <strong>مدیریت دارایی</strong>
+          </div>
+
+          <div class="asset-tree">
+            <div class="tree-level tree-level--root">
+              <span>01</span>
+              <strong>دارایی</strong>
+              <small>Asset</small>
+            </div>
+
+            <div class="tree-line"></div>
+
+            <div class="tree-level">
+              <span>02</span>
+              <strong>مشخصات و شناسنامه</strong>
+              <small>Identity</small>
+            </div>
+
+            <div class="tree-line"></div>
+
+            <div class="tree-level">
+              <span>03</span>
+              <strong>محل استقرار و مسئول</strong>
+              <small>Location & Owner</small>
+            </div>
+
+            <div class="tree-line"></div>
+
+            <div class="tree-level tree-level--accent">
+              <span>04</span>
+              <strong>سوابق و چرخه عمر</strong>
+              <small>Lifecycle</small>
             </div>
           </div>
 
-          <div
-            class="asset-visual"
-            aria-label="ساختار درخت کالا در Gamma Help Desk"
-          >
-            <div class="asset-window">
-              <div class="asset-window__header">
-                <span>Asset Management</span>
-                <strong>درخت کالا</strong>
-              </div>
+          <div class="asset-status">
+            <div>
+              <span>وضعیت</span>
+              <strong>فعال</strong>
+            </div>
 
-              <div class="asset-tree">
-                <div class="tree-level tree-level--root">
-                  <span>01</span>
-                  <strong>گروه کالا</strong>
-                  <small>Product Group</small>
-                </div>
-
-                <div class="tree-line"></div>
-
-                <div class="tree-level">
-                  <span>02</span>
-                  <strong>کالا</strong>
-                  <small>Product</small>
-                </div>
-
-                <div class="tree-line"></div>
-
-                <div class="tree-level">
-                  <span>03</span>
-                  <strong>برند</strong>
-                  <small>Brand</small>
-                </div>
-
-                <div class="tree-line"></div>
-
-                <div class="tree-level tree-level--accent">
-                  <span>04</span>
-                  <strong>مدل کالا</strong>
-                  <small>Model</small>
-                </div>
-              </div>
-
-              <div class="asset-status">
-                <div>
-                  <span>وضعیت</span>
-                  <strong>فعال</strong>
-                </div>
-
-                <div>
-                  <span>محل استقرار</span>
-                  <strong>ساختمان مرکزی</strong>
-                </div>
-              </div>
+            <div>
+              <span>محل استقرار</span>
+              <strong>ساختمان مرکزی</strong>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Product Tree -->
     <section class="tree-section">
@@ -669,77 +670,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     margin-inline: auto;
   }
 
-  /* Hero */
-
-  .asset-hero {
-    padding-block: clamp(4rem, 9vw, 8rem);
-    color: var(--color-white);
-    background: var(--hero-product-background);
-  }
-
-  .breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    margin-block-end: 3rem;
-    color: var(--color-text-on-dark);
-    font-size: var(--font-size-sm);
-  }
-
-  .breadcrumb a {
-    color: var(--color-text-on-dark);
-    text-decoration: none;
-  }
-
-  .breadcrumb a:hover {
-    color: var(--color-accent);
-  }
-
-  .breadcrumb span {
-    opacity: 0.7;
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-    align-items: center;
-    gap: clamp(2rem, 5vw, 3rem);
-  }
-
-  h1,
-  h2 {
-    margin: 0;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-heading);
-  }
-
-  h1 {
-    max-width: 850px;
-    font-size: var(--font-size-h1);
-    letter-spacing: -0.03em;
-  }
-
-  h1 .accent-text,
-  h2 .accent-text {
-    color: var(--color-accent);
-  }
-
-  .hero-description {
-    max-width: 700px;
-    margin: var(--space-lg) 0 0;
-    color: var(--color-text-on-dark);
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-body);
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-lg);
-  }
-
   .button {
     display: inline-flex;
     align-items: center;
@@ -918,13 +848,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   .section-heading--center {
     margin-inline: auto;
     text-align: center;
-  }
-
-  .section-heading h2,
-  .feature-content h2,
-  .cta-box h2 {
-    color: var(--color-text-primary);
-    font-size: var(--font-size-h2);
   }
 
   .section-heading p,
@@ -1512,7 +1435,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   /* Tablet */
 
   @media (max-width: 64rem) {
-    .hero-grid,
     .feature-grid,
     .feature-grid--reverse {
       grid-template-columns: 1fr;
@@ -1609,10 +1531,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   /* Mobile */
 
   @media (max-width: 48rem) {
-    .asset-hero {
-      padding-block: 4rem;
-    }
-
     h1 {
       font-size: clamp(2.5rem, 11vw, 4rem);
     }

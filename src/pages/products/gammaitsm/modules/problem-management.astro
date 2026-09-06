@@ -6,8 +6,8 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   title="مدیریت مشکلات | Gamma Help Desk"
   description="مدیریت مشکلات در Gamma Help Desk با هدف شناسایی علت ریشه‌ای مشکلات، کاهش رخدادهای تکرارشونده و جلوگیری از بروز مجدد اختلالات."
 >
-  <main class="problem-management-page">
-    <section class="problem-hero">
+  <main class="page">
+    <section class="hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="مسیر صفحه">
           <a href="/">خانه</a>
@@ -19,16 +19,14 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
           <span>مدیریت مشکلات</span>
         </nav>
 
-        <div class="problem-hero__content">
-          <div class="problem-hero__copy">
-            <span class="problem-hero__label">Problem Management</span>
-
+        <div class="hero-content">
+          <div class="hero-copy">
             <h1>
               مدیریت مشکلات برای
               <span class="accent-text">جلوگیری از تکرار رخدادها</span>
             </h1>
 
-            <p class="problem-hero__lead">
+            <p class="hero-lead">
               مشکل ممکن است یک یا چند کاربر را تحت تأثیر قرار دهد. هدف مدیریت
               مشکلات، شناسایی و حل ریشه اصلی مشکلات و جلوگیری از رخدادهای جدید
               است؛ در حالی که مدیریت رخداد بر بازگرداندن سرویس به وضعیت عادی در
@@ -36,7 +34,7 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
             </p>
           </div>
 
-          <div class="problem-hero__visual" aria-hidden="true">
+          <div class="hero-visual" aria-hidden="true">
             <div class="problem-visual">
               <div class="problem-visual__header">
                 <span></span>
@@ -100,8 +98,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 
         <div class="problem-insight">
           <div class="problem-insight__content">
-            <span class="problem-section__number">01</span>
-
             <h3>رخدادهای پرتکرار را شناسایی کنید</h3>
 
             <p>
@@ -170,8 +166,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
           </div>
 
           <div class="problem-cause__content">
-            <span class="problem-section__number">02</span>
-
             <h2>
               علت بروز مشکلات را
               <span class="accent-text">ریشه‌یابی کنید</span>
@@ -199,11 +193,9 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
       <div class="container">
         <div class="problem-threshold">
           <div class="problem-threshold__content">
-            <span class="problem-section__number">03</span>
-
             <h2>
-              از یک سوراخ
-              <span class="accent-text">دو بار نیش نخورید!</span>
+              از یک سوراخ دو بار
+              <span class="accent-text"> گزیده نشوید!</span>
             </h2>
 
             <p>
@@ -256,8 +248,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
       <div class="container">
         <div class="solution-section">
           <div class="solution-section__content">
-            <span class="problem-section__number">04</span>
-
             <h2>
               مشکلات را با ثبت
               <span class="accent-text">راه‌حل مناسب</span> کاهش دهید
@@ -453,81 +443,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
-  .problem-management-page {
-    overflow: hidden;
-  }
-
-  .problem-hero {
-    position: relative;
-    background: var(--hero-product-background);
-    color: var(--color-text-on-dark);
-    padding-block: 1.25rem 7rem;
-  }
-
-  .problem-hero .breadcrumb {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-block-end: 5rem;
-    color: rgba(216, 225, 223, 0.65);
-    font-size: var(--font-size-sm);
-  }
-
-  .problem-hero .breadcrumb a {
-    color: inherit;
-    text-decoration: none;
-    transition: color var(--transition-fast);
-  }
-
-  .problem-hero .breadcrumb a:hover {
-    color: var(--color-white);
-  }
-
-  .problem-hero__content {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
-    align-items: center;
-    gap: 5rem;
-    max-width: 80rem;
-    margin-inline: auto;
-  }
-
-  .problem-hero__copy {
-    max-width: 48rem;
-  }
-
-  .problem-hero__label {
-    display: inline-flex;
-    margin-block-end: 1.25rem;
-    color: var(--color-accent);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.04em;
-    direction: ltr;
-  }
-
-  .problem-hero h1 {
-    margin: 0;
-    color: var(--color-white);
-    font-size: clamp(2.6rem, 6vw, 5.4rem);
-    line-height: 1.2;
-    letter-spacing: -0.03em;
-  }
-
-  h1 .accent-text,
-  h2 .accent-text {
-    color: var(--color-accent);
-  }
-
-  .problem-hero__lead {
-    max-width: 44rem;
-    margin-block-start: 2rem;
-    color: rgba(216, 225, 223, 0.82);
-    font-size: 1.08rem;
-    line-height: 2;
-  }
-
   .problem-visual {
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -654,25 +569,11 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     text-align: center;
   }
 
-  .section-heading h2,
-  .problem-cause__content h2,
-  .problem-threshold__content h2,
-  .solution-section__content h2 {
-    margin: 0;
-    color: var(--color-text-primary);
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 1.35;
-  }
-
   .section-heading p {
     margin-block-start: 1.5rem;
     color: var(--color-text-secondary);
     font-size: 1.05rem;
     line-height: 2;
-  }
-
-  .section-heading--light h2 {
-    color: var(--color-white);
   }
 
   .section-heading--light p {
@@ -689,16 +590,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     gap: clamp(3rem, 8vw, 7rem);
     max-width: 76rem;
     margin-inline: auto;
-  }
-
-  .problem-section__number {
-    display: inline-flex;
-    margin-block-end: 1.25rem;
-    color: var(--color-accent);
-    font-family: var(--font-family-sans);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    direction: ltr;
   }
 
   .problem-insight__content h3 {
@@ -777,11 +668,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     content: "";
   }
 
-  .problem-cause__content h2,
-  .solution-section__content h2 {
-    color: var(--color-white);
-  }
-
   .problem-cause__content p {
     color: rgba(216, 225, 223, 0.75);
   }
@@ -838,10 +724,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     font-size: var(--font-size-sm);
   }
 
-  .problem-threshold__content h2 {
-    color: var(--color-text-primary);
-  }
-
   .threshold-card {
     overflow: hidden;
     border: 1px solid var(--color-line);
@@ -896,10 +778,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     background: var(--color-brand-subtle);
     color: var(--color-accent);
     font-weight: var(--font-weight-bold);
-  }
-
-  .solution-section__content h2 {
-    color: var(--color-text-primary);
   }
 
   .solution-section__content p {
@@ -1070,14 +948,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
     margin-inline: auto;
   }
 
-  .problem-cta h2 {
-    max-width: 48rem;
-    margin: 0;
-    color: var(--color-white);
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.4;
-  }
-
   .problem-cta p {
     max-width: 42rem;
     margin-block-start: 1rem;
@@ -1107,19 +977,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   }
 
   @media (max-width: 64rem) {
-    .problem-hero__content {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .problem-hero__copy {
-      max-width: 54rem;
-    }
-
-    .problem-hero__visual {
-      max-width: 42rem;
-    }
-
     .problem-insight,
     .problem-threshold,
     .solution-section,
@@ -1151,22 +1008,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
   }
 
   @media (max-width: 48rem) {
-    .problem-hero {
-      padding-block-end: 5rem;
-    }
-
-    .problem-hero .breadcrumb {
-      margin-block-end: 3.5rem;
-    }
-
-    .problem-hero h1 {
-      font-size: clamp(2.25rem, 11vw, 3.5rem);
-    }
-
-    .problem-hero__lead {
-      font-size: 1rem;
-    }
-
     .problem-visual__body {
       padding: 1.25rem;
     }
@@ -1186,13 +1027,6 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 
     .section-heading {
       margin-block-end: 3rem;
-    }
-
-    .section-heading h2,
-    .problem-cause__content h2,
-    .problem-threshold__content h2,
-    .solution-section__content h2 {
-      font-size: clamp(1.8rem, 8vw, 2.5rem);
     }
 
     .problem-cause__examples {
