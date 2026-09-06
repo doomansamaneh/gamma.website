@@ -559,7 +559,7 @@ Use:
 
 NOT:
 
-"کسب‌وکار"
+"کسب و کار"
 
 Avoid exaggerated marketing language.
 

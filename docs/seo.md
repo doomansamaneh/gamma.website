@@ -274,7 +274,7 @@ For example:
 
 must be written with a space, not:
 
-**کسب‌وکار**
+**کسب و کار**
 
 Persian and English product names should be written consistently:
 

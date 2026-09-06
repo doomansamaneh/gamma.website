@@ -352,7 +352,7 @@ In Persian website content, always write:
 
 Do NOT write:
 
-**کسب‌وکار**
+**کسب و کار**
 
 unless this rule is explicitly changed later.
 
