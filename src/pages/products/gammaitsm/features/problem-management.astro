@@ -1,0 +1,1239 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="مدیریت مشکلات | Gamma Help Desk"
+  description="مدیریت مشکلات در Gamma Help Desk با هدف شناسایی علت ریشه‌ای مشکلات، کاهش رخدادهای تکرارشونده و جلوگیری از بروز مجدد اختلالات."
+>
+  <main class="problem-management-page">
+    <section class="problem-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma Help Desk</a>
+          <span>/</span>
+          <span>مدیریت مشکلات</span>
+        </nav>
+
+        <div class="problem-hero__content">
+          <div class="problem-hero__copy">
+            <span class="problem-hero__label">Problem Management</span>
+
+            <h1>
+              مدیریت مشکلات برای
+              <span class="accent-text">جلوگیری از تکرار رخدادها</span>
+            </h1>
+
+            <p class="problem-hero__lead">
+              مشکل ممکن است یک یا چند کاربر را تحت تأثیر قرار دهد. هدف مدیریت
+              مشکلات، شناسایی و حل ریشه اصلی مشکلات و جلوگیری از رخدادهای جدید
+              است؛ در حالی که مدیریت رخداد بر بازگرداندن سرویس به وضعیت عادی در
+              سریع‌ترین زمان ممکن تمرکز دارد.
+            </p>
+          </div>
+
+          <div class="problem-hero__visual" aria-hidden="true">
+            <div class="problem-visual">
+              <div class="problem-visual__header">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="problem-visual__body">
+                <div class="problem-visual__root">
+                  <div class="problem-visual__node problem-visual__node--main">
+                    <strong>Problem</strong>
+                    <small>مشکل</small>
+                  </div>
+                </div>
+
+                <div class="problem-visual__branches">
+                  <div class="problem-visual__node">
+                    <strong>Incident</strong>
+                    <small>رخداد</small>
+                  </div>
+
+                  <div
+                    class="problem-visual__node problem-visual__node--accent"
+                  >
+                    <strong>Root Cause</strong>
+                    <small>علت ریشه‌ای</small>
+                  </div>
+
+                  <div class="problem-visual__node">
+                    <strong>Solution</strong>
+                    <small>راه‌حل</small>
+                  </div>
+                </div>
+
+                <div class="problem-visual__status">
+                  <span></span>
+                  جلوگیری از تکرار مشکل
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section problem-section--light">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            رخدادهای پرتکرار را به کمک
+            <span class="accent-text">گاما بشناسید</span>
+          </h2>
+
+          <p>
+            رخدادهایی که مرتب تکرار می‌شوند، معمولاً نشانه‌ای از وجود یک مشکل
+            اساسی هستند. گاما با در اختیار قرار دادن گزارش‌های مورد نیاز، به شما
+            کمک می‌کند رخدادهای پرتکرار را شناسایی کرده و علت بروز آن‌ها را
+            ریشه‌یابی کنید.
+          </p>
+        </div>
+
+        <div class="problem-insight">
+          <div class="problem-insight__content">
+            <span class="problem-section__number">01</span>
+
+            <h3>رخدادهای پرتکرار را شناسایی کنید</h3>
+
+            <p>
+              گزارش درخواست‌های پرتکرار گاما به شما نشان می‌دهد کاربران بیشتر در
+              چه زمینه‌هایی مشکل داشته‌اند و کدام سرویس‌ها بیشتر دچار اختلال
+              شده‌اند. این اطلاعات نقطه شروع مناسبی برای شناسایی مشکلات
+              تکرارشونده و بررسی علت اصلی آن‌هاست.
+            </p>
+          </div>
+
+          <div class="problem-insight__chart" aria-hidden="true">
+            <div class="mini-chart">
+              <div class="mini-chart__title">
+                <span>رخدادهای پرتکرار</span>
+                <small>گزارش</small>
+              </div>
+
+              <div class="mini-chart__bars">
+                <div style="--value: 88%;">
+                  <span>شبکه</span>
+                  <i></i>
+                </div>
+
+                <div style="--value: 72%;">
+                  <span>سیستم</span>
+                  <i></i>
+                </div>
+
+                <div style="--value: 58%;">
+                  <span>نرم‌افزار</span>
+                  <i></i>
+                </div>
+
+                <div style="--value: 42%;">
+                  <span>تجهیزات</span>
+                  <i></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section problem-section--dark">
+      <div class="container">
+        <div class="problem-cause">
+          <div class="problem-cause__visual" aria-hidden="true">
+            <div class="cause-diagram">
+              <div class="cause-diagram__incident">
+                <span>رخداد</span>
+              </div>
+
+              <div class="cause-diagram__line"></div>
+
+              <div class="cause-diagram__root">
+                <span>علت ریشه‌ای</span>
+              </div>
+
+              <div class="cause-diagram__line"></div>
+
+              <div class="cause-diagram__solution">
+                <span>راه‌حل</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="problem-cause__content">
+            <span class="problem-section__number">02</span>
+
+            <h2>
+              علت بروز مشکلات را
+              <span class="accent-text">ریشه‌یابی کنید</span>
+            </h2>
+
+            <p>
+              یکی از وظایف مهم کارشناسان فناوری اطلاعات هنگام رفع مشکلات
+              کاربران، شناسایی و ثبت علت اصلی بروز مشکل است. ثبت این اطلاعات کمک
+              می‌کند بدانید مشکلات سازمان بیشتر از چه عواملی ناشی می‌شوند و برای
+              کاهش تکرار آن‌ها چه راهکاری باید در نظر گرفته شود.
+            </p>
+
+            <div class="problem-cause__examples">
+              <span>نوسان برق</span>
+              <span>ویروسی شدن</span>
+              <span>ریختن مایعات</span>
+              <span>خرابی تجهیزات</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section problem-section--light">
+      <div class="container">
+        <div class="problem-threshold">
+          <div class="problem-threshold__content">
+            <span class="problem-section__number">03</span>
+
+            <h2>
+              از یک سوراخ
+              <span class="accent-text">دو بار نیش نخورید!</span>
+            </h2>
+
+            <p>
+              گاما به شما امکان می‌دهد برای علت‌های بروز مشکلات، حد مجاز ماهانه
+              تعریف کنید. برای مثال می‌توانید مشخص کنید ریختن مایعات برای محصول
+              کامپیوتر حداکثر دو بار در ماه اتفاق بیفتد یا نوسان برق سه بار در
+              ماه به‌عنوان علت بروز مشکل ثبت شود.
+            </p>
+
+            <p>
+              با این اطلاعات و گزارش‌های گاما، می‌توانید سریع متوجه شوید بیشترین
+              مشکلات از کجا ایجاد می‌شوند و کدام علت‌ها نیازمند اقدام جدی‌تر
+              هستند.
+            </p>
+          </div>
+
+          <div class="problem-threshold__card">
+            <div class="threshold-card">
+              <div class="threshold-card__header">
+                <span>علت مشکل</span>
+                <span>حد مجاز ماهانه</span>
+              </div>
+
+              <div class="threshold-card__row">
+                <span>ریختن مایعات</span>
+                <strong>۲ بار</strong>
+              </div>
+
+              <div class="threshold-card__row">
+                <span>نوسان برق</span>
+                <strong>۳ بار</strong>
+              </div>
+
+              <div class="threshold-card__row">
+                <span>آلودگی ویروسی</span>
+                <strong>۱ بار</strong>
+              </div>
+
+              <div class="threshold-card__alert">
+                <span>!</span>
+                علت‌های پرتکرار نیازمند بررسی هستند
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section problem-section--accent-soft">
+      <div class="container">
+        <div class="solution-section">
+          <div class="solution-section__content">
+            <span class="problem-section__number">04</span>
+
+            <h2>
+              مشکلات را با ثبت
+              <span class="accent-text">راه‌حل مناسب</span> کاهش دهید
+            </h2>
+
+            <p>
+              یکی از مزایای گاما این است که می‌توانید راه‌حل‌های مناسب برای رفع
+              مشکلات را ثبت کنید تا کاربران و کارشناسان در مواجهه با مشکلات
+              مشابه، سریع‌تر به راهکار مناسب دسترسی داشته باشند.
+            </p>
+
+            <p>
+              با ثبت راه‌حل‌ها، دانش تخصصی کارشناسان و تجربه‌های به‌دست‌آمده در
+              سازمان حفظ می‌شود و می‌توان از آن برای جلوگیری از بروز مجدد مشکلات
+              استفاده کرد.
+            </p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-card__top">
+              <span class="solution-card__icon">✓</span>
+
+              <div>
+                <small>Problem Solution</small>
+                <strong>راه‌حل ثبت شد</strong>
+              </div>
+            </div>
+
+            <div class="solution-card__body">
+              <div>
+                <span>مشکل</span>
+                <strong>قطع مکرر ارتباط شبکه</strong>
+              </div>
+
+              <div>
+                <span>علت ریشه‌ای</span>
+                <strong>نوسان تجهیزات شبکه</strong>
+              </div>
+
+              <div>
+                <span>راه‌حل</span>
+                <strong>بررسی و تعویض تجهیز</strong>
+              </div>
+            </div>
+
+            <div class="solution-card__footer">
+              دانش سازمانی ثبت و قابل استفاده مجدد است.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section problem-section--dark problem-itil">
+      <div class="container">
+        <div class="section-heading section-heading--light">
+          <h2>
+            نقش مدیریت مشکلات در چارچوب
+            <span class="accent-text">ITIL</span>
+          </h2>
+
+          <p>
+            مدیریت مشکلات یکی از فرایندهای مهم مدیریت خدمات فناوری اطلاعات است
+            که تمرکز آن بر شناسایی علت‌های اصلی رخدادها و جلوگیری از تکرار
+            آن‌هاست. این فرایند در کنار مدیریت رخداد کمک می‌کند سازمان تنها به
+            رفع موقت اختلالات اکتفا نکند و برای رفع ریشه‌ای مشکلات نیز اقدام
+            کند.
+          </p>
+        </div>
+
+        <div class="itil-flow">
+          <article>
+            <span>01</span>
+            <strong>رخداد</strong>
+            <p>اختلال در سرویس یا تجربه کاربر ثبت می‌شود.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <strong>تحلیل</strong>
+            <p>رخدادهای مرتبط و پرتکرار بررسی می‌شوند.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>ریشه‌یابی</strong>
+            <p>علت اصلی بروز مشکل شناسایی و ثبت می‌شود.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <strong>راه‌حل</strong>
+            <p>راهکار مناسب برای رفع مشکل تعریف می‌شود.</p>
+          </article>
+
+          <article>
+            <span>05</span>
+            <strong>جلوگیری</strong>
+            <p>با رفع علت، احتمال تکرار رخداد کاهش می‌یابد.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section problem-section--light problem-benefits">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            اهمیت مدیریت مشکلات برای
+            <span class="accent-text">هر سازمان</span>
+          </h2>
+
+          <p>
+            هدف اصلی مدیریت مشکلات، به حداقل رساندن تأثیر مشکلات بر کسب و کار و
+            جلوگیری از تکرار آن‌هاست. در صورت اجرای صحیح این فرایند، زمان خرابی
+            و اختلالات کاهش پیدا می‌کند و کیفیت خدمات بهبود می‌یابد.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article>
+            <strong>01</strong>
+            <h3>افزایش دسترس‌پذیری خدمات</h3>
+            <p>با کاهش علت‌های ریشه‌ای، اختلالات خدمات کمتر می‌شوند.</p>
+          </article>
+
+          <article>
+            <strong>02</strong>
+            <h3>بهبود کیفیت خدمات</h3>
+            <p>مشکلات اصلی شناسایی و برای رفع دائمی آن‌ها اقدام می‌شود.</p>
+          </article>
+
+          <article>
+            <strong>03</strong>
+            <h3>کاهش زمان حل مسئله</h3>
+            <p>ثبت علت‌ها و راه‌حل‌ها، مسیر حل مشکلات مشابه را کوتاه می‌کند.</p>
+          </article>
+
+          <article>
+            <strong>04</strong>
+            <h3>کاهش تعداد رخدادها</h3>
+            <p>
+              با جلوگیری از تکرار مشکلات، تعداد رخدادهای مرتبط کاهش می‌یابد.
+            </p>
+          </article>
+
+          <article>
+            <strong>05</strong>
+            <h3>بهره‌وری بیشتر</h3>
+            <p>کارشناسان زمان کمتری را صرف مشکلات تکراری خواهند کرد.</p>
+          </article>
+
+          <article>
+            <strong>06</strong>
+            <h3>کاهش هزینه‌ها</h3>
+            <p>
+              کاهش خرابی و زمان صرف‌شده برای رفع مشکلات، هزینه‌ها را کم می‌کند.
+            </p>
+          </article>
+
+          <article>
+            <strong>07</strong>
+            <h3>بهبود رضایت کاربران</h3>
+            <p>سرویس‌های پایدارتر تجربه بهتری برای کاربران ایجاد می‌کنند.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-cta">
+      <div class="container">
+        <div class="problem-cta__inner">
+          <div>
+            <h2>
+              مشکلات را قبل از تبدیل شدن به
+              <span class="accent-text">رخدادهای تکراری</span> مدیریت کنید.
+            </h2>
+
+            <p>
+              با Gamma Help Desk علت مشکلات را شناسایی کنید، راه‌حل‌ها را ثبت
+              کنید و از تکرار اختلالات در سازمان جلوگیری کنید.
+            </p>
+          </div>
+
+          <a href="/contact/" class="problem-cta__button">
+            درخواست مشاوره
+            <span aria-hidden="true">←</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .problem-management-page {
+    overflow: hidden;
+  }
+
+  .problem-hero {
+    position: relative;
+    background: var(--hero-product-background);
+    color: var(--color-text-on-dark);
+    padding-block: 1.25rem 7rem;
+  }
+
+  .problem-hero .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-block-end: 5rem;
+    color: rgba(216, 225, 223, 0.65);
+    font-size: var(--font-size-sm);
+  }
+
+  .problem-hero .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .problem-hero .breadcrumb a:hover {
+    color: var(--color-white);
+  }
+
+  .problem-hero__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
+    align-items: center;
+    gap: 5rem;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+
+  .problem-hero__copy {
+    max-width: 48rem;
+  }
+
+  .problem-hero__label {
+    display: inline-flex;
+    margin-block-end: 1.25rem;
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.04em;
+    direction: ltr;
+  }
+
+  .problem-hero h1 {
+    margin: 0;
+    color: var(--color-white);
+    font-size: clamp(2.6rem, 6vw, 5.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+  }
+
+  h1 .accent-text,
+  h2 .accent-text {
+    color: var(--color-accent);
+  }
+
+  .problem-hero__lead {
+    max-width: 44rem;
+    margin-block-start: 2rem;
+    color: rgba(216, 225, 223, 0.82);
+    font-size: 1.08rem;
+    line-height: 2;
+  }
+
+  .problem-visual {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+  }
+
+  .problem-visual__header {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.9rem 1rem;
+    border-block-end: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .problem-visual__header span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .problem-visual__body {
+    padding: 2.25rem;
+  }
+
+  .problem-visual__root {
+    display: flex;
+    justify-content: center;
+  }
+
+  .problem-visual__node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 5.25rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.055);
+    text-align: center;
+  }
+
+  .problem-visual__node strong {
+    color: var(--color-white);
+    direction: ltr;
+  }
+
+  .problem-visual__node small {
+    margin-block-start: 0.35rem;
+    color: rgba(216, 225, 223, 0.6);
+  }
+
+  .problem-visual__node--main {
+    width: 10rem;
+    border-color: rgba(239, 63, 35, 0.45);
+    background: rgba(239, 63, 35, 0.1);
+  }
+
+  .problem-visual__node--accent {
+    border-color: rgba(239, 63, 35, 0.35);
+  }
+
+  .problem-visual__branches {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-block-start: 3rem;
+  }
+
+  .problem-visual__branches::before {
+    position: absolute;
+    inset-block-start: -1.5rem;
+    inset-inline: 16% 16%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    content: "";
+  }
+
+  .problem-visual__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-block-start: 1.5rem;
+    padding-block-start: 1.25rem;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(216, 225, 223, 0.7);
+    font-size: var(--font-size-sm);
+  }
+
+  .problem-visual__status span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+
+  .problem-section {
+    padding-block: clamp(5rem, 9vw, 8rem);
+  }
+
+  .problem-section--light {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+
+  .problem-section--dark {
+    background: var(--hero-bg-base);
+    color: var(--color-text-on-dark);
+  }
+
+  .problem-section--accent-soft {
+    background: var(--color-brand-subtle);
+  }
+
+  .section-heading {
+    max-width: 52rem;
+    margin-inline: auto;
+    margin-block-end: 4rem;
+    text-align: center;
+  }
+
+  .section-heading h2,
+  .problem-cause__content h2,
+  .problem-threshold__content h2,
+  .solution-section__content h2 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    line-height: 1.35;
+  }
+
+  .section-heading p {
+    margin-block-start: 1.5rem;
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 2;
+  }
+
+  .section-heading--light h2 {
+    color: var(--color-white);
+  }
+
+  .section-heading--light p {
+    color: rgba(216, 225, 223, 0.72);
+  }
+
+  .problem-insight,
+  .problem-threshold,
+  .solution-section,
+  .problem-cause {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.85fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 7rem);
+    max-width: 76rem;
+    margin-inline: auto;
+  }
+
+  .problem-section__number {
+    display: inline-flex;
+    margin-block-end: 1.25rem;
+    color: var(--color-accent);
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    direction: ltr;
+  }
+
+  .problem-insight__content h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: clamp(1.6rem, 3vw, 2.35rem);
+    line-height: 1.4;
+  }
+
+  .problem-insight__content p,
+  .problem-cause__content p,
+  .problem-threshold__content p,
+  .solution-section__content p {
+    margin-block-start: 1.5rem;
+    color: var(--color-text-secondary);
+    line-height: 2;
+  }
+
+  .mini-chart {
+    padding: 1.75rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .mini-chart__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 2rem;
+  }
+
+  .mini-chart__title span {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .mini-chart__title small {
+    color: var(--color-text-muted);
+  }
+
+  .mini-chart__bars {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .mini-chart__bars > div {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mini-chart__bars span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .mini-chart__bars i {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 0.6rem;
+    border-radius: 99rem;
+    background: var(--color-surface-alt);
+  }
+
+  .mini-chart__bars i::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: var(--value);
+    border-radius: inherit;
+    background: var(--color-accent);
+    content: "";
+  }
+
+  .problem-cause__content h2,
+  .solution-section__content h2 {
+    color: var(--color-white);
+  }
+
+  .problem-cause__content p {
+    color: rgba(216, 225, 223, 0.75);
+  }
+
+  .problem-cause__visual {
+    min-height: 24rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .cause-diagram {
+    display: grid;
+    justify-items: center;
+    width: min(100%, 22rem);
+  }
+
+  .cause-diagram__incident,
+  .cause-diagram__root,
+  .cause-diagram__solution {
+    display: grid;
+    place-items: center;
+    width: 9rem;
+    min-height: 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  .cause-diagram__root {
+    border-color: rgba(239, 63, 35, 0.45);
+    background: rgba(239, 63, 35, 0.1);
+  }
+
+  .cause-diagram__line {
+    width: 1px;
+    height: 2.5rem;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .problem-cause__examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-block-start: 2rem;
+  }
+
+  .problem-cause__examples span {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    color: rgba(216, 225, 223, 0.78);
+    font-size: var(--font-size-sm);
+  }
+
+  .problem-threshold__content h2 {
+    color: var(--color-text-primary);
+  }
+
+  .threshold-card {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .threshold-card__header,
+  .threshold-card__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .threshold-card__header {
+    background: var(--color-brand-dark);
+    color: rgba(255, 255, 255, 0.72);
+    font-size: var(--font-size-sm);
+  }
+
+  .threshold-card__row {
+    border-block-start: 1px solid var(--color-line);
+  }
+
+  .threshold-card__row span {
+    color: var(--color-text-secondary);
+  }
+
+  .threshold-card__row strong {
+    color: var(--color-text-primary);
+  }
+
+  .threshold-card__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 1.25rem;
+    border-block-start: 1px solid var(--color-line);
+    color: var(--color-accent-dark);
+    font-size: var(--font-size-sm);
+  }
+
+  .threshold-card__alert span {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--color-brand-subtle);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .solution-section__content h2 {
+    color: var(--color-text-primary);
+  }
+
+  .solution-section__content p {
+    color: var(--color-text-secondary);
+  }
+
+  .solution-card {
+    overflow: hidden;
+    border: 1px solid rgba(239, 63, 35, 0.18);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .solution-card__top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .solution-card__icon {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: var(--color-brand-subtle);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .solution-card__top div {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .solution-card__top small {
+    color: var(--color-text-muted);
+    direction: ltr;
+  }
+
+  .solution-card__top strong {
+    color: var(--color-text-primary);
+  }
+
+  .solution-card__body {
+    display: grid;
+  }
+
+  .solution-card__body > div {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.15rem 1.5rem;
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .solution-card__body span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  .solution-card__body strong {
+    color: var(--color-text-primary);
+  }
+
+  .solution-card__footer {
+    padding: 1.15rem 1.5rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .itil-flow {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 78rem;
+    margin-inline: auto;
+  }
+
+  .itil-flow article {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.045);
+  }
+
+  .itil-flow article > span {
+    display: block;
+    margin-block-end: 2.5rem;
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    direction: ltr;
+  }
+
+  .itil-flow strong {
+    display: block;
+    color: var(--color-white);
+    font-size: 1.2rem;
+  }
+
+  .itil-flow p {
+    margin-block-start: 0.8rem;
+    color: rgba(216, 225, 223, 0.62);
+    font-size: var(--font-size-sm);
+    line-height: 1.9;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 78rem;
+    margin-inline: auto;
+  }
+
+  .benefits-grid article {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .benefits-grid article:last-child {
+    grid-column: span 2;
+  }
+
+  .benefits-grid article > strong {
+    display: block;
+    margin-block-end: 2.5rem;
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    direction: ltr;
+  }
+
+  .benefits-grid h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  .benefits-grid p {
+    margin-block-start: 0.7rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.9;
+  }
+
+  .problem-cta {
+    padding-block: 4rem;
+    background: var(--color-brand-dark);
+    color: var(--color-white);
+  }
+
+  .problem-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 78rem;
+    margin-inline: auto;
+  }
+
+  .problem-cta h2 {
+    max-width: 48rem;
+    margin: 0;
+    color: var(--color-white);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.4;
+  }
+
+  .problem-cta p {
+    max-width: 42rem;
+    margin-block-start: 1rem;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.9;
+  }
+
+  .problem-cta__button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.4rem;
+    border-radius: var(--radius-md);
+    background: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    transition:
+      background var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .problem-cta__button:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 64rem) {
+    .problem-hero__content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .problem-hero__copy {
+      max-width: 54rem;
+    }
+
+    .problem-hero__visual {
+      max-width: 42rem;
+    }
+
+    .problem-insight,
+    .problem-threshold,
+    .solution-section,
+    .problem-cause {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .problem-cause__visual {
+      order: 2;
+      min-height: auto;
+    }
+
+    .problem-cause__content {
+      order: 1;
+    }
+
+    .itil-flow {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .benefits-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .benefits-grid article:last-child {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .problem-hero {
+      padding-block-end: 5rem;
+    }
+
+    .problem-hero .breadcrumb {
+      margin-block-end: 3.5rem;
+    }
+
+    .problem-hero h1 {
+      font-size: clamp(2.25rem, 11vw, 3.5rem);
+    }
+
+    .problem-hero__lead {
+      font-size: 1rem;
+    }
+
+    .problem-visual__body {
+      padding: 1.25rem;
+    }
+
+    .problem-visual__branches {
+      grid-template-columns: 1fr;
+      margin-block-start: 1rem;
+    }
+
+    .problem-visual__branches::before {
+      display: none;
+    }
+
+    .problem-section {
+      padding-block: 4.5rem;
+    }
+
+    .section-heading {
+      margin-block-end: 3rem;
+    }
+
+    .section-heading h2,
+    .problem-cause__content h2,
+    .problem-threshold__content h2,
+    .solution-section__content h2 {
+      font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .problem-cause__examples {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .itil-flow,
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-cta__inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .problem-cta__button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .problem-cause__examples {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-visual__node--main {
+      width: 8.5rem;
+    }
+
+    .threshold-card__header,
+    .threshold-card__row {
+      padding-inline: 1rem;
+    }
+
+    .solution-card__top,
+    .solution-card__body > div,
+    .solution-card__footer {
+      padding-inline: 1rem;
+    }
+  }
+</style>

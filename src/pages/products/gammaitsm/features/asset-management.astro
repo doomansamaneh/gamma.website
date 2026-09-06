@@ -1,0 +1,1731 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="مدیریت دارایی و تجهیزات | Gamma Help Desk"
+  description="مدیریت تجهیزات و دارایی‌های سازمان با Gamma Help Desk؛ از ساختار درخت کالا و شناسنامه تجهیزات تا کنترل جابه‌جایی، هزینه‌ها، سوابق و گزارش‌های مدیریتی."
+>
+  <main class="asset-page">
+    <!-- Hero -->
+    <section class="asset-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma Help Desk</a>
+          <span>/</span>
+          <span>مدیریت دارایی</span>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-content_">
+            <h1>
+              داراییهای سازمان را
+              <span class="accent-text">ساختار یافته و دقیق</span>مدیریت کنید
+            </h1>
+
+            <p class="hero-description">
+              تمام چرخه عمر تجهیزات سازمان را از زمان ورود و تخصیص تا جابه‌جایی،
+              تعمیر، نگهداری و اسقاط مدیریت کنید و همیشه شناسنامه، سوابق،
+              هزینه‌ها و وضعیت دارایی‌ها را در اختیار داشته باشید.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--accent" href="/contact/demo/">
+                درخواست دموی Gamma Help Desk
+              </a>
+
+              <a class="button button--secondary" href="/products/gammaitsm/">
+                معرفی Gamma Help Desk
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="asset-visual"
+            aria-label="ساختار درخت کالا در Gamma Help Desk"
+          >
+            <div class="asset-window">
+              <div class="asset-window__header">
+                <span>Asset Management</span>
+                <strong>درخت کالا</strong>
+              </div>
+
+              <div class="asset-tree">
+                <div class="tree-level tree-level--root">
+                  <span>01</span>
+                  <strong>گروه کالا</strong>
+                  <small>Product Group</small>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level">
+                  <span>02</span>
+                  <strong>کالا</strong>
+                  <small>Product</small>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level">
+                  <span>03</span>
+                  <strong>برند</strong>
+                  <small>Brand</small>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level tree-level--accent">
+                  <span>04</span>
+                  <strong>مدل کالا</strong>
+                  <small>Model</small>
+                </div>
+              </div>
+
+              <div class="asset-status">
+                <div>
+                  <span>وضعیت</span>
+                  <strong>فعال</strong>
+                </div>
+
+                <div>
+                  <span>محل استقرار</span>
+                  <strong>ساختمان مرکزی</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Tree -->
+    <section class="tree-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            قبل از تعریف دارایی،
+            <span class="accent-text">ساختار کالا را مشخص کنید</span>
+          </h2>
+
+          <p>
+            برای مدیریت صحیح دارایی‌ها، ابتدا باید ساختار کالاها و تجهیزات
+            سازمان مشخص باشد. Gamma Help Desk امکان تعریف درخت کالا در چهار سطح
+            را فراهم می‌کند تا دارایی‌ها بر اساس یک ساختار استاندارد و قابل
+            گزارش‌دهی ثبت شوند.
+          </p>
+        </div>
+
+        <div class="product-tree">
+          <article class="tree-card">
+            <span>01</span>
+            <strong>گروه کالا</strong>
+            <small>Product Group</small>
+            <p>
+              دسته‌بندی اصلی تجهیزات مانند کامپیوتر، چاپگر، تجهیزات شبکه و سایر
+              دارایی‌ها.
+            </p>
+          </article>
+
+          <article class="tree-card">
+            <span>02</span>
+            <strong>کالا</strong>
+            <small>Product</small>
+            <p>نوع مشخص کالا در هر گروه، مانند رایانه رومیزی یا لپ‌تاپ.</p>
+          </article>
+
+          <article class="tree-card">
+            <span>03</span>
+            <strong>برند</strong>
+            <small>Brand</small>
+            <p>تعیین برند سازنده کالا برای ایجاد شناسنامه دقیق‌تر تجهیزات.</p>
+          </article>
+
+          <article class="tree-card tree-card--accent">
+            <span>04</span>
+            <strong>مدل کالا</strong>
+            <small>Model</small>
+            <p>ثبت مدل دقیق تجهیز برای مدیریت و گزارش‌گیری جزئی‌تر.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Movement -->
+    <section class="movement-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-content">
+            <h2>
+              جابه‌جایی تجهیزات را
+              <span class="accent-text">کنترل کنید</span>
+            </h2>
+
+            <p>
+              یکی از مشکلات رایج واحد فناوری اطلاعات، جابه‌جایی تجهیزات بین
+              واحدهای مختلف بدون اطلاع یا هماهنگی با IT است. Gamma Help Desk
+              می‌تواند تغییرات محل استقرار تجهیزات را شناسایی و به مسئولان
+              مربوطه اطلاع‌رسانی کند.
+            </p>
+
+            <p>
+              همچنین می‌توانید تجهیزاتی را که در یک بازه زمانی مشخص مورد استفاده
+              قرار نگرفته‌اند شناسایی کنید و در صورت نیاز آنها را از واحد مربوطه
+              بازگردانید یا برای استفاده مجدد اختصاص دهید.
+            </p>
+          </div>
+
+          <div class="movement-panel">
+            <div class="movement-card">
+              <span>مبدأ</span>
+              <strong>معاونت مالی</strong>
+              <small>ساختمان مرکزی</small>
+            </div>
+
+            <div class="movement-arrow">
+              <span>جابجایی شناسایی شد</span>
+              <strong>←</strong>
+            </div>
+
+            <div class="movement-card movement-card--accent">
+              <span>مقصد</span>
+              <strong>معاونت اداری</strong>
+              <small>ساختمان آموزش</small>
+            </div>
+
+            <div class="movement-alert">
+              <span>اعلان</span>
+              <strong> محل استقرار تجهیز تغییر کرده است. </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost -->
+    <section class="cost-section">
+      <div class="container">
+        <div class="section-heading section-heading--center_">
+          <h2>
+            هزینه واقعی هر تجهیز را
+            <span class="accent-text">محاسبه کنید</span>
+          </h2>
+
+          <p>
+            تعمیرات، قطعات مصرفی و خدماتی که برای تجهیزات انجام می‌شوند، هزینه و
+            زمان قابل توجهی از واحد فناوری اطلاعات می‌گیرند. Gamma Help Desk این
+            اطلاعات را در سوابق هر دارایی ثبت می‌کند تا بتوانید تجهیزات پرهزینه
+            را شناسایی کنید.
+          </p>
+        </div>
+
+        <div class="cost-grid">
+          <article>
+            <span>01</span>
+            <strong>قطعات مصرفی</strong>
+            <p>هزینه قطعاتی مانند RAM، HDD، CPU، کارتریج و سایر قطعات مصرفی.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <strong>خدمات</strong>
+            <p>
+              ثبت هزینه خدماتی مانند نصب سیستم‌عامل، تعمیر، Recovery و سایر
+              اقدامات کارشناسان.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>زمان کارشناسان</strong>
+            <p>
+              بررسی میزان زمانی که کارشناسان فناوری اطلاعات برای هر تجهیز صرف
+              کرده‌اند.
+            </p>
+          </article>
+
+          <article class="cost-card--accent">
+            <span>04</span>
+            <strong>تصمیم برای اسقاط</strong>
+            <p>
+              شناسایی تجهیزاتی که هزینه نگهداری آنها دیگر توجیه اقتصادی ندارد.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="history-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-content">
+            <h2>
+              تمام سوابق یک تجهیز را
+              <span class="accent-text">در یکجا ببینید</span>
+            </h2>
+
+            <p>
+              تاریخچه یکی از مهم‌ترین بخش‌های مدیریت تجهیزات و دارایی‌های سازمان
+              است. در Gamma Help Desk می‌توانید سوابق مرتبط با هر تجهیز را در
+              طول چرخه عمر آن مشاهده کنید.
+            </p>
+
+            <ul class="history-list">
+              <li>تاریخچه تغییر واحد سازمانی</li>
+              <li>تاریخچه جابه‌جایی تجهیز</li>
+              <li>تاریخچه قراردادها</li>
+              <li>تغییر وضعیت دارایی</li>
+              <li>استفاده‌کنندگان تجهیز</li>
+              <li>سوابق تعمیرات و اقدامات</li>
+              <li>زمان صرف‌شده توسط کارشناسان</li>
+              <li>هزینه‌های انجام‌شده برای تجهیز</li>
+            </ul>
+          </div>
+
+          <div class="history-panel">
+            <div class="history-header">
+              <span>Asset History</span>
+              <strong>PC-10482</strong>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span>1405/09/12</span>
+                <strong>تخصیص به واحد مالی</strong>
+                <small>کاربر: علی رضایی</small>
+              </div>
+
+              <div class="timeline-item">
+                <span>1405/11/08</span>
+                <strong>تعمیر سخت‌افزار</strong>
+                <small>تعویض RAM</small>
+              </div>
+
+              <div class="timeline-item timeline-item--accent">
+                <span>1406/02/21</span>
+                <strong>انتقال تجهیز</strong>
+                <small>مالی ← اداری</small>
+              </div>
+
+              <div class="timeline-item">
+                <span>1406/04/15</span>
+                <strong>ثبت درخواست جدید</strong>
+                <small>مشکل عملکرد سیستم</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shared Assets -->
+    <section class="shared-section">
+      <div class="container">
+        <div class="feature-grid feature-grid--reverse">
+          <div class="feature-content">
+            <h2>
+              تجهیزات اشتراکی سازمان را
+              <span class="accent-text">هم مدیریت کنید</span>
+            </h2>
+
+            <p>
+              همه تجهیزات متعلق به یک کاربر مشخص نیستند. چاپگرها، تجهیزات اتاق
+              جلسات، نمایشگرها و برخی تجهیزات دیگر ممکن است به‌صورت اشتراکی در
+              یک واحد مورد استفاده قرار گیرند.
+            </p>
+
+            <p>
+              این تجهیزات نیز می‌توانند در Gamma Help Desk ثبت شوند تا کاربران
+              هنگام ثبت درخواست، تجهیز مورد نظر را از فهرست تجهیزات قابل انتخاب
+              مشاهده کنند.
+            </p>
+          </div>
+
+          <div class="shared-panel">
+            <div class="shared-device">
+              <span>Asset</span>
+              <strong>HP LaserJet M607</strong>
+              <small>چاپگر واحد مالی</small>
+            </div>
+
+            <div class="shared-users">
+              <span>استفاده‌کنندگان</span>
+
+              <div>
+                <i>01</i>
+                <strong>واحد مالی</strong>
+              </div>
+
+              <div>
+                <i>02</i>
+                <strong>واحد حسابداری</strong>
+              </div>
+
+              <div>
+                <i>03</i>
+                <strong>واحد اداری</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reports -->
+    <section class="reports-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            آمار و شناسنامه تجهیزات
+            <span class="accent-text">همیشه در دسترس شماست</span>
+          </h2>
+
+          <p>
+            اطلاعات تجهیزات را فقط برای ثبت شناسنامه نگه ندارید. با گزارش‌های
+            مدیریتی Gamma Help Desk می‌توانید وضعیت دارایی‌ها را در ساختار
+            سازمانی بررسی و برای نگهداری یا جایگزینی آنها تصمیم‌گیری کنید.
+          </p>
+        </div>
+
+        <div class="report-layout">
+          <div class="report-card report-card--large">
+            <div class="report-card__header">
+              <span> گزارش تجهیزات بر اساس ساختار سازمانی </span>
+
+              <strong>نمای درختی</strong>
+            </div>
+
+            <div class="org-tree">
+              <div class="org-row org-row--root">
+                <span>سازمان</span>
+                <strong>1,284 تجهیز</strong>
+              </div>
+
+              <div class="org-row">
+                <span>معاونت مالی</span>
+                <strong>214 تجهیز</strong>
+              </div>
+
+              <div class="org-row">
+                <span>معاونت اداری</span>
+                <strong>187 تجهیز</strong>
+              </div>
+
+              <div class="org-row">
+                <span>معاونت فناوری اطلاعات</span>
+                <strong>326 تجهیز</strong>
+              </div>
+
+              <div class="org-row">
+                <span>معاونت منابع انسانی</span>
+                <strong>143 تجهیز</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="report-side">
+            <div class="report-card">
+              <span>نمای فهرست</span>
+              <strong>لیست تجهیزات</strong>
+              <small> مشاهده جزئیات و وضعیت دارایی‌ها در قالب فهرست. </small>
+            </div>
+
+            <div class="report-card">
+              <span>نمای ماتریسی</span>
+              <strong>تحلیل ساختاری</strong>
+              <small> مقایسه تجهیزات بر اساس واحد، کالا، برند و مدل. </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Reports -->
+    <section class="management-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            از اطلاعات دارایی‌ها برای
+            <span class="accent-text">تصمیم‌گیری استفاده کنید</span>
+          </h2>
+
+          <p>
+            گزارش‌های مدیریت دارایی Gamma Help Desk به شما کمک می‌کنند تجهیزات
+            مسئله‌دار، پرهزینه و کم‌استفاده را شناسایی کنید و تصمیم‌های دقیق‌تری
+            برای نگهداری، تعمیر، جایگزینی یا اسقاط تجهیزات بگیرید.
+          </p>
+        </div>
+
+        <div class="management-grid">
+          <article>
+            <span>01</span>
+            <strong>دارایی‌های پر درخواست</strong>
+            <p>
+              دارایی‌هایی را که بیشتر دچار مشکل می‌شوند شناسایی کنید و مشکلات
+              تکرارشونده آنها را به‌صورت ریشه‌ای بررسی کنید.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <strong>دارایی‌های پر هزینه</strong>
+            <p>
+              مجموع هزینه قطعات مصرفی و خدمات انجام‌شده برای هر دارایی را محاسبه
+              و تجهیزات پرهزینه را شناسایی کنید.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>MTBF</strong>
+            <p>
+              فاصله بین خرابی‌های یک دارایی را محاسبه کنید و از این شاخص برای
+              ارزیابی قابلیت اطمینان تجهیزات استفاده کنید.
+            </p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <strong>سابقه جابه‌جایی</strong>
+            <p>
+              مسیر هر دارایی را از زمان ورود به چرخه خدمات تا خروج از سازمان و
+              اسقاط آن دنبال کنید.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agent -->
+    <section class="agent-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-content">
+            <h2>
+              اطلاعات کلاینت‌ها را با Agent
+              <span class="accent-text">جمع‌آوری کنید</span>
+            </h2>
+
+            <p>
+              با استفاده از Agent و WMI می‌توانید اطلاعات فنی کلاینت‌های سازمان
+              را به‌صورت خودکار دریافت و در شناسنامه تجهیزات ثبت کنید.
+            </p>
+
+            <p>
+              اطلاعاتی مانند قطعات سخت‌افزاری، نرم‌افزارهای نصب‌شده و نام
+              کامپیوتر می‌توانند در فرایند شناسایی و مدیریت تجهیزات مورد استفاده
+              قرار گیرند.
+            </p>
+
+            <ul class="agent-list">
+              <li>مشخصات سخت‌افزاری</li>
+              <li>قطعات سیستم</li>
+              <li>نرم‌افزارهای نصب‌شده</li>
+              <li>نام کامپیوتر</li>
+              <li>اطلاعات کلاینت</li>
+              <li>به‌روزرسانی شناسنامه تجهیز</li>
+            </ul>
+          </div>
+
+          <div class="agent-panel">
+            <div class="agent-window__header">
+              <span>Endpoint Agent</span>
+              <strong>Online</strong>
+            </div>
+
+            <div class="agent-info">
+              <div>
+                <span>Computer Name</span>
+                <strong>FIN-PC-024</strong>
+              </div>
+
+              <div>
+                <span>CPU</span>
+                <strong>Intel Core i7</strong>
+              </div>
+
+              <div>
+                <span>RAM</span>
+                <strong>16 GB</strong>
+              </div>
+
+              <div>
+                <span>Storage</span>
+                <strong>512 GB SSD</strong>
+              </div>
+
+              <div>
+                <span>Installed Software</span>
+                <strong>24 Applications</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lifecycle -->
+    <section class="lifecycle-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            چرخه عمر دارایی را
+            <span class="accent-text">یکپارچه مدیریت کنید</span>
+          </h2>
+
+          <p>
+            دارایی از زمان ورود به سازمان تا زمان خروج، اطلاعات و سوابق مختلفی
+            ایجاد می‌کند. Gamma Help Desk این چرخه را در یک ساختار یکپارچه در
+            اختیار واحد فناوری اطلاعات قرار می‌دهد.
+          </p>
+        </div>
+
+        <div class="lifecycle">
+          <article>
+            <div class="lifecycle-marker">
+              <span>01</span>
+            </div>
+
+            <strong>ورود</strong>
+            <small>ثبت دارایی</small>
+          </article>
+
+          <article>
+            <div class="lifecycle-marker">
+              <span>02</span>
+            </div>
+
+            <strong>تخصیص</strong>
+            <small>کاربر یا واحد</small>
+          </article>
+
+          <article>
+            <div class="lifecycle-marker">
+              <span>03</span>
+            </div>
+
+            <strong>نگهداری</strong>
+            <small>تعمیر و خدمات</small>
+          </article>
+
+          <article>
+            <div class="lifecycle-marker">
+              <span>04</span>
+            </div>
+
+            <strong>جابه‌جایی</strong>
+            <small>تغییر محل یا کاربر</small>
+          </article>
+
+          <article class="lifecycle-card--accent">
+            <div class="lifecycle-marker">
+              <span>05</span>
+            </div>
+
+            <strong>اسقاط</strong>
+            <small>خروج از سازمان</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="asset-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>
+            مدیریت دارایی را از یک
+            <span class="accent-text">فهرست تجهیزات</span>
+            فراتر ببرید
+          </h2>
+
+          <p>
+            تجهیزات سازمان را بشناسید، سوابق آنها را حفظ کنید، هزینه‌ها را کنترل
+            کنید و با اطلاعات دقیق برای نگهداری و جایگزینی دارایی‌ها تصمیم
+            بگیرید.
+          </p>
+
+          <a class="button button--accent" href="/contact/demo/">
+            درخواست دموی Gamma Help Desk
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .asset-page {
+    background: var(--color-background);
+  }
+
+  .container {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+  }
+
+  /* Hero */
+
+  .asset-hero {
+    padding-block: clamp(4rem, 9vw, 8rem);
+    color: var(--color-white);
+    background: var(--hero-product-background);
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-block-end: 3rem;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .breadcrumb span {
+    opacity: 0.7;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 3rem);
+  }
+
+  h1,
+  h2 {
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+  }
+
+  h1 {
+    max-width: 850px;
+    font-size: var(--font-size-h1);
+    letter-spacing: -0.03em;
+  }
+
+  h1 .accent-text,
+  h2 .accent-text {
+    color: var(--color-accent);
+  }
+
+  .hero-description {
+    max-width: 700px;
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-body);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding-inline: 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast),
+      border-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button--accent {
+    color: var(--color-white);
+    background: var(--color-accent);
+  }
+
+  .button--accent:hover {
+    background: var(--color-brand-hover);
+  }
+
+  .button--secondary {
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+
+  .button--secondary:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Hero Tree */
+
+  .asset-window {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+  }
+
+  .asset-window__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .asset-window__header span {
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+  }
+
+  .asset-window__header strong {
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+
+  .asset-tree {
+    padding: 1.5rem;
+  }
+
+  .tree-level {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 0.15rem 0.75rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.045);
+  }
+
+  .tree-level > span {
+    grid-row: span 2;
+    color: var(--color-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .tree-level strong {
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+
+  .tree-level small {
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-xs);
+  }
+
+  .tree-level--accent {
+    border-color: rgba(239, 63, 35, 0.5);
+    background: rgba(239, 63, 35, 0.1);
+  }
+
+  .tree-line {
+    width: 1px;
+    height: 24px;
+    margin-inline: auto;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .asset-status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .asset-status div {
+    padding: 1rem 1.25rem;
+  }
+
+  .asset-status div + div {
+    border-inline-start: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .asset-status span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-xs);
+  }
+
+  .asset-status strong {
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Sections */
+
+  .tree-section,
+  .movement-section,
+  .cost-section,
+  .history-section,
+  .shared-section,
+  .reports-section,
+  .management-section,
+  .agent-section,
+  .lifecycle-section,
+  .asset-cta {
+    padding-block: var(--space-xl);
+  }
+
+  .tree-section,
+  .movement-section,
+  .cost-section,
+  .shared-section,
+  .reports-section,
+  .lifecycle-section,
+  .asset-cta {
+    background: var(--color-surface);
+  }
+
+  .history-section,
+  .management-section,
+  .agent-section {
+    background: var(--color-surface-alt);
+  }
+
+  .section-heading {
+    /* max-width: 820px; */
+    margin-bottom: 3rem;
+  }
+
+  .section-heading--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .section-heading h2,
+  .feature-content h2,
+  .cta-box h2 {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-h2);
+  }
+
+  .section-heading p,
+  .feature-content p,
+  .cta-box p {
+    margin: var(--space-md) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-body);
+  }
+
+  /* Product Tree */
+
+  .product-tree {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-block: 1px solid var(--color-border);
+  }
+
+  .tree-card {
+    min-height: 240px;
+    padding: 2rem 1.5rem;
+  }
+
+  .tree-card + .tree-card {
+    border-inline-start: 1px solid var(--color-border);
+  }
+
+  .tree-card > span,
+  .cost-grid article > span,
+  .management-grid article > span {
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .tree-card strong,
+  .cost-grid article strong,
+  .management-grid article strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .tree-card small {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .tree-card p,
+  .cost-grid article p,
+  .management-grid article p {
+    margin: var(--space-xs) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .tree-card--accent {
+    background: var(--color-brand-subtle);
+  }
+
+  /* Feature Grid */
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+  }
+
+  .feature-grid--reverse {
+    grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1fr);
+  }
+
+  .feature-grid--reverse .feature-content {
+    grid-column: 2;
+  }
+
+  .feature-grid--reverse > :not(.feature-content) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature-list,
+  .history-list,
+  .agent-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1.5rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .feature-list li,
+  .history-list li,
+  .agent-list li {
+    position: relative;
+    padding-inline-start: 1.25rem;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .feature-list li::before,
+  .history-list li::before,
+  .agent-list li::before {
+    position: absolute;
+    top: 0.55em;
+    inset-inline-start: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    content: "";
+  }
+
+  /* Movement */
+
+  .movement-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .movement-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-alt);
+  }
+
+  .movement-card--accent {
+    border-color: rgba(239, 63, 35, 0.35);
+    background: var(--color-brand-subtle);
+  }
+
+  .movement-card span,
+  .movement-arrow span,
+  .movement-alert span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .movement-card strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+  }
+
+  .movement-card small {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+  }
+
+  .movement-arrow {
+    text-align: center;
+  }
+
+  .movement-arrow strong {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+  }
+
+  .movement-alert {
+    grid-column: 1 / -1;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(239, 63, 35, 0.25);
+    border-radius: var(--radius-md);
+    background: var(--color-brand-subtle);
+  }
+
+  .movement-alert span {
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .movement-alert strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Cost */
+
+  .cost-grid,
+  .management-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-block: 1px solid var(--color-border);
+  }
+
+  .cost-grid article,
+  .management-grid article {
+    min-height: 230px;
+    padding: 2rem 1.5rem;
+  }
+
+  .cost-grid article + article,
+  .management-grid article + article {
+    border-inline-start: 1px solid var(--color-border);
+  }
+
+  .cost-card--accent {
+    background: var(--color-brand-subtle);
+  }
+
+  /* History */
+
+  .history-panel {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .history-header span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .history-header strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .timeline {
+    padding: 1.5rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 0 0 1.5rem 1.5rem;
+    border-inline-start: 1px solid var(--color-border);
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+    border-inline-start: 0;
+  }
+
+  .timeline-item::before {
+    position: absolute;
+    top: 0.2rem;
+    inset-inline-start: -4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-line);
+    content: "";
+  }
+
+  .timeline-item--accent::before {
+    background: var(--color-accent);
+  }
+
+  .timeline-item span,
+  .timeline-item small {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .timeline-item strong {
+    display: block;
+    margin-block: 0.35rem;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Shared Assets */
+
+  .shared-panel {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .shared-device,
+  .shared-users {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .shared-device span,
+  .shared-users > span {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .shared-device strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+  }
+
+  .shared-device small {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-text-secondary);
+  }
+
+  .shared-users div {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    padding-block: 0.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .shared-users i {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--color-accent);
+    background: var(--color-brand-subtle);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .shared-users strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Reports */
+
+  .report-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+    gap: 1rem;
+  }
+
+  .report-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-alt);
+  }
+
+  .report-card--large {
+    min-height: 360px;
+    background: var(--color-surface);
+  }
+
+  .report-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .report-card__header span,
+  .report-card__header strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .org-tree {
+    padding-top: 1rem;
+  }
+
+  .org-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .org-row span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .org-row strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .org-row--root {
+    border-radius: var(--radius-md);
+    background: var(--color-brand-subtle);
+  }
+
+  .report-side {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .report-card > span {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .report-card > strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+  }
+
+  .report-card > small {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Agent */
+
+  .agent-panel {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .agent-window__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .agent-window__header span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .agent-window__header strong {
+    color: var(--color-success);
+    font-size: var(--font-size-xs);
+  }
+
+  .agent-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agent-info div {
+    padding: 1.25rem;
+  }
+
+  .agent-info div:nth-child(odd) {
+    border-inline-end: 1px solid var(--color-border);
+  }
+
+  .agent-info div:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .agent-info span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .agent-info strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Lifecycle */
+
+  .lifecycle {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .lifecycle::before {
+    position: absolute;
+    top: 21px;
+    inset-inline: 10%;
+    height: 1px;
+    background: var(--color-border);
+    content: "";
+  }
+
+  .lifecycle article {
+    position: relative;
+    z-index: 1;
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .lifecycle-marker {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    margin-inline: auto;
+    margin-bottom: 1.25rem;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-surface);
+  }
+
+  .lifecycle-marker span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .lifecycle article strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+  }
+
+  .lifecycle article small {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+  }
+
+  .lifecycle-card--accent .lifecycle-marker {
+    border-color: var(--color-accent);
+    background: var(--color-brand-subtle);
+  }
+
+  .lifecycle-card--accent .lifecycle-marker span {
+    color: var(--color-accent);
+  }
+
+  /* CTA */
+
+  .asset-cta {
+    padding-block: var(--space-xl);
+  }
+
+  .cta-box {
+    max-width: 900px;
+    margin-inline: auto;
+    padding: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-alt);
+  }
+
+  .cta-box p {
+    max-width: 650px;
+    margin-inline: auto;
+  }
+
+  .cta-box .button {
+    margin-top: var(--space-lg);
+  }
+
+  /* Tablet */
+
+  @media (max-width: 64rem) {
+    .hero-grid,
+    .feature-grid,
+    .feature-grid--reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-grid--reverse .feature-content,
+    .feature-grid--reverse > :not(.feature-content) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .product-tree {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tree-card:nth-child(3),
+    .tree-card:nth-child(4) {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tree-card:nth-child(3) {
+      border-inline-start: 0;
+    }
+
+    .cost-grid,
+    .management-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cost-grid article:nth-child(3),
+    .management-grid article:nth-child(3) {
+      border-inline-start: 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .cost-grid article:nth-child(4),
+    .management-grid article:nth-child(4) {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .report-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .lifecycle {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .lifecycle::before {
+      top: 22px;
+      bottom: 22px;
+      inset-inline: auto;
+      inset-inline-start: 22px;
+      width: 1px;
+      height: auto;
+    }
+
+    .lifecycle article {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      text-align: start;
+    }
+
+    .lifecycle-marker {
+      margin: 0;
+    }
+
+    .lifecycle article strong,
+    .lifecycle article small {
+      grid-column: 2;
+    }
+
+    .lifecycle article strong {
+      grid-row: 1;
+      align-self: end;
+    }
+
+    .lifecycle article small {
+      grid-row: 2;
+      margin-top: 0;
+      align-self: start;
+    }
+
+    .lifecycle-marker {
+      grid-row: 1 / span 2;
+      grid-column: 1;
+    }
+  }
+
+  /* Mobile */
+
+  @media (max-width: 48rem) {
+    .asset-hero {
+      padding-block: 4rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 11vw, 4rem);
+    }
+
+    .section-heading h2,
+    .feature-content h2,
+    .cta-box h2 {
+      font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .product-tree,
+    .cost-grid,
+    .management-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tree-card,
+    .cost-grid article,
+    .management-grid article {
+      min-height: auto;
+      border-inline-start: 0 !important;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tree-card:first-child,
+    .cost-grid article:first-child,
+    .management-grid article:first-child {
+      border-top: 0;
+    }
+
+    .feature-list,
+    .history-list,
+    .agent-list {
+      grid-template-columns: 1fr;
+    }
+
+    .movement-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .movement-arrow {
+      transform: rotate(-90deg);
+    }
+
+    .movement-alert {
+      grid-column: auto;
+    }
+
+    .scan-results {
+      grid-template-columns: 1fr;
+    }
+
+    .asset-status {
+      grid-template-columns: 1fr;
+    }
+
+    .asset-status div + div {
+      border-inline-start: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .agent-info {
+      grid-template-columns: 1fr;
+    }
+
+    .agent-info div:nth-child(odd) {
+      border-inline-end: 0;
+    }
+
+    .agent-info div + div {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .report-card__header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .org-row {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .lifecycle::before {
+      inset-inline-start: 21px;
+    }
+  }
+
+  /* Small Mobile */
+
+  @media (max-width: 32rem) {
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .asset-tree {
+      padding: 1rem;
+    }
+
+    .tree-level {
+      grid-template-columns: 26px 1fr;
+    }
+
+    .timeline-item {
+      padding-inline-start: 1.25rem;
+    }
+
+    .report-card--large {
+      min-height: auto;
+    }
+  }
+</style>

@@ -1,0 +1,1530 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="مدیریت گردش کار | Gamma ITSM"
+  description="گردش‌های کاری Gamma ITSM را برای خودکارسازی فرایندهای خدمات فناوری اطلاعات، ارجاع درخواست‌ها، تأییدها، شرایط، زمان‌سنج و اعلان‌ها طراحی و اجرا کنید."
+>
+  <main class="workflow-page">
+    <!-- Hero -->
+    <section class="workflow-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma Help Desk</a>
+          <span>/</span>
+          <span>گردش کار</span>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>
+              گردش‌های کاری سازمان خود را
+              <span class="accent-text">مکانیزه کنید</span>
+            </h1>
+
+            <p class="hero-description">
+              مدیریت درخواست‌ها و خدمات فناوری اطلاعات بدون داشتن گردش کاری
+              قدرتمند، ارزش چندانی نخواهد داشت. Gamma ITSM به شما امکان می‌دهد
+              برای انواع درخواست‌ها و خدمات، گردش‌های کاری متفاوت و قابل کنترل
+              تعریف کنید.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--accent" href="/contact/demo/">
+                درخواست دموی Gamma ITSM
+              </a>
+
+              <a class="button button--secondary" href="/products/gammaitsm/">
+                معرفی Gamma ITSM
+              </a>
+            </div>
+          </div>
+
+          <div class="workflow-visual" aria-label="نمونه گردش کار">
+            <div class="workflow-window">
+              <div class="workflow-window__header">
+                <span>Workflow</span>
+                <span class="workflow-status">فعال</span>
+              </div>
+
+              <div class="workflow-canvas">
+                <div class="workflow-node workflow-node--start">
+                  <small>شروع</small>
+                  <strong>ثبت درخواست</strong>
+                </div>
+
+                <div class="workflow-connector">
+                  <span></span>
+                </div>
+
+                <div class="workflow-node">
+                  <small>تأیید</small>
+                  <strong>تأیید مدیر</strong>
+                </div>
+
+                <div class="workflow-connector">
+                  <span></span>
+                </div>
+
+                <div class="workflow-node workflow-node--accent">
+                  <small>اقدام</small>
+                  <strong>کارشناس IT</strong>
+                </div>
+
+                <div class="workflow-branch">
+                  <div class="workflow-branch__line"></div>
+
+                  <div class="workflow-node workflow-node--small">
+                    <small>شرط</small>
+                    <strong>نیاز به تأیید؟</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example -->
+    <section class="example-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">یک مثال واقعی</p>
+
+          <h2>
+            فرایندها را از ثبت درخواست تا
+            <span class="accent-text">انجام خودکار کنید</span>
+          </h2>
+
+          <p>
+            فرض کنید کاربر سازمان درخواست یک چاپگر ثبت می‌کند. می‌توانید گردش
+            کاری تعریف کنید که ابتدا درخواست برای رئیس کاربر ارسال شود، پس از
+            تأیید به مسئولان فناوری اطلاعات ارجاع شود و در ادامه، وضعیت و مسئول
+            انجام کار به‌صورت خودکار تعیین شود.
+          </p>
+        </div>
+
+        <div class="process-flow">
+          <article>
+            <span>01</span>
+            <strong>ثبت درخواست</strong>
+            <p>کاربر درخواست خدمت را از طریق کاتالوگ خدمات ثبت می‌کند.</p>
+          </article>
+
+          <div class="process-arrow">←</div>
+
+          <article>
+            <span>02</span>
+            <strong>تأیید مدیر</strong>
+            <p>درخواست برای مدیر یا سمت سازمانی مربوطه ارسال می‌شود.</p>
+          </article>
+
+          <div class="process-arrow">←</div>
+
+          <article>
+            <span>03</span>
+            <strong>ارجاع به IT</strong>
+            <p>پس از تأیید، درخواست به گروه یا کارشناس مناسب ارجاع می‌شود.</p>
+          </article>
+
+          <div class="process-arrow">←</div>
+
+          <article>
+            <span>04</span>
+            <strong>انجام و پیگیری</strong>
+            <p>فرایند تا پایان کار و بسته شدن درخواست ادامه پیدا می‌کند.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-content">
+            <h2>
+              گردش خودکار بر اساس
+              <span class="accent-text">ساختار سازمانی و موقعیت</span>
+              ایجاد کنید
+            </h2>
+
+            <p>
+              در سازمان‌های بزرگ، یک فرایند واحد همیشه برای همه درخواست‌ها مناسب
+              نیست. Gamma ITSM امکان تعریف گردش‌های کاری متفاوت بر اساس اطلاعات
+              سازمانی و ویژگی‌های درخواست را فراهم می‌کند.
+            </p>
+
+            <p>
+              برای مثال، درخواست ایجادشده از ساختمان مرکزی می‌تواند مسیر متفاوتی
+              نسبت به درخواست ساختمان آموزش داشته باشد. همچنین درخواست مدیرعامل
+              می‌تواند با اولویت بالا مستقیماً به مسئول مشخصی ارجاع شود.
+            </p>
+
+            <ul class="feature-list">
+              <li>سمت سازمانی</li>
+              <li>واحد سازمانی</li>
+              <li>ساختمان</li>
+              <li>منطقه جغرافیایی</li>
+              <li>نوع درخواست</li>
+              <li>درخواست‌دهنده</li>
+            </ul>
+          </div>
+
+          <div class="feature-panel">
+            <div class="rule-card">
+              <span>Rule</span>
+              <strong>اگر ساختمان = مرکزی</strong>
+              <div class="rule-arrow">↓</div>
+              <strong>ارجاع به گروه پشتیبانی مرکزی</strong>
+            </div>
+
+            <div class="rule-card rule-card--accent">
+              <span>Priority Rule</span>
+              <strong>اگر درخواست‌دهنده = مدیرعامل</strong>
+              <div class="rule-arrow">↓</div>
+              <strong>اولویت بالا + مسئول مشخص</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Round Robin -->
+    <section class="round-robin-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            درخواست‌ها را
+            <span class="accent-text">عادلانه توزیع کنید</span>
+          </h2>
+
+          <p>
+            الگوریتم Round Robin در Gamma ITSM درخواست‌ها را به‌صورت ترتیبی و
+            چرخشی بین کارشناسان یک گروه توزیع می‌کند تا ارجاع درخواست‌ها
+            ساختاریافته و منظم انجام شود.
+          </p>
+        </div>
+
+        <div class="round-robin">
+          <div class="rr-group">
+            <span>گروه کارشناسان IT</span>
+            <strong>پشتیبانی سخت‌افزار</strong>
+          </div>
+
+          <div class="rr-arrow">←</div>
+
+          <div class="rr-experts">
+            <div class="rr-expert active">
+              <span>01</span>
+              <strong>کارشناس A</strong>
+            </div>
+
+            <div class="rr-expert">
+              <span>02</span>
+              <strong>کارشناس B</strong>
+            </div>
+
+            <div class="rr-expert">
+              <span>03</span>
+              <strong>کارشناس C</strong>
+            </div>
+
+            <div class="rr-expert">
+              <span>04</span>
+              <strong>کارشناس D</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Desk -->
+    <section class="feature-section feature-section--muted">
+      <div class="container">
+        <div class="feature-grid feature-grid--reverse">
+          <div class="feature-content">
+            <h2>
+              با ایجاد نقش Help Desk
+              <span class="accent-text">کیفیت خدمات IT را افزایش دهید</span>
+            </h2>
+
+            <p>
+              می‌توانید شخص یا اشخاصی را در واحد خدمات فناوری اطلاعات به‌عنوان
+              Help Desk تعیین کنید تا به‌عنوان نقطه تماس اصلی
+              <strong>Single Point Of Contact</strong>
+              با کاربران فعالیت کنند.
+            </p>
+
+            <p>
+              درخواست کاربران پس از ثبت می‌تواند به‌صورت خودکار به Help Desk
+              ارجاع شود. کارشناس Help Desk در صورت امکان درخواست را بررسی و حل
+              می‌کند و در غیر این صورت آن را برای کارشناسان تخصصی‌تر ارجاع خواهد
+              داد.
+            </p>
+          </div>
+
+          <div class="role-panel">
+            <div class="role-step">
+              <span>01</span>
+              <strong>کاربر</strong>
+              <small>ثبت درخواست</small>
+            </div>
+
+            <div class="role-line"></div>
+
+            <div class="role-step role-step--accent">
+              <span>02</span>
+              <strong>Help Desk</strong>
+              <small>بررسی اولیه</small>
+            </div>
+
+            <div class="role-line"></div>
+
+            <div class="role-step">
+              <span>03</span>
+              <strong>کارشناس IT</strong>
+              <small>اقدام تخصصی</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call Center -->
+    <section class="feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-content">
+            <h2>
+              برای حجم بالای درخواست‌ها
+              <span class="accent-text">Call Center</span>
+              ایجاد کنید
+            </h2>
+
+            <p>
+              در بعضی سازمان‌ها بهتر است کاربران مستقیماً با کارشناسان فناوری
+              اطلاعات در ارتباط نباشند. در این مدل، یک واحد یا گروه مشخص
+              به‌عنوان نقطه تماس با کاربران فعالیت می‌کند.
+            </p>
+
+            <p>
+              کارشناسان Call Center می‌توانند درخواست‌ها را گروه‌بندی کرده و از
+              طرف کاربر در سامانه ثبت کنند. درخواست‌های ساده در همین مرحله حل
+              می‌شوند و موارد تخصصی‌تر به کارشناسان یا لایه بالاتر IT ارجاع
+              خواهند شد.
+            </p>
+          </div>
+
+          <div class="call-center-panel">
+            <div class="cc-item">
+              <span>01</span>
+              <strong>تماس کاربر</strong>
+            </div>
+
+            <div class="cc-arrow">←</div>
+
+            <div class="cc-item cc-item--accent">
+              <span>02</span>
+              <strong>Call Center</strong>
+            </div>
+
+            <div class="cc-arrow">←</div>
+
+            <div class="cc-item">
+              <span>03</span>
+              <strong>کارشناس IT</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timer -->
+    <section class="timer-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            زمان‌سنج را وارد گردش کار کنید و
+            <span class="accent-text">پیگیری را خودکار کنید</span>
+          </h2>
+
+          <p>
+            اگر کاربر یا مسئول یک فعالیت را در مهلت مشخص‌شده انجام ندهد، Gamma
+            ITSM می‌تواند بر اساس زمان‌سنج تعریف‌شده، فرایند را به‌صورت خودکار
+            وارد مسیر بعدی کند. این قابلیت برای Escalation و کنترل مهلت انجام
+            فعالیت‌ها بسیار کاربردی است.
+          </p>
+        </div>
+
+        <div class="timer-flow">
+          <div class="timer-node">
+            <small>Activity</small>
+            <strong>تأیید درخواست</strong>
+          </div>
+
+          <div class="timer-line"></div>
+
+          <div class="timer-node timer-node--timer">
+            <small>Timer</small>
+            <strong>مهلت انجام</strong>
+            <span>24 ساعت</span>
+          </div>
+
+          <div class="timer-line"></div>
+
+          <div class="timer-outputs">
+            <div>
+              <span>01</span>
+              <strong>اعلان</strong>
+              <small>پیامک یا اطلاع‌رسانی</small>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>وظیفه سیستمی</strong>
+              <small>تغییر خودکار وضعیت</small>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>شرط</strong>
+              <small>انتخاب مسیر بعدی</small>
+            </div>
+
+            <div>
+              <span>04</span>
+              <strong>وظیفه کاربر</strong>
+              <small>ارجاع به کاربر دیگر</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="capabilities-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            ابزارهای لازم برای طراحی
+            <span class="accent-text">گردش‌های کاری سازمان</span>
+          </h2>
+
+          <p>
+            گردش کار در Gamma ITSM فقط مجموعه‌ای از مراحل ثابت نیست؛ می‌توانید
+            مسئول، شرط، زمان، فرم، وضعیت و نحوه اطلاع‌رسانی را برای هر مرحله
+            تعیین کنید.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          <article>
+            <span>01</span>
+            <strong>طراحی بصری</strong>
+            <p>طراحی گردش کار به‌صورت Visual و Drag & Drop.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <strong>تعیین مسئول</strong>
+            <p>انجام فعالیت توسط کاربر، گروه، سمت سازمانی یا نقش کاربر.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>شرط در گردش کار</strong>
+            <p>انتخاب مسیر بعدی بر اساس شرایط تعریف‌شده.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <strong>زمان‌سنج</strong>
+            <p>تعریف مهلت انجام فعالیت و اجرای مسیرهای خودکار.</p>
+          </article>
+
+          <article>
+            <span>05</span>
+            <strong>وضعیت‌های سفارشی</strong>
+            <p>تعریف وضعیت‌های مختلف درخواست با رنگ‌بندی دلخواه.</p>
+          </article>
+
+          <article>
+            <span>06</span>
+            <strong>فرم‌های سفارشی</strong>
+            <p>استفاده از فرم‌های سفارشی در هر مرحله از گردش کار.</p>
+          </article>
+
+          <article>
+            <span>07</span>
+            <strong>خبررسانی</strong>
+            <p>ارسال ایمیل، پیامک و Web Service در مراحل مختلف.</p>
+          </article>
+
+          <article>
+            <span>08</span>
+            <strong>الگوهای قابل تنظیم</strong>
+            <p>تعریف الگوی دلخواه برای پیام‌ها و اعلان‌های سیستم.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conditions -->
+    <section class="conditions-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            یک کاربر، چند نقش؛
+            <span class="accent-text">چند مسیر متفاوت</span>
+          </h2>
+
+          <p>
+            در Gamma ITSM امکان تخصیص چند سمت به یک کاربر وجود دارد. بنابراین
+            می‌توانید گردش کار را بر اساس اطلاعات دقیق سازمانی و شرایط درخواست
+            تعیین کنید.
+          </p>
+        </div>
+
+        <div class="condition-grid">
+          <div class="condition-card">
+            <span>شرط</span>
+            <strong>واحد سازمانی</strong>
+            <p>برای واحدهای مختلف گردش‌های متفاوت تعریف کنید.</p>
+          </div>
+
+          <div class="condition-card">
+            <span>شرط</span>
+            <strong>ساختمان</strong>
+            <p>مسیر درخواست را بر اساس محل استقرار تعیین کنید.</p>
+          </div>
+
+          <div class="condition-card">
+            <span>شرط</span>
+            <strong>سمت و نقش</strong>
+            <p>فرایند را بر اساس سمت یا نقش درخواست‌دهنده تغییر دهید.</p>
+          </div>
+
+          <div class="condition-card condition-card--accent">
+            <span>شرط</span>
+            <strong>نوع درخواست</strong>
+            <p>برای انواع مختلف درخواست‌ها مسیرهای مستقل تعریف کنید.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Survey -->
+    <section class="survey-section">
+      <div class="container">
+        <div class="survey-grid">
+          <div>
+            <h2>
+              رضایت کاربر را هم وارد
+              <span class="accent-text">فرایند کنید</span>
+            </h2>
+
+            <p>
+              می‌توانید در پایان فرایند یا در هر مرحله‌ای که لازم باشد، تأییدیه
+              یا نظر کاربر نهایی را دریافت کنید. برای این کار امکان طراحی فرم
+              نظرسنجی و قرار دادن آن در گردش کار وجود دارد.
+            </p>
+          </div>
+
+          <div class="survey-card">
+            <div class="survey-rating">
+              <span>رضایت از خدمت</span>
+
+              <div class="rating">
+                <i>1</i>
+                <i>2</i>
+                <i class="active">3</i>
+                <i>4</i>
+                <i>5</i>
+              </div>
+            </div>
+
+            <div class="survey-status">
+              <span>وضعیت فرایند</span>
+              <strong>در انتظار تأیید کاربر</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="workflow-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>
+            فرایندهای خدمات IT را
+            <span class="accent-text">قابل کنترل و خودکار کنید</span>
+          </h2>
+
+          <p>
+            گردش‌های کاری خود را متناسب با ساختار سازمان، نقش‌ها، شرایط،
+            زمان‌بندی و نیازهای واقعی واحد فناوری اطلاعات طراحی کنید.
+          </p>
+
+          <a class="button button--accent" href="/contact/demo/">
+            درخواست دموی Gamma ITSM
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .workflow-page {
+    --workflow-dark: var(--color-brand-dark);
+    --workflow-accent: var(--color-brand);
+    --workflow-surface: var(--color-surface);
+    --workflow-surface-alt: var(--color-surface-alt);
+    --workflow-border: var(--color-border);
+    --workflow-muted: var(--color-text-secondary);
+  }
+
+  .container {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+  }
+
+  .workflow-hero {
+    padding-block: clamp(4rem, 9vw, 8rem);
+    color: var(--color-white);
+    background: var(--hero-product-background);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    padding: 1.25rem 0;
+    color: var(--feature-muted);
+    font-size: 0.82rem;
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--feature-accent);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 7rem);
+  }
+
+  h1,
+  h2 {
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+  }
+
+  h1 {
+    max-width: 850px;
+    font-size: var(--font-size-h1);
+    letter-spacing: -0.03em;
+  }
+
+  h1 span,
+  h2 span {
+    color: var(--workflow-accent);
+  }
+
+  .hero-description {
+    max-width: 700px;
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-body);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding-inline: 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast),
+      border-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button--accent {
+    color: var(--color-white);
+    background: var(--workflow-accent);
+  }
+
+  .button--accent:hover {
+    background: var(--color-brand-hover);
+  }
+
+  .button--secondary {
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+
+  .button--secondary:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .workflow-visual {
+    position: relative;
+  }
+
+  .workflow-window {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+  }
+
+  .workflow-window__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .workflow-status {
+    color: var(--workflow-accent);
+    font-size: var(--font-size-xs);
+  }
+
+  .workflow-canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    min-height: 480px;
+    padding: 2rem;
+  }
+
+  .workflow-node {
+    width: min(100%, 250px);
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .workflow-node small {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-xs);
+  }
+
+  .workflow-node strong {
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+
+  .workflow-node--start {
+    border-color: rgba(239, 63, 35, 0.45);
+  }
+
+  .workflow-node--accent {
+    border-color: var(--workflow-accent);
+    background: rgba(239, 63, 35, 0.1);
+  }
+
+  .workflow-connector {
+    position: relative;
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .workflow-connector span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid var(--workflow-accent);
+    border-bottom: 1px solid var(--workflow-accent);
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .workflow-branch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .workflow-branch__line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .workflow-node--small {
+    width: 180px;
+  }
+
+  .example-section,
+  .feature-section,
+  .round-robin-section,
+  .capabilities-section,
+  .conditions-section,
+  .survey-section {
+    padding-block: var(--space-xl);
+  }
+
+  .example-section,
+  .round-robin-section,
+  .conditions-section {
+    background: var(--color-surface);
+  }
+
+  .feature-section--muted,
+  .capabilities-section,
+  .survey-section {
+    background: var(--color-surface-alt);
+  }
+
+  .section-heading {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .section-heading--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .section-heading h2,
+  .feature-content h2,
+  .survey-grid h2,
+  .cta-box h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary);
+  }
+
+  .section-heading p:not(.eyebrow),
+  .feature-content p,
+  .survey-grid p {
+    margin: var(--space-md) 0 0;
+    color: var(--workflow-muted);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-body);
+  }
+
+  .process-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    border-block: 1px solid var(--workflow-border);
+  }
+
+  .process-flow article {
+    min-height: 220px;
+    padding: 2rem 1.5rem;
+  }
+
+  .process-flow article + .process-arrow {
+    display: flex;
+  }
+
+  .process-flow article span,
+  .capabilities-grid article span,
+  .condition-card span {
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .process-flow article strong,
+  .capabilities-grid article strong,
+  .condition-card strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .process-flow article p,
+  .capabilities-grid article p,
+  .condition-card p {
+    margin: var(--space-xs) 0 0;
+    color: var(--workflow-muted);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .process-arrow {
+    align-items: center;
+    justify-content: center;
+    padding-inline: 0.5rem;
+    color: var(--workflow-accent);
+    font-size: 1.25rem;
+  }
+
+  .feature-grid,
+  .survey-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+  }
+
+  .feature-grid--reverse {
+    grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1fr);
+  }
+
+  .feature-grid--reverse .feature-content {
+    grid-column: 2;
+  }
+
+  .feature-grid--reverse .role-panel {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature-content p strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 1.5rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .feature-list li {
+    position: relative;
+    padding-inline-start: 1.25rem;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .feature-list li::before {
+    position: absolute;
+    top: 0.55em;
+    inset-inline-start: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--workflow-accent);
+    content: "";
+  }
+
+  .feature-panel {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .rule-card {
+    padding: 1.5rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .rule-card--accent {
+    border-color: rgba(239, 63, 35, 0.35);
+    background: var(--color-brand-subtle);
+  }
+
+  .rule-card span {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .rule-card strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+  }
+
+  .rule-arrow {
+    margin-block: 0.75rem;
+    color: var(--workflow-accent);
+  }
+
+  .round-robin {
+    display: grid;
+    grid-template-columns: 1fr auto 2fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-alt);
+  }
+
+  .rr-group {
+    padding: 1.5rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .rr-group span,
+  .rr-expert span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .rr-group strong,
+  .rr-expert strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .rr-arrow {
+    color: var(--workflow-accent);
+    font-size: 1.5rem;
+  }
+
+  .rr-experts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+
+  .rr-expert {
+    padding: 1.25rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .rr-expert.active {
+    border-color: var(--workflow-accent);
+  }
+
+  .role-panel {
+    padding: 2rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .role-step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.15rem 1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-md);
+  }
+
+  .role-step span {
+    grid-row: span 2;
+    color: var(--workflow-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .role-step strong {
+    color: var(--color-text-primary);
+  }
+
+  .role-step small {
+    color: var(--workflow-muted);
+  }
+
+  .role-step--accent {
+    border-color: rgba(239, 63, 35, 0.35);
+    background: var(--color-brand-subtle);
+  }
+
+  .role-line {
+    width: 1px;
+    height: 32px;
+    margin-inline: auto;
+    background: var(--workflow-border);
+  }
+
+  .call-center-panel {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cc-item {
+    padding: 1.5rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-alt);
+  }
+
+  .cc-item--accent {
+    border-color: rgba(239, 63, 35, 0.35);
+    background: var(--color-brand-subtle);
+  }
+
+  .cc-item span {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .cc-item strong {
+    color: var(--color-text-primary);
+  }
+
+  .cc-arrow {
+    color: var(--workflow-accent);
+  }
+
+  .timer-section {
+    padding-block: var(--space-xl);
+    color: var(--color-white);
+    background: var(--hero-product-background);
+  }
+
+  .timer-section .section-heading h2 {
+    color: var(--color-white);
+  }
+
+  .timer-section .section-heading p:not(.eyebrow) {
+    color: var(--color-text-on-dark);
+  }
+
+  .timer-flow {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr 2fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .timer-node {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .timer-node small,
+  .timer-node span {
+    display: block;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-xs);
+  }
+
+  .timer-node strong {
+    display: block;
+    margin-block: 0.5rem;
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+
+  .timer-node--timer {
+    border-color: rgba(239, 63, 35, 0.5);
+  }
+
+  .timer-node--timer span {
+    color: var(--workflow-accent);
+  }
+
+  .timer-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .timer-outputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .timer-outputs div {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .timer-outputs span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--workflow-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .timer-outputs strong {
+    display: block;
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+
+  .timer-outputs small {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-xs);
+  }
+
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-block: 1px solid var(--workflow-border);
+  }
+
+  .capabilities-grid article {
+    min-height: 220px;
+    padding: 2rem 1.5rem;
+  }
+
+  .capabilities-grid article + article {
+    border-inline-start: 1px solid var(--workflow-border);
+  }
+
+  .capabilities-grid article:nth-child(5) {
+    border-block-start: 1px solid var(--workflow-border);
+  }
+
+  .capabilities-grid article:nth-child(n + 5) {
+    border-block-start: 1px solid var(--workflow-border);
+  }
+
+  .conditions-section {
+    background: var(--color-surface);
+  }
+
+  .condition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-block: 1px solid var(--workflow-border);
+  }
+
+  .condition-card {
+    min-height: 210px;
+    padding: 2rem 1.5rem;
+  }
+
+  .condition-card + .condition-card {
+    border-inline-start: 1px solid var(--workflow-border);
+  }
+
+  .condition-card--accent {
+    background: var(--color-brand-subtle);
+  }
+
+  .survey-grid {
+    padding: 3rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-lg);
+  }
+
+  .survey-card {
+    padding: 1.5rem;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .survey-rating > span,
+  .survey-status span {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .rating {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .rating i {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid var(--workflow-border);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    font-style: normal;
+    font-size: var(--font-size-xs);
+  }
+
+  .rating i.active {
+    border-color: var(--workflow-accent);
+    color: var(--color-white);
+    background: var(--workflow-accent);
+  }
+
+  .survey-status {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--workflow-border);
+  }
+
+  .survey-status strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .workflow-cta {
+    padding-block: var(--space-xl);
+    background: var(--color-background);
+  }
+
+  .cta-box {
+    max-width: 900px;
+    margin-inline: auto;
+    padding: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    border: 1px solid var(--workflow-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .cta-box h2 {
+    color: var(--color-text-primary);
+  }
+
+  .cta-box p:not(.eyebrow) {
+    max-width: 650px;
+    margin: var(--space-md) auto var(--space-lg);
+    color: var(--workflow-muted);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-body);
+  }
+
+  @media (max-width: 64rem) {
+    .hero-grid,
+    .feature-grid,
+    .feature-grid--reverse,
+    .survey-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-grid--reverse .feature-content,
+    .feature-grid--reverse .role-panel {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .process-flow {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-arrow {
+      display: none !important;
+    }
+
+    .timer-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .timer-line {
+      width: 1px;
+      height: 32px;
+      margin-inline: auto;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .capabilities-grid article:nth-child(3),
+    .capabilities-grid article:nth-child(5),
+    .capabilities-grid article:nth-child(7) {
+      border-inline-start: 0;
+    }
+
+    .capabilities-grid article:nth-child(n + 3) {
+      border-block-start: 1px solid var(--workflow-border);
+    }
+
+    .condition-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .condition-card:nth-child(3),
+    .condition-card:nth-child(4) {
+      border-block-start: 1px solid var(--workflow-border);
+    }
+
+    .condition-card:nth-child(3) {
+      border-inline-start: 0;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .workflow-hero {
+      padding-block: 4rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 11vw, 4rem);
+    }
+
+    .section-heading h2,
+    .feature-content h2,
+    .survey-grid h2,
+    .cta-box h2 {
+      font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .process-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .process-flow article {
+      min-height: auto;
+      border-block-end: 1px solid var(--workflow-border);
+    }
+
+    .process-flow article:last-child {
+      border-block-end: 0;
+    }
+
+    .round-robin {
+      grid-template-columns: 1fr;
+    }
+
+    .rr-arrow {
+      text-align: center;
+      transform: rotate(-90deg);
+    }
+
+    .rr-experts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-list {
+      grid-template-columns: 1fr;
+    }
+
+    .call-center-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .cc-arrow {
+      text-align: center;
+      transform: rotate(-90deg);
+    }
+
+    .timer-outputs {
+      grid-template-columns: 1fr;
+    }
+
+    .capabilities-grid,
+    .condition-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .capabilities-grid article,
+    .capabilities-grid article:nth-child(n + 3) {
+      border-inline-start: 0;
+      border-block-start: 1px solid var(--workflow-border);
+    }
+
+    .capabilities-grid article:first-child {
+      border-block-start: 0;
+    }
+
+    .condition-card,
+    .condition-card:nth-child(3),
+    .condition-card:nth-child(4) {
+      border-inline-start: 0;
+      border-block-start: 1px solid var(--workflow-border);
+    }
+
+    .condition-card:first-child {
+      border-block-start: 0;
+    }
+
+    .survey-grid {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 32rem) {
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .workflow-canvas {
+      padding: 1.25rem;
+    }
+
+    .workflow-branch {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .workflow-branch__line {
+      width: 1px;
+      height: 30px;
+      margin-inline: auto;
+    }
+
+    .workflow-node--small {
+      width: 100%;
+    }
+
+    .rr-experts {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

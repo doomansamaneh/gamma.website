@@ -67,6 +67,12 @@ h1 {
   max-width: 18ch;
 }
 
+.accent-text {
+  display: inline-block;
+  color: var(--color-accent);
+  padding: var(--space-2xs);
+}
+
 a {
   color: inherit;
 }

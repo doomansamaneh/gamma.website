@@ -1,0 +1,1985 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const features = [
+  {
+    icon: "▦",
+    title: "کاتالوگ خدمات",
+    text: "امکان تعریف کاتالوگ خدمات در لایه‌های مختلف و برای واحدهای مختلف سازمان، متناسب با ساختار خدمات شما.",
+  },
+  {
+    icon: "✓",
+    title: "ثبت و پیگیری آسان",
+    text: "کاربران می‌توانند درخواست خود را به‌سادگی ثبت کنند و در هر لحظه از وضعیت و مهلت رسیدگی آن مطلع شوند.",
+  },
+  {
+    icon: "◈",
+    title: "شناخت ماهیت درخواست‌ها",
+    text: "درخواست‌ها بر اساس ماهیت‌هایی مانند نیاز جدید، پیشنهاد، مشکل، رخداد و درخواست خدمت دسته‌بندی می‌شوند.",
+  },
+  {
+    icon: "↗",
+    title: "توزیع هوشمند درخواست‌ها",
+    text: "درخواست‌ها بر اساس شرایط مختلف بین کارشناسان توزیع می‌شوند و در کنار ارجاع خودکار، امکان ارجاع دستی نیز وجود دارد.",
+  },
+  {
+    icon: "▥",
+    title: "تحلیل حجم درخواست‌ها",
+    text: "با مشاهده تعداد درخواست‌ها در ماه‌های مختلف، دوره‌های پرترافیک را شناسایی و برای ظرفیت کارشناسان برنامه‌ریزی کنید.",
+  },
+  {
+    icon: "◷",
+    title: "کنترل مهلت درخواست‌ها",
+    text: "گاما قبل از رسیدن درخواست‌ها به تأخیر، به افراد مسئول اطلاع می‌دهد تا امکان اقدام به‌موقع وجود داشته باشد.",
+  },
+];
+
+const notifications = [
+  {
+    number: "01",
+    title: "اعلان‌های گاما",
+    text: "درخواست‌هایی که به پایان مهلت خود نزدیک می‌شوند در بخش اعلان‌های گاما نمایش داده می‌شوند.",
+  },
+  {
+    number: "02",
+    title: "ارسال پیامک",
+    text: "هنگام ارجاع درخواست یا ایجاد تأخیر، می‌توان پیامک اطلاع‌رسانی برای افراد مربوطه ارسال کرد.",
+  },
+  {
+    number: "03",
+    title: "ارسال ایمیل",
+    text: "می‌توان ارسال ایمیل هنگام ایجاد درخواست، نزدیک شدن به مهلت یا ایجاد تأخیر را تنظیم کرد.",
+  },
+  {
+    number: "04",
+    title: "Push Notification",
+    text: "حتی در صورت بسته بودن مرورگر، کاربران از درخواست‌های جدید و ارجاع‌شده مطلع می‌شوند.",
+  },
+];
+---
+
+<BaseLayout
+  title="مدیریت درخواست‌های خدماتی | Gamma Help Desk"
+  description="مدیریت درخواست‌های خدماتی و Request Fulfillment در Gamma Help Desk؛ از کاتالوگ خدمات و ثبت درخواست تا ارجاع، پیگیری، SLA و گزارش‌گیری."
+>
+  <main class="request-page">
+    <!-- Breadcrumb -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="/">خانه</a>
+        <span>/</span>
+        <a href="/products/">محصولات</a>
+        <span>/</span>
+        <a href="/products/gammaitsm/">Gamma Help Desk</a>
+        <span>/</span>
+        <span>مدیریت درخواست</span>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <section class="feature-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>
+            مدیریت درخواست‌های خدماتی،
+            <strong class="">از ثبت تا انجام</strong>
+          </h1>
+
+          <p class="hero-description">
+            فرایند Request Fulfillment در ITIL برای مدیریت و برآورده کردن
+            درخواست‌های خدماتی کاربران طراحی شده است؛ از درخواست‌های ساده‌ای
+            مانند تغییر گذرواژه تا خدمات پیچیده‌تر سازمانی.
+          </p>
+
+          <div class="hero-actions">
+            <a href="/products/gamma-help-desk/" class="button button--accent">
+              مشاهده Gamma Help Desk
+            </a>
+
+            <a href="/contact/" class="button button--outline">
+              درخواست دمو
+              <span>←</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <strong>Request Fulfillment</strong>
+              <span>مدیریت چرخه درخواست</span>
+            </div>
+
+            <div>
+              <strong>Service Catalog</strong>
+              <span>کاتالوگ خدمات سازمان</span>
+            </div>
+
+            <div>
+              <strong>SLA</strong>
+              <span>کنترل مهلت رسیدگی</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="dashboard-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+              <span>Gamma Help Desk</span>
+            </div>
+
+            <div class="dashboard-body">
+              <div class="dashboard-top">
+                <div>
+                  <small>درخواست‌های خدماتی</small>
+                  <strong>128</strong>
+                </div>
+
+                <div class="status-pill">● در حال پردازش</div>
+              </div>
+
+              <div class="request-item">
+                <div class="request-icon">▦</div>
+
+                <div class="request-info">
+                  <strong>درخواست دسترسی به سامانه</strong>
+                  <span>واحد منابع انسانی</span>
+                </div>
+
+                <div class="request-status">در حال بررسی</div>
+              </div>
+
+              <div class="request-item">
+                <div class="request-icon">✓</div>
+
+                <div class="request-info">
+                  <strong>تغییر گذرواژه</strong>
+                  <span>واحد مالی</span>
+                </div>
+
+                <div class="request-status request-status--success">
+                  انجام شد
+                </div>
+              </div>
+
+              <div class="request-item">
+                <div class="request-icon">◷</div>
+
+                <div class="request-info">
+                  <strong>درخواست نصب نرم‌افزار</strong>
+                  <span>واحد فروش</span>
+                </div>
+
+                <div class="request-status request-status--warning">
+                  نزدیک به SLA
+                </div>
+              </div>
+
+              <div class="mini-chart">
+                <div class="chart-label">
+                  <span>حجم درخواست‌ها</span>
+                  <strong>این ماه</strong>
+                </div>
+
+                <div class="chart-bars">
+                  <i style="height: 34%"></i>
+                  <i style="height: 52%"></i>
+                  <i style="height: 43%"></i>
+                  <i style="height: 76%"></i>
+                  <i style="height: 61%"></i>
+                  <i style="height: 90%"></i>
+                  <i style="height: 68%"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            درخواست‌های خدماتی را
+            <span class="accent-text">ساختار یافته مدیریت کنید</span>
+          </h2>
+
+          <p>
+            کاربران درخواست‌ها و نیازهای خود را طبق کاتالوگ خدمات اعلام می‌کنند
+            و گاما تمام چرخه درخواست را از ثبت تا انجام و بسته شدن مدیریت
+            می‌کند.
+          </p>
+        </div>
+
+        <div class="process-flow">
+          <div class="process-step">
+            <span class="step-number">01</span>
+            <div class="step-icon">▦</div>
+            <strong>کاتالوگ خدمات</strong>
+            <span>انتخاب خدمت</span>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <span class="step-number">02</span>
+            <div class="step-icon">＋</div>
+            <strong>ثبت درخواست</strong>
+            <span>ارسال درخواست</span>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <span class="step-number">03</span>
+            <div class="step-icon">↗</div>
+            <strong>ارجاع</strong>
+            <span>تخصیص به کارشناس</span>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <span class="step-number">04</span>
+            <div class="step-icon">⚙</div>
+            <strong>انجام خدمت</strong>
+            <span>اقدام و پیگیری</span>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <span class="step-number">05</span>
+            <div class="step-icon">✓</div>
+            <strong>بسته شدن</strong>
+            <span>تکمیل درخواست</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Catalog -->
+    <section class="catalog-section">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <h2>
+            هر خدمت،
+            <span class="accent-text">یک مسیر مشخص برای درخواست</span>
+          </h2>
+
+          <p>
+            کاربران درخواست‌های خود را بر اساس کاتالوگ خدمات ثبت می‌کنند. در
+            نرم‌افزار Service Desk گاما می‌توانید کاتالوگ خدمات را در لایه‌های
+            مختلف و برای بخش‌های مختلف سازمان تعریف کنید.
+          </p>
+
+          <div class="check-list">
+            <div>
+              <span>✓</span>
+              <strong>تعریف خدمات در چند سطح</strong>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <strong>اختصاص خدمات به واحدهای مختلف</strong>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <strong>ثبت درخواست بر اساس خدمت انتخاب‌شده</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-visual">
+          <div class="catalog-card">
+            <div class="catalog-header">
+              <div>
+                <small>Service Catalog</small>
+                <strong>کاتالوگ خدمات</strong>
+              </div>
+
+              <span>＋</span>
+            </div>
+
+            <div class="catalog-search">
+              🔍
+              <span>جستجوی خدمت موردنظر...</span>
+            </div>
+
+            <div class="catalog-category">
+              <span class="category-icon">▣</span>
+              <div>
+                <strong>خدمات فناوری اطلاعات</strong>
+                <small>۱۲ خدمت</small>
+              </div>
+              <span>←</span>
+            </div>
+
+            <div class="catalog-category">
+              <span class="category-icon">◈</span>
+              <div>
+                <strong>خدمات منابع انسانی</strong>
+                <small>۸ خدمت</small>
+              </div>
+              <span>←</span>
+            </div>
+
+            <div class="catalog-category">
+              <span class="category-icon">▤</span>
+              <div>
+                <strong>خدمات مالی</strong>
+                <small>۶ خدمت</small>
+              </div>
+              <span>←</span>
+            </div>
+
+            <div class="catalog-category">
+              <span class="category-icon">◇</span>
+              <div>
+                <strong>خدمات عمومی سازمان</strong>
+                <small>۱۵ خدمت</small>
+              </div>
+              <span>←</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Easy Request -->
+    <section class="request-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            ثبت و پیگیری آسان
+            <span class="accent-text">درخواست‌ها</span>
+          </h2>
+
+          <p>
+            از آنجایی که کاربران نهایی معمولاً در کار کردن با سامانه‌های
+            نرم‌افزاری مقاومت می‌کنند، گاما محیطی ساده و مناسب برای آنها فراهم
+            کرده است تا بتوانند درخواست خود را سریع ثبت و پیگیری کنند.
+          </p>
+        </div>
+
+        <div class="request-features">
+          <article class="request-feature">
+            <div class="large-number">01</div>
+            <h3>ثبت درخواست</h3>
+            <p>
+              کاربر خدمت موردنظر خود را انتخاب کرده و درخواست را بدون پیچیدگی و
+              مراحل اضافی ثبت می‌کند.
+            </p>
+          </article>
+
+          <article class="request-feature">
+            <div class="large-number">02</div>
+            <h3>پیگیری وضعیت</h3>
+            <p>
+              کاربر در هر لحظه می‌تواند وضعیت درخواست خود و آخرین اقدام
+              انجام‌شده را مشاهده کند.
+            </p>
+          </article>
+
+          <article class="request-feature">
+            <div class="large-number">03</div>
+            <h3>مشاهده مهلت رسیدگی</h3>
+            <p>
+              مهلت انجام درخواست برای کاربر شفاف است و امکان پیگیری وضعیت رسیدگی
+              وجود دارد.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Request Types -->
+    <section class="types-section">
+      <div class="container types-grid">
+        <div class="types-intro">
+          <h2>
+            بدانید کاربران
+            <span class="accent-text">چه چیزی درخواست می‌کنند</span>
+          </h2>
+
+          <p>
+            درخواست‌هایی که کاربران برای سازمان ارسال می‌کنند، بر اساس طراحی
+            Service Catalog می‌توانند ماهیت‌های مختلفی داشته باشند. گاما با
+            دسته‌بندی این درخواست‌ها به شما کمک می‌کند تصویر دقیق‌تری از نیازهای
+            کاربران داشته باشید.
+          </p>
+        </div>
+
+        <div class="type-tags">
+          <span>نیاز جدید</span>
+          <span>پیشنهاد</span>
+          <span>مشکل</span>
+          <span>رخداد</span>
+          <span>درخواست خدمت</span>
+          <span>درخواست اطلاعات</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Round Robin -->
+    <section class="distribution-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            توزیع هوشمند درخواست‌ها
+            <span class="accent-text">بین کارشناسان</span>
+          </h2>
+
+          <p>
+            گاما با توجه به شرایط درخواست مانند موضوع، محصول، نوع درخواست و واحد
+            سازمانی، امکان تعریف فرآیندهای ارجاع و توزیع درخواست‌ها را فراهم
+            می‌کند.
+          </p>
+        </div>
+
+        <div class="distribution-flow">
+          <div class="distribution-node distribution-node--main">
+            <span>＋</span>
+            <strong>درخواست جدید</strong>
+            <small>Request</small>
+          </div>
+
+          <div class="distribution-connector"></div>
+
+          <div class="distribution-node">
+            <span>⚙</span>
+            <strong>بررسی شرایط</strong>
+            <small>موضوع · محصول · واحد</small>
+          </div>
+
+          <div class="distribution-connector"></div>
+
+          <div class="distribution-node">
+            <span>◈</span>
+            <strong>الگوریتم توزیع</strong>
+            <small>Round Robin و سایر روش‌ها</small>
+          </div>
+
+          <div class="distribution-connector"></div>
+
+          <div class="experts">
+            <div class="expert">
+              <span>01</span>
+              <strong>کارشناس ۱</strong>
+            </div>
+
+            <div class="expert">
+              <span>02</span>
+              <strong>کارشناس ۲</strong>
+            </div>
+
+            <div class="expert">
+              <span>03</span>
+              <strong>کارشناس ۳</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="distribution-note">
+          <span>i</span>
+          <p>
+            توزیع درخواست‌ها می‌تواند به‌صورت خودکار انجام شود و در کنار آن،
+            امکان ارجاع دستی درخواست به مسئول مربوطه نیز وجود دارد.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="capabilities-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            همه چیز برای مدیریت
+            <span class="accent-text">چرخه درخواست</span>
+          </h2>
+        </div>
+
+        <div class="capabilities-grid">
+          {
+            features.map((feature) => (
+              <article class="capability-card">
+                <div class="capability-icon">{feature.icon}</div>
+
+                <h3>{feature.title}</h3>
+
+                <p>{feature.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Workload -->
+    <section class="workload-section">
+      <div class="container workload-grid">
+        <div class="workload-copy">
+          <h2>
+            پیک کاری سازمان را
+            <span class="accent-text">بشناسید</span>
+          </h2>
+
+          <p>
+            گاما تعداد درخواست‌ها را بر اساس ماه‌های مختلف سال نمایش می‌دهد تا
+            بتوانید دوره‌هایی را که حجم درخواست‌ها بیشتر است شناسایی کرده و برای
+            آنها برنامه‌ریزی مناسب داشته باشید.
+          </p>
+
+          <div class="stat-row">
+            <div>
+              <strong>1,280</strong>
+              <span>درخواست این ماه</span>
+            </div>
+
+            <div>
+              <strong>87٪</strong>
+              <span>درخواست‌های به‌موقع</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="workload-chart">
+          <div class="chart-header">
+            <div>
+              <small>گزارش ماهانه درخواست‌ها</small>
+              <strong>حجم درخواست‌ها</strong>
+            </div>
+
+            <span>1405</span>
+          </div>
+
+          <div class="bars">
+            <div class="bar-column">
+              <i style="height: 42%"></i>
+              <span>فر</span>
+            </div>
+
+            <div class="bar-column">
+              <i style="height: 57%"></i>
+              <span>ارد</span>
+            </div>
+
+            <div class="bar-column">
+              <i style="height: 48%"></i>
+              <span>خرد</span>
+            </div>
+
+            <div class="bar-column">
+              <i style="height: 73%"></i>
+              <span>تیر</span>
+            </div>
+
+            <div class="bar-column">
+              <i style="height: 64%"></i>
+              <span>مرد</span>
+            </div>
+
+            <div class="bar-column bar-column--active">
+              <i style="height: 91%"></i>
+              <span>شهریور</span>
+            </div>
+
+            <div class="bar-column">
+              <i style="height: 69%"></i>
+              <span>مهر</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notifications -->
+    <section class="notification-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            نگران تأخیر در انجام درخواست‌ها
+            <span class="accent-text">نباشید</span>
+          </h2>
+
+          <p>
+            گاما با اطلاع‌رسانی هوشمند و توجه به مهلت درخواست‌ها، به شما کمک
+            می‌کند پیش از ایجاد تأخیر برای انجام درخواست اقدام کنید.
+          </p>
+        </div>
+
+        <div class="notification-grid">
+          {
+            notifications.map((notification) => (
+              <article class="notification-card">
+                <span class="notification-number">{notification.number}</span>
+
+                <div>
+                  <h3>{notification.title}</h3>
+                  <p>{notification.text}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>
+            یک چرخه شفاف برای
+            <span class="accent-text">خدمات سازمان</span>
+          </h2>
+        </div>
+
+        <div class="benefits-grid">
+          <article>
+            <span>01</span>
+            <strong>ثبت ساختاریافته</strong>
+            <p>درخواست‌ها بر اساس کاتالوگ خدمات ثبت می‌شوند.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <strong>توزیع هوشمند</strong>
+            <p>درخواست‌ها به شکل مناسب بین کارشناسان توزیع می‌شوند.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>شفافیت وضعیت</strong>
+            <p>کاربر و مسئولان همیشه از وضعیت درخواست مطلع هستند.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <strong>کنترل SLA</strong>
+            <p>نزدیک شدن به مهلت و ایجاد تأخیر قابل مشاهده و پیگیری است.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>
+            درخواست‌های خدماتی را
+            <span class="accent-text">قابل مدیریت کنید</span>
+          </h2>
+
+          <p>
+            با Gamma Help Desk، ثبت، ارجاع، پیگیری و تحلیل درخواست‌های خدماتی را
+            در یک سامانه یکپارچه مدیریت کنید.
+          </p>
+
+          <div class="cta-actions">
+            <a href="/products/gamma-help-desk/" class="button button--accent">
+              مشاهده Gamma Help Desk
+            </a>
+
+            <a href="/contact/" class="button button--light"> درخواست دمو </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .request-page {
+    --feature-border: rgba(20, 24, 30, 0.1);
+    --feature-muted: #66707c;
+    --feature-dark: #101318;
+    --feature-accent: #f47b20;
+    overflow: hidden;
+  }
+
+  .container {
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    padding: 1.25rem 0;
+    color: var(--feature-muted);
+    font-size: 0.82rem;
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--feature-accent);
+  }
+
+  /* Hero */
+
+  .feature-hero {
+    padding: 5rem 0 6rem;
+    background:
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(244, 123, 32, 0.09),
+        transparent 28%
+      ),
+      linear-gradient(180deg, #fff, #fafafa);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .hero-content h1 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--feature-dark);
+    font-size: clamp(2.4rem, 5vw, 4.3rem);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-content h1 strong {
+    display: block;
+    color: var(--feature-accent);
+    font-weight: 800;
+  }
+
+  .hero-description {
+    max-width: 680px;
+    margin: 1.8rem 0 0;
+    color: var(--feature-muted);
+    font-size: 1.12rem;
+    line-height: 2.05;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    min-height: 48px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button--accent {
+    background: var(--feature-accent);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(244, 123, 32, 0.2);
+  }
+
+  .button--outline {
+    border: 1px solid var(--feature-border);
+    color: var(--feature-dark);
+    background: #fff;
+  }
+
+  .button--light {
+    background: #fff;
+    color: var(--feature-dark);
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 720px;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--feature-border);
+  }
+
+  .hero-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .hero-meta strong {
+    color: var(--feature-dark);
+    font-size: 0.82rem;
+  }
+
+  .hero-meta span {
+    color: var(--feature-muted);
+    font-size: 0.76rem;
+  }
+
+  /* Dashboard */
+
+  .hero-visual {
+    position: relative;
+  }
+
+  .dashboard-window {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: #15181d;
+    box-shadow:
+      0 35px 80px rgba(16, 19, 24, 0.18),
+      0 10px 30px rgba(16, 19, 24, 0.1);
+    transform: perspective(1000px) rotateY(-3deg) rotateX(2deg);
+  }
+
+  .window-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+  }
+
+  .window-dots {
+    display: flex;
+    gap: 5px;
+  }
+
+  .window-dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .dashboard-body {
+    padding: 1.25rem;
+  }
+
+  .dashboard-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .dashboard-top div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .dashboard-top small {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.7rem;
+  }
+
+  .dashboard-top strong {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+
+  .status-pill {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(244, 123, 32, 0.1);
+    color: #f47b20;
+    font-size: 0.65rem;
+  }
+
+  .request-item {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.7rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .request-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: rgba(244, 123, 32, 0.1);
+    color: #f47b20;
+  }
+
+  .request-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .request-info strong {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.75rem;
+  }
+
+  .request-info span {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.65rem;
+  }
+
+  .request-status {
+    color: #d3d7dc;
+    font-size: 0.62rem;
+  }
+
+  .request-status--success {
+    color: #72c59a;
+  }
+
+  .request-status--warning {
+    color: #f2b35e;
+  }
+
+  .mini-chart {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+  }
+
+  .chart-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .chart-label span,
+  .chart-label strong {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.65rem;
+  }
+
+  .chart-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 70px;
+    gap: 0.4rem;
+  }
+
+  .chart-bars i {
+    display: block;
+    flex: 1;
+    border-radius: 4px 4px 0 0;
+    background: #f47b20;
+    opacity: 0.7;
+  }
+
+  /* General sections */
+
+  .process-section,
+  .request-section,
+  .capabilities-section,
+  .notification-section,
+  .benefits-section {
+    padding: 7rem 0;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 3rem;
+  }
+
+  .section-heading--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .section-heading h2,
+  .feature-copy h2,
+  .types-intro h2,
+  .workload-copy h2 {
+    margin: 0;
+    color: var(--feature-dark);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+  }
+
+  .section-heading h2 span,
+  .feature-copy h2 span,
+  .types-intro h2 span,
+  .workload-copy h2 span {
+    color: var(--feature-accent);
+  }
+
+  .section-heading p,
+  .feature-copy > p,
+  .types-intro > p,
+  .workload-copy > p {
+    margin: 1.25rem 0 0;
+    color: var(--feature-muted);
+    font-size: 1.05rem;
+    line-height: 2;
+  }
+
+  /* Process */
+
+  .process-section {
+    background: #f7f7f7;
+  }
+
+  .process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 4rem;
+  }
+
+  .process-step {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    min-width: 130px;
+    text-align: center;
+  }
+
+  .step-number {
+    position: absolute;
+    top: -1.3rem;
+    color: #adb3ba;
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+
+  .step-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--feature-border);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--feature-accent);
+    font-size: 1.25rem;
+    box-shadow: 0 8px 20px rgba(16, 19, 24, 0.05);
+  }
+
+  .process-step strong {
+    color: var(--feature-dark);
+    font-size: 0.9rem;
+  }
+
+  .process-step > span:last-child {
+    margin-top: 0.35rem;
+    color: var(--feature-muted);
+    font-size: 0.72rem;
+  }
+
+  .process-line {
+    flex: 0 1 60px;
+    height: 1px;
+    background: #d9dde1;
+  }
+
+  /* Catalog */
+
+  .catalog-section {
+    padding: 8rem 0;
+    background: var(--feature-dark);
+    color: #fff;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.85fr);
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .catalog-section .feature-copy h2 {
+    color: #fff;
+  }
+
+  .catalog-section .feature-copy > p {
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  .check-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .check-list div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .check-list span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(244, 123, 32, 0.12);
+    color: var(--feature-accent);
+  }
+
+  .check-list strong {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.88rem;
+  }
+
+  .catalog-visual {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .catalog-card {
+    padding: 1.3rem;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--feature-dark);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  }
+
+  .catalog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .catalog-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .catalog-header small {
+    color: var(--feature-muted);
+    font-size: 0.7rem;
+  }
+
+  .catalog-header strong {
+    font-size: 1.1rem;
+  }
+
+  .catalog-header > span {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--feature-accent);
+    color: #fff;
+  }
+
+  .catalog-search {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1.25rem 0;
+    padding: 0.8rem;
+    border: 1px solid var(--feature-border);
+    border-radius: 9px;
+    color: #9aa1a9;
+    font-size: 0.75rem;
+  }
+
+  .catalog-category {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #edf0f2;
+  }
+
+  .category-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    background: rgba(244, 123, 32, 0.08);
+    color: var(--feature-accent);
+  }
+
+  .catalog-category div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .catalog-category strong {
+    font-size: 0.78rem;
+  }
+
+  .catalog-category small {
+    color: var(--feature-muted);
+    font-size: 0.65rem;
+  }
+
+  .catalog-category > span:last-child {
+    color: var(--feature-accent);
+  }
+
+  /* User Experience */
+
+  .request-section {
+    background: #fff;
+  }
+
+  .request-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--feature-border);
+    border-bottom: 1px solid var(--feature-border);
+  }
+
+  .request-feature {
+    min-height: 270px;
+    padding: 2.5rem;
+    border-left: 1px solid var(--feature-border);
+  }
+
+  .request-feature:first-child {
+    border-left: 0;
+  }
+
+  .large-number {
+    margin-bottom: 2.5rem;
+    color: #dfe2e5;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .request-feature h3 {
+    margin: 0;
+    color: var(--feature-dark);
+    font-size: 1.15rem;
+  }
+
+  .request-feature p {
+    margin: 0.8rem 0 0;
+    color: var(--feature-muted);
+    line-height: 1.9;
+    font-size: 0.9rem;
+  }
+
+  /* Types */
+
+  .types-section {
+    padding: 7rem 0;
+    background: #f6f6f6;
+  }
+
+  .types-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .type-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .type-tags span {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--feature-border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--feature-dark);
+    font-size: 0.88rem;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(16, 19, 24, 0.04);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .type-tags span:hover {
+    border-color: var(--feature-accent);
+    transform: translateY(-3px);
+  }
+
+  /* Distribution */
+
+  .distribution-section {
+    padding: 8rem 0;
+    background: var(--feature-dark);
+  }
+
+  .distribution-section .section-heading h2 {
+    color: #fff;
+  }
+
+  .distribution-section .section-heading p {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .distribution-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 4rem;
+  }
+
+  .distribution-node {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    padding: 1.4rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.035);
+    text-align: center;
+  }
+
+  .distribution-node > span {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 0.75rem;
+    border-radius: 10px;
+    background: rgba(244, 123, 32, 0.12);
+    color: var(--feature-accent);
+  }
+
+  .distribution-node strong {
+    color: #fff;
+    font-size: 0.8rem;
+  }
+
+  .distribution-node small {
+    margin-top: 0.3rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.6rem;
+  }
+
+  .distribution-node--main {
+    border-color: rgba(244, 123, 32, 0.3);
+  }
+
+  .distribution-connector {
+    width: 35px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .experts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 150px;
+  }
+
+  .expert {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .expert span {
+    color: var(--feature-accent);
+    font-size: 0.65rem;
+  }
+
+  .expert strong {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+  }
+
+  .distribution-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    max-width: 760px;
+    margin: 3rem auto 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .distribution-note > span {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--feature-accent);
+    color: #fff;
+    font-size: 0.7rem;
+  }
+
+  .distribution-note p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+
+  /* Capabilities */
+
+  .capabilities-section {
+    background: #fff;
+  }
+
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .capability-card {
+    padding: 2rem;
+    border: 1px solid var(--feature-border);
+    border-radius: 14px;
+    background: #fff;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .capability-card:hover {
+    border-color: rgba(244, 123, 32, 0.3);
+    box-shadow: 0 15px 35px rgba(16, 19, 24, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .capability-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 1.5rem;
+    border-radius: 11px;
+    background: rgba(244, 123, 32, 0.08);
+    color: var(--feature-accent);
+    font-size: 1.1rem;
+  }
+
+  .capability-card h3 {
+    margin: 0;
+    color: var(--feature-dark);
+    font-size: 1rem;
+  }
+
+  .capability-card p {
+    margin: 0.75rem 0 0;
+    color: var(--feature-muted);
+    font-size: 0.85rem;
+    line-height: 1.9;
+  }
+
+  /* Workload */
+
+  .workload-section {
+    padding: 8rem 0;
+    background: #f6f6f6;
+  }
+
+  .workload-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--feature-border);
+  }
+
+  .stat-row div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-row strong {
+    color: var(--feature-dark);
+    font-size: 1.5rem;
+  }
+
+  .stat-row span {
+    color: var(--feature-muted);
+    font-size: 0.72rem;
+  }
+
+  .workload-chart {
+    padding: 2rem;
+    border: 1px solid var(--feature-border);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(16, 19, 24, 0.05);
+  }
+
+  .chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--feature-border);
+  }
+
+  .chart-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .chart-header small {
+    color: var(--feature-muted);
+    font-size: 0.7rem;
+  }
+
+  .chart-header strong {
+    color: var(--feature-dark);
+    font-size: 1rem;
+  }
+
+  .chart-header > span {
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    background: #f5f5f5;
+    color: var(--feature-muted);
+    font-size: 0.7rem;
+  }
+
+  .bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 260px;
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+
+  .bar-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 0.75rem;
+  }
+
+  .bar-column i {
+    display: block;
+    width: min(35px, 80%);
+    min-height: 10px;
+    border-radius: 7px 7px 2px 2px;
+    background: #dfe2e5;
+  }
+
+  .bar-column--active i {
+    background: var(--feature-accent);
+  }
+
+  .bar-column span {
+    color: var(--feature-muted);
+    font-size: 0.65rem;
+  }
+
+  /* Notifications */
+
+  .notification-section {
+    background: #fff;
+  }
+
+  .notification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .notification-card {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 1rem;
+    padding: 1.75rem;
+    border: 1px solid var(--feature-border);
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  .notification-number {
+    color: var(--feature-accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .notification-card h3 {
+    margin: 0;
+    color: var(--feature-dark);
+    font-size: 1rem;
+  }
+
+  .notification-card p {
+    margin: 0.65rem 0 0;
+    color: var(--feature-muted);
+    font-size: 0.82rem;
+    line-height: 1.9;
+  }
+
+  /* Benefits */
+
+  .benefits-section {
+    background: var(--color-surface-alt);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-block: 1px solid var(--color-border);
+  }
+
+  .benefits-grid article {
+    min-height: 230px;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .benefits-grid article + article {
+    border-inline-start: 1px solid var(--color-border);
+  }
+
+  .benefits-grid span {
+    display: block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+
+  .benefits-grid strong {
+    display: block;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+  }
+
+  .benefits-grid p {
+    margin-block-start: var(--space-xs);
+    margin-block-end: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Final CTA */
+
+  .final-cta {
+    padding: 7rem 0;
+    background: var(--feature-dark);
+  }
+
+  .cta-content {
+    max-width: 780px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.4;
+  }
+
+  .cta-content h2 span {
+    display: block;
+    color: var(--feature-accent);
+  }
+
+  .cta-content p {
+    max-width: 650px;
+    margin: 1.25rem auto 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  /* Responsive */
+
+  @media (max-width: 1000px) {
+    .hero-grid,
+    .feature-grid,
+    .types-grid,
+    .workload-grid {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    .hero-visual {
+      max-width: 680px;
+      margin-inline: auto;
+      width: 100%;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-grid article:nth-child(3) {
+      border-left: 0;
+      border-top: 1px solid var(--feature-border);
+    }
+
+    .benefits-grid article:nth-child(4) {
+      border-top: 1px solid var(--feature-border);
+    }
+
+    .process-flow {
+      flex-wrap: wrap;
+    }
+
+    .process-line {
+      display: none;
+    }
+
+    .process-step {
+      flex: 0 0 calc(33.333% - 1rem);
+    }
+
+    .distribution-flow {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      width: min(100% - 28px, 1180px);
+    }
+
+    .feature-hero {
+      padding: 3rem 0 4rem;
+    }
+
+    .hero-grid {
+      gap: 3rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2.35rem;
+    }
+
+    .hero-meta {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .dashboard-window {
+      transform: none;
+    }
+
+    .process-section,
+    .request-section,
+    .capabilities-section,
+    .notification-section,
+    .benefits-section,
+    .workload-section {
+      padding: 5rem 0;
+    }
+
+    .process-step {
+      flex: 0 0 calc(50% - 0.75rem);
+    }
+
+    .request-features,
+    .capabilities-grid,
+    .notification-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .request-feature {
+      border-left: 0;
+      border-bottom: 1px solid var(--feature-border);
+    }
+
+    .request-feature:last-child {
+      border-bottom: 0;
+    }
+
+    .catalog-section {
+      padding: 5rem 0;
+    }
+
+    .feature-grid,
+    .types-grid,
+    .workload-grid {
+      gap: 3rem;
+    }
+
+    .distribution-section {
+      padding: 5rem 0;
+    }
+
+    .distribution-flow {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .distribution-node,
+    .experts {
+      width: 100%;
+    }
+
+    .distribution-connector {
+      width: 1px;
+      height: 25px;
+      margin-inline: auto;
+    }
+
+    .experts {
+      flex-direction: row;
+    }
+
+    .expert {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .expert strong {
+      display: none;
+    }
+
+    .bars {
+      height: 190px;
+      gap: 0.35rem;
+    }
+
+    .stat-row {
+      gap: 2rem;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefits-grid article,
+    .benefits-grid article:nth-child(3),
+    .benefits-grid article:nth-child(4) {
+      border-left: 0;
+      border-top: 1px solid var(--feature-border);
+    }
+
+    .benefits-grid article:first-child {
+      border-top: 0;
+    }
+
+    .final-cta {
+      padding: 5rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-actions,
+    .cta-actions {
+      flex-direction: column;
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .process-step {
+      flex-basis: calc(50% - 0.5rem);
+    }
+
+    .request-item {
+      grid-template-columns: 32px 1fr;
+    }
+
+    .request-status {
+      display: none;
+    }
+
+    .experts {
+      flex-direction: column;
+    }
+
+    .expert {
+      justify-content: flex-start;
+    }
+
+    .expert strong {
+      display: block;
+    }
+  }
+</style>

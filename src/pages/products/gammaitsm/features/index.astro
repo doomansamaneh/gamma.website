@@ -22,25 +22,24 @@ import { GammaItsmCapabilityGroups } from "../../../../data/gammaitsm";
         {
           GammaItsmCapabilityGroups.map((group) => (
             <section aria-labelledby={group.slug}>
-              <>
-                <h2 id={group.slug}>{group.name}</h2>
-                <div class="feature-list">
-                  {group.features.map((feature) => (
-                    <a href={`/products/gammaitsm/features/${feature.slug}/`}>
-                      <strong>{feature.name}</strong>
-                      <span>{feature.description}</span>
-                      <em aria-hidden="true">←</em>
-                    </a>
-                  ))}
-                </div>
-              </>
+              <h2 id={group.slug}>{group.name}</h2>
+
+              <div class="feature-list">
+                {group.features.map((feature) => (
+                  <a href={`/products/gammaitsm/features/${feature.slug}/`}>
+                    <strong>{feature.name}</strong>
+                    <span>{feature.description}</span>
+                    <em aria-hidden="true">←</em>
+                  </a>
+                ))}
+              </div>
             </section>
           ))
         }
       </div>
-      <a class="button button--accent" href="/contact/demo/"
-        >درخواست دموی GammaItsm</a
-      >
+      <a class="button button--accent" href="/contact/demo/">
+        درخواست دموی GammaItsm
+      </a>
     </div>
   </main>
 </BaseLayout>
