@@ -79,9 +79,12 @@ h2 {
 }
 
 h1 {
+  max-width: 18ch;
+  margin-block-end: var(--space-md);
   font-size: var(--font-size-h1);
-  letter-spacing: -0.03em;
+  line-height: 1.25;
 }
+
 
 h2 {
   font-size: var(--font-size-h2);
@@ -121,11 +124,6 @@ a {
   width: min(calc(100% - 2rem), var(--container-width));
   margin-inline: auto;
 }
-
-.page {
-  overflow: hidden;
-}
-
 
 /* =========================================================
    Typography
@@ -225,7 +223,7 @@ h1 span, h2 span {
    ========================================================= */
 
 .hero {
-  position: relative;
+  /* position: relative; */
   background: var(--hero-product-background);
   color: var(--color-text-on-dark);
   padding-block: 1.25rem 7rem;

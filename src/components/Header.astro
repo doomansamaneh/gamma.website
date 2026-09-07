@@ -344,47 +344,69 @@ import CompanyLogo from "./brand/CompanyLogo.astro";
 
 <script>
   const header = document.querySelector<HTMLElement>(".site-header");
-  const navigation = document.querySelector<HTMLElement>("#site-navigation");
+  const siteNavigation =
+    document.querySelector<HTMLElement>("#site-navigation");
   const menuToggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
-  const menuItems = Array.from(
-    document.querySelectorAll<HTMLElement>("[data-menu-item]"),
-  );
 
-  const setActiveMenu = (activeItem: HTMLElement | null) => {
+  if (header && siteNavigation && menuToggle) {
+    const menuItems = Array.from(
+      header.querySelectorAll<HTMLElement>("[data-menu-item]"),
+    );
+
+    const setActiveMenu = (activeItem: HTMLElement | null) => {
+      menuItems.forEach((item) => {
+        const trigger = item.querySelector<HTMLButtonElement>(".menu-trigger");
+        const submenu = item.querySelector<HTMLElement>(".submenu");
+
+        const isActive = item === activeItem;
+
+        item.dataset.open = String(isActive);
+        trigger?.setAttribute("aria-expanded", String(isActive));
+
+        if (submenu) {
+          submenu.hidden = !isActive;
+        }
+      });
+    };
+
     menuItems.forEach((item) => {
       const trigger = item.querySelector<HTMLButtonElement>(".menu-trigger");
-      const submenu = item.querySelector<HTMLElement>(".submenu");
-      const isActive = item === activeItem;
-      item.dataset.open = String(isActive);
-      trigger?.setAttribute("aria-expanded", String(isActive));
-      if (submenu) submenu.hidden = !isActive;
-    });
-  };
 
-  menuItems.forEach((item) => {
-    item
-      .querySelector<HTMLButtonElement>(".menu-trigger")
-      ?.addEventListener("click", () => {
-        setActiveMenu(item.dataset.open === "true" ? null : item);
+      trigger?.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        const isOpen = item.dataset.open === "true";
+
+        setActiveMenu(isOpen ? null : item);
       });
-  });
+    });
 
-  menuToggle?.addEventListener("click", () => {
-    const isOpen = navigation?.dataset.open === "true";
-    navigation?.setAttribute("data-open", String(!isOpen));
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    if (isOpen) setActiveMenu(null);
-  });
+    menuToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
 
-  document.addEventListener("click", (event) => {
-    if (!header?.contains(event.target as Node)) setActiveMenu(null);
-  });
+      const isOpen = siteNavigation.dataset.open === "true";
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setActiveMenu(null);
-      navigation?.setAttribute("data-open", "false");
-      menuToggle?.setAttribute("aria-expanded", "false");
-    }
-  });
+      siteNavigation.dataset.open = String(!isOpen);
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+
+      if (isOpen) {
+        setActiveMenu(null);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!header.contains(event.target as Node)) {
+        setActiveMenu(null);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setActiveMenu(null);
+
+        siteNavigation.dataset.open = "false";
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 </script>

@@ -9,16 +9,16 @@ export const navigation = [
       { label: 'Gamma.Kernel', description: 'چارچوب متن‌باز نرم‌افزارهای سازمانی مبتنی بر .NET', href: '/products/gamma-kernel/' },
     ],
   },
-  {
-    label: 'منابع',
-    href: '/resources/',
-    children: [
-      { label: 'مقالات', description: 'دانش و دیدگاه‌های تخصصی', href: '/resources/articles/' },
-      { label: 'ویدئوها', description: 'محتوای ویدئویی محصولات و فناوری', href: '/resources/videos/' },
-      { label: 'راهنمای ITIL', description: 'منابع آموزشی مدیریت خدمات فناوری اطلاعات', href: '/resources/itil/' },
-      { label: 'پرسشهای متداول', description: 'پاسخ پرسشهای رایج', href: '/resources/faq/' },
-    ],
-  },
+  // {
+  //   label: 'منابع',
+  //   href: '/resources/',
+  //   children: [
+  //     { label: 'مقالات', description: 'دانش و دیدگاه‌های تخصصی', href: '/resources/articles/' },
+  //     { label: 'ویدئوها', description: 'محتوای ویدئویی محصولات و فناوری', href: '/resources/videos/' },
+  //     { label: 'راهنمای ITIL', description: 'منابع آموزشی مدیریت خدمات فناوری اطلاعات', href: '/resources/itil/' },
+  //     { label: 'پرسشهای متداول', description: 'پاسخ پرسشهای رایج', href: '/resources/faq/' },
+  //   ],
+  // },
   {
     label: 'شرکت',
     href: '/company/about/',

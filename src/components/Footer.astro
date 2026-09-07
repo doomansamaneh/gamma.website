@@ -50,7 +50,7 @@ const contactHref =
       </ul>
     </nav>
 
-    <nav class="footer-nav" aria-label="منابع">
+    <!-- <nav class="footer-nav" aria-label="منابع">
       <h2>منابع</h2>
       <ul>
         {
@@ -61,7 +61,7 @@ const contactHref =
           ))
         }
       </ul>
-    </nav>
+    </nav> -->
 
     <div class="footer-contact">
       <h2>ارتباط با ما</h2>
@@ -89,10 +89,9 @@ const contactHref =
 
   .footer-main {
     display: grid;
-    grid-template-columns: minmax(14rem, 1.6fr) repeat(
-        3,
-        minmax(8rem, 1fr)
-      ) minmax(13rem, 1.25fr);
+    grid-template-columns:
+      minmax(14rem, 1.6fr) repeat(3, minmax(8rem, 1fr))
+      minmax(13rem, 1.25fr);
     gap: var(--space-lg);
     padding-block: clamp(3rem, 6vw, 5rem);
   }
