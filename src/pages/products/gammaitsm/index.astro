@@ -1,14 +1,16 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { GammaItsmModules } from "../../../data/gammaitsm";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { GammaItsmModules } from "@data/gammaitsm";
 ---
 
 <BaseLayout
-  title="GammaItsm | نرم‌افزار مدیریت خدمات فناوری اطلاعات و Help Desk"
-  description="GammaItsm نرم‌افزار مدیریت خدمات فناوری اطلاعات و Help Desk سازمانی است که درخواست‌ها، رخدادها، مشکلات، تغییرات، دارایی‌ها، انبار و گردش‌های کاری را یکپارچه مدیریت می‌کند."
+  title="GammaItsm | نرم‌افزار ITSM و مدیریت خدمات فناوری اطلاعات"
+  description="GammaItsm نرم‌افزار ITSM سازمانی برای مدیریت خدمات فناوری اطلاعات، Help Desk، درخواست‌ها، رخدادها، مشکلات، تغییرات، دارایی‌ها، SLA و گردش‌های کاری است."
 >
   <main class="page">
-    <!-- Hero -->
+    <!-- =========================================================
+         Hero
+         ========================================================= -->
     <section class="hero" id="overview">
       <div class="container">
         <nav class="breadcrumb" aria-label="مسیر صفحه">
@@ -16,7 +18,7 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
           <span>/</span>
           <a href="/products/">محصولات</a>
           <span>/</span>
-          <span>Gamma Help Desk</span>
+          <span>GammaItsm</span>
         </nav>
 
         <div class="hero-content">
@@ -27,9 +29,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
             </h1>
 
             <p class="hero-lead">
-              GammaItsm یک راهکار سازمانی تحت وب برای مدیریت خدمات فناوری
-              اطلاعات است که درخواست‌ها، رخدادها، مشکلات، دارایی‌ها، فرایندها و
-              خدمات IT را در یک بستر یکپارچه مدیریت می‌کند.
+              GammaItsm یک نرم‌افزار ITSM سازمانی تحت وب برای مدیریت یکپارچه
+              خدمات فناوری اطلاعات است؛ از ثبت درخواست و مدیریت رخداد و مشکل تا
+              تغییر، دارایی، SLA، گردش کار و گزارش‌گیری.
             </p>
 
             <div class="hero-actions">
@@ -105,7 +107,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       </div>
     </section>
 
-    <!-- Product navigation -->
+    <!-- =========================================================
+         Product navigation
+         ========================================================= -->
     <nav class="product-nav" aria-label="ناوبری GammaItsm">
       <div class="container product-nav-inner">
         <a href="#overview">معرفی</a>
@@ -115,12 +119,13 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
         <a href="#screenshots">محیط محصول</a>
         <a href="#integrations">یکپارچه‌سازی</a>
         <a href="#faq">سوالات متداول</a>
-
-        <a class="nav-cta" href="/contact/demo/"> درخواست دمو </a>
+        <a class="nav-cta" href="/contact/demo/">درخواست دمو</a>
       </div>
     </nav>
 
-    <!-- Introduction -->
+    <!-- =========================================================
+         Introduction
+         ========================================================= -->
     <section class="content-section intro-section">
       <div class="container intro-grid">
         <div>
@@ -135,21 +140,31 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
 
           <p>
             GammaItsm این فرایندها را در یک محیط یکپارچه قرار می‌دهد تا سازمان
-            بتواند خدمات IT را از زمان ثبت درخواست تا انجام، کنترل و گزارش‌گیری
-            مدیریت کند.
+            بتواند خدمات IT را از زمان ثبت درخواست تا انجام، کنترل، پیگیری و
+            گزارش‌گیری مدیریت کند.
+          </p>
+
+          <p>
+            در نتیجه، واحد فناوری اطلاعات به جای مدیریت مجموعه‌ای از فعالیت‌های
+            پراکنده، یک بستر یکپارچه برای ارائه و کنترل خدمات در اختیار خواهد
+            داشت.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Value -->
+    <!-- =========================================================
+         Value
+         ========================================================= -->
     <section class="content-section value-section">
       <div class="container">
         <div class="section-heading">
           <h2>یک بستر برای مدیریت کل خدمات IT</h2>
+
           <p>
-            GammaItsm به جای مدیریت جداگانه فعالیت‌ها، ارتباط میان فرایندها و
-            اطلاعات سازمان را حفظ می‌کند.
+            GammaItsm ارتباط میان درخواست‌ها، فرایندها، کاربران، دارایی‌ها و
+            اطلاعات خدمات را حفظ می‌کند تا مدیریت خدمات فناوری اطلاعات
+            ساختاریافته و قابل اندازه‌گیری باشد.
           </p>
         </div>
 
@@ -157,43 +172,49 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
           <article class="value-card">
             <div class="value-icon">01</div>
             <h3>یکپارچگی فرایندها</h3>
+
             <p>
               درخواست، رخداد، مشکل، تغییر، دارایی و سایر فعالیت‌های مرتبط در یک
-              محیط مدیریت می‌شوند.
+              محیط مدیریت می‌شوند و سابقه ارتباط میان آن‌ها حفظ می‌شود.
             </p>
           </article>
 
           <article class="value-card">
             <div class="value-icon">02</div>
             <h3>گردش کار قابل پیکربندی</h3>
+
             <p>
               برای هر نوع خدمت یا درخواست می‌توان فرایند، تأییدها، مسئولیت‌ها و
-              مراحل اجرای متفاوت تعریف کرد.
+              مراحل اجرای متفاوت تعریف و متناسب با ساختار سازمان تنظیم کرد.
             </p>
           </article>
 
           <article class="value-card">
             <div class="value-icon">03</div>
             <h3>کنترل سطح خدمت</h3>
+
             <p>
-              SLA و زمان‌های مورد انتظار در کنار فرایندهای خدماتی قابل مدیریت و
-              پیگیری هستند.
+              SLA، زمان‌های مورد انتظار و وضعیت انجام خدمات در کنار فرایندهای
+              خدماتی قابل مدیریت، پیگیری و ارزیابی هستند.
             </p>
           </article>
 
           <article class="value-card">
             <div class="value-icon">04</div>
             <h3>دید مدیریتی</h3>
+
             <p>
-              اطلاعات عملیاتی خدمات IT به داده‌هایی قابل تحلیل برای تصمیم‌گیری
-              مدیریتی تبدیل می‌شوند.
+              اطلاعات عملیاتی خدمات IT به داده‌هایی قابل تحلیل برای پایش عملکرد،
+              شناسایی نقاط ضعف و تصمیم‌گیری مدیریتی تبدیل می‌شوند.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Modules -->
+    <!-- =========================================================
+         Modules
+         ========================================================= -->
     <section
       class="content-section modules-section"
       id="modules"
@@ -204,9 +225,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
           <h2 id="modules-title">ماژول‌های GammaItsm</h2>
 
           <p>
-            اجزای مختلف GammaItsm برای پوشش فرایندهای اصلی مدیریت خدمات فناوری
-            اطلاعات طراحی شده‌اند و می‌توانند متناسب با ساختار سازمان پیکربندی
-            شوند.
+            ماژول‌های GammaItsm برای پوشش فرایندهای اصلی مدیریت خدمات فناوری
+            اطلاعات طراحی شده‌اند و می‌توانند متناسب با ساختار و نیاز سازمان
+            مورد استفاده و پیکربندی قرار گیرند.
           </p>
         </div>
 
@@ -239,7 +260,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       </div>
     </section>
 
-    <!-- Workflow -->
+    <!-- =========================================================
+         Workflow
+         ========================================================= -->
     <section
       class="content-section workflow-section"
       id="workflow"
@@ -251,13 +274,15 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
 
           <p>
             یکی از نقاط قوت GammaItsm امکان طراحی گردش کار متناسب با نوع خدمت،
-            ساختار سازمان و سطح دسترسی افراد است.
+            ساختار سازمان، مسئولیت‌ها و سطح دسترسی افراد است.
           </p>
         </div>
 
         <div class="workflow-layout">
           <div class="workflow-intro">
-            <h3>یک نمونه: درخواست کالا</h3>
+            <span class="eyebrow">نمونه فرایند</span>
+
+            <h3>درخواست کالا؛ از ثبت تا تحویل</h3>
 
             <p>
               یک درخواست ساده می‌تواند از ثبت توسط کاربر شروع شود و پس از تأیید،
@@ -268,6 +293,28 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
               در هر مرحله مسئول مشخص است و وضعیت درخواست برای افراد مرتبط قابل
               مشاهده و پیگیری خواهد بود.
             </p>
+
+            <div class="workflow-features">
+              <div>
+                <strong>تأیید مرحله‌ای</strong>
+                <span>تعریف مسیر تأیید متناسب با سازمان</span>
+              </div>
+
+              <div>
+                <strong>مسئولیت مشخص</strong>
+                <span>تعیین مسئول برای هر مرحله از فرایند</span>
+              </div>
+
+              <div>
+                <strong>اعلان خودکار</strong>
+                <span>اطلاع‌رسانی به افراد مرتبط با فرایند</span>
+              </div>
+
+              <div>
+                <strong>ثبت سوابق</strong>
+                <span>حفظ سابقه اقدامات و وضعیت فرایند</span>
+              </div>
+            </div>
           </div>
 
           <div class="request-timeline">
@@ -341,7 +388,7 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
             </article>
 
             <article class="timeline-item">
-              <div class="timeline-marker">4</div>
+              <div class="timeline-marker">۴</div>
 
               <div class="timeline-card">
                 <div class="timeline-card-top">
@@ -390,15 +437,17 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       </div>
     </section>
 
-    <!-- Scenarios -->
+    <!-- =========================================================
+         Scenarios
+         ========================================================= -->
     <section class="content-section scenarios-section">
       <div class="container">
         <div class="section-heading">
           <h2>فرایندها به یکدیگر متصل هستند</h2>
 
           <p>
-            اطلاعات یک فعالیت می‌تواند مبنای اجرای فعالیت دیگری قرار گیرد و
-            ارتباط میان فرایندها حفظ شود.
+            ارزش یک راهکار ITSM زمانی بیشتر می‌شود که اطلاعات یک فعالیت بتواند
+            مبنای اجرای فعالیت دیگری قرار گیرد و ارتباط میان فرایندها حفظ شود.
           </p>
         </div>
 
@@ -432,14 +481,16 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
 
             <p>
               اطلاعات دارایی، رخدادهای مرتبط و عملیات انجام‌شده می‌توانند در
-              کنار یکدیگر قرار گیرند تا سابقه کامل خدمات حفظ شود.
+              کنار یکدیگر قرار گیرند تا سابقه خدمات و اقدامات انجام‌شده حفظ شود.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ITIL -->
+    <!-- =========================================================
+         ITIL
+         ========================================================= -->
     <section
       class="content-section itil-section"
       id="itil"
@@ -447,14 +498,21 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     >
       <div class="container itil-grid">
         <div>
+          <span class="eyebrow eyebrow--light">چارچوب مدیریت خدمات</span>
+
           <h2 id="itil-title">GammaItsm و ITIL</h2>
         </div>
 
         <div>
           <p>
-            ITIL یک چارچوب و مجموعه‌ای از روش‌های مدیریت خدمات فناوری اطلاعات
-            است. GammaItsm محصول ITSM دومان سامانه است و می‌تواند برای
-            پیاده‌سازی و مدیریت فرایندهای مرتبط با ITIL به کار رود.
+            ITIL چارچوبی برای مدیریت خدمات فناوری اطلاعات است که به سازمان‌ها
+            کمک می‌کند ارائه و مدیریت خدمات IT را ساختاریافته‌تر کنند.
+          </p>
+
+          <p>
+            GammaItsm به عنوان یک راهکار ITSM، امکانات لازم برای پیاده‌سازی و
+            مدیریت بسیاری از فرایندهای مرتبط با مدیریت خدمات فناوری اطلاعات را
+            در اختیار سازمان قرار می‌دهد.
           </p>
 
           <a class="text-link dark-link" href="/resources/itil/">
@@ -486,7 +544,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       </div>
     </section>
 
-    <!-- Screenshots -->
+    <!-- =========================================================
+         Screenshots
+         ========================================================= -->
     <section
       class="content-section screenshots-section"
       id="screenshots"
@@ -494,35 +554,47 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     >
       <div class="container">
         <div class="section-heading">
-          <h2 id="screenshots-title">محیط محصول</h2>
+          <h2 id="screenshots-title">محیط نرم‌افزار GammaItsm</h2>
 
           <p>
-            تصاویر واقعی محیط GammaItsm می‌توانند در این بخش قرار بگیرند تا
-            کاربران پیش از درخواست دمو با فضای نرم‌افزار آشنا شوند.
+            بخشی از محیط واقعی GammaItsm را ببینید؛ از داشبورد مدیریتی تا
+            کارپوشه و مدیریت فعالیت‌های خدمات فناوری اطلاعات.
           </p>
         </div>
 
-        <div class="gallery-placeholder">
-          <figure>
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--large">
             <img
               src="/images/products/gamma-itsm/itsm-dashboard.png"
-              alt="داشبورد نرم افزار Gamma ITSM"
+              alt="داشبورد نرم افزار GammaItsm برای مدیریت خدمات فناوری اطلاعات"
               loading="lazy"
             />
+
+            <figcaption>
+              <strong>داشبورد مدیریت خدمات</strong>
+              <span>نمایی از اطلاعات و وضعیت خدمات فناوری اطلاعات</span>
+            </figcaption>
           </figure>
 
-          <figure>
+          <figure class="gallery-card">
             <img
               src="/images/products/gamma-itsm/itsm-inbox.png"
-              alt="کارپوشه Gamma ITSM"
+              alt="کارپوشه نرم افزار GammaItsm"
               loading="lazy"
             />
+
+            <figcaption>
+              <strong>کارپوشه</strong>
+              <span>مدیریت و پیگیری فعالیت‌ها و درخواست‌های ارجاع‌شده</span>
+            </figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- Integrations -->
+    <!-- =========================================================
+         Integrations
+         ========================================================= -->
     <section
       class="content-section integrations-section"
       id="integrations"
@@ -530,6 +602,8 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     >
       <div class="container integration-grid">
         <div>
+          <span class="eyebrow">معماری باز</span>
+
           <h2 id="integrations-title">یکپارچه‌سازی با سیستم‌های دیگر</h2>
         </div>
 
@@ -550,7 +624,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- =========================================================
+         FAQ
+         ========================================================= -->
     <section
       class="content-section faq-section"
       id="faq"
@@ -559,6 +635,11 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       <div class="container narrow-content">
         <div class="section-heading">
           <h2 id="faq-title">پرسش‌های متداول GammaItsm</h2>
+
+          <p>
+            پاسخ برخی از پرسش‌های متداول درباره نرم‌افزار ITSM و مدیریت خدمات
+            فناوری اطلاعات GammaItsm.
+          </p>
         </div>
 
         <div class="faq-list">
@@ -568,7 +649,8 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
             <p>
               GammaItsm برای سازمان‌هایی طراحی شده است که نیاز به مدیریت
               ساختاریافته خدمات فناوری اطلاعات، درخواست‌ها، رخدادها و فرایندهای
-              مرتبط دارند.
+              مرتبط دارند و می‌خواهند فعالیت‌های واحد IT را در یک بستر یکپارچه
+              مدیریت کنند.
             </p>
           </details>
 
@@ -577,7 +659,8 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
 
             <p>
               بله. گردش کار، مراحل تأیید، مسئولیت‌ها و اقدامات فرایندها
-              می‌توانند متناسب با نیاز سازمان تعریف و پیکربندی شوند.
+              می‌توانند متناسب با نوع خدمت و ساختار سازمان تعریف و پیکربندی
+              شوند.
             </p>
           </details>
 
@@ -585,8 +668,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
             <summary>آیا GammaItsm فقط برای ثبت تیکت است؟</summary>
 
             <p>
-              خیر. مدیریت رخداد، درخواست، مشکل، تغییر، دارایی، انبار، SLA و
-              گردش‌های کاری بخشی از قابلیت‌های راهکار GammaItsm هستند.
+              خیر. GammaItsm یک راهکار ITSM است و علاوه بر Help Desk و ثبت
+              درخواست، قابلیت‌هایی مانند مدیریت رخداد، مشکل، تغییر، دارایی،
+              انبار، SLA و گردش‌های کاری را پوشش می‌دهد.
             </p>
           </details>
 
@@ -594,10 +678,59 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
             <summary>آیا GammaItsm بر مبنای ITIL طراحی شده است؟</summary>
 
             <p>
-              GammaItsm به عنوان یک راهکار ITSM می‌تواند برای پیاده‌سازی و
-              مدیریت فرایندهای مرتبط با چارچوب ITIL مورد استفاده قرار گیرد.
+              GammaItsm به عنوان یک راهکار مدیریت خدمات فناوری اطلاعات می‌تواند
+              برای پیاده‌سازی و مدیریت فرایندهای مرتبط با چارچوب ITIL مورد
+              استفاده قرار گیرد.
             </p>
           </details>
+
+          <details>
+            <summary>آیا GammaItsm تحت وب است؟</summary>
+
+            <p>
+              بله. GammaItsm یک راهکار تحت وب است و کاربران می‌توانند از طریق
+              محیط وب به خدمات و فرایندهای مورد نیاز خود دسترسی داشته باشند.
+            </p>
+          </details>
+
+          <details>
+            <summary
+              >آیا GammaItsm امکان اتصال به سیستم‌های دیگر را دارد؟</summary
+            >
+
+            <p>
+              GammaItsm می‌تواند در معماری نرم‌افزاری سازمان در کنار سایر
+              سیستم‌ها قرار گیرد و از طریق سازوکارهای یکپارچه‌سازی مورد نیاز،
+              اطلاعات را دریافت یا منتقل کند.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Final CTA
+         ========================================================= -->
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <span class="eyebrow eyebrow--light">GammaItsm</span>
+
+          <h2>مدیریت خدمات IT را ساختاریافته کنید</h2>
+
+          <p>
+            اگر سازمان شما به دنبال یک راهکار یکپارچه برای مدیریت درخواست‌ها،
+            رخدادها، مشکلات، تغییرات، دارایی‌ها و گردش‌های کاری است، محیط
+            GammaItsm را در یک جلسه دمو ببینید.
+          </p>
+        </div>
+
+        <div class="final-cta-actions">
+          <a class="button button--accent" href="/contact/demo/">
+            درخواست دموی GammaItsm
+          </a>
+
+          <a class="text-link dark-link" href="#modules"> مشاهده ماژول‌ها </a>
         </div>
       </div>
     </section>
@@ -605,6 +738,10 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
 </BaseLayout>
 
 <style>
+  /* =========================================================
+     Hero
+     ========================================================= */
+
   .hero-points {
     display: flex;
     flex-wrap: wrap;
@@ -733,7 +870,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     background: rgba(255, 255, 255, 0.08);
   }
 
-  /* Navigation */
+  /* =========================================================
+     Navigation
+     ========================================================= */
 
   .product-nav {
     position: sticky;
@@ -747,12 +886,12 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
   .product-nav-inner {
     display: flex;
     gap: 1.25rem;
-    overflow-x: auto;
     padding-block: 0.9rem;
     white-space: nowrap;
   }
 
   .product-nav a {
+    flex: 0 0 auto;
     color: var(--color-muted);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
@@ -769,7 +908,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     color: var(--color-accent-dark);
   }
 
-  /* Generic sections */
+  /* =========================================================
+     Generic sections
+     ========================================================= */
 
   .content-section {
     padding-block: clamp(4.5rem, 8vw, 7rem);
@@ -798,7 +939,22 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     line-height: 1.9;
   }
 
-  /* Introduction */
+  .eyebrow {
+    display: inline-block;
+    margin-block-end: 1rem;
+    color: var(--color-brand);
+    font-size: 0.78rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.02em;
+  }
+
+  .eyebrow--light {
+    color: var(--color-accent-soft);
+  }
+
+  /* =========================================================
+     Introduction
+     ========================================================= */
 
   .intro-grid {
     display: grid;
@@ -826,7 +982,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     margin-block-end: 0;
   }
 
-  /* Value */
+  /* =========================================================
+     Value
+     ========================================================= */
 
   .value-grid {
     display: grid;
@@ -862,7 +1020,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     line-height: 1.85;
   }
 
-  /* Modules */
+  /* =========================================================
+     Modules
+     ========================================================= */
 
   .modules-section {
     background: var(--color-paper);
@@ -935,7 +1095,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     font-weight: var(--font-weight-bold);
   }
 
-  /* Workflow */
+  /* =========================================================
+     Workflow
+     ========================================================= */
 
   .workflow-section {
     background: var(--color-surface);
@@ -960,6 +1122,34 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     margin-block-end: 1rem;
     color: var(--color-muted);
     line-height: 1.9;
+  }
+
+  .workflow-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-block-start: 2.5rem;
+  }
+
+  .workflow-features > div {
+    padding-block-start: 1rem;
+    border-block-start: 2px solid var(--color-brand);
+  }
+
+  .workflow-features strong,
+  .workflow-features span {
+    display: block;
+  }
+
+  .workflow-features strong {
+    margin-block-end: 0.4rem;
+    color: var(--color-primary);
+  }
+
+  .workflow-features span {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
   }
 
   .request-timeline {
@@ -1059,35 +1249,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     font-size: 0.72rem;
   }
 
-  .workflow-features {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-block-start: 3rem;
-  }
-
-  .workflow-features > div {
-    padding-block-start: 1rem;
-    border-block-start: 2px solid var(--color-brand);
-  }
-
-  .workflow-features strong,
-  .workflow-features span {
-    display: block;
-  }
-
-  .workflow-features strong {
-    margin-block-end: 0.4rem;
-    color: var(--color-primary);
-  }
-
-  .workflow-features span {
-    color: var(--color-muted);
-    font-size: 0.85rem;
-    line-height: 1.7;
-  }
-
-  /* Scenarios */
+  /* =========================================================
+     Scenarios
+     ========================================================= */
 
   .scenario-grid {
     display: grid;
@@ -1130,7 +1294,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     line-height: 1.85;
   }
 
-  /* ITIL */
+  /* =========================================================
+     ITIL
+     ========================================================= */
 
   .itil-section {
     background: var(--color-primary);
@@ -1149,7 +1315,7 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
 
   .itil-grid p {
     max-width: 45rem;
-    margin-block-end: 1.5rem;
+    margin-block-end: 1rem;
     color: var(--color-text-on-dark);
     line-height: 1.95;
   }
@@ -1187,43 +1353,18 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     font-size: 0.85rem;
   }
 
-  /* Feature strip */
+  /* =========================================================
+     Screenshots
+     ========================================================= */
 
-  .feature-strip {
+  .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1px;
-    background: var(--color-line);
-  }
-
-  .feature-strip article {
-    min-height: 10rem;
-    padding: 1.5rem;
-    background: var(--color-paper);
-  }
-
-  .feature-strip h3 {
-    margin-block-end: 0.5rem;
-    color: var(--color-primary);
-    font-size: 1.1rem;
-  }
-
-  .feature-strip p {
-    margin: 0;
-    color: var(--color-muted);
-    font-size: 0.9rem;
-    line-height: 1.8;
-  }
-
-  /* Screenshots */
-
-  .gallery-placeholder {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
     gap: 1.25rem;
+    align-items: start;
   }
 
-  .gallery-placeholder figure {
+  .gallery-card {
     margin: 0;
     overflow: hidden;
     border: 1px solid var(--color-line);
@@ -1232,19 +1373,32 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     box-shadow: var(--shadow-soft);
   }
 
-  .gallery-placeholder img {
+  .gallery-card img {
     display: block;
     width: 100%;
     height: auto;
   }
 
-  @media (max-width: 48rem) {
-    .gallery-placeholder {
-      grid-template-columns: 1fr;
-    }
+  .gallery-card figcaption {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.25rem 1.4rem;
   }
 
-  /* Integrations */
+  .gallery-card figcaption strong {
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+
+  .gallery-card figcaption span {
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  /* =========================================================
+     Integrations
+     ========================================================= */
 
   .integration-grid {
     display: grid;
@@ -1279,7 +1433,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     font-size: 0.8rem;
   }
 
-  /* FAQ */
+  /* =========================================================
+     FAQ
+     ========================================================= */
 
   .faq-list {
     border-block-start: 1px solid var(--color-line);
@@ -1309,7 +1465,9 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     line-height: 1.9;
   }
 
-  /* Final CTA */
+  /* =========================================================
+     Final CTA
+     ========================================================= */
 
   .final-cta {
     padding-block: clamp(4.5rem, 8vw, 7rem);
@@ -1317,32 +1475,54 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
     color: var(--color-white);
   }
 
+  .final-cta-inner {
+    display: grid;
+    gap: 2.5rem;
+  }
+
   .final-cta h2 {
+    max-width: 48rem;
     margin-block-end: 1rem;
     color: var(--color-white);
     font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.25;
   }
 
   .final-cta p {
     max-width: 44rem;
-    margin-block-end: 2rem;
+    margin: 0;
     color: #d1d5d4;
     line-height: 1.9;
+  }
+
+  .final-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .final-cta .text-link {
     color: var(--color-accent-soft);
   }
 
-  /* Responsive */
+  /* =========================================================
+     Responsive
+     ========================================================= */
 
   @media (min-width: 48rem) {
-    .hero-grid {
+    .hero-content {
       grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+      align-items: center;
     }
 
     .intro-grid {
       grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      align-items: start;
+    }
+
+    .workflow-layout {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
       align-items: start;
     }
 
@@ -1355,6 +1535,11 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
       align-items: start;
     }
+
+    .final-cta-inner {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+    }
   }
 
   @media (max-width: 64rem) {
@@ -1362,51 +1547,53 @@ import { GammaItsmModules } from "../../../data/gammaitsm";
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .workflow-features {
+    .itil-processes {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .itil-processes {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .gallery-grid {
+      grid-template-columns: 1fr;
     }
   }
 
   @media (max-width: 48rem) {
-    .hero-grid,
+    .hero-content,
     .modules-grid,
     .value-grid,
     .scenario-grid,
-    .feature-strip {
+    .workflow-features {
       grid-template-columns: 1fr;
-    }
-
-    .window-body {
-      grid-template-columns: 4rem minmax(0, 1fr);
     }
 
     .product-nav-inner {
       gap: 1rem;
+      overflow-x: auto;
     }
 
     .product-nav .nav-cta {
       margin-inline-start: 0;
     }
 
-    .workflow-features {
+    .itil-processes {
       grid-template-columns: 1fr;
     }
 
-    .itil-processes {
-      grid-template-columns: 1fr;
+    .final-cta-actions {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .window-body {
+      grid-template-columns: 4rem minmax(0, 1fr);
     }
   }
 
   @media (max-width: 36rem) {
-    .product-hero {
+    .hero {
       padding-block: 3.5rem;
     }
 
-    .product-hero h1 {
+    .hero h1 {
       font-size: 2.4rem;
     }
 

@@ -1,15 +1,1252 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import ContentPlaceholder from "../../../components/ContentPlaceholder.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const demoUrl = "https://itsm.landa-sme.ir";
 ---
 
 <BaseLayout
-  title="درخواست دمو | دومان سامانه"
-  description="درخواست معرفی و دموی محصولات دومان سامانه."
+  title="دموی Gamma ITSM | نرم افزار مدیریت خدمات فناوری اطلاعات"
+  description="Gamma ITSM را در یک سناریوی واقعی تجربه کنید؛ از ثبت درخواست و ارجاع تا انجام کار، ثبت گزارش و تأیید نهایی."
 >
-  <ContentPlaceholder
-    eyebrow="درخواست دمو"
-    title="درخواست دموی محصول"
-    description="فرم درخواست دمو پس از مشخص شدن مسیر ارسال و اطلاعات موردنیاز تکمیل خواهد شد."
-  />
+  <main class="demo-page">
+    <!-- =========================================================
+         Hero
+         ========================================================= -->
+
+    <section class="hero demo-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <span>دمو</span>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              مدیریت خدمات IT را
+              <span class="accent-text">در عمل تجربه کنید</span>
+            </h1>
+
+            <p class="hero-lead">
+              Gamma ITSM فقط برای ثبت تیکت نیست؛ فرآیندهای خدمات IT را از ثبت
+              درخواست تا ارجاع، انجام کار، ثبت فعالیت و تأیید نهایی مکانیزه
+              می‌کند.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button--accent"
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ورود به دموی آنلاین ↗
+              </a>
+
+              <a class="button button--secondary" href="#custom-demo">
+                درخواست دموی اختصاصی
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="demo-flow">
+              <div class="demo-flow-item">
+                <strong>ثبت درخواست</strong>
+                <span>کاربر</span>
+              </div>
+
+              <div class="demo-flow-line"></div>
+
+              <div class="demo-flow-item">
+                <strong>ارجاع</strong>
+                <span>مدیر IT</span>
+              </div>
+
+              <div class="demo-flow-line"></div>
+
+              <div class="demo-flow-item">
+                <strong>انجام کار</strong>
+                <span>کارشناس</span>
+              </div>
+
+              <div class="demo-flow-line"></div>
+
+              <div class="demo-flow-item">
+                <strong>تأیید</strong>
+                <span>مدیر IT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Online Demo
+         این بخش عمداً بدون تغییر نگه داشته شده است.
+         ========================================================= -->
+
+    <section class="section demo-online" id="online-demo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">دموی آنلاین</p>
+
+          <h2>
+            همین حالا
+            <span class="accent-text">Gamma ITSM</span>
+            را امتحان کنید
+          </h2>
+
+          <p>
+            محیط دموی آنلاین با یک سناریوی آماده در اختیار شماست. می‌توانید با
+            نقش‌های مختلف وارد سامانه شوید و گردش یک درخواست را از ابتدا تا
+            انتها بررسی کنید.
+          </p>
+        </div>
+
+        <div class="demo-access">
+          <div class="demo-access-copy">
+            <h3>ورود به محیط دموی Gamma ITSM</h3>
+
+            <p>
+              برای مشاهده قابلیت‌های سیستم، وارد محیط دموی آنلاین شوید. پیشنهاد
+              می‌کنیم سناریوی چهارمرحله‌ای زیر را به ترتیب دنبال کنید.
+            </p>
+
+            <a
+              class="button button--accent"
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ورود به دموی آنلاین ↗
+            </a>
+          </div>
+
+          <div class="demo-credentials">
+            <div class="credential">
+              <span class="credential-label"> کاربر درخواست‌دهنده </span>
+
+              <strong>user01</strong>
+              <code>user01</code>
+            </div>
+
+            <div class="credential">
+              <span class="credential-label"> مدیر IT </span>
+
+              <strong>itman</strong>
+              <code>itman</code>
+            </div>
+
+            <div class="credential">
+              <span class="credential-label"> کارشناس فنی </span>
+
+              <strong>tech01</strong>
+              <code>tech01</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Demo Scenario
+         این بخش عمداً بدون تغییر نگه داشته شده است.
+         ========================================================= -->
+
+    <section class="section demo-scenario" id="scenario">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">راهنمای دموی آنلاین</p>
+
+          <h2>
+            سناریوی دموی
+            <span class="accent-text">Gamma ITSM</span>
+          </h2>
+
+          <p>
+            در این سناریو یک درخواست را از زمان ثبت توسط کاربر، تا ارجاع، انجام
+            کار و تأیید نهایی دنبال می‌کنیم.
+          </p>
+        </div>
+
+        <div class="scenario-list">
+          <!-- =====================================================
+               Step 1
+               ===================================================== -->
+
+          <article class="scenario-step">
+            <div class="scenario-number">01</div>
+
+            <div class="scenario-content">
+              <span class="scenario-role"> کاربر درخواست‌دهنده </span>
+
+              <h3>ایجاد درخواست</h3>
+
+              <p>
+                ابتدا با کاربر درخواست‌دهنده وارد سامانه شوید و یک درخواست جدید
+                ایجاد کنید. این مرحله نقطه شروع گردش کار است.
+              </p>
+
+              <div class="scenario-action">
+                <strong>ورود با حساب:</strong>
+                <code>user01 / user01</code>
+              </div>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-002-inbox-user.png"
+                  alt="ورود به نرم افزار توسط کاربر درخواست دهنده"
+                  loading="lazy"
+                />
+                <figcaption>
+                  ورود به نرم افزار توسط کاربر درخواست دهنده
+                </figcaption>
+              </figure>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-003-create-request.png"
+                  alt="صفحه ثبت درخواست در Gamma ITSM"
+                  loading="lazy"
+                />
+                <figcaption>ثبت درخواست توسط کاربر در Gamma ITSM</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               Step 2
+               ===================================================== -->
+
+          <article class="scenario-step">
+            <div class="scenario-number">02</div>
+
+            <div class="scenario-content">
+              <span class="scenario-role"> مدیر IT </span>
+
+              <h3>توزیع و ارجاع درخواست</h3>
+
+              <p>
+                مدیر IT درخواست جدید را در کارپوشه مشاهده می‌کند و می‌تواند آن
+                را به یک کارشناس فنی، گروه کارشناسی یا شخص خودش ارجاع دهد.
+              </p>
+
+              <div class="scenario-action">
+                <strong>ورود با حساب:</strong>
+                <code>itman / itman</code>
+              </div>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-004-it-admin-inbox.png"
+                  alt="کارپوشه مدیر it"
+                  loading="lazy"
+                />
+                <figcaption>کارپوشه مدیر it</figcaption>
+              </figure>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-005-forward.png"
+                  alt="ارجاع درخواست به کارشناس در Gamma ITSM"
+                  loading="lazy"
+                />
+                <figcaption>مشاهده و ارجاع درخواست توسط مدیر IT</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               Step 3
+               ===================================================== -->
+
+          <article class="scenario-step">
+            <div class="scenario-number">03</div>
+
+            <div class="scenario-content">
+              <span class="scenario-role"> کارشناس فنی </span>
+
+              <h3>انجام درخواست و ثبت گزارش کار</h3>
+
+              <p>
+                کارشناس فنی اقدام مربوط به درخواست را انجام می‌دهد، گزارش کار
+                خود را ثبت می‌کند و پس از تکمیل کار، درخواست را می‌بندد.
+              </p>
+
+              <div class="scenario-action">
+                <strong>ورود با حساب:</strong>
+                <code>tech01 / tech01</code>
+              </div>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-006-menu.png"
+                  alt="منوی کارشناس در Gamma ITSM"
+                  loading="lazy"
+                />
+                <figcaption>منوی کارشناس</figcaption>
+              </figure>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-007-work-log.png"
+                  alt="ثبت گزارش کار توسط کارشناس فنی در Gamma ITSM"
+                  loading="lazy"
+                />
+                <figcaption>
+                  انجام درخواست و ثبت گزارش کار توسط کارشناس
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               Step 4
+               ===================================================== -->
+
+          <article class="scenario-step">
+            <div class="scenario-number">04</div>
+
+            <div class="scenario-content">
+              <span class="scenario-role"> مدیر IT </span>
+
+              <h3>تأیید نهایی</h3>
+
+              <p>
+                پس از انجام کار، مدیر IT گزارش‌های ثبت‌شده توسط کارشناس را بررسی
+                کرده و در صورت تأیید، درخواست را به مرحله نهایی می‌رساند.
+              </p>
+
+              <div class="scenario-action">
+                <strong>ورود با حساب:</strong>
+                <code>itman / itman</code>
+              </div>
+
+              <figure class="guide-image">
+                <img
+                  src="/images/products/gamma-itsm/itsm-demo-009-confirm.png"
+                  alt="تأیید نهایی درخواست توسط مدیر IT در Gamma ITSM"
+                  loading="lazy"
+                />
+                <figcaption>بررسی گزارش کار و تأیید نهایی درخواست</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Workflow / Value
+         ========================================================= -->
+
+    <section class="section section--dark demo-workflow">
+      <div class="container">
+        <div class="section-heading section-heading--dark">
+          <p class="section-label">فراتر از ثبت تیکت</p>
+
+          <h2>
+            یک درخواست،
+            <span class="accent-text">یک فرایند کامل خدمات IT</span>
+          </h2>
+
+          <p>
+            سناریوی بالا فقط یک نمونه از نحوه کار Gamma ITSM است. در این سیستم،
+            درخواست می‌تواند در قالب یک فرایند مشخص بین نقش‌ها و مراحل مختلف
+            سازمان حرکت کند؛ از ثبت و ارجاع تا انجام، کنترل و تأیید نهایی.
+          </p>
+        </div>
+
+        <div class="workflow-visual">
+          <div class="workflow-node">
+            <span>01</span>
+            <strong>ثبت درخواست</strong>
+            <small>شروع فرایند</small>
+          </div>
+
+          <div class="workflow-connector"></div>
+
+          <div class="workflow-node">
+            <span>02</span>
+            <strong>توزیع و ارجاع</strong>
+            <small>مدیریت مسئولیت</small>
+          </div>
+
+          <div class="workflow-connector"></div>
+
+          <div class="workflow-node">
+            <span>03</span>
+            <strong>انجام و ثبت فعالیت</strong>
+            <small>اجرای خدمت</small>
+          </div>
+
+          <div class="workflow-connector"></div>
+
+          <div class="workflow-node">
+            <span>04</span>
+            <strong>کنترل و تأیید</strong>
+            <small>بستن فرایند</small>
+          </div>
+        </div>
+
+        <p class="workflow-note">
+          این سناریو تنها یک نمونه است؛ مدیر سیستم می‌تواند متناسب با نیاز
+          سازمان، گردش کارهای مختلف را تعریف و در صورت نیاز اصلاح یا ویرایش کند.
+        </p>
+
+        <div class="workflow-value">
+          <div>
+            <strong>درخواست</strong>
+            <span>ثبت و دریافت خدمت</span>
+          </div>
+
+          <div>
+            <strong>فرایند</strong>
+            <span>حرکت درخواست بین نقش‌ها</span>
+          </div>
+
+          <div>
+            <strong>کنترل</strong>
+            <span>ثبت فعالیت و بررسی نتیجه</span>
+          </div>
+
+          <div>
+            <strong>نتیجه</strong>
+            <span>تکمیل و تأیید خدمت</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Custom Demo
+         ========================================================= -->
+
+    <section class="section custom-demo" id="custom-demo">
+      <div class="container">
+        <div class="custom-demo-grid">
+          <div class="custom-demo-copy">
+            <p class="section-label">دموی اختصاصی</p>
+
+            <h2>
+              حالا Gamma ITSM را
+              <span class="accent-text">متناسب با سازمان خود</span>
+              ببینید
+            </h2>
+
+            <p>
+              دموی آنلاین به شما کمک می‌کند قابلیت‌های اصلی Gamma ITSM را خودتان
+              تجربه کنید. اگر می‌خواهید ببینید این قابلیت‌ها چگونه با فرایندهای
+              واقعی سازمان شما تطبیق پیدا می‌کنند، می‌توانید درخواست دموی
+              اختصاصی ثبت کنید.
+            </p>
+
+            <p>
+              در جلسه اختصاصی، به جای یک نمایش عمومی، سناریوها و نیازهای واقعی
+              سازمان شما بررسی می‌شوند و قابلیت‌های مرتبط با همان نیازها ارائه
+              خواهند شد.
+            </p>
+
+            <ul class="custom-demo-list">
+              <li>بررسی فرایندهای واقعی سازمان</li>
+              <li>معرفی قابلیت‌های متناسب با نیاز شما</li>
+              <li>نمایش گردش کار و کارپوشه‌ها</li>
+              <li>بررسی نحوه پیاده‌سازی و استقرار</li>
+            </ul>
+          </div>
+
+          <div class="custom-demo-form-wrap">
+            <form
+              class="custom-demo-form"
+              method="post"
+              action="/api/demo-request"
+            >
+              <div class="form-field">
+                <label for="name">نام و نام خانوادگی *</label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="organization">نام سازمان *</label>
+
+                <input
+                  id="organization"
+                  name="organization"
+                  type="text"
+                  autocomplete="organization"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="phone">شماره تماس *</label>
+
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="email">ایمیل</label>
+
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="users">تعداد کاربران</label>
+
+                <input
+                  id="users"
+                  name="users"
+                  type="number"
+                  min="1"
+                  inputmode="numeric"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="message"> توضیحات یا نیازهای سازمان </label>
+
+                <textarea id="message" name="message" rows="5"></textarea>
+              </div>
+
+              <input
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+                class="honeypot"
+                aria-hidden="true"
+              />
+
+              <button class="button button--accent form-submit" type="submit">
+                درخواست دموی اختصاصی
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Final CTA
+         ========================================================= -->
+
+    <section class="section demo-cta">
+      <div class="container">
+        <div class="demo-cta-inner">
+          <div>
+            <p class="section-label">تجربه واقعی محصول</p>
+
+            <h2>
+              قابلیت‌های Gamma ITSM را
+              <span class="accent-text">خودتان ببینید</span>
+            </h2>
+
+            <p>
+              ابتدا دموی آنلاین را تجربه کنید و با نحوه اجرای یک فرایند خدمات IT
+              آشنا شوید. اگر نیازهای سازمان شما پیچیده‌تر است، برای بررسی
+              سناریوهای واقعی خود درخواست دموی اختصاصی ثبت کنید.
+            </p>
+          </div>
+
+          <div class="demo-cta-actions">
+            <a
+              class="button button--accent"
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ورود به دموی آنلاین ↗
+            </a>
+
+            <a class="button button--secondary" href="#custom-demo">
+              درخواست دموی اختصاصی
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
+
+<style>
+  /* =========================================================
+     Demo Page
+     ========================================================= */
+
+  .demo-page {
+    --demo-accent: var(--color-brand);
+    --demo-accent-soft: var(--color-brand-subtle);
+  }
+
+  /* =========================================================
+     Hero
+     ========================================================= */
+
+  .demo-hero {
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(239, 63, 35, 0.12),
+        transparent 30%
+      ),
+      var(--hero-corporate-background);
+  }
+
+  .demo-hero .hero-copy {
+    max-width: 50rem;
+  }
+
+  .demo-hero .hero-lead {
+    max-width: 44rem;
+  }
+
+  .demo-hero .hero-visual {
+    min-height: 18rem;
+    padding: 2rem;
+    border-inline-start: 1px solid rgba(216, 225, 223, 0.12);
+  }
+
+  /* =========================================================
+     Demo Flow
+     ========================================================= */
+
+  .demo-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .demo-flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    min-height: 7rem;
+    padding: 1rem;
+    border: 1px solid rgba(216, 225, 223, 0.14);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.035);
+    text-align: center;
+  }
+
+  .demo-flow-item strong {
+    color: var(--color-white);
+    font-size: 0.9rem;
+  }
+
+  .demo-flow-item span {
+    margin-top: 0.4rem;
+    color: rgba(216, 225, 223, 0.55);
+    font-size: 0.75rem;
+  }
+
+  .demo-flow-line {
+    width: 1.5rem;
+    height: 1px;
+    background: rgba(216, 225, 223, 0.2);
+  }
+
+  /* =========================================================
+     Sections
+     ========================================================= */
+
+  .section {
+    padding-block: 6rem;
+  }
+
+  .section-heading {
+    max-width: 52rem;
+    margin-block-end: 3rem;
+  }
+
+  .section-heading h2 {
+    margin-block-end: 1.5rem;
+  }
+
+  .section-heading p {
+    max-width: 44rem;
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+    line-height: var(--line-height-body);
+  }
+
+  .section-label {
+    margin-block-end: 1rem;
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  /* =========================================================
+     Online Demo
+     ========================================================= */
+
+  .demo-online {
+    background: var(--color-surface);
+  }
+
+  .demo-access {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.9fr);
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .demo-access-copy {
+    padding: 2.5rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-paper);
+  }
+
+  .demo-access-copy h3 {
+    margin-block-end: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .demo-access-copy p {
+    max-width: 38rem;
+    margin-block-end: 2rem;
+    color: var(--color-muted);
+    line-height: var(--line-height-body);
+  }
+
+  .demo-credentials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .credential {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    min-height: 5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+  }
+
+  .credential-label {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+  }
+
+  .credential strong {
+    font-size: 0.9rem;
+  }
+
+  .credential code,
+  .scenario-action code {
+    direction: ltr;
+    unicode-bidi: isolate;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-paper);
+    color: var(--color-primary);
+    font-family: monospace;
+    font-size: 0.8rem;
+  }
+
+  /* =========================================================
+     Scenario
+     ========================================================= */
+
+  .demo-scenario {
+    background: var(--color-paper);
+  }
+
+  .scenario-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .scenario-step {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+  }
+
+  .scenario-number {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.15rem;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    direction: ltr;
+  }
+
+  .scenario-role {
+    display: block;
+    margin-block-end: 0.5rem;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .scenario-content h3 {
+    margin-block-end: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .scenario-content p {
+    max-width: 48rem;
+    margin-block-end: 1rem;
+    color: var(--color-muted);
+    line-height: var(--line-height-body);
+  }
+
+  .scenario-action {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  /* =========================================================
+     Guide Images
+     ========================================================= */
+
+  .guide-image {
+    margin: 2rem 0 0;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+  }
+
+  .guide-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .guide-image figcaption {
+    padding: 0.75rem 1rem;
+    border-block-start: 1px solid var(--color-line);
+    color: var(--color-muted);
+    background: var(--color-white);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* =========================================================
+     Workflow
+     ========================================================= */
+
+  .section--dark {
+    background: var(--hero-bg-base);
+    color: var(--color-text-on-dark);
+  }
+
+  .section-heading--dark p:not(.section-label) {
+    color: rgba(216, 225, 223, 0.68);
+  }
+
+  .workflow-visual {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0;
+    margin-block-start: 3rem;
+  }
+
+  .workflow-node {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 9rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(216, 225, 223, 0.14);
+    background: rgba(255, 255, 255, 0.025);
+    text-align: center;
+  }
+
+  .workflow-node:first-child {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+
+  .workflow-node:last-child {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .workflow-node span {
+    margin-block-end: 0.5rem;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+    direction: ltr;
+  }
+
+  .workflow-node strong {
+    color: var(--color-white);
+    font-size: 0.95rem;
+  }
+
+  .workflow-node small {
+    margin-block-start: 0.4rem;
+    color: rgba(216, 225, 223, 0.55);
+    font-size: 0.75rem;
+  }
+
+  .workflow-connector {
+    align-self: center;
+    width: 2rem;
+    height: 1px;
+    background: rgba(216, 225, 223, 0.2);
+  }
+
+  .workflow-note {
+    max-width: 50rem;
+    margin: 2rem auto 0;
+    color: rgba(216, 225, 223, 0.62);
+    text-align: center;
+    line-height: var(--line-height-body);
+  }
+
+  .workflow-value {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-block-start: 4rem;
+    border: 1px solid rgba(216, 225, 223, 0.12);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: rgba(216, 225, 223, 0.12);
+  }
+
+  .workflow-value > div {
+    min-height: 7rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .workflow-value strong {
+    display: block;
+    margin-block-end: 0.5rem;
+    color: var(--color-white);
+    font-size: 0.95rem;
+  }
+
+  .workflow-value span {
+    color: rgba(216, 225, 223, 0.58);
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+
+  /* =========================================================
+     Custom Demo
+     ========================================================= */
+
+  .custom-demo {
+    background: var(--color-white);
+  }
+
+  .custom-demo-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(28rem, 1.1fr);
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .custom-demo-copy {
+    max-width: 40rem;
+  }
+
+  .custom-demo-copy h2 {
+    margin-block-end: 1.5rem;
+  }
+
+  .custom-demo-copy > p:not(.section-label) {
+    color: var(--color-muted);
+    line-height: var(--line-height-body);
+  }
+
+  .custom-demo-list {
+    display: grid;
+    gap: 0.8rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .custom-demo-list li {
+    position: relative;
+    padding-inline-start: 1.5rem;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .custom-demo-list li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.75rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    transform: translateY(-50%);
+  }
+
+  .custom-demo-form-wrap {
+    padding: 2rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-paper);
+  }
+
+  .custom-demo-form {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .form-field {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .form-field label {
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: 0.75rem 0.9rem;
+    outline: none;
+    transition:
+      border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+
+  .form-field textarea {
+    resize: vertical;
+    min-height: 8rem;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 0.1875rem var(--color-accent-soft);
+  }
+
+  .form-submit {
+    width: 100%;
+    margin-block-start: 0.5rem;
+  }
+
+  /* =========================================================
+     Final CTA
+     ========================================================= */
+
+  .demo-cta {
+    background: var(--color-paper);
+  }
+
+  .demo-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    background: var(--hero-bg-base);
+    color: var(--color-text-on-dark);
+  }
+
+  .demo-cta-inner h2 {
+    margin-block-end: 1rem;
+  }
+
+  .demo-cta-inner p:not(.section-label) {
+    max-width: 42rem;
+    margin: 0;
+    color: rgba(216, 225, 223, 0.68);
+    line-height: var(--line-height-body);
+  }
+
+  .demo-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* =========================================================
+     Responsive
+     ========================================================= */
+
+  @media (max-width: 64rem) {
+    .demo-hero .hero-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .demo-hero .hero-visual {
+      min-height: 15rem;
+      max-width: 100%;
+      border-inline-start: 0;
+      border-block-start: 1px solid rgba(216, 225, 223, 0.12);
+    }
+
+    .demo-access {
+      grid-template-columns: 1fr;
+    }
+
+    .custom-demo-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .demo-cta-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .workflow-value {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .section {
+      padding-block: 4rem;
+    }
+
+    .demo-flow {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .demo-flow-item {
+      width: calc(50% - 0.25rem);
+      min-height: 6rem;
+    }
+
+    .demo-flow-line {
+      display: none;
+    }
+
+    .credential {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+
+    .scenario-step {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .scenario-number {
+      justify-content: flex-start;
+    }
+
+    .workflow-visual {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .workflow-node {
+      min-height: 6rem;
+      border-radius: var(--radius-md) !important;
+    }
+
+    .workflow-connector {
+      width: 1px;
+      height: 1.25rem;
+      margin-inline: auto;
+    }
+
+    .workflow-value {
+      grid-template-columns: 1fr;
+      margin-block-start: 3rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .custom-demo-form-wrap {
+      padding: 1.25rem;
+    }
+
+    .demo-cta-inner {
+      padding: 2rem;
+    }
+
+    .demo-cta-actions {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .demo-cta-actions .button {
+      width: 100%;
+    }
+  }
+
+  .honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
