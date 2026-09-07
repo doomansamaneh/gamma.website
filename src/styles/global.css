@@ -132,14 +132,17 @@ a {
    ========================================================= */
 
 .accent-text {
-  display: inline;
+  display: inline-block;
   color: var(--color-accent);
-  padding-inline: var(--space-xs);
 }
 
 h1 .accent-text,
 h2 .accent-text {
   color: var(--color-accent);
+}
+ 
+h1 span, h2 span {
+  padding-inline: var(--space-xs);
 }
 
 
