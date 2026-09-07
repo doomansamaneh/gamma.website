@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 const demoUrl = "https://itsm.landa-sme.ir";
+const success = Astro.url.searchParams.get("success") === "1";
 ---
 
 <BaseLayout
@@ -457,6 +458,17 @@ const demoUrl = "https://itsm.landa-sme.ir";
               <li>بررسی نحوه پیاده‌سازی و استقرار</li>
             </ul>
           </div>
+
+          {
+            success && (
+              <div class="form-success" role="status">
+                <strong>درخواست شما با موفقیت ارسال شد.</strong>
+                <span>
+                  اطلاعات شما دریافت شد و در اولین فرصت با شما تماس خواهیم گرفت.
+                </span>
+              </div>
+            )
+          }
 
           <div class="custom-demo-form-wrap">
             <form
@@ -1248,5 +1260,31 @@ const demoUrl = "https://itsm.landa-sme.ir";
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  .form-success {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-block-end: var(--space-md);
+    padding: 1rem 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-success) 28%, transparent);
+    border-radius: var(--radius-md);
+    background: color-mix(
+      in srgb,
+      var(--color-success) 8%,
+      var(--color-surface)
+    );
+    color: var(--color-success);
+    line-height: var(--line-height-normal);
+  }
+
+  .form-success strong {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .form-success span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
@@ -8,96 +8,89 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 >
   <main class="page">
     <!-- Hero -->
-   <section class="hero">
-  <div class="container">
+    <section class="hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma Help Desk</a>
+          <span>/</span>
+          <span>مدیریت انبارداری</span>
+        </nav>
 
-    <nav class="breadcrumb" aria-label="مسیر صفحه">
-      <a href="/">خانه</a>
-      <span>/</span>
-      <a href="/products/">محصولات</a>
-      <span>/</span>
-      <a href="/products/gammaitsm/">Gamma Help Desk</a>
-      <span>/</span>
-      <span>مدیریت انبارداری</span>
-    </nav>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>مدیریت انبار و قطعات فناوری اطلاعات</h1>
 
-    <div class="hero-content">
+            <p class="hero-lead">
+              موجودی انبارهای IT را کنترل کنید، گردش کالا و قطعات را مدیریت کنید
+              و سوابق هر قطعه را از زمان خرید تا مصرف، تعمیر و بازگشت به انبار
+              در اختیار داشته باشید.
+            </p>
 
-      <div class="hero-copy">
-        <h1>مدیریت انبار و قطعات فناوری اطلاعات</h1>
+            <div class="hero-actions">
+              <a href="/contact/demo/" class="button button-primary">
+                درخواست دمو
+              </a>
 
-        <p class="hero-lead">
-          موجودی انبارهای IT را کنترل کنید، گردش کالا و قطعات را مدیریت کنید و
-          سوابق هر قطعه را از زمان خرید تا مصرف، تعمیر و بازگشت به انبار در
-          اختیار داشته باشید.
-        </p>
+              <a href="#overview" class="button button-secondary">
+                آشنایی با امکانات
+              </a>
+            </div>
+          </div>
 
-        <div class="hero-actions">
-          <a href="/contact/demo/" class="button button-primary">
-            درخواست دمو
-          </a>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="warehouse-visual">
+              <div class="warehouse-header">
+                <span>موجودی انبار</span>
+                <span class="status-dot"></span>
+              </div>
 
-          <a href="#overview" class="button button-secondary">
-            آشنایی با امکانات
-          </a>
+              <div class="warehouse-summary">
+                <div>
+                  <strong>۴</strong>
+                  <span>انبار</span>
+                </div>
+
+                <div>
+                  <strong>۱۲۸</strong>
+                  <span>قلم کالا</span>
+                </div>
+
+                <div>
+                  <strong>۲۳</strong>
+                  <span>در انتظار تأمین</span>
+                </div>
+              </div>
+
+              <div class="stock-list">
+                <div class="stock-row">
+                  <span>قطعات شبکه</span>
+                  <span>موجود</span>
+                </div>
+
+                <div class="stock-row">
+                  <span>قطعات کامپیوتر</span>
+                  <span>موجود</span>
+                </div>
+
+                <div class="stock-row warning">
+                  <span>قطعات مصرفی</span>
+                  <span>نقطه سفارش</span>
+                </div>
+
+                <div class="stock-row">
+                  <span>قطعات تعمیراتی</span>
+                  <span>موجود</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <div class="warehouse-visual">
-
-          <div class="warehouse-header">
-            <span>موجودی انبار</span>
-            <span class="status-dot"></span>
-          </div>
-
-          <div class="warehouse-summary">
-            <div>
-              <strong>۴</strong>
-              <span>انبار</span>
-            </div>
-
-            <div>
-              <strong>۱۲۸</strong>
-              <span>قلم کالا</span>
-            </div>
-
-            <div>
-              <strong>۲۳</strong>
-              <span>در انتظار تأمین</span>
-            </div>
-          </div>
-
-          <div class="stock-list">
-
-            <div class="stock-row">
-              <span>قطعات شبکه</span>
-              <span>موجود</span>
-            </div>
-
-            <div class="stock-row">
-              <span>قطعات کامپیوتر</span>
-              <span>موجود</span>
-            </div>
-
-            <div class="stock-row warning">
-              <span>قطعات مصرفی</span>
-              <span>نقطه سفارش</span>
-            </div>
-
-            <div class="stock-row">
-              <span>قطعات تعمیراتی</span>
-              <span>موجود</span>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Intro -->
     <section class="section section-light" id="overview">

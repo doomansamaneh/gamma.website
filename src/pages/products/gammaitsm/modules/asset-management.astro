@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
@@ -8,101 +8,101 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 >
   <main class="page">
     <!-- Hero -->
-  <section class="hero">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="مسیر صفحه">
-      <a href="/">خانه</a>
-      <span>/</span>
-      <a href="/products/">محصولات</a>
-      <span>/</span>
-      <a href="/products/gammaitsm/">Gamma Help Desk</a>
-      <span>/</span>
-      <span>مدیریت دارایی</span>
-    </nav>
+    <section class="hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma Help Desk</a>
+          <span>/</span>
+          <span>مدیریت دارایی</span>
+        </nav>
 
-    <div class="hero-content">
-      <div class="hero-copy">
-        <h1>
-          دارایی‌های سازمان را
-          <span class="accent-text">ساختاریافته و دقیق</span>
-          مدیریت کنید
-        </h1>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              دارایی‌های سازمان را
+              <span class="accent-text">ساختاریافته و دقیق</span>
+              مدیریت کنید
+            </h1>
 
-        <p class="hero-lead">
-          تمام چرخه عمر تجهیزات سازمان را از زمان ورود و تخصیص تا جابه‌جایی،
-          تعمیر، نگهداری و اسقاط مدیریت کنید و همیشه شناسنامه، سوابق،
-          هزینه‌ها و وضعیت دارایی‌ها را در اختیار داشته باشید.
-        </p>
+            <p class="hero-lead">
+              تمام چرخه عمر تجهیزات سازمان را از زمان ورود و تخصیص تا جابه‌جایی،
+              تعمیر، نگهداری و اسقاط مدیریت کنید و همیشه شناسنامه، سوابق،
+              هزینه‌ها و وضعیت دارایی‌ها را در اختیار داشته باشید.
+            </p>
 
-        <div class="hero-actions">
-          <a class="button button--accent" href="/contact/demo/">
-            درخواست دموی Gamma Help Desk
-          </a>
+            <div class="hero-actions">
+              <a class="button button--accent" href="/contact/demo/">
+                درخواست دموی Gamma Help Desk
+              </a>
 
-          <a class="button button--secondary" href="/products/gammaitsm/">
-            معرفی Gamma Help Desk
-          </a>
+              <a class="button button--secondary" href="/products/gammaitsm/">
+                معرفی Gamma Help Desk
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="hero-visual"
+            aria-label="ساختار مدیریت دارایی در Gamma Help Desk"
+          >
+            <div class="asset-window">
+              <div class="asset-window__header">
+                <span>Asset Management</span>
+                <strong>مدیریت دارایی</strong>
+              </div>
+
+              <div class="asset-tree">
+                <div class="tree-level tree-level--root">
+                  <span>01</span>
+                  <strong>دارایی</strong>
+                  <small>Asset</small>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level">
+                  <span>02</span>
+                  <strong>مشخصات و شناسنامه</strong>
+                  <small>Identity</small>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level">
+                  <span>03</span>
+                  <strong>محل استقرار و مسئول</strong>
+                  <small>Location & Owner</small>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level tree-level--accent">
+                  <span>04</span>
+                  <strong>سوابق و چرخه عمر</strong>
+                  <small>Lifecycle</small>
+                </div>
+              </div>
+
+              <div class="asset-status">
+                <div>
+                  <span>وضعیت</span>
+                  <strong>فعال</strong>
+                </div>
+
+                <div>
+                  <span>محل استقرار</span>
+                  <strong>ساختمان مرکزی</strong>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div
-        class="hero-visual"
-        aria-label="ساختار مدیریت دارایی در Gamma Help Desk"
-      >
-        <div class="asset-window">
-          <div class="asset-window__header">
-            <span>Asset Management</span>
-            <strong>مدیریت دارایی</strong>
-          </div>
-
-          <div class="asset-tree">
-            <div class="tree-level tree-level--root">
-              <span>01</span>
-              <strong>دارایی</strong>
-              <small>Asset</small>
-            </div>
-
-            <div class="tree-line"></div>
-
-            <div class="tree-level">
-              <span>02</span>
-              <strong>مشخصات و شناسنامه</strong>
-              <small>Identity</small>
-            </div>
-
-            <div class="tree-line"></div>
-
-            <div class="tree-level">
-              <span>03</span>
-              <strong>محل استقرار و مسئول</strong>
-              <small>Location & Owner</small>
-            </div>
-
-            <div class="tree-line"></div>
-
-            <div class="tree-level tree-level--accent">
-              <span>04</span>
-              <strong>سوابق و چرخه عمر</strong>
-              <small>Lifecycle</small>
-            </div>
-          </div>
-
-          <div class="asset-status">
-            <div>
-              <span>وضعیت</span>
-              <strong>فعال</strong>
-            </div>
-
-            <div>
-              <span>محل استقرار</span>
-              <strong>ساختمان مرکزی</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Product Tree -->
     <section class="tree-section">

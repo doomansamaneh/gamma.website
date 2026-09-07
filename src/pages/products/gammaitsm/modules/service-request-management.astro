@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 
 const features = [
   {
@@ -64,130 +64,130 @@ const notifications = [
 >
   <main class="page">
     <!-- Hero -->
-   <section class="hero">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="مسیر صفحه">
-      <a href="/">خانه</a>
-      <span>/</span>
-      <a href="/products/">محصولات</a>
-      <span>/</span>
-      <a href="/products/gammaitsm/">Gamma Help Desk</a>
-      <span>/</span>
-      <span>مدیریت درخواست</span>
-    </nav>
+    <section class="hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma Help Desk</a>
+          <span>/</span>
+          <span>مدیریت درخواست</span>
+        </nav>
 
-    <div class="hero-content">
-      <div class="hero-copy">
-        <h1>
-          مدیریت درخواست‌های خدماتی،
-          <span class="accent-text">از ثبت تا انجام</span>
-        </h1>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              مدیریت درخواست‌های خدماتی،
+              <span class="accent-text">از ثبت تا انجام</span>
+            </h1>
 
-        <p class="hero-lead">
-          فرایند Request Fulfillment در ITIL برای مدیریت و برآورده کردن
-          درخواست‌های خدماتی کاربران طراحی شده است؛ از درخواست‌های ساده‌ای
-          مانند تغییر گذرواژه تا خدمات پیچیده‌تر سازمانی.
-        </p>
+            <p class="hero-lead">
+              فرایند Request Fulfillment در ITIL برای مدیریت و برآورده کردن
+              درخواست‌های خدماتی کاربران طراحی شده است؛ از درخواست‌های ساده‌ای
+              مانند تغییر گذرواژه تا خدمات پیچیده‌تر سازمانی.
+            </p>
 
-        <div class="hero-meta">
-          <div>
-            <strong>Request Fulfillment</strong>
-            <span>مدیریت چرخه درخواست</span>
-          </div>
-
-          <div>
-            <strong>Service Catalog</strong>
-            <span>کاتالوگ خدمات سازمان</span>
-          </div>
-
-          <div>
-            <strong>SLA</strong>
-            <span>کنترل مهلت رسیدگی</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="dashboard-window">
-          <div class="window-header">
-            <div class="window-dots">
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
-
-            <span>Gamma Help Desk</span>
-          </div>
-
-          <div class="dashboard-body">
-            <div class="dashboard-top">
+            <div class="hero-meta">
               <div>
-                <small>درخواست‌های خدماتی</small>
-                <strong>128</strong>
+                <strong>Request Fulfillment</strong>
+                <span>مدیریت چرخه درخواست</span>
               </div>
 
-              <div class="status-pill">● در حال پردازش</div>
-            </div>
-
-            <div class="request-item">
-              <div class="request-icon">▦</div>
-
-              <div class="request-info">
-                <strong>درخواست دسترسی به سامانه</strong>
-                <span>واحد منابع انسانی</span>
+              <div>
+                <strong>Service Catalog</strong>
+                <span>کاتالوگ خدمات سازمان</span>
               </div>
 
-              <div class="request-status">در حال بررسی</div>
-            </div>
-
-            <div class="request-item">
-              <div class="request-icon">✓</div>
-
-              <div class="request-info">
-                <strong>تغییر گذرواژه</strong>
-                <span>واحد مالی</span>
-              </div>
-
-              <div class="request-status request-status--success">
-                انجام شد
+              <div>
+                <strong>SLA</strong>
+                <span>کنترل مهلت رسیدگی</span>
               </div>
             </div>
+          </div>
 
-            <div class="request-item">
-              <div class="request-icon">◷</div>
+          <div class="hero-visual">
+            <div class="dashboard-window">
+              <div class="window-header">
+                <div class="window-dots">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
 
-              <div class="request-info">
-                <strong>درخواست نصب نرم‌افزار</strong>
-                <span>واحد فروش</span>
+                <span>Gamma Help Desk</span>
               </div>
 
-              <div class="request-status request-status--warning">
-                نزدیک به SLA
-              </div>
-            </div>
+              <div class="dashboard-body">
+                <div class="dashboard-top">
+                  <div>
+                    <small>درخواست‌های خدماتی</small>
+                    <strong>128</strong>
+                  </div>
 
-            <div class="mini-chart">
-              <div class="chart-label">
-                <span>حجم درخواست‌ها</span>
-                <strong>این ماه</strong>
-              </div>
+                  <div class="status-pill">● در حال پردازش</div>
+                </div>
 
-              <div class="chart-bars">
-                <i style="height: 34%"></i>
-                <i style="height: 52%"></i>
-                <i style="height: 43%"></i>
-                <i style="height: 76%"></i>
-                <i style="height: 61%"></i>
-                <i style="height: 90%"></i>
-                <i style="height: 68%"></i>
+                <div class="request-item">
+                  <div class="request-icon">▦</div>
+
+                  <div class="request-info">
+                    <strong>درخواست دسترسی به سامانه</strong>
+                    <span>واحد منابع انسانی</span>
+                  </div>
+
+                  <div class="request-status">در حال بررسی</div>
+                </div>
+
+                <div class="request-item">
+                  <div class="request-icon">✓</div>
+
+                  <div class="request-info">
+                    <strong>تغییر گذرواژه</strong>
+                    <span>واحد مالی</span>
+                  </div>
+
+                  <div class="request-status request-status--success">
+                    انجام شد
+                  </div>
+                </div>
+
+                <div class="request-item">
+                  <div class="request-icon">◷</div>
+
+                  <div class="request-info">
+                    <strong>درخواست نصب نرم‌افزار</strong>
+                    <span>واحد فروش</span>
+                  </div>
+
+                  <div class="request-status request-status--warning">
+                    نزدیک به SLA
+                  </div>
+                </div>
+
+                <div class="mini-chart">
+                  <div class="chart-label">
+                    <span>حجم درخواست‌ها</span>
+                    <strong>این ماه</strong>
+                  </div>
+
+                  <div class="chart-bars">
+                    <i style="height: 34%"></i>
+                    <i style="height: 52%"></i>
+                    <i style="height: 43%"></i>
+                    <i style="height: 76%"></i>
+                    <i style="height: 61%"></i>
+                    <i style="height: 90%"></i>
+                    <i style="height: 68%"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Process -->
     <section class="process-section">
