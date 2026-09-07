@@ -1,0 +1,125 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="صفحه پیدا نشد | دومان سامانه"
+  description="صفحه مورد نظر پیدا نشد."
+>
+  <main class="not-found">
+    <div class="container">
+      <div class="not-found-card">
+        <p class="section-label">خطای 404</p>
+
+        <h1>
+          صفحه مورد نظر
+          <span class="accent-text"> پیدا نشد </span>
+        </h1>
+
+        <p>
+          ممکن است آدرس وارد شده اشتباه باشد یا صفحه مورد نظر حذف شده باشد.
+          می‌توانید به صفحه اصلی بازگردید و محصولات و راهکارهای دومان سامانه را
+          مشاهده کنید.
+        </p>
+
+        <div class="not-found-actions">
+          <a class="button button--accent" href="/"> بازگشت به صفحه اصلی </a>
+
+          <a class="button button--secondary" href="/products/">
+            مشاهده محصولات
+          </a>
+        </div>
+
+        <div class="not-found-code">404</div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: calc(100vh - 8rem);
+
+    display: flex;
+
+    align-items: center;
+
+    padding-block: clamp(4rem, 10vw, 8rem);
+
+    background: var(--hero-corporate-background);
+
+    color: var(--color-text-on-dark);
+  }
+
+  .not-found-card {
+    position: relative;
+
+    max-width: 52rem;
+
+    margin-inline: auto;
+
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+  .not-found h1 {
+    max-width: none;
+
+    margin-top: var(--space-md);
+
+    color: var(--color-white);
+  }
+
+  .not-found p:not(.section-label) {
+    max-width: 38rem;
+
+    margin: var(--space-lg) auto 0;
+
+    color: rgba(216, 225, 223, 0.8);
+
+    font-size: 1.1rem;
+
+    line-height: 2;
+  }
+
+  .not-found-actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: var(--space-md);
+
+    margin-top: var(--space-xl);
+  }
+
+  .not-found-code {
+    position: absolute;
+
+    inset-inline-end: -2rem;
+
+    inset-block-end: -5rem;
+
+    color: rgba(255, 255, 255, 0.04);
+
+    font-size: clamp(12rem, 30vw, 22rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    pointer-events: none;
+  }
+
+  @media (max-width: 48rem) {
+    .not-found-actions {
+      flex-direction: column;
+    }
+
+    .not-found-actions .button {
+      width: 100%;
+    }
+  }
+</style>
