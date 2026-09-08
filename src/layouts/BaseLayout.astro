@@ -12,6 +12,7 @@ const {
   title = "دومان سامانه | محصولات نرم‌افزاری سازمانی",
   description = "دومان سامانه یک شرکت فناوری است که محصولات نرم‌افزاری برای حوزه‌های سازمانی و تخصصی توسعه می‌دهد.",
 } = Astro.props;
+
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 ---
 
@@ -19,20 +20,64 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 <html lang="fa-IR" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width" />
+
     <meta name="description" content={description} />
+
+    <meta name="robots" content="index, follow" />
+
     <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+
     <meta property="og:site_name" content="دومان سامانه" />
+
     <meta property="og:title" content={title} />
+
     <meta property="og:description" content={description} />
+
+    <meta property="og:url" content={canonical} />
+
     <meta property="og:type" content="website" />
+
     <meta property="og:locale" content="fa_IR" />
+
+    <!-- Twitter -->
+
     <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:title" content={title} />
+
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+
     <title>{title}</title>
   </head>
+
   <body>
     <Header />
-    <main><slot /></main>
+
+    <main>
+      <slot />
+    </main>
+
     <Footer />
   </body>
 </html>
