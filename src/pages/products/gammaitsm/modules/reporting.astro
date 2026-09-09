@@ -1,0 +1,700 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = "گزارش‌ها و داشبوردها | Gamma ITSM";
+const description =
+  "گزارش‌ها و داشبوردهای Gamma ITSM برای تحلیل درخواست‌ها، دارایی‌ها، اقدامات، مصرف کالا و قطعات و عملکرد خدمات IT.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="reports-page">
+    <!-- =====================================================
+     Hero
+     ===================================================== -->
+
+    <section class="hero" id="overview">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma ITSM</a>
+          <span>/</span>
+          <span>گزارش‌ها</span>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              گزارش‌ها و داشبوردها؛
+              <span class="accent-text">تصمیم‌گیری با داده</span>
+            </h1>
+
+            <p class="hero-lead">
+              اطلاعات درخواست‌ها، دارایی‌ها، اقدامات و مصرف منابع را جمع‌آوری و
+              تحلیل کنید و تصویری روشن از عملکرد خدمات IT داشته باشید.
+            </p>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-report" aria-hidden="true">
+              <div class="hero-report-top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="hero-report-content">
+                <div class="hero-report-title">
+                  <span>گزارش عملکرد خدمات</span>
+                  <strong>تحلیل اطلاعات</strong>
+                </div>
+
+                <div class="hero-report-chart">
+                  <i style="height: 38%"></i>
+                  <i style="height: 62%"></i>
+                  <i style="height: 48%"></i>
+                  <i style="height: 76%"></i>
+                  <i style="height: 58%"></i>
+                  <i style="height: 88%"></i>
+                </div>
+
+                <div class="hero-report-footer">
+                  <span>درخواست‌ها</span>
+                  <span>دارایی‌ها</span>
+                  <span>منابع</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    /* =========================================================
+     Reports — page-specific styles only
+     Hero uses the global design system.
+     ========================================================= */
+
+    .reports-page {
+      --reports-soft-line: color-mix(
+        in srgb,
+        var(--color-brand-dark) 12%,
+        transparent
+      );
+
+      --reports-dark-line: color-mix(
+        in srgb,
+        var(--color-white) 16%,
+        transparent
+      );
+    }
+
+    /* =========================================================
+     Hero visual
+     ========================================================= */
+
+    .reports-logo {
+      width: min(15rem, 60%);
+      margin-inline: auto;
+    }
+
+    .hero-report {
+      width: min(100%, 26rem);
+      margin-top: var(--space-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .hero-report-top {
+      display: flex;
+      gap: 0.35rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-report-top span {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-report-content {
+      padding: var(--space-md);
+    }
+
+    .hero-report-title {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      align-items: center;
+    }
+
+    .hero-report-title span {
+      color: rgba(216, 225, 223, 0.55);
+      font-size: var(--font-size-xs);
+    }
+
+    .hero-report-title strong {
+      color: var(--color-white);
+      font-size: var(--font-size-sm);
+    }
+
+    .hero-report-chart {
+      display: flex;
+      align-items: end;
+      gap: 0.45rem;
+      height: 8rem;
+      margin-top: var(--space-md);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero-report-chart i {
+      flex: 1;
+      min-width: 0;
+      border-radius: 0.2rem 0.2rem 0 0;
+      background: color-mix(in srgb, var(--color-brand) 72%, transparent);
+    }
+
+    .hero-report-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+
+    .hero-report-footer span {
+      color: rgba(216, 225, 223, 0.48);
+      font-size: var(--font-size-xs);
+    }
+
+    /* =========================================================
+     Report domains
+     ========================================================= */
+
+    .report-domains {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+    }
+
+    .report-domain {
+      padding: var(--space-lg);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+    }
+
+    .report-domain > span {
+      color: var(--color-brand);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .report-domain h3 {
+      margin: var(--space-lg) 0 var(--space-xs);
+    }
+
+    .report-domain p {
+      margin: 0;
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+      font-size: var(--font-size-sm);
+    }
+
+    /* =========================================================
+     Dashboard
+     ========================================================= */
+
+    .dashboard-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: var(--space-xl);
+      align-items: start;
+    }
+
+    .dashboard-panel {
+      overflow: hidden;
+      border: 1px solid var(--reports-dark-line);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .dashboard-panel-header {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-md);
+      padding: var(--space-md) var(--space-lg);
+      border-bottom: 1px solid var(--reports-dark-line);
+    }
+
+    .dashboard-panel-header span {
+      color: color-mix(in srgb, var(--color-text-on-dark) 52%, transparent);
+      font-size: var(--font-size-xs);
+    }
+
+    .dashboard-panel-header strong {
+      color: var(--color-white);
+      font-size: var(--font-size-sm);
+    }
+
+    .dashboard-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-items > div {
+      min-height: 7rem;
+      padding: var(--space-md);
+      border-bottom: 1px solid var(--reports-dark-line);
+    }
+
+    .dashboard-items > div:nth-child(odd) {
+      border-inline-end: 1px solid var(--reports-dark-line);
+    }
+
+    .dashboard-items > div:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+
+    .dashboard-items span,
+    .dashboard-items strong {
+      display: block;
+    }
+
+    .dashboard-items span {
+      color: color-mix(in srgb, var(--color-text-on-dark) 55%, transparent);
+      font-size: var(--font-size-xs);
+    }
+
+    .dashboard-items strong {
+      margin-top: var(--space-sm);
+      color: var(--color-white);
+      font-size: var(--font-size-sm);
+    }
+
+    .dashboard-copy {
+      border-top: 1px solid var(--reports-dark-line);
+    }
+
+    .dashboard-point {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: var(--space-sm);
+      padding-block: var(--space-md);
+      border-bottom: 1px solid var(--reports-dark-line);
+    }
+
+    .dashboard-point > span {
+      color: var(--color-brand);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .dashboard-point h3 {
+      margin: 0 0 var(--space-xs);
+      color: var(--color-white);
+      font-size: var(--font-size-md);
+    }
+
+    .dashboard-point p {
+      margin: 0;
+      color: color-mix(in srgb, var(--color-text-on-dark) 68%, transparent);
+      line-height: var(--line-height-relaxed);
+      font-size: var(--font-size-sm);
+    }
+
+    /* =========================================================
+     Report cards
+     ========================================================= */
+
+    .report-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    .report-card {
+      padding: var(--space-lg);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+    }
+
+    .report-card-number {
+      color: var(--color-brand);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .report-card h3 {
+      margin: var(--space-lg) 0 var(--space-xs);
+    }
+
+    .report-card p {
+      margin: 0;
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .report-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-top: var(--space-md);
+    }
+
+    .report-card-tags span {
+      padding: 0.35rem 0.65rem;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+    }
+
+    /* =========================================================
+     Split sections
+     ========================================================= */
+
+    .split-section {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .split-copy h2 {
+      margin: 0 0 var(--space-md);
+    }
+
+    .split-copy p {
+      margin: 0 0 var(--space-md);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .split-copy p:last-child {
+      margin-block-end: 0;
+    }
+
+    /* =========================================================
+     Analysis list
+     ========================================================= */
+
+    .analysis-list {
+      border-top: 1px solid var(--color-line);
+    }
+
+    .analysis-list article {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: var(--space-sm);
+      padding-block: var(--space-md);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .analysis-list article > span {
+      color: var(--color-brand);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .analysis-list strong,
+    .analysis-list small {
+      display: block;
+    }
+
+    .analysis-list strong {
+      font-size: var(--font-size-md);
+    }
+
+    .analysis-list small {
+      margin-top: var(--space-2xs);
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+    }
+
+    /* =========================================================
+     Dimensions
+     ========================================================= */
+
+    .dimension-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--reports-dark-line);
+    }
+
+    .dimension-grid article {
+      min-height: 9rem;
+      padding: var(--space-lg);
+      border-inline-end: 1px solid var(--reports-dark-line);
+    }
+
+    .dimension-grid article:last-child {
+      border-inline-end: 0;
+    }
+
+    .dimension-grid span,
+    .dimension-grid strong,
+    .dimension-grid small {
+      display: block;
+    }
+
+    .dimension-grid span {
+      color: var(--color-brand);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .dimension-grid strong {
+      margin-top: var(--space-lg);
+      color: var(--color-white);
+      font-size: var(--font-size-md);
+    }
+
+    .dimension-grid small {
+      margin-top: var(--space-xs);
+      color: color-mix(in srgb, var(--color-text-on-dark) 58%, transparent);
+      font-size: var(--font-size-xs);
+    }
+
+    /* =========================================================
+     Inventory
+     ========================================================= */
+
+    .inventory-card {
+      overflow: hidden;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .inventory-card-header {
+      padding: var(--space-lg);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .inventory-card-header span {
+      display: block;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+    }
+
+    .inventory-card-header strong {
+      font-size: var(--font-size-xl);
+    }
+
+    .inventory-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inventory-list div {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .inventory-list div:nth-child(odd) {
+      border-inline-end: 1px solid var(--color-line);
+    }
+
+    .inventory-list div:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+
+    .inventory-list span {
+      color: var(--color-brand);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    /* =========================================================
+     Problem flow
+     ========================================================= */
+
+    .problem-flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: var(--space-md);
+      align-items: center;
+    }
+
+    .problem-flow > div {
+      padding: var(--space-lg);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+    }
+
+    .problem-flow span,
+    .problem-flow strong,
+    .problem-flow small {
+      display: block;
+    }
+
+    .problem-flow span {
+      color: var(--color-brand);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .problem-flow strong {
+      margin-top: var(--space-lg);
+    }
+
+    .problem-flow small {
+      margin-top: var(--space-xs);
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+    }
+
+    .problem-flow > i {
+      width: 2rem;
+      height: 1px;
+      background: var(--color-line);
+    }
+
+    /* =========================================================
+     Summary
+     ========================================================= */
+
+    .reports-summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .summary-copy h2 {
+      margin: 0 0 var(--space-md);
+      color: var(--color-white);
+    }
+
+    .summary-copy p {
+      max-width: 36rem;
+      margin: 0;
+      color: color-mix(in srgb, var(--color-text-on-dark) 72%, transparent);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .summary-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm);
+    }
+
+    .summary-points div {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      border: 1px solid var(--reports-dark-line);
+      border-radius: var(--radius-md);
+    }
+
+    .summary-points span {
+      color: var(--color-brand);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .summary-points strong {
+      color: var(--color-white);
+      font-size: var(--font-size-sm);
+    }
+
+    /* =========================================================
+     Responsive
+     ========================================================= */
+
+    @media (max-width: 900px) {
+      .report-domains,
+      .dashboard-layout,
+      .split-section,
+      .reports-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .report-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .dimension-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dimension-grid article:nth-child(2) {
+        border-inline-end: 0;
+      }
+
+      .dimension-grid article:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--reports-dark-line);
+      }
+
+      .problem-flow {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+      }
+
+      .problem-flow > i {
+        width: 1px;
+        height: 1.5rem;
+        margin-inline-start: var(--space-md);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .dashboard-items,
+      .inventory-list,
+      .summary-points {
+        grid-template-columns: 1fr;
+      }
+
+      .dashboard-items > div:nth-child(odd),
+      .inventory-list div:nth-child(odd) {
+        border-inline-end: 0;
+      }
+
+      .dashboard-items > div:nth-last-child(-n + 2),
+      .inventory-list div:nth-last-child(-n + 2) {
+        border-bottom: 1px solid var(--reports-dark-line);
+      }
+
+      .dashboard-items > div:last-child,
+      .inventory-list div:last-child {
+        border-bottom: 0;
+      }
+
+      .dimension-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dimension-grid article,
+      .dimension-grid article:nth-child(2) {
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--reports-dark-line);
+      }
+
+      .dimension-grid article:last-child {
+        border-bottom: 0;
+      }
+
+      .hero-report {
+        margin-top: var(--space-md);
+      }
+    }
+  </style>
+</BaseLayout>

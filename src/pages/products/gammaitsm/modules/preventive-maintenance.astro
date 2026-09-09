@@ -1,0 +1,1475 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="سرویس‌های دوره‌ای | Gamma ITSM"
+  description="مدیریت سرویس‌های دوره‌ای و برنامه‌های زمان‌بندی‌شده تجهیزات با امکان تعریف دارایی، وظایف، چک‌لیست، فرم، گردش کار و ثبت نتایج در Gamma ITSM."
+>
+  <!-- =========================================================
+       Hero
+       Global .hero is used intentionally.
+       ========================================================= -->
+
+  <section class="hero" id="overview">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="/">خانه</a>
+        <span>/</span>
+        <a href="/products/">محصولات</a>
+        <span>/</span>
+        <a href="/products/gammaitsm/">Gamma ITSM</a>
+        <span>/</span>
+        <span>سرویس‌های دوره‌ای</span>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <h1>
+            سرویس‌های دوره‌ای؛
+            <span class="accent-text">
+              برنامه‌ریزی و اجرای منظم فعالیت‌ها
+            </span>
+          </h1>
+
+          <p class="hero-lead">
+            فعالیت‌های دوره‌ای تجهیزات را با برنامه زمان‌بندی‌شده، دارایی‌های
+            مشخص، وظایف استاندارد، چک‌لیست، فرم و گردش کار مدیریت کنید و نتیجه
+            هر فعالیت را در سامانه ثبت و پیگیری نمایید.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button--accent" href="/contact/demo/">
+              درخواست دمو
+            </a>
+
+            <a class="button button--secondary" href="#how-it-works">
+              آشنایی با فرایند
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual periodic-visual" aria-hidden="true">
+          <div class="periodic-plan">
+            <div class="plan-header">
+              <span>برنامه دوره‌ای</span>
+              <strong>بازدید تجهیزات</strong>
+            </div>
+
+            <div class="plan-row">
+              <span>دوره</span>
+              <strong>هر ۶ ماه</strong>
+            </div>
+
+            <div class="plan-row">
+              <span>دارایی</span>
+              <strong>PCها</strong>
+            </div>
+
+            <div class="plan-row">
+              <span>وظایف</span>
+              <strong>۴ وظیفه</strong>
+            </div>
+
+            <div class="plan-progress">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <p class="hero-visual-caption">برنامه‌ریزی، اجرا و ثبت نتیجه</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Introduction
+       ========================================================= -->
+
+  <section class="periodic-section" id="how-it-works">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">سرویس دوره‌ای</p>
+
+        <h2>
+          فعالیت‌های تکرارشونده را
+          <span class="accent-text">به یک فرایند قابل مدیریت</span>
+          تبدیل کنید
+        </h2>
+
+        <p>
+          سرویس‌های دوره‌ای در Gamma ITSM برای فعالیت‌هایی طراحی شده‌اند که باید
+          در بازه‌های زمانی مشخص روی مجموعه‌ای از تجهیزات، دارایی‌ها یا سایر
+          اقلام انجام شوند.
+        </p>
+
+        <p>
+          به‌جای ایجاد و پیگیری دستی فعالیت‌ها، برنامه یک‌بار تعریف می‌شود و
+          سامانه بر اساس دوره، دارایی‌ها، وظایف و گردش کار مشخص، اجرای فعالیت‌ها
+          را مدیریت می‌کند.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <article class="process-step">
+          <span class="process-index">01</span>
+          <h3>تعریف اطلاعات پایه</h3>
+          <p>
+            گروه‌بندی وظایف و تعریف فعالیت‌هایی که باید در برنامه انجام شوند.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="process-index">02</span>
+          <h3>تعریف برنامه</h3>
+          <p>
+            تعیین دوره اجرا، دارایی‌ها، مسئول، گردش کار و ظرفیت اجرای روزانه.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="process-index">03</span>
+          <h3>اجرای برنامه</h3>
+          <p>ایجاد و اجرای فعالیت‌ها برای دارایی‌ها و کارشناسان مرتبط.</p>
+        </article>
+
+        <article class="process-step">
+          <span class="process-index">04</span>
+          <h3>مشاهده نتایج</h3>
+          <p>مشاهده جزئیات فعالیت‌ها، وظایف، قطعات و اطلاعات ثبت‌شده.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Scheduling
+       ========================================================= -->
+
+  <section class="periodic-section periodic-section--dark">
+    <div class="container">
+      <div class="section-intro section-intro--dark">
+        <p class="section-label">برنامه‌ریزی</p>
+
+        <h2>
+          برای هر تجهیز،
+          <span class="accent-text">برنامه مناسب خودش را تعریف کنید</span>
+        </h2>
+
+        <p>
+          برنامه‌های دوره‌ای می‌توانند دوره‌های زمانی، دارایی‌ها، وظایف و گردش
+          کار متفاوتی داشته باشند.
+        </p>
+      </div>
+
+      <div class="schedule-examples">
+        <article class="schedule-card">
+          <div class="schedule-card-header">
+            <span>برنامه 01</span>
+            <strong>سرویس دوره‌ای PCها</strong>
+          </div>
+
+          <div class="schedule-meta">
+            <div>
+              <small>دوره</small>
+              <strong>هر ۶ ماه</strong>
+            </div>
+
+            <div>
+              <small>دارایی</small>
+              <strong>تجهیزات کلاینت</strong>
+            </div>
+          </div>
+
+          <ul>
+            <li>گردگیری تجهیزات</li>
+            <li>بررسی وضعیت شبکه</li>
+            <li>بررسی نسخه سیستم‌عامل</li>
+            <li>بررسی وضعیت سخت‌افزار</li>
+          </ul>
+        </article>
+
+        <article class="schedule-card">
+          <div class="schedule-card-header">
+            <span>برنامه 02</span>
+            <strong>بازبینی سرورها</strong>
+          </div>
+
+          <div class="schedule-meta">
+            <div>
+              <small>دوره</small>
+              <strong>ماهانه</strong>
+            </div>
+
+            <div>
+              <small>دارایی</small>
+              <strong>سرورها</strong>
+            </div>
+          </div>
+
+          <ul>
+            <li>بررسی ظرفیت هارد</li>
+            <li>بررسی منابع CPU</li>
+            <li>بررسی وضعیت سرویس‌ها</li>
+            <li>بررسی پشتیبان‌گیری</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Tasks
+       ========================================================= -->
+
+  <section class="periodic-section">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">وظایف و چک‌لیست</p>
+
+        <h2>
+          هر برنامه با
+          <span class="accent-text">وظایف مشخص و قابل کنترل</span>
+          اجرا می‌شود
+        </h2>
+
+        <p>
+          وظایف مورد نیاز ابتدا در اطلاعات پایه تعریف می‌شوند و سپس در
+          برنامه‌های مختلف مورد استفاده قرار می‌گیرند. ترتیب اجرا، زمان
+          استاندارد، هزینه و دستورالعمل انجام کار نیز می‌تواند برای هر وظیفه
+          مشخص شود.
+        </p>
+      </div>
+
+      <div class="task-layout">
+        <div class="task-list">
+          <article class="task-item">
+            <span>01</span>
+
+            <div>
+              <h3>ترتیب اجرا</h3>
+              <p>مشخص می‌کند وظایف در چه ترتیبی انجام شوند.</p>
+            </div>
+          </article>
+
+          <article class="task-item">
+            <span>02</span>
+
+            <div>
+              <h3>زمان استاندارد</h3>
+              <p>مدت زمان استاندارد مورد انتظار برای انجام وظیفه.</p>
+            </div>
+          </article>
+
+          <article class="task-item">
+            <span>03</span>
+
+            <div>
+              <h3>هزینه استاندارد</h3>
+              <p>امکان ثبت هزینه استاندارد هر فعالیت.</p>
+            </div>
+          </article>
+
+          <article class="task-item">
+            <span>04</span>
+
+            <div>
+              <h3>دستورالعمل انجام کار</h3>
+              <p>شرح یا دستورالعمل مورد نیاز کارشناس برای انجام وظیفه.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="checklist-panel">
+          <div class="checklist-header">
+            <span>چک‌لیست سرویس</span>
+            <strong>بررسی PC</strong>
+          </div>
+
+          <div class="checklist-item">
+            <span class="checkmark">✓</span>
+            <span>گردگیری تجهیزات</span>
+          </div>
+
+          <div class="checklist-item">
+            <span class="checkmark">✓</span>
+            <span>بررسی اتصال شبکه</span>
+          </div>
+
+          <div class="checklist-item">
+            <span class="checkmark">✓</span>
+            <span>بررسی نسخه سیستم‌عامل</span>
+          </div>
+
+          <div class="checklist-item">
+            <span class="checkmark">✓</span>
+            <span>بررسی آنتی‌ویروس</span>
+          </div>
+
+          <div class="checklist-note">
+            چک‌لیست هر وظیفه می‌تواند با فرم‌ساز Gamma متناسب با نیاز همان
+            فعالیت طراحی شود.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Forms
+       ========================================================= -->
+
+  <section class="periodic-section periodic-section--paper">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">فرم و گردآوری اطلاعات</p>
+
+        <h2>
+          برای هر فعالیت،
+          <span class="accent-text">فرم مورد نیاز خودتان را بسازید</span>
+        </h2>
+
+        <p>
+          چک‌لیست فقط مجموعه‌ای از گزینه‌های بله و خیر نیست. برای هر وظیفه
+          می‌توان یک فرم متناسب با اطلاعات مورد نیاز همان فعالیت طراحی کرد و
+          نتیجه اجرای آن را ثبت نمود.
+        </p>
+      </div>
+
+      <div class="form-capability">
+        <div class="form-copy">
+          <h3>یک برنامه، چند وظیفه، چند فرم متفاوت</h3>
+
+          <p>
+            برای نمونه، در سرویس دوره‌ای یک سرور می‌توان وظایف متفاوتی مانند
+            بررسی CPU، بررسی ظرفیت دیسک، بررسی آنتی‌ویروس و کنترل پشتیبان‌گیری
+            تعریف کرد.
+          </p>
+
+          <p>
+            هر یک از این وظایف می‌تواند چک‌لیست یا فرم مخصوص خود را داشته باشد
+            تا اطلاعات دقیق مورد نیاز همان فعالیت از کارشناس دریافت شود.
+          </p>
+        </div>
+
+        <div class="form-preview">
+          <div class="form-preview-header">
+            <span>فرم وظیفه</span>
+            <strong>بررسی منابع سرور</strong>
+          </div>
+
+          <div class="fake-field">
+            <span>میزان مصرف CPU</span>
+            <strong>42%</strong>
+          </div>
+
+          <div class="fake-field">
+            <span>فضای آزاد دیسک</span>
+            <strong>280 GB</strong>
+          </div>
+
+          <div class="fake-field">
+            <span>وضعیت پشتیبان‌گیری</span>
+            <strong>تأیید شد</strong>
+          </div>
+
+          <div class="fake-field">
+            <span>شرح کارشناس</span>
+            <strong>بدون مغایرت</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Assets + workflow
+       ========================================================= -->
+
+  <section class="periodic-section periodic-section--dark">
+    <div class="container">
+      <div class="section-intro section-intro--dark">
+        <p class="section-label">دارایی و گردش کار</p>
+
+        <h2>
+          اجرای برنامه را
+          <span class="accent-text">به فرایند سازمانی خود متصل کنید</span>
+        </h2>
+
+        <p>
+          هر برنامه می‌تواند مجموعه مشخصی از دارایی‌ها و یک گردش کار داشته باشد.
+          بنابراین اجرای سرویس دوره‌ای تنها به ثبت یک فعالیت محدود نمی‌شود و
+          می‌تواند بخشی از فرایند خدمات سازمان باشد.
+        </p>
+      </div>
+
+      <div class="workflow-model">
+        <div class="workflow-node">
+          <span>برنامه</span>
+          <strong>بازدید دوره‌ای</strong>
+          <small>هر ماه</small>
+        </div>
+
+        <div class="workflow-line"></div>
+
+        <div class="workflow-node">
+          <span>دارایی‌ها</span>
+          <strong>سرورها</strong>
+          <small>دارایی‌های منتخب</small>
+        </div>
+
+        <div class="workflow-line"></div>
+
+        <div class="workflow-node">
+          <span>وظایف</span>
+          <strong>چک‌لیست‌ها</strong>
+          <small>فرم‌های اختصاصی</small>
+        </div>
+
+        <div class="workflow-line"></div>
+
+        <div class="workflow-node workflow-node--accent">
+          <span>گردش کار</span>
+          <strong>تأیید و ثبت نتیجه</strong>
+          <small>فرایند سازمانی</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Execution
+       ========================================================= -->
+
+  <section class="periodic-section">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">اجرای برنامه</p>
+
+        <h2>
+          اجرای دوره‌ای،
+          <span class="accent-text">بدون ایجاد حجم کار یک‌باره</span>
+        </h2>
+
+        <p>
+          وقتی تعداد دارایی‌های یک برنامه زیاد باشد، اجرای همه فعالیت‌ها در یک
+          زمان همیشه منطقی نیست. Gamma می‌تواند تعداد مواردی را که در هر روز
+          برای هر کارشناس به کارپوشه ارسال می‌شود کنترل کند.
+        </p>
+      </div>
+
+      <div class="execution-example">
+        <div class="execution-summary">
+          <div>
+            <span>تعداد کل</span>
+            <strong>100</strong>
+            <small>دارایی</small>
+          </div>
+
+          <div>
+            <span>ظرفیت روزانه</span>
+            <strong>10</strong>
+            <small>مورد برای هر کارشناس</small>
+          </div>
+
+          <div>
+            <span>اجرای تدریجی</span>
+            <strong>10 روز</strong>
+            <small>تا تکمیل برنامه</small>
+          </div>
+        </div>
+
+        <div class="execution-days">
+          <div>
+            <span>روز ۱</span>
+            <strong>10</strong>
+          </div>
+
+          <div>
+            <span>روز ۲</span>
+            <strong>10</strong>
+          </div>
+
+          <div>
+            <span>روز ۳</span>
+            <strong>10</strong>
+          </div>
+
+          <div>
+            <span>...</span>
+            <strong>...</strong>
+          </div>
+
+          <div class="execution-days--complete">
+            <span>تکمیل</span>
+            <strong>100</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Real-world inspection
+       ========================================================= -->
+
+  <section class="periodic-section periodic-section--paper">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">ثبت وضعیت واقعی</p>
+
+        <h2>
+          مغایرت‌ها را هنگام بازدید
+          <span class="accent-text">ثبت و اصلاح کنید</span>
+        </h2>
+
+        <p>
+          سرویس دوره‌ای تنها برای تأیید انجام یک وظیفه نیست. در زمان بازدید ممکن
+          است وضعیت واقعی دارایی با اطلاعات ثبت‌شده در سامانه متفاوت باشد. Gamma
+          امکان ثبت این مغایرت‌ها و اصلاح اطلاعات را در همان فرایند فراهم
+          می‌کند.
+        </p>
+      </div>
+
+      <div class="inspection-grid">
+        <article class="inspection-card">
+          <span class="inspection-status inspection-status--missing">
+            مشاهده نشد
+          </span>
+
+          <h3>دارایی در محل نیست</h3>
+
+          <p>
+            اگر دارایی ثبت‌شده در محل یا در اختیار مخاطب مشاهده نشود، وضعیت آن
+            در سرویس دوره‌ای مشخص می‌شود.
+          </p>
+        </article>
+
+        <article class="inspection-card">
+          <span class="inspection-status inspection-status--edit">
+            نیاز به اصلاح
+          </span>
+
+          <h3>اطلاعات دارایی متفاوت است</h3>
+
+          <p>
+            مشخصات ثبت‌شده دارایی را می‌توان در زمان سرویس بررسی و در صورت نیاز
+            اصلاح کرد.
+          </p>
+        </article>
+
+        <article class="inspection-card">
+          <span class="inspection-status inspection-status--parts">
+            قطعات
+          </span>
+
+          <h3>قطعات تغییر کرده‌اند</h3>
+
+          <p>
+            قطعات وابسته به دارایی بررسی می‌شوند و قطعه جدید را می‌توان اضافه،
+            ویرایش یا حذف کرد.
+          </p>
+        </article>
+
+        <article class="inspection-card">
+          <span class="inspection-status inspection-status--new">
+            دارایی جدید
+          </span>
+
+          <h3>دارایی ثبت نشده است</h3>
+
+          <p>
+            اگر دارایی در اختیار مخاطب وجود داشته باشد اما در سامانه ثبت نشده
+            باشد، امکان ثبت آن در فرایند سرویس وجود دارد.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Results
+       ========================================================= -->
+
+  <section class="periodic-section">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">نتایج و سابقه</p>
+
+        <h2>
+          نتیجه هر سرویس،
+          <span class="accent-text">بخشی از سابقه دارایی است</span>
+        </h2>
+
+        <p>
+          پس از اجرای سرویس دوره‌ای می‌توان جزئیات هر فعالیت، وظایف انجام‌شده،
+          فرم‌های تکمیل‌شده، قطعات و اطلاعات ثبت‌شده برای هر دارایی را مشاهده و
+          پیگیری کرد.
+        </p>
+      </div>
+
+      <div class="result-model">
+        <div class="result-block">
+          <span>برنامه</span>
+          <strong>سرویس دوره‌ای سرورها</strong>
+        </div>
+
+        <div class="result-divider"></div>
+
+        <div class="result-block">
+          <span>دارایی</span>
+          <strong>Server-024</strong>
+        </div>
+
+        <div class="result-divider"></div>
+
+        <div class="result-block">
+          <span>وظایف انجام‌شده</span>
+          <strong>8 وظیفه</strong>
+        </div>
+
+        <div class="result-divider"></div>
+
+        <div class="result-block">
+          <span>نتیجه</span>
+          <strong>تکمیل و تأیید</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Feature summary
+       ========================================================= -->
+
+  <section class="periodic-section periodic-section--dark">
+    <div class="container">
+      <div class="section-intro section-intro--dark">
+        <p class="section-label">یکپارچه در Gamma ITSM</p>
+
+        <h2>
+          از برنامه‌ریزی تا نتیجه،
+          <span class="accent-text">در یک فرایند</span>
+        </h2>
+      </div>
+
+      <div class="capability-grid">
+        <div class="capability-item">
+          <strong>برنامه زمان‌بندی‌شده</strong>
+          <span>تعریف دوره‌های مختلف برای فعالیت‌ها</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>دارایی‌های هدف</strong>
+          <span>انتخاب تجهیزات و دارایی‌های هر برنامه</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>وظایف استاندارد</strong>
+          <span>تعریف فعالیت‌ها، زمان و دستورالعمل انجام</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>چک‌لیست و فرم</strong>
+          <span>فرم متفاوت برای هر نوع فعالیت</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>گردش کار</strong>
+          <span>اجرای برنامه در چارچوب فرایند سازمان</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>اجرای مرحله‌ای</strong>
+          <span>کنترل تعداد فعالیت‌های روزانه کارشناسان</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>ثبت مغایرت</strong>
+          <span>اصلاح اطلاعات دارایی و قطعات هنگام بازدید</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>سابقه و نتیجه</strong>
+          <span>مشاهده جزئیات فعالیت‌های انجام‌شده</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA
+       ========================================================= -->
+
+  <!-- <section class="periodic-cta">
+    <div class="container">
+      <div class="cta-content">
+        <p class="section-label">Gamma ITSM</p>
+
+        <h2>
+          برنامه‌های دوره‌ای سازمان را
+          <span class="accent-text">در عمل مدیریت کنید</span>
+        </h2>
+
+        <p>
+          از تعریف برنامه و دارایی‌ها تا اجرای وظایف، تکمیل فرم‌ها، ثبت
+          مغایرت‌ها و مشاهده نتایج.
+        </p>
+
+        <a class="button button--accent" href="/contact/demo/">
+          درخواست دموی اختصاصی
+        </a>
+      </div>
+    </div>
+  </section> -->
+</BaseLayout>
+
+<style>
+  /* =========================================================
+     Periodic Services
+     Page-specific styles only.
+     Global hero styles are intentionally reused.
+     ========================================================= */
+
+  /* =========================================================
+     Hero visual
+     ========================================================= */
+
+  .periodic-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 24rem;
+  }
+
+  .periodic-plan {
+    width: min(100%, 25rem);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  .plan-header {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .plan-header span,
+  .plan-header strong {
+    display: block;
+  }
+
+  .plan-header span {
+    margin-bottom: var(--space-xs);
+    color: rgba(216, 225, 223, 0.55);
+    font-size: var(--font-size-sm);
+  }
+
+  .plan-header strong {
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-lg);
+  }
+
+  .plan-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .plan-row span {
+    color: rgba(216, 225, 223, 0.55);
+    font-size: var(--font-size-sm);
+  }
+
+  .plan-row strong {
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+  }
+
+  .plan-progress {
+    display: flex;
+    gap: 0.35rem;
+    margin-top: var(--space-md);
+  }
+
+  .plan-progress span {
+    height: 0.3rem;
+    flex: 1;
+    border-radius: 99px;
+    background: rgba(239, 63, 35, 0.75);
+  }
+
+  .plan-progress span:nth-child(5),
+  .plan-progress span:nth-child(6) {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* =========================================================
+     Sections
+     ========================================================= */
+
+  .periodic-section {
+    padding-block: var(--space-xl);
+    background: var(--color-surface);
+  }
+
+  .periodic-section--paper {
+    background: var(--color-paper);
+  }
+
+  .periodic-section--dark {
+    background: var(--hero-bg-base);
+    color: var(--color-text-on-dark);
+  }
+
+  .section-intro {
+    max-width: 48rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-intro p:not(.section-label) {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section-intro p + p {
+    margin-top: var(--space-sm);
+  }
+
+  .section-intro--dark p:not(.section-label) {
+    color: rgba(216, 225, 223, 0.7);
+  }
+
+  /* =========================================================
+     Process
+     ========================================================= */
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .process-step {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .process-index {
+    display: block;
+    margin-bottom: var(--space-lg);
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .process-step h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--font-size-lg);
+  }
+
+  .process-step p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     Schedule examples
+     ========================================================= */
+
+  .schedule-examples {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 60rem;
+  }
+
+  .schedule-card {
+    padding: var(--space-lg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .schedule-card-header {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .schedule-card-header span,
+  .schedule-card-header strong {
+    display: block;
+  }
+
+  .schedule-card-header span {
+    margin-bottom: var(--space-xs);
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+  }
+
+  .schedule-card-header strong {
+    font-size: var(--font-size-xl);
+  }
+
+  .schedule-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-block: var(--space-md);
+  }
+
+  .schedule-meta small,
+  .schedule-meta strong {
+    display: block;
+  }
+
+  .schedule-meta small {
+    margin-bottom: 0.25rem;
+    color: rgba(216, 225, 223, 0.5);
+  }
+
+  .schedule-meta strong {
+    font-size: var(--font-size-sm);
+  }
+
+  .schedule-card ul {
+    display: grid;
+    gap: var(--space-xs);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .schedule-card li {
+    padding-block: var(--space-xs);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    color: rgba(216, 225, 223, 0.72);
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Tasks
+     ========================================================= */
+
+  .task-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .task-list {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .task-item {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .task-item > span {
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .task-item h3 {
+    margin: 0 0 var(--space-xs);
+  }
+
+  .task-item p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .checklist-panel {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+  }
+
+  .checklist-header {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .checklist-header span,
+  .checklist-header strong {
+    display: block;
+  }
+
+  .checklist-header span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .checklist-header strong {
+    margin-top: var(--space-xs);
+    font-size: var(--font-size-lg);
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .checkmark {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: 0 0 1.5rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-brand-subtle);
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .checklist-note {
+    margin-top: var(--space-md);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     Forms
+     ========================================================= */
+
+  .form-capability {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .form-copy {
+    max-width: 40rem;
+  }
+
+  .form-copy h3 {
+    margin-top: 0;
+    font-size: var(--font-size-xl);
+  }
+
+  .form-copy p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .form-preview {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .form-preview-header {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .form-preview-header span,
+  .form-preview-header strong {
+    display: block;
+  }
+
+  .form-preview-header span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .form-preview-header strong {
+    margin-top: var(--space-xs);
+  }
+
+  .fake-field {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: var(--space-md);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .fake-field span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .fake-field strong {
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Workflow
+     ========================================================= */
+
+  .workflow-model {
+    display: flex;
+    align-items: stretch;
+    max-width: 70rem;
+  }
+
+  .workflow-node {
+    flex: 1;
+    padding: var(--space-lg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .workflow-node--accent {
+    border-color: rgba(239, 63, 35, 0.5);
+    background: rgba(239, 63, 35, 0.07);
+  }
+
+  .workflow-node span,
+  .workflow-node strong,
+  .workflow-node small {
+    display: block;
+  }
+
+  .workflow-node span {
+    color: rgba(216, 225, 223, 0.5);
+    font-size: var(--font-size-sm);
+  }
+
+  .workflow-node strong {
+    margin-block: var(--space-sm);
+  }
+
+  .workflow-node small {
+    color: rgba(216, 225, 223, 0.6);
+    font-size: var(--font-size-xs);
+  }
+
+  .workflow-line {
+    width: 2rem;
+    flex: 0 0 2rem;
+    align-self: center;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* =========================================================
+     Execution
+     ========================================================= */
+
+  .execution-example {
+    max-width: 68rem;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+  }
+
+  .execution-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .execution-summary div {
+    padding-inline: var(--space-md);
+    border-inline-start: 1px solid var(--color-line);
+  }
+
+  .execution-summary div:first-child {
+    border-inline-start: 0;
+  }
+
+  .execution-summary span,
+  .execution-summary strong,
+  .execution-summary small {
+    display: block;
+  }
+
+  .execution-summary span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .execution-summary strong {
+    margin-block: var(--space-xs);
+    font-size: var(--font-size-2xl);
+  }
+
+  .execution-summary small {
+    color: var(--color-text-muted);
+  }
+
+  .execution-days {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .execution-days div {
+    padding: var(--space-md);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+
+  .execution-days span,
+  .execution-days strong {
+    display: block;
+  }
+
+  .execution-days span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+  }
+
+  .execution-days strong {
+    margin-top: var(--space-xs);
+  }
+
+  .execution-days--complete {
+    border-color: var(--color-accent) !important;
+    background: var(--color-brand-subtle);
+  }
+
+  /* =========================================================
+     Inspection
+     ========================================================= */
+
+  .inspection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .inspection-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .inspection-status {
+    display: inline-block;
+    margin-bottom: var(--space-md);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-brand-subtle);
+    color: var(--color-accent);
+    font-size: var(--font-size-xs);
+  }
+
+  .inspection-card h3 {
+    margin: 0 0 var(--space-sm);
+  }
+
+  .inspection-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     Results
+     ========================================================= */
+
+  .result-model {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    max-width: 70rem;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .result-block {
+    padding-inline: var(--space-md);
+  }
+
+  .result-block span,
+  .result-block strong {
+    display: block;
+  }
+
+  .result-block span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .result-block strong {
+    margin-top: var(--space-sm);
+  }
+
+  .result-divider {
+    width: 1px;
+    height: 3rem;
+    background: var(--color-line);
+  }
+
+  /* =========================================================
+     Capability grid
+     ========================================================= */
+
+  .capability-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .capability-item {
+    min-height: 10rem;
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .capability-item strong,
+  .capability-item span {
+    display: block;
+  }
+
+  .capability-item strong {
+    margin-bottom: var(--space-sm);
+  }
+
+  .capability-item span {
+    color: rgba(216, 225, 223, 0.6);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     CTA
+     ========================================================= */
+
+  .periodic-cta {
+    padding-block: var(--space-xl);
+    background: var(--color-brand-dark);
+    color: var(--color-text-on-dark);
+  }
+
+  .cta-content {
+    max-width: 48rem;
+  }
+
+  .cta-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-content > p:not(.section-label) {
+    margin-bottom: var(--space-lg);
+    color: rgba(216, 225, 223, 0.7);
+  }
+
+  /* =========================================================
+     Responsive
+     ========================================================= */
+
+  @media (max-width: 1000px) {
+    .process-steps,
+    .inspection-grid,
+    .capability-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .task-layout,
+    .form-capability {
+      grid-template-columns: 1fr;
+    }
+
+    .workflow-model {
+      flex-wrap: wrap;
+    }
+
+    .workflow-node {
+      min-width: calc(50% - 1rem);
+    }
+
+    .workflow-line {
+      display: none;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .process-steps,
+    .schedule-examples,
+    .inspection-grid,
+    .capability-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .periodic-visual {
+      min-height: 20rem;
+    }
+
+    .workflow-model {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+    }
+
+    .workflow-node {
+      min-width: 0;
+    }
+
+    .execution-summary {
+      grid-template-columns: 1fr;
+    }
+
+    .execution-summary div {
+      padding: var(--space-sm) 0;
+      border-inline-start: 0;
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .execution-summary div:last-child {
+      border-bottom: 0;
+    }
+
+    .execution-days {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-model {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .result-block {
+      padding: 0;
+    }
+
+    .result-divider {
+      width: 100%;
+      height: 1px;
+    }
+  }
+</style>

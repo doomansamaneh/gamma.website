@@ -1,0 +1,1019 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = "یکپارچگی و یکسان‌سازی اطلاعات | Gamma ITSM";
+const description =
+  "Gamma ITSM با اتصال به سامانه‌های سازمانی، امکان همگام‌سازی اطلاعات، فراخوانی API، ارسال پیام و تبادل دوطرفه اطلاعات را فراهم می‌کند.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="integration-page">
+    <!-- =====================================================
+         Hero
+         ===================================================== -->
+    <section class="hero" id="overview">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma ITSM</a>
+          <span>/</span>
+          <span>یکپارچگی و یکسان‌سازی اطلاعات</span>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              یکپارچگی و یکسان‌سازی
+              <span class="accent-text">اطلاعات</span>
+            </h1>
+
+            <p class="hero-lead">
+              Gamma می‌تواند با سامانه‌های موجود سازمان ارتباط برقرار کند،
+              اطلاعات را همگام‌سازی کند، سرویس‌های بیرونی را در گردش کار
+              فراخوانی کند و به‌صورت دوطرفه با سامانه‌های دیگر تبادل اطلاعات
+              داشته باشد.
+            </p>
+          </div>
+
+          <div class="hero-visual">
+            <div class="integration-network" aria-hidden="true">
+              <div class="network-node network-node--gamma">
+                <strong>Gamma</strong>
+                <span>ITSM</span>
+              </div>
+
+              <div class="network-systems">
+                <span>منابع انسانی</span>
+                <span>اتوماسیون</span>
+                <span>حضور و غیاب</span>
+                <span>سرویس‌های سازمانی</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Introduction
+         ===================================================== -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            Gamma در کنار
+            <span class="accent-text">سامانه‌های موجود</span>
+            سازمان
+          </h2>
+
+          <p>
+            سازمان‌ها معمولاً از مجموعه‌ای از سامانه‌ها و سرویس‌های مختلف
+            استفاده می‌کنند. منابع انسانی، اتوماسیون اداری، حضور و غیاب،
+            سامانه‌های مالی و بانکی و سرویس‌های تخصصی، هرکدام بخشی از اطلاعات و
+            فرآیندهای سازمان را مدیریت می‌کنند.
+          </p>
+
+          <p>
+            Gamma می‌تواند با این سامانه‌ها ارتباط برقرار کند و به‌جای ایجاد یک
+            جزیره اطلاعاتی مستقل، بخشی از اکوسیستم نرم‌افزاری سازمان باشد.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Capabilities
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            چهار قابلیت برای
+            <span class="accent-text">یکپارچگی</span>
+          </h2>
+
+          <p>
+            ارتباط Gamma با سامانه‌های دیگر می‌تواند از همگام‌سازی اطلاعات پایه
+            تا تبادل دوطرفه درخواست و پاسخ را پوشش دهد.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card">
+            <div class="capability-number">01</div>
+
+            <h3>همگام‌سازی اطلاعات</h3>
+
+            <p>
+              اطلاعات پایه مورد نیاز Gamma می‌تواند از سامانه‌های موجود سازمان
+              دریافت و در Gamma همگام شود.
+            </p>
+
+            <ul>
+              <li>چارت سازمانی</li>
+              <li>پرسنل و کاربران</li>
+              <li>واحدهای سازمانی</li>
+              <li>سایر اطلاعات پایه</li>
+            </ul>
+          </article>
+
+          <article class="capability-card">
+            <div class="capability-number">02</div>
+
+            <h3>فراخوانی API در گردش کار</h3>
+
+            <p>
+              یک مرحله از گردش کار می‌تواند سرویس یک سامانه ثالث را فراخوانی کند
+              و نتیجه آن را در ادامه فرآیند مورد استفاده قرار دهد.
+            </p>
+
+            <ul>
+              <li>استعلام اطلاعات</li>
+              <li>ثبت درخواست در سامانه دیگر</li>
+              <li>دریافت نتیجه یک سرویس</li>
+            </ul>
+          </article>
+
+          <article class="capability-card">
+            <div class="capability-number">03</div>
+
+            <h3>ارسال ایمیل و پیامک</h3>
+
+            <p>
+              اطلاع‌رسانی می‌تواند بخشی از فرآیند باشد و بر اساس رویدادها، شرایط
+              یا مراحل گردش کار انجام شود.
+            </p>
+
+            <ul>
+              <li>اعلام ثبت درخواست</li>
+              <li>اطلاع‌رسانی تغییر وضعیت</li>
+              <li>اعلام ارجاع یا انجام کار</li>
+              <li>ارسال پیام در مراحل مختلف فرآیند</li>
+            </ul>
+          </article>
+
+          <article class="capability-card">
+            <div class="capability-number">04</div>
+
+            <h3>تبادل دوطرفه اطلاعات</h3>
+
+            <p>
+              ارتباط فقط از سمت Gamma نیست. سامانه‌های دیگر نیز می‌توانند از
+              طریق API به Gamma درخواست ارسال کنند و پاسخ دریافت کنند.
+            </p>
+
+            <ul>
+              <li>دریافت درخواست از سامانه ثالث</li>
+              <li>ایجاد درخواست در Gamma</li>
+              <li>ارسال پاسخ به سامانه درخواست‌کننده</li>
+              <li>تبادل اطلاعات در هر دو جهت</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Workflow Integration
+         ===================================================== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-heading section-heading--light">
+          <h2>
+            یکپارچگی،
+            <span class="accent-text">بخشی از فرآیند</span>
+            است
+          </h2>
+
+          <p>
+            در Gamma ارتباط با سامانه‌های دیگر می‌تواند مستقیماً در گردش کار
+            قرار بگیرد. بنابراین یکپارچه‌سازی فقط یک اتصال فنی نیست؛ می‌تواند
+            بخشی از منطق اجرای فرآیند باشد.
+          </p>
+        </div>
+
+        <div class="workflow-flow">
+          <div class="workflow-item">
+            <span>01</span>
+            <strong>ثبت درخواست</strong>
+            <small>در Gamma یا سامانه دیگر</small>
+          </div>
+
+          <div class="workflow-line"></div>
+
+          <div class="workflow-item">
+            <span>02</span>
+            <strong>اجرای گردش کار</strong>
+            <small>بررسی شرایط و تعیین مرحله بعد</small>
+          </div>
+
+          <div class="workflow-line"></div>
+
+          <div class="workflow-item workflow-item--accent">
+            <span>03</span>
+            <strong>فراخوانی سرویس</strong>
+            <small>ارتباط با سامانه ثالث</small>
+          </div>
+
+          <div class="workflow-line"></div>
+
+          <div class="workflow-item">
+            <span>04</span>
+            <strong>دریافت پاسخ</strong>
+            <small>استفاده از نتیجه در فرآیند</small>
+          </div>
+
+          <div class="workflow-line"></div>
+
+          <div class="workflow-item">
+            <span>05</span>
+            <strong>ادامه فرآیند</strong>
+            <small>ثبت نتیجه و اطلاع‌رسانی</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Synchronization
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="split-content">
+          <div class="split-copy">
+            <h2>
+              اطلاعات سازمانی را
+              <span class="accent-text">دوباره ایجاد نکنید</span>
+            </h2>
+
+            <p>
+              وقتی چارت سازمانی و اطلاعات پرسنل در یک سامانه مرجع مانند منابع
+              انسانی یا اتوماسیون سازمان نگهداری می‌شود، نیازی نیست همین اطلاعات
+              به‌صورت دستی در Gamma ایجاد و نگهداری شود.
+            </p>
+
+            <p>
+              Gamma می‌تواند اطلاعات مورد نیاز خود را از سامانه مرجع دریافت و با
+              آن همگام کند تا ساختار سازمانی و کاربران در سیستم‌های مختلف هماهنگ
+              باقی بمانند.
+            </p>
+          </div>
+
+          <div class="sync-model">
+            <div class="system-box">
+              <span>سامانه مرجع</span>
+              <strong>چارت سازمانی</strong>
+              <small> پرسنل · واحدها · ساختار سازمان </small>
+            </div>
+
+            <div class="sync-channel">
+              <span>همگام‌سازی</span>
+            </div>
+
+            <div class="system-box">
+              <span>Gamma</span>
+              <strong>ساختار سازمانی</strong>
+              <small> کاربران · واحدها · دسترسی‌ها </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Two Way API
+         ===================================================== -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            ارتباط
+            <span class="accent-text">دوطرفه</span>
+            با Gamma
+          </h2>
+
+          <p>
+            Gamma می‌تواند هم از سرویس‌های بیرونی استفاده کند و هم سرویس‌هایی در
+            اختیار سامانه‌های دیگر قرار دهد. به این ترتیب جریان اطلاعات می‌تواند
+            در هر دو جهت برقرار باشد.
+          </p>
+        </div>
+
+        <div class="two-way">
+          <div class="two-way-card">
+            <span class="two-way-label">ورودی</span>
+
+            <h3>سامانه دیگر → Gamma</h3>
+
+            <p>
+              یک سامانه ثالث می‌تواند از طریق API درخواست خود را به Gamma ارسال
+              کند تا درخواست در Gamma ایجاد و گردش کار مربوط به آن اجرا شود.
+            </p>
+          </div>
+
+          <div class="two-way-center">
+            <span>API</span>
+          </div>
+
+          <div class="two-way-card">
+            <span class="two-way-label">خروجی</span>
+
+            <h3>Gamma → سامانه دیگر</h3>
+
+            <p>
+              Gamma می‌تواند نتیجه پردازش یا وضعیت درخواست را در اختیار سامانه
+              درخواست‌کننده قرار دهد یا سرویس سامانه مقابل را فراخوانی کند.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Real Experience
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            تجربه واقعی در
+            <span class="accent-text">یکپارچه‌سازی</span>
+          </h2>
+
+          <p>
+            قابلیت‌های یکپارچه‌سازی Gamma در پروژه‌های واقعی برای ارتباط با
+            سامانه‌ها و سرویس‌های مختلف سازمانی استفاده شده‌اند.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-item">
+            <strong>پرگار</strong>
+            <span>همگام‌سازی اطلاعات سازمانی</span>
+          </article>
+
+          <article class="experience-item">
+            <strong>چارگون</strong>
+            <span>ارتباط با سامانه‌های سازمانی</span>
+          </article>
+
+          <article class="experience-item">
+            <strong>کسری</strong>
+            <span>تبادل اطلاعات سازمانی و پرسنلی</span>
+          </article>
+
+          <article class="experience-item">
+            <strong>پارس سداد</strong>
+            <span>تبادل دوطرفه درخواست و پاسخ</span>
+          </article>
+
+          <article class="experience-item">
+            <strong>بانک رفاه</strong>
+            <span>ارتباط سرویس‌ها و تبادل اطلاعات</span>
+          </article>
+
+          <article class="experience-item experience-item--more">
+            <strong>و چندین سرویس دیگر</strong>
+            <span> متناسب با نیاز و معماری هر سازمان </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Scenario
+         ===================================================== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-heading section-heading--light">
+          <h2>
+            یکپارچگی در
+            <span class="accent-text">عمل</span>
+          </h2>
+
+          <p>
+            یک درخواست می‌تواند از سامانه‌ای دیگر وارد Gamma شود، در گردش کار
+            پردازش شود و در صورت نیاز با سرویس‌های دیگر ارتباط برقرار کند.
+          </p>
+        </div>
+
+        <div class="scenario">
+          <div class="scenario-item">
+            <span>01</span>
+            <h3>ثبت درخواست</h3>
+            <p>سامانه ثالث درخواست را از طریق API به Gamma ارسال می‌کند.</p>
+          </div>
+
+          <div class="scenario-item">
+            <span>02</span>
+            <h3>اجرای فرآیند</h3>
+            <p>
+              Gamma درخواست را دریافت کرده و گردش کار مربوط به آن را اجرا
+              می‌کند.
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <span>03</span>
+            <h3>فراخوانی سرویس</h3>
+            <p>
+              در یکی از مراحل فرآیند، Gamma سرویس سامانه دیگری را فراخوانی
+              می‌کند.
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <span>04</span>
+            <h3>نتیجه و اطلاع‌رسانی</h3>
+            <p>
+              نتیجه در Gamma ثبت شده و در صورت نیاز از طریق API، ایمیل یا پیامک
+              ارسال می‌شود.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Summary
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            Gamma در
+            <span class="accent-text">اکوسیستم سازمان</span>
+          </h2>
+
+          <p>
+            Gamma می‌تواند به‌عنوان بخشی از اکوسیستم نرم‌افزاری سازمان عمل کند؛
+            اطلاعات را از سامانه‌های مرجع دریافت کند، سرویس‌های دیگر را در گردش
+            کار فراخوانی کند و با سامانه‌های ثالث به‌صورت دوطرفه تبادل اطلاعات
+            داشته باشد.
+          </p>
+        </div>
+
+        <div class="summary-grid">
+          <div>
+            <strong>همگام‌سازی</strong>
+            <span>اطلاعات سازمانی و اطلاعات پایه</span>
+          </div>
+
+          <div>
+            <strong>API</strong>
+            <span>فراخوانی و ارائه سرویس</span>
+          </div>
+
+          <div>
+            <strong>Workflow</strong>
+            <span>قرار گرفتن Integration در فرآیند</span>
+          </div>
+
+          <div>
+            <strong>ارتباطات</strong>
+            <span>ایمیل و پیامک</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    /* =========================================================
+       Integration Page
+       Hero styles are inherited from BaseLayout / global CSS.
+       ========================================================= */
+
+    .integration-page {
+      --integration-line: var(--color-line);
+    }
+
+    /* =========================================================
+       Hero Visual
+       ========================================================= */
+
+    .integration-logo {
+      width: min(11rem, 45%);
+      margin-inline: auto;
+    }
+
+    .integration-network {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      align-items: center;
+      gap: var(--space-md);
+      width: min(100%, 34rem);
+      margin: var(--space-lg) auto 0;
+    }
+
+    .network-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 7rem;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .network-node strong {
+      color: var(--color-white);
+      font-size: 1.15rem;
+    }
+
+    .network-node span {
+      margin-top: 0.25rem;
+      color: var(--color-text-on-dark);
+      font-size: var(--font-size-sm);
+    }
+
+    .network-systems {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .network-systems span {
+      padding: 0.7rem 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--color-text-on-dark);
+      font-size: var(--font-size-sm);
+      text-align: center;
+    }
+
+    /* =========================================================
+       Sections
+       ========================================================= */
+
+    .section {
+      padding-block: var(--space-xl);
+    }
+
+    .section--paper {
+      background: var(--color-paper);
+    }
+
+    .section--dark {
+      background: var(--color-brand-dark);
+      color: var(--color-text-on-dark);
+    }
+
+    .section-heading {
+      max-width: 52rem;
+      margin-inline: auto;
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--color-primary);
+    }
+
+    .section-heading p {
+      margin: var(--space-md) auto 0;
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .section-heading--light h2 {
+      color: var(--color-white);
+    }
+
+    .section-heading--light p {
+      color: var(--color-text-on-dark);
+    }
+
+    /* =========================================================
+       Capabilities
+       ========================================================= */
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-md);
+    }
+
+    .capability-card {
+      padding: var(--space-lg);
+      border: 1px solid var(--integration-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+    }
+
+    .capability-number {
+      margin-bottom: var(--space-md);
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.08em;
+    }
+
+    .capability-card h3 {
+      margin: 0 0 var(--space-sm);
+      color: var(--color-primary);
+    }
+
+    .capability-card p {
+      margin: 0;
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-body);
+    }
+
+    .capability-card ul {
+      display: grid;
+      gap: 0.45rem;
+      margin: var(--space-md) 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .capability-card li {
+      position: relative;
+      padding-inline-start: 1rem;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+    }
+
+    .capability-card li::before {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0.65em;
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    /* =========================================================
+       Workflow
+       ========================================================= */
+
+    .workflow-flow {
+      display: flex;
+      align-items: stretch;
+      max-width: 72rem;
+      margin-inline: auto;
+    }
+
+    .workflow-item {
+      flex: 1;
+      padding: var(--space-md);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.035);
+      text-align: center;
+    }
+
+    .workflow-item--accent {
+      border-color: rgba(239, 63, 35, 0.5);
+      background: rgba(239, 63, 35, 0.08);
+    }
+
+    .workflow-item > span {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .workflow-item strong {
+      display: block;
+      color: var(--color-white);
+      font-size: var(--font-size-sm);
+    }
+
+    .workflow-item small {
+      display: block;
+      margin-top: 0.4rem;
+      color: var(--color-text-on-dark);
+      font-size: 0.75rem;
+      line-height: 1.7;
+    }
+
+    .workflow-line {
+      flex: 0 0 1.25rem;
+      align-self: center;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* =========================================================
+       Synchronization
+       ========================================================= */
+
+    .split-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: var(--space-xl);
+    }
+
+    .split-copy h2 {
+      margin: 0 0 var(--space-md);
+      color: var(--color-primary);
+    }
+
+    .split-copy p {
+      margin: 0 0 var(--space-md);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-body);
+    }
+
+    .split-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sync-model {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .system-box {
+      padding: var(--space-md);
+      border: 1px solid var(--integration-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      text-align: center;
+    }
+
+    .system-box span {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .system-box strong {
+      display: block;
+      color: var(--color-primary);
+    }
+
+    .system-box small {
+      display: block;
+      margin-top: 0.4rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .sync-channel {
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      writing-mode: vertical-rl;
+    }
+
+    /* =========================================================
+       Two Way
+       ========================================================= */
+
+    .two-way {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: stretch;
+      max-width: 64rem;
+      margin-inline: auto;
+    }
+
+    .two-way-card {
+      padding: var(--space-lg);
+      border: 1px solid var(--integration-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+    }
+
+    .two-way-label {
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .two-way-card h3 {
+      margin: var(--space-sm) 0;
+      color: var(--color-primary);
+    }
+
+    .two-way-card p {
+      margin: 0;
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-body);
+    }
+
+    .two-way-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 5rem;
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+    }
+
+    /* =========================================================
+       Experience
+       ========================================================= */
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--integration-line);
+      background: var(--integration-line);
+    }
+
+    .experience-item {
+      min-height: 8rem;
+      padding: var(--space-md);
+      background: var(--color-surface);
+    }
+
+    .experience-item strong {
+      display: block;
+      color: var(--color-primary);
+      font-size: 1.05rem;
+    }
+
+    .experience-item span {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+      line-height: 1.7;
+    }
+
+    .experience-item--more {
+      background: var(--color-paper);
+    }
+
+    /* =========================================================
+       Scenario
+       ========================================================= */
+
+    .scenario {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-sm);
+    }
+
+    .scenario-item {
+      padding: var(--space-lg);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .scenario-item > span {
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .scenario-item h3 {
+      margin: var(--space-md) 0 var(--space-sm);
+      color: var(--color-white);
+    }
+
+    .scenario-item p {
+      margin: 0;
+      color: var(--color-text-on-dark);
+      line-height: var(--line-height-body);
+    }
+
+    /* =========================================================
+       Summary
+       ========================================================= */
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-block: 1px solid var(--integration-line);
+    }
+
+    .summary-grid > div {
+      padding: var(--space-md);
+      border-inline-start: 1px solid var(--integration-line);
+      text-align: center;
+    }
+
+    .summary-grid > div:first-child {
+      border-inline-start: 0;
+    }
+
+    .summary-grid strong {
+      display: block;
+      color: var(--color-primary);
+    }
+
+    .summary-grid span {
+      display: block;
+      margin-top: 0.4rem;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+    }
+
+    /* =========================================================
+       Responsive
+       ========================================================= */
+
+    @media (max-width: 900px) {
+      .capability-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-flow {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-line {
+        display: none;
+      }
+
+      .split-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+
+      .experience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .scenario {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .summary-grid > div:nth-child(3) {
+        border-inline-start: 0;
+        border-block-start: 1px solid var(--integration-line);
+      }
+
+      .summary-grid > div:nth-child(4) {
+        border-block-start: 1px solid var(--integration-line);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .integration-network {
+        grid-template-columns: 1fr;
+      }
+
+      .network-node {
+        width: 7rem;
+        margin-inline: auto;
+      }
+
+      .network-systems {
+        width: 100%;
+      }
+
+      .sync-model {
+        grid-template-columns: 1fr;
+      }
+
+      .sync-channel {
+        writing-mode: initial;
+        text-align: center;
+      }
+
+      .two-way {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+      }
+
+      .two-way-center {
+        min-width: 0;
+        min-height: 2rem;
+      }
+
+      .experience-grid,
+      .scenario,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-grid > div {
+        border-inline-start: 0;
+        border-block-start: 1px solid var(--integration-line);
+      }
+
+      .summary-grid > div:first-child {
+        border-block-start: 0;
+      }
+    }
+  </style>
+</BaseLayout>

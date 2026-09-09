@@ -1,0 +1,1195 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = "کاتالوگ خدمات | Gamma ITSM";
+const description =
+  "کاتالوگ خدمات Gamma ITSM برای تعریف گروه‌های سرویس، سرویس‌ها، واحدهای مجاز و درخواست‌های متداول با دارایی، اقدام و فرم سفارشی.";
+
+const serviceGroups = [
+  {
+    title: "خدمات کاربران",
+    items: ["رایانه و تجهیزات", "نرم‌افزار", "دسترسی و حساب کاربری"],
+  },
+  {
+    title: "خدمات زیرساخت",
+    items: ["شبکه", "سرورها", "امنیت"],
+  },
+  {
+    title: "خدمات سازمانی",
+    items: ["تلفن و ارتباطات", "خدمات اداری", "سایر خدمات"],
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="service-catalog-page">
+    <!-- =====================================================
+         Hero
+         ===================================================== -->
+    <section class="hero" id="overview">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma ITSM</a>
+          <span>/</span>
+          <span>کاتالوگ خدمات</span>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              کاتالوگ خدمات؛
+              <span class="accent-text">ساختاری برای ارائه خدمات</span>
+            </h1>
+
+            <p class="hero-lead">
+              خدمات سازمان را در قالب گروه‌های سرویس و سرویس‌های مشخص تعریف کنید
+              و برای هر سرویس، محدوده ارائه و انواع درخواست‌های متداول را تعیین
+              نمایید.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--accent" href="#structure">
+                ساختار کاتالوگ
+              </a>
+
+              <a class="button button--secondary" href="#requests">
+                درخواست‌های متداول
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="catalog-flow" aria-hidden="true">
+              <div class="catalog-flow-item">
+                <span class="catalog-flow-icon">01</span>
+                <strong>گروه سرویس</strong>
+              </div>
+
+              <i></i>
+
+              <div class="catalog-flow-item">
+                <span class="catalog-flow-icon">02</span>
+                <strong>سرویس</strong>
+              </div>
+
+              <i></i>
+
+              <div class="catalog-flow-item">
+                <span class="catalog-flow-icon">03</span>
+                <strong>درخواست</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Introduction
+         ===================================================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            خدمات را
+            <span class="accent-text">ساختارمند ارائه کنید</span>
+          </h2>
+
+          <p>
+            کاتالوگ خدمات در Gamma فقط فهرستی از خدمات قابل درخواست نیست. ساختار
+            کاتالوگ مشخص می‌کند چه سرویس‌هایی ارائه می‌شوند، هر سرویس برای چه
+            واحدهایی قابل استفاده است و درخواست‌های مرتبط با آن چگونه ثبت و
+            مدیریت می‌شوند.
+          </p>
+        </div>
+
+        <div class="catalog-model">
+          <div class="model-level model-level--group">
+            <span class="model-number">01</span>
+
+            <div>
+              <h3>گروه سرویس</h3>
+              <p>
+                سرویس‌های مرتبط را در گروه‌های مشخص قرار دهید تا ساختار کاتالوگ
+                برای کاربران ساده و قابل فهم باشد.
+              </p>
+            </div>
+          </div>
+
+          <div class="model-connector" aria-hidden="true"></div>
+
+          <div class="model-level model-level--service">
+            <span class="model-number">02</span>
+
+            <div>
+              <h3>سرویس</h3>
+              <p>
+                هر سرویس دارای شناسنامه مشخص و محدوده واحدهای مجاز برای استفاده
+                از آن است.
+              </p>
+            </div>
+          </div>
+
+          <div class="model-connector" aria-hidden="true"></div>
+
+          <div class="model-level model-level--request">
+            <span class="model-number">03</span>
+
+            <div>
+              <h3>درخواست متداول</h3>
+              <p>
+                برای درخواست‌های رایج هر سرویس، اطلاعات و محدودیت‌های موردنیاز
+                برای ثبت و اجرای درخواست را مشخص کنید.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Structure
+         ===================================================== -->
+    <section class="section section--dark" id="structure">
+      <div class="container">
+        <div class="section-heading section-heading--dark">
+          <h2>
+            ساختار
+            <span class="accent-text">کاتالوگ خدمات</span>
+          </h2>
+
+          <p>
+            مدل کاتالوگ در Gamma از سه سطح اصلی تشکیل می‌شود؛ گروه سرویس، سرویس
+            و درخواست‌های متداول هر سرویس.
+          </p>
+        </div>
+
+        <div class="structure-grid">
+          <article class="structure-card">
+            <span class="structure-index">01</span>
+
+            <h3>گروه سرویس</h3>
+
+            <p>
+              برای دسته‌بندی سرویس‌های مرتبط و ایجاد یک ساختار منظم در کاتالوگ
+              خدمات.
+            </p>
+
+            <div class="structure-example">
+              <span>نمونه</span>
+              <strong>خدمات کاربران</strong>
+            </div>
+          </article>
+
+          <article class="structure-card structure-card--featured">
+            <span class="structure-index">02</span>
+
+            <h3>سرویس</h3>
+
+            <p>
+              هر سرویس دارای شناسنامه و محدوده مشخصی از واحدهای مجاز برای ارائه
+              و استفاده است.
+            </p>
+
+            <div class="service-properties">
+              <span>شناسنامه سرویس</span>
+              <span>واحدهای مجاز</span>
+            </div>
+          </article>
+
+          <article class="structure-card">
+            <span class="structure-index">03</span>
+
+            <h3>درخواست متداول</h3>
+
+            <p>
+              درخواست‌های پرتکرار یک سرویس را با اطلاعات و قواعد موردنیاز برای
+              ثبت درخواست تعریف کنید.
+            </p>
+
+            <div class="structure-example">
+              <span>نمونه</span>
+              <strong>درخواست نصب نرم‌افزار</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Service
+         ===================================================== -->
+    <section class="section section--light" id="service">
+      <div class="container">
+        <div class="split-section">
+          <div class="split-copy">
+            <h2>
+              هر سرویس،
+              <span class="accent-text">یک تعریف مشخص</span>
+            </h2>
+
+            <p>
+              سرویس در Gamma نقطه اصلی تعریف یک خدمت است. در کنار اطلاعات
+              شناسنامه‌ای سرویس، می‌توان مشخص کرد این خدمت برای کدام واحدهای
+              سازمان قابل ارائه است.
+            </p>
+
+            <p>
+              به این ترتیب کاربران فقط خدمات مرتبط با محدوده فعالیت خود را در
+              کاتالوگ مشاهده و درخواست می‌کنند.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-header">
+              <span>سرویس</span>
+              <strong>رایانه و تجهیزات کاربر</strong>
+            </div>
+
+            <div class="service-card-section">
+              <span class="property-label">شناسنامه سرویس</span>
+
+              <div class="property-row">
+                <span>عنوان</span>
+                <strong>رایانه و تجهیزات کاربر</strong>
+              </div>
+
+              <div class="property-row">
+                <span>وضعیت</span>
+                <strong>فعال</strong>
+              </div>
+            </div>
+
+            <div class="service-card-section">
+              <span class="property-label">واحدهای مجاز</span>
+
+              <div class="unit-list">
+                <span>منابع انسانی</span>
+                <span>مالی</span>
+                <span>فروش</span>
+                <span>مدیریت</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Common Requests
+         ===================================================== -->
+    <section class="section section--paper" id="requests">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            درخواست‌های متداول؛
+            <span class="accent-text">تعریف دقیق‌تر خدمت</span>
+          </h2>
+
+          <p>
+            هر سرویس می‌تواند چند درخواست متداول داشته باشد. برای هر درخواست،
+            اطلاعات مرتبط با دارایی، اقدام‌های مجاز، نرم‌افزار و فرم ثبت درخواست
+            مشخص می‌شود.
+          </p>
+        </div>
+
+        <div class="request-layout">
+          <div class="request-card request-card--main">
+            <div class="request-card-header">
+              <span class="request-badge">درخواست متداول</span>
+              <h3>نصب نرم‌افزار</h3>
+            </div>
+
+            <p>
+              یک نمونه درخواست مرتبط با سرویس رایانه و تجهیزات کاربر که می‌تواند
+              اطلاعات موردنیاز را متناسب با نوع درخواست دریافت کند.
+            </p>
+
+            <div class="request-meta">
+              <span>مرتبط با سرویس</span>
+              <strong>رایانه و تجهیزات کاربر</strong>
+            </div>
+          </div>
+
+          <div class="request-properties">
+            <article class="request-property">
+              <span class="property-number">01</span>
+
+              <div>
+                <h3>دارایی مرتبط</h3>
+                <p>
+                  مشخص کنید درخواست با کدام دارایی یا تجهیزات مرتبط است تا
+                  اطلاعات درخواست در ارتباط با دارایی موردنظر ثبت شود.
+                </p>
+              </div>
+            </article>
+
+            <article class="request-property">
+              <span class="property-number">02</span>
+
+              <div>
+                <h3>اقدام‌های مجاز</h3>
+                <p>
+                  اقدام‌هایی را که در چارچوب درخواست قابل انجام هستند مشخص کنید
+                  تا اجرای خدمت ساختارمند باشد.
+                </p>
+              </div>
+            </article>
+
+            <article class="request-property">
+              <span class="property-number">03</span>
+
+              <div>
+                <h3>نرم‌افزار مجاز درخواست</h3>
+                <p>
+                  در درخواست‌های مرتبط با نرم‌افزار، نرم‌افزارهای مجاز برای
+                  انتخاب و ثبت درخواست مشخص می‌شوند.
+                </p>
+              </div>
+            </article>
+
+            <article class="request-property">
+              <span class="property-number">04</span>
+
+              <div>
+                <h3>فرم سفارشی</h3>
+                <p>
+                  برای دریافت اطلاعات اختصاصی هر نوع درخواست، فرم متناسب با همان
+                  خدمت را در اختیار کاربر قرار دهید.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Catalog Example
+         ===================================================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            یک نمونه از
+            <span class="accent-text">کاتالوگ خدمات</span>
+          </h2>
+
+          <p>
+            ساختار کاتالوگ می‌تواند متناسب با خدمات واقعی هر سازمان تعریف شود.
+          </p>
+        </div>
+
+        <div class="catalog-example">
+          <div class="catalog-example-sidebar">
+            <span class="catalog-example-label">گروه سرویس</span>
+
+            {
+              serviceGroups.map((group, index) => (
+                <div
+                  class:list={[
+                    "catalog-group",
+                    index === 0 && "catalog-group--active",
+                  ]}
+                >
+                  <strong>{group.title}</strong>
+
+                  <span>{group.items.length} سرویس</span>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="catalog-example-content">
+            <div class="catalog-example-header">
+              <span>سرویس</span>
+              <h3>رایانه و تجهیزات</h3>
+              <p>
+                خدمات مرتبط با رایانه، تجهیزات جانبی و نرم‌افزارهای مورد استفاده
+                کاربران.
+              </p>
+            </div>
+
+            <div class="catalog-service-list">
+              <article>
+                <span>01</span>
+                <div>
+                  <strong>نصب نرم‌افزار</strong>
+                  <small>درخواست متداول</small>
+                </div>
+              </article>
+
+              <article>
+                <span>02</span>
+                <div>
+                  <strong>رفع مشکل رایانه</strong>
+                  <small>درخواست متداول</small>
+                </div>
+              </article>
+
+              <article>
+                <span>03</span>
+                <div>
+                  <strong>تعویض تجهیزات</strong>
+                  <small>درخواست متداول</small>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Workflow connection
+         ===================================================== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-heading section-heading--dark">
+          <h2>
+            کاتالوگ خدمات،
+            <span class="accent-text">آغاز یک فرآیند</span>
+          </h2>
+
+          <p>
+            تعریف سرویس در Gamma از فرآیند اجرای خدمت جدا نیست. درخواست ثبت‌شده
+            می‌تواند وارد گردش کار خدمات سازمان شود و ادامه فرآیند بر اساس
+            ساختار تعریف‌شده انجام گیرد.
+          </p>
+        </div>
+
+        <div class="catalog-process">
+          <div class="process-step">
+            <span>01</span>
+            <strong>انتخاب سرویس</strong>
+            <small>کاربر خدمت موردنظر را انتخاب می‌کند.</small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="process-step">
+            <span>02</span>
+            <strong>انتخاب درخواست</strong>
+            <small>درخواست متداول مرتبط با سرویس انتخاب می‌شود.</small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="process-step">
+            <span>03</span>
+            <strong>تکمیل اطلاعات</strong>
+            <small>دارایی، نرم‌افزار و فرم موردنیاز تکمیل می‌شود.</small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="process-step">
+            <span>04</span>
+            <strong>اجرای فرآیند</strong>
+            <small>درخواست وارد فرآیند خدمات Gamma می‌شود.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Summary
+         ===================================================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="catalog-summary">
+          <div class="summary-copy">
+            <h2>
+              یک کاتالوگ،
+              <span class="accent-text">متناسب با سازمان شما</span>
+            </h2>
+
+            <p>
+              Gamma به سازمان اجازه می‌دهد ساختار خدمات خود را متناسب با نحوه
+              ارائه خدمات و فرآیندهای داخلی تعریف کند؛ از گروه‌بندی سرویس‌ها تا
+              جزئیات هر درخواست.
+            </p>
+          </div>
+
+          <div class="summary-points">
+            <div>
+              <span>01</span>
+              <strong>گروه‌بندی خدمات</strong>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>شناسنامه و محدوده سرویس</strong>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>درخواست‌های متداول</strong>
+            </div>
+
+            <div>
+              <span>04</span>
+              <strong>فرم و اطلاعات اختصاصی درخواست</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  /* =========================================================
+     Service Catalog — page-specific styles only
+     Hero styles are inherited from the global design system.
+     ========================================================= */
+
+  .service-catalog-page {
+    --catalog-line: color-mix(in srgb, var(--color-white) 18%, transparent);
+
+    --catalog-soft-line: color-mix(
+      in srgb,
+      var(--color-brand-dark) 12%,
+      transparent
+    );
+  }
+
+  /* =========================================================
+     Hero visual
+     ========================================================= */
+
+  .catalog-logo {
+    width: min(15rem, 60%);
+    margin-inline: auto;
+  }
+
+  .catalog-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-block-start: var(--space-lg);
+  }
+
+  .catalog-flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+
+  .catalog-flow-item strong {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .catalog-flow-icon {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--catalog-line);
+    border-radius: 50%;
+    font-size: var(--font-size-xs);
+  }
+
+  .catalog-flow > i {
+    width: 2rem;
+    height: 1px;
+    background: var(--catalog-line);
+  }
+
+  /* =========================================================
+     Shared sections
+     ========================================================= */
+
+  .section {
+    padding-block: var(--space-xl);
+  }
+
+  .section--light {
+    background: var(--color-white);
+  }
+
+  .section--paper {
+    background: var(--color-paper);
+  }
+
+  .section--dark {
+    background: var(--color-brand-dark);
+    color: var(--color-text-on-dark);
+  }
+
+  .section-heading {
+    max-width: 48rem;
+    margin-inline: auto;
+    margin-block-end: var(--space-xl);
+    text-align: center;
+  }
+
+  .section-heading h2 {
+    margin: 0 0 var(--space-md);
+  }
+
+  .section-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section-heading--dark p {
+    color: color-mix(in srgb, var(--color-text-on-dark) 72%, transparent);
+  }
+
+  /* =========================================================
+     Catalog model
+     ========================================================= */
+
+  .catalog-model {
+    max-width: 52rem;
+    margin-inline: auto;
+  }
+
+  .model-level {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: 1px solid var(--catalog-soft-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .model-number {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: var(--color-brand-subtle);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .model-level h3 {
+    margin: 0 0 var(--space-xs);
+  }
+
+  .model-level p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .model-connector {
+    width: 1px;
+    height: 2.5rem;
+    margin-inline-start: 1.35rem;
+    background: var(--color-line);
+  }
+
+  /* =========================================================
+     Structure cards
+     ========================================================= */
+
+  .structure-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .structure-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--catalog-line);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-white) 4%, transparent);
+  }
+
+  .structure-card--featured {
+    border-color: color-mix(in srgb, var(--color-brand) 55%, transparent);
+  }
+
+  .structure-index {
+    display: block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .structure-card h3 {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-white);
+  }
+
+  .structure-card p {
+    margin: 0;
+    color: color-mix(in srgb, var(--color-text-on-dark) 72%, transparent);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .structure-example,
+  .service-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-block-start: var(--space-lg);
+  }
+
+  .structure-example span,
+  .service-properties span {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--catalog-line);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+  }
+
+  .structure-example strong {
+    display: block;
+    width: 100%;
+    margin-block-start: var(--space-xs);
+  }
+
+  /* =========================================================
+     Service section
+     ========================================================= */
+
+  .split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .split-copy h2 {
+    margin: 0 0 var(--space-md);
+  }
+
+  .split-copy p {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .split-copy p:last-child {
+    margin-block-end: 0;
+  }
+
+  .service-card {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .service-card-header {
+    padding: var(--space-lg);
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .service-card-header span,
+  .property-label {
+    display: block;
+    margin-block-end: var(--space-xs);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .service-card-header strong {
+    font-size: var(--font-size-xl);
+  }
+
+  .service-card-section {
+    padding: var(--space-md) var(--space-lg);
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .service-card-section:last-child {
+    border-block-end: 0;
+  }
+
+  .property-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: var(--space-xs);
+  }
+
+  .property-row span {
+    color: var(--color-text-muted);
+  }
+
+  .unit-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .unit-list span {
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-paper);
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Common requests
+     ========================================================= */
+
+  .request-layout {
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.75fr) minmax(0, 1.25fr);
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .request-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .request-card-header {
+    margin-block-end: var(--space-md);
+  }
+
+  .request-badge {
+    display: inline-block;
+    margin-block-end: var(--space-sm);
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .request-card h3 {
+    margin: 0;
+    font-size: var(--font-size-xl);
+  }
+
+  .request-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .request-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    margin-block-start: var(--space-lg);
+    padding-block-start: var(--space-md);
+    border-block-start: 1px solid var(--color-line);
+  }
+
+  .request-meta span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .request-properties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .request-property {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .property-number {
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .request-property h3 {
+    margin: 0 0 var(--space-xs);
+    font-size: var(--font-size-md);
+  }
+
+  .request-property p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Catalog example
+     ========================================================= */
+
+  .catalog-example {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .catalog-example-sidebar {
+    padding: var(--space-md);
+    border-inline-end: 1px solid var(--color-line);
+    background: var(--color-paper);
+  }
+
+  .catalog-example-label {
+    display: block;
+    margin-block-end: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .catalog-group {
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .catalog-group + .catalog-group {
+    margin-block-start: var(--space-xs);
+  }
+
+  .catalog-group--active {
+    background: var(--color-white);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .catalog-group strong,
+  .catalog-group span {
+    display: block;
+  }
+
+  .catalog-group span {
+    margin-block-start: var(--space-2xs);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .catalog-example-content {
+    padding: var(--space-lg);
+  }
+
+  .catalog-example-header {
+    padding-block-end: var(--space-md);
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .catalog-example-header > span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .catalog-example-header h3 {
+    margin: var(--space-xs) 0;
+    font-size: var(--font-size-xl);
+  }
+
+  .catalog-example-header p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .catalog-service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+    margin-block-start: var(--space-md);
+  }
+
+  .catalog-service-list article {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+  }
+
+  .catalog-service-list article > span {
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .catalog-service-list strong,
+  .catalog-service-list small {
+    display: block;
+  }
+
+  .catalog-service-list small {
+    margin-block-start: var(--space-2xs);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  /* =========================================================
+     Process
+     ========================================================= */
+
+  .catalog-process {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: var(--space-sm);
+    align-items: center;
+  }
+
+  .process-step {
+    min-width: 0;
+  }
+
+  .process-step > span {
+    display: block;
+    margin-block-end: var(--space-sm);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .process-step strong,
+  .process-step small {
+    display: block;
+  }
+
+  .process-step strong {
+    margin-block-end: var(--space-xs);
+    color: var(--color-white);
+  }
+
+  .process-step small {
+    color: color-mix(in srgb, var(--color-text-on-dark) 65%, transparent);
+    line-height: var(--line-height-normal);
+  }
+
+  .catalog-process > i {
+    width: 2rem;
+    height: 1px;
+    background: var(--catalog-line);
+  }
+
+  /* =========================================================
+     Summary
+     ========================================================= */
+
+  .catalog-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .summary-copy h2 {
+    margin: 0 0 var(--space-md);
+  }
+
+  .summary-copy p {
+    max-width: 36rem;
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .summary-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .summary-points div {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+  }
+
+  .summary-points span {
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  /* =========================================================
+     Responsive
+     ========================================================= */
+
+  @media (max-width: 900px) {
+    .structure-grid,
+    .split-section,
+    .request-layout,
+    .catalog-summary {
+      grid-template-columns: 1fr;
+    }
+
+    .request-properties {
+      grid-template-columns: 1fr;
+    }
+
+    .catalog-example {
+      grid-template-columns: 1fr;
+    }
+
+    .catalog-example-sidebar {
+      border-inline-end: 0;
+      border-block-end: 1px solid var(--color-line);
+    }
+
+    .catalog-service-list {
+      grid-template-columns: 1fr;
+    }
+
+    .catalog-process {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .catalog-process > i {
+      width: 1px;
+      height: 1.5rem;
+      margin-inline-start: 0.25rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding-block: var(--space-lg);
+    }
+
+    .catalog-flow {
+      gap: var(--space-xs);
+    }
+
+    .catalog-flow > i {
+      width: 1rem;
+    }
+
+    .model-level {
+      padding: var(--space-md);
+    }
+
+    .summary-points {
+      grid-template-columns: 1fr;
+    }
+
+    .property-row {
+      flex-direction: column;
+      gap: var(--space-2xs);
+    }
+  }
+</style>

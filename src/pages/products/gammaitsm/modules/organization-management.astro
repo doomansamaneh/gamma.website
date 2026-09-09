@@ -1,0 +1,1246 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="امنیت و سطوح دسترسی Gamma ITSM"
+  description="مدیریت کاربران، گروه‌های دسترسی، مجوزها و محدوده دسترسی به اطلاعات در Gamma ITSM."
+>
+  <!-- =========================================================
+       Hero
+       Uses the global .hero styles
+       ========================================================= -->
+
+  <section class="hero" id="overview">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="مسیر صفحه">
+        <a href="/">خانه</a>
+        <span>/</span>
+        <a href="/products/">محصولات</a>
+        <span>/</span>
+        <a href="/products/gammaitsm/">Gamma ITSM</a>
+        <span>/</span>
+        <span>امنیت و سطوح دسترسی</span>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <h1>
+            دسترسی به اطلاعات،
+            <span class="accent-text">متناسب با نقش هر کاربر</span>
+          </h1>
+
+          <p class="hero-lead">
+            Gamma ITSM امکان تعریف گروه‌های کاربری، مجوزهای دسترسی و محدوده
+            دسترسی به اطلاعات را فراهم می‌کند تا هر کاربر متناسب با مسئولیت خود
+            به امکانات و داده‌های مورد نیاز دسترسی داشته باشد.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button--accent" href="/contact/demo/">
+              درخواست دمو
+            </a>
+
+            <a class="button button--secondary" href="#access-model">
+              آشنایی با مدل دسترسی
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual security-visual" aria-hidden="true">
+          <div class="security-model">
+            <div class="security-node security-node--user">
+              <span class="security-node-icon">●</span>
+              <span>کاربر</span>
+            </div>
+
+            <div class="security-connector"></div>
+
+            <div class="security-node">
+              <span class="security-node-icon">◆</span>
+              <span>گروه کاربری</span>
+            </div>
+
+            <div class="security-connector"></div>
+
+            <div class="security-node">
+              <span class="security-node-icon">✓</span>
+              <span>مجوزها</span>
+            </div>
+
+            <div class="security-connector"></div>
+
+            <div class="security-node security-node--scope">
+              <span class="security-node-icon">◇</span>
+              <span>محدوده داده</span>
+            </div>
+          </div>
+
+          <p class="hero-visual-caption">نقش، مجوز و محدوده دسترسی</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Access model
+       ========================================================= -->
+
+  <section class="security-section" id="access-model">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">مدل دسترسی</p>
+
+        <h2>
+          امنیت فقط درباره
+          <span class="accent-text">مجوزها نیست</span>
+        </h2>
+
+        <p>
+          در Gamma ITSM دسترسی کاربران از دو بخش اصلی تشکیل می‌شود: مجوزهایی که
+          کاربر از گروه‌های کاربری دریافت می‌کند و محدوده‌ای که تعیین می‌کند این
+          مجوزها روی چه اطلاعاتی اعمال شوند.
+        </p>
+      </div>
+
+      <div class="security-principles">
+        <article class="security-principle">
+          <span class="security-number">01</span>
+
+          <div>
+            <h3>گروه‌های کاربری</h3>
+
+            <p>
+              مجوزها در قالب گروه‌های کاربری تعریف می‌شوند. یک کاربر می‌تواند
+              عضو چند گروه باشد و مجوزهای همه گروه‌های خود را دریافت کند.
+            </p>
+          </div>
+        </article>
+
+        <article class="security-principle">
+          <span class="security-number">02</span>
+
+          <div>
+            <h3>مجوزهای دسترسی</h3>
+
+            <p>
+              هر گروه مجموعه‌ای از مجوزها را در اختیار دارد؛ از مشاهده و ایجاد
+              تا ویرایش، حذف و سایر عملیات تخصصی هر بخش از سامانه.
+            </p>
+          </div>
+        </article>
+
+        <article class="security-principle">
+          <span class="security-number">03</span>
+
+          <div>
+            <h3>محدوده دسترسی به داده</h3>
+
+            <p>
+              می‌توان مشخص کرد کاربر این مجوزها را روی کدام سازمان، واحدها،
+              ساختمان‌ها، سرویس‌ها، دارایی‌ها و سایر داده‌ها در اختیار داشته
+              باشد.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Permission tree
+       ========================================================= -->
+
+  <section class="security-section security-section--dark">
+    <div class="container">
+      <div class="section-intro section-intro--dark">
+        <p class="section-label">مجوزهای سلسله‌مراتبی</p>
+
+        <h2>
+          ساختار روشن برای
+          <span class="accent-text">مدیریت مجوزها</span>
+        </h2>
+
+        <p>
+          مجوزهای Gamma ITSM به‌صورت سلسله‌مراتبی تعریف می‌شوند تا دسترسی به هر
+          قابلیت با دقت مشخص شود.
+        </p>
+      </div>
+
+      <div class="permission-tree">
+        <div class="permission-level">
+          <span class="permission-label">زیرسیستم</span>
+          <strong>Doc</strong>
+          <small>Document Management</small>
+        </div>
+
+        <span class="permission-arrow">←</span>
+
+        <div class="permission-level">
+          <span class="permission-label">موجودیت</span>
+          <strong>Document</strong>
+          <small>سند</small>
+        </div>
+
+        <span class="permission-arrow">←</span>
+
+        <div class="permission-level permission-level--accent">
+          <span class="permission-label">مجوز</span>
+          <strong>View</strong>
+          <small>مشاهده</small>
+        </div>
+      </div>
+
+      <div class="permission-code">
+        <span>Doc</span>
+        <i>.</i>
+        <span>Document</span>
+        <i>.</i>
+        <strong>View</strong>
+      </div>
+
+      <div class="permission-features">
+        <div>
+          <span>مشاهده</span>
+          <small>View</small>
+        </div>
+
+        <div>
+          <span>ایجاد</span>
+          <small>Create</small>
+        </div>
+
+        <div>
+          <span>ویرایش</span>
+          <small>Edit</small>
+        </div>
+
+        <div>
+          <span>حذف</span>
+          <small>Delete</small>
+        </div>
+
+        <div>
+          <span>سایر مجوزها</span>
+          <small>...</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Record level access
+       ========================================================= -->
+
+  <section class="security-section" id="data-scope">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">دسترسی به داده‌ها</p>
+
+        <h2>
+          یک مجوز،
+          <span class="accent-text">محدوده‌های متفاوت</span>
+        </h2>
+
+        <p>
+          دو کاربر ممکن است هر دو مجوز مشاهده دارایی را داشته باشند، اما هر کدام
+          فقط بخشی از دارایی‌های سازمان را مشاهده کنند. Gamma این تفاوت را با
+          تعریف محدوده دسترسی به داده‌ها مدیریت می‌کند.
+        </p>
+      </div>
+
+      <div class="scope-comparison">
+        <article class="scope-card">
+          <div class="scope-card-header">
+            <span class="scope-card-index">01</span>
+            <h3>مدیر خدمات</h3>
+          </div>
+
+          <p>دسترسی مشاهده دارایی در سطح سازمان</p>
+
+          <div class="scope-result">
+            <strong>کل سازمان</strong>
+            <span>همه دارایی‌های مجاز</span>
+          </div>
+        </article>
+
+        <article class="scope-card">
+          <div class="scope-card-header">
+            <span class="scope-card-index">02</span>
+            <h3>کارشناس واحد</h3>
+          </div>
+
+          <p>دسترسی مشاهده دارایی در سطح واحد و زیرمجموعه</p>
+
+          <div class="scope-result">
+            <strong>واحدهای مشخص</strong>
+            <span>واحد و زیرمجموعه‌های آن</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       User scopes
+       ========================================================= -->
+
+  <section class="security-section security-section--paper">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">محدوده‌های دسترسی</p>
+
+        <h2>
+          دسترسی کاربران را
+          <span class="accent-text">دقیق تنظیم کنید</span>
+        </h2>
+
+        <p>
+          علاوه بر گروه‌های کاربری، می‌توان محدوده دسترسی هر کاربر را متناسب با
+          ساختار سازمان و مسئولیت او تعیین کرد.
+        </p>
+      </div>
+
+      <div class="scope-grid">
+        <article class="scope-item">
+          <span class="scope-icon">01</span>
+          <h3>سازمان</h3>
+          <p>تعیین سازمان‌هایی که اطلاعات آن‌ها برای کاربر قابل مشاهده است.</p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">02</span>
+          <h3>واحدها</h3>
+          <p>
+            مشاهده اطلاعات واحد کاربر یا واحدهای انتخاب‌شده و زیرمجموعه‌های
+            آن‌ها.
+          </p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">03</span>
+          <h3>ساختمان</h3>
+          <p>محدود کردن اطلاعات مرتبط با ساختمان‌های مشخص.</p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">04</span>
+          <h3>سرویس‌ها</h3>
+          <p>محدود کردن مشاهده درخواست‌ها به سرویس‌های مشخص سازمان.</p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">05</span>
+          <h3>گروه کالا</h3>
+          <p>
+            محدود کردن دسترسی به دارایی‌ها، کالاها و موجودی براساس گروه کالا.
+          </p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">06</span>
+          <h3>انبارها</h3>
+          <p>
+            تعیین انبارهایی که کاربر امکان مشاهده یا استفاده از آن‌ها را دارد.
+          </p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">07</span>
+          <h3>گروه کارشناسی</h3>
+          <p>
+            ارتباط کاربران با گروه‌های کارشناسی برای مدیریت کارپوشه و گردش
+            درخواست‌ها.
+          </p>
+        </article>
+
+        <article class="scope-item">
+          <span class="scope-icon">08</span>
+          <h3>سمت سازمانی</h3>
+          <p>استفاده از سمت سازمانی کاربر در فرآیندهای گردش کار.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       User management
+       ========================================================= -->
+
+  <section class="security-section">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">مدیریت کاربران</p>
+
+        <h2>
+          کنترل دسترسی،
+          <span class="accent-text">متناسب با ساختار سازمان</span>
+        </h2>
+
+        <p>
+          اطلاعات کاربر در Gamma فقط شامل نام و مشخصات حساب نیست. عضویت در
+          گروه‌ها، سازمان، واحدها و سایر محدوده‌های دسترسی بخشی از مدل امنیتی
+          کاربر را تشکیل می‌دهند.
+        </p>
+      </div>
+
+      <div class="user-model">
+        <div class="user-profile">
+          <span class="user-avatar">م</span>
+
+          <div>
+            <strong>کاربر سازمانی</strong>
+            <span>کارشناس خدمات IT</span>
+          </div>
+        </div>
+
+        <div class="user-model-line"></div>
+
+        <div class="user-model-column">
+          <span>گروه‌های کاربری</span>
+          <strong>۲ گروه</strong>
+          <small>مجوزهای کاربر</small>
+        </div>
+
+        <div class="user-model-column">
+          <span>محدوده داده</span>
+          <strong>واحدهای مشخص</strong>
+          <small>اطلاعات قابل مشاهده</small>
+        </div>
+
+        <div class="user-model-column">
+          <span>عضویت‌ها</span>
+          <strong>گروه کارشناسی</strong>
+          <small>کارپوشه و گردش کار</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Delegation
+       ========================================================= -->
+
+  <section class="security-section security-section--dark">
+    <div class="container">
+      <div class="delegation">
+        <div class="delegation-copy">
+          <p class="section-label">تفویض اختیار</p>
+
+          <h2>
+            واگذاری کارپوشه،
+            <span class="accent-text">بدون از دست دادن سابقه فعالیت</span>
+          </h2>
+
+          <p>
+            در زمان غیبت یا تغییر مسئولیت، کاربر می‌تواند اختیار کارپوشه خود را
+            برای مدت مشخص یا به‌صورت نامحدود به کاربر دیگری واگذار کند.
+          </p>
+
+          <p>
+            در این حالت گیرنده می‌تواند فعالیت‌های کارپوشه تفویض‌شده را مشاهده و
+            پیگیری کند، در حالی که هویت کاربر واقعی انجام‌دهنده فعالیت همچنان
+            مشخص باقی می‌ماند.
+          </p>
+        </div>
+
+        <div class="delegation-flow">
+          <div class="delegation-user">
+            <span>کاربر اصلی</span>
+            <strong>کارپوشه</strong>
+          </div>
+
+          <div class="delegation-arrow">
+            <span>تفویض اختیار</span>
+            <i>←</i>
+          </div>
+
+          <div class="delegation-user">
+            <span>کاربر دریافت‌کننده</span>
+            <strong>کارپوشه تفویض‌شده</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Actor / audit
+       ========================================================= -->
+
+  <section class="security-section">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">ردیابی فعالیت</p>
+
+        <h2>
+          مسئولیت‌ها روشن می‌مانند؛
+          <span class="accent-text">حتی در تفویض اختیار</span>
+        </h2>
+
+        <p>
+          در فرآیندهای کاری، کاربری که درخواست را دریافت می‌کند ممکن است با
+          کاربری که فعالیت را انجام می‌دهد متفاوت باشد. Gamma این دو هویت را
+          به‌صورت مستقل نگهداری می‌کند.
+        </p>
+      </div>
+
+      <div class="actor-flow">
+        <div class="actor-card">
+          <span>ارجاع به</span>
+          <strong>کاربر A</strong>
+          <small>مسئول کار</small>
+        </div>
+
+        <div class="actor-line">
+          <span>انجام فعالیت</span>
+          <i>←</i>
+        </div>
+
+        <div class="actor-card actor-card--accent">
+          <span>انجام‌دهنده</span>
+          <strong>کاربر B</strong>
+          <small>ثبت‌کننده فعالیت</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Scenario
+       ========================================================= -->
+
+  <section class="security-section security-section--paper">
+    <div class="container">
+      <div class="section-intro">
+        <p class="section-label">یک سناریوی واقعی</p>
+
+        <h2>
+          یک سامانه،
+          <span class="accent-text">سطوح دسترسی متفاوت</span>
+        </h2>
+      </div>
+
+      <div class="scenario">
+        <div class="scenario-person">
+          <span>مدیر خدمات IT</span>
+          <strong>دسترسی سازمانی</strong>
+          <p>مشاهده درخواست‌ها، کاربران، دارایی‌ها و اقدامات در سطح سازمان.</p>
+        </div>
+
+        <div class="scenario-person">
+          <span>مدیر واحد</span>
+          <strong>دسترسی زیرمجموعه</strong>
+          <p>مشاهده اطلاعات واحد خود و واحدهای زیرمجموعه.</p>
+        </div>
+
+        <div class="scenario-person">
+          <span>کارشناس</span>
+          <strong>دسترسی محدود</strong>
+          <p>
+            مشاهده درخواست‌ها و اطلاعات مرتبط با مسئولیت‌ها و سرویس‌های مشخص.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA
+       ========================================================= -->
+
+  <!-- <section class="security-cta">
+    <div class="container">
+      <div class="cta-content">
+        <p class="section-label">Gamma ITSM</p>
+
+        <h2>
+          امنیت را متناسب با
+          <span class="accent-text">ساختار سازمان خود</span>
+          مدیریت کنید
+        </h2>
+
+        <p>مدل دسترسی Gamma ITSM را در یک سناریوی واقعی سازمانی ببینید.</p>
+
+        <a class="button button--accent" href="/contact/demo/">
+          درخواست دموی اختصاصی
+        </a>
+      </div>
+    </div>
+  </section> -->
+</BaseLayout>
+
+<style>
+  /* =========================================================
+     Security page
+     Only page-specific styles.
+     Global .hero is intentionally reused.
+     ========================================================= */
+
+  .security-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 24rem;
+  }
+
+  .security-model {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  .security-node {
+    flex: 1;
+    min-width: 0;
+    padding: var(--space-md) var(--space-sm);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    backdrop-filter: blur(8px);
+  }
+
+  .security-node--user {
+    border-color: rgba(239, 63, 35, 0.55);
+  }
+
+  .security-node--scope {
+    background: rgba(239, 63, 35, 0.08);
+  }
+
+  .security-node-icon {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--color-accent);
+    font-size: 1.2rem;
+  }
+
+  .security-node span:last-child {
+    display: block;
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+  }
+
+  .security-connector {
+    width: 1.5rem;
+    height: 1px;
+    flex: 0 0 1.5rem;
+    background: rgba(255, 255, 255, 0.24);
+  }
+
+  .hero-visual-caption {
+    margin-top: var(--space-lg);
+    color: var(--color-text-on-dark);
+    opacity: 0.65;
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Sections
+     ========================================================= */
+
+  .security-section {
+    padding-block: var(--space-xl);
+    background: var(--color-surface);
+  }
+
+  .security-section--paper {
+    background: var(--color-paper);
+  }
+
+  .security-section--dark {
+    background: var(--hero-bg-base);
+    color: var(--color-text-on-dark);
+  }
+
+  .section-intro {
+    max-width: 48rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-intro p:last-child {
+    margin-top: var(--space-md);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section-intro--dark p:last-child {
+    color: rgba(216, 225, 223, 0.7);
+  }
+
+  /* =========================================================
+     Principles
+     ========================================================= */
+
+  .security-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .security-principle {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .security-number {
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .security-principle h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--font-size-lg);
+  }
+
+  .security-principle p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     Permission tree
+     ========================================================= */
+
+  .permission-tree {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: var(--space-md);
+    max-width: 60rem;
+    margin-inline: auto;
+  }
+
+  .permission-level {
+    flex: 1;
+    padding: var(--space-lg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .permission-level--accent {
+    border-color: rgba(239, 63, 35, 0.5);
+    background: rgba(239, 63, 35, 0.08);
+  }
+
+  .permission-label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    color: rgba(216, 225, 223, 0.55);
+    font-size: var(--font-size-sm);
+  }
+
+  .permission-level strong {
+    display: block;
+    font-size: var(--font-size-xl);
+  }
+
+  .permission-level small {
+    display: block;
+    margin-top: var(--space-xs);
+    color: rgba(216, 225, 223, 0.65);
+  }
+
+  .permission-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--color-accent);
+    font-size: var(--font-size-xl);
+  }
+
+  .permission-code {
+    width: fit-content;
+    margin: var(--space-xl) auto;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    direction: ltr;
+    font-family: monospace;
+    font-size: var(--font-size-lg);
+  }
+
+  .permission-code span {
+    color: rgba(216, 225, 223, 0.7);
+  }
+
+  .permission-code i {
+    margin-inline: 0.2rem;
+    color: var(--color-accent);
+    font-style: normal;
+  }
+
+  .permission-code strong {
+    color: var(--color-accent);
+  }
+
+  .permission-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .permission-features div {
+    min-width: 7rem;
+    padding: var(--space-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+
+  .permission-features span,
+  .permission-features small {
+    display: block;
+  }
+
+  .permission-features small {
+    margin-top: 0.2rem;
+    color: rgba(216, 225, 223, 0.45);
+    direction: ltr;
+  }
+
+  /* =========================================================
+     Scope comparison
+     ========================================================= */
+
+  .scope-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 56rem;
+  }
+
+  .scope-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .scope-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .scope-card-index {
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .scope-card h3 {
+    margin: 0;
+  }
+
+  .scope-card > p {
+    margin-block: var(--space-md);
+    color: var(--color-text-secondary);
+  }
+
+  .scope-result {
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    background: var(--color-brand-subtle);
+  }
+
+  .scope-result strong,
+  .scope-result span {
+    display: block;
+  }
+
+  .scope-result strong {
+    color: var(--color-text-primary);
+  }
+
+  .scope-result span {
+    margin-top: 0.25rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Scope grid
+     ========================================================= */
+
+  .scope-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-line);
+  }
+
+  .scope-item {
+    min-height: 12rem;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+  }
+
+  .scope-icon {
+    display: block;
+    margin-bottom: var(--space-lg);
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .scope-item h3 {
+    margin: 0 0 var(--space-sm);
+  }
+
+  .scope-item p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     User model
+     ========================================================= */
+
+  .user-model {
+    display: grid;
+    grid-template-columns: 1.4fr 1px repeat(3, 1fr);
+    align-items: stretch;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .user-avatar {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-brand-subtle);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .user-profile strong,
+  .user-profile span:not(.user-avatar) {
+    display: block;
+  }
+
+  .user-profile span:not(.user-avatar) {
+    margin-top: 0.2rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .user-model-line {
+    background: var(--color-line);
+  }
+
+  .user-model-column {
+    padding: var(--space-lg);
+    border-inline-start: 1px solid var(--color-line);
+  }
+
+  .user-model-column span,
+  .user-model-column strong,
+  .user-model-column small {
+    display: block;
+  }
+
+  .user-model-column span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .user-model-column strong {
+    margin-block: var(--space-sm);
+  }
+
+  .user-model-column small {
+    color: var(--color-text-muted);
+  }
+
+  /* =========================================================
+     Delegation
+     ========================================================= */
+
+  .delegation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .delegation-copy {
+    max-width: 42rem;
+  }
+
+  .delegation-copy p:not(.section-label) {
+    color: rgba(216, 225, 223, 0.7);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .delegation-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .delegation-user {
+    padding: var(--space-lg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    text-align: center;
+  }
+
+  .delegation-user span,
+  .delegation-user strong {
+    display: block;
+  }
+
+  .delegation-user span {
+    color: rgba(216, 225, 223, 0.6);
+    font-size: var(--font-size-sm);
+  }
+
+  .delegation-user strong {
+    margin-top: var(--space-sm);
+  }
+
+  .delegation-arrow {
+    text-align: center;
+  }
+
+  .delegation-arrow span {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: rgba(216, 225, 223, 0.5);
+    font-size: var(--font-size-xs);
+  }
+
+  .delegation-arrow i {
+    color: var(--color-accent);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+  }
+
+  /* =========================================================
+     Actor
+     ========================================================= */
+
+  .actor-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: 54rem;
+    gap: var(--space-lg);
+  }
+
+  .actor-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+  }
+
+  .actor-card--accent {
+    border-color: var(--color-accent);
+  }
+
+  .actor-card span,
+  .actor-card strong,
+  .actor-card small {
+    display: block;
+  }
+
+  .actor-card span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .actor-card strong {
+    margin-block: var(--space-sm);
+    font-size: var(--font-size-lg);
+  }
+
+  .actor-card small {
+    color: var(--color-text-muted);
+  }
+
+  .actor-line {
+    text-align: center;
+  }
+
+  .actor-line span {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+  }
+
+  .actor-line i {
+    color: var(--color-accent);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+  }
+
+  /* =========================================================
+     Scenario
+     ========================================================= */
+
+  .scenario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .scenario-person {
+    padding: var(--space-lg);
+    border-top: 2px solid var(--color-accent);
+    background: var(--color-surface);
+  }
+
+  .scenario-person span,
+  .scenario-person strong {
+    display: block;
+  }
+
+  .scenario-person span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .scenario-person strong {
+    margin-block: var(--space-sm);
+  }
+
+  .scenario-person p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     CTA
+     ========================================================= */
+
+  .security-cta {
+    padding-block: var(--space-xl);
+    background: var(--color-brand-dark);
+    color: var(--color-text-on-dark);
+  }
+
+  .cta-content {
+    max-width: 48rem;
+  }
+
+  .cta-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-content > p:not(.section-label) {
+    margin-bottom: var(--space-lg);
+    color: rgba(216, 225, 223, 0.7);
+  }
+
+  /* =========================================================
+     Responsive
+     ========================================================= */
+
+  @media (max-width: 900px) {
+    .security-principles,
+    .scope-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-model {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .user-model-line {
+      display: none;
+    }
+
+    .user-model-column {
+      border-top: 1px solid var(--color-line);
+    }
+
+    .delegation {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .security-model {
+      flex-direction: column;
+      max-width: 18rem;
+    }
+
+    .security-node {
+      width: 100%;
+    }
+
+    .security-connector {
+      width: 1px;
+      height: 1.5rem;
+      flex: 0 0 1.5rem;
+    }
+
+    .security-principles,
+    .scope-comparison,
+    .scope-grid,
+    .scenario {
+      grid-template-columns: 1fr;
+    }
+
+    .permission-tree {
+      flex-direction: column;
+    }
+
+    .permission-arrow {
+      justify-content: center;
+      transform: rotate(-90deg);
+    }
+
+    .user-model {
+      grid-template-columns: 1fr;
+    }
+
+    .user-model-column {
+      border-inline-start: 0;
+    }
+
+    .delegation-flow,
+    .actor-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .delegation-arrow i,
+    .actor-line i {
+      display: inline-block;
+      transform: rotate(-90deg);
+    }
+  }
+</style>

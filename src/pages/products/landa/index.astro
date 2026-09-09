@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import ProductLogo  from "@components/brand/ProductLogo.astro"
+import ProductLogo from "@components/brand/ProductLogo.astro";
 import SectionHeading from "@components/common/SectionHeading.astro";
 
 const capabilityGroups = [
@@ -101,55 +101,49 @@ const benefits = [
 >
   <main class="page">
     <section class="hero">
-  <div class="container">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <span>لاندا</span>
+        </nav>
 
-    <nav class="breadcrumb" aria-label="مسیر صفحه">
-      <a href="/">خانه</a>
-      <span>/</span>
-      <a href="/products/">محصولات</a>
-      <span>/</span>
-      <span>لاندا</span>
-    </nav>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              لاندا؛
+              <span class="accent-text">حسابداری آنلاین</span>
+              برای کسب و کارهای کوچک و متوسط
+            </h1>
 
-    <div class="hero-content">
+            <p class="hero-lead">
+              لاندا یک نرم افزار حسابداری آنلاین و ابری است که مدیریت حسابداری و
+              امور مالی کسب و کار را ساده، سریع و در دسترس می‌کند.
+            </p>
 
-      <div class="hero-copy">
-        <h1>
-          لاندا؛
-          <span class="accent-text">حسابداری آنلاین</span>
-          برای کسب و کارهای کوچک و متوسط
-        </h1>
+            <div class="hero-actions">
+              <a
+                class="button button--accent"
+                href="https://landa-sme.ir/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ورود به سایت لاندا ↗
+              </a>
 
-        <p class="hero-lead">
-          لاندا یک نرم افزار حسابداری آنلاین و ابری است که مدیریت حسابداری
-          و امور مالی کسب و کار را ساده، سریع و در دسترس می‌کند.
-        </p>
+              <a class="button button--secondary" href="#capabilities">
+                آشنایی با امکانات
+              </a>
+            </div>
+          </div>
 
-        <div class="hero-actions">
-          <a
-            class="button button--accent"
-            href="https://landa-sme.ir/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ورود به سایت لاندا ↗
-          </a>
-
-          <a class="button button--secondary" href="#capabilities">
-            آشنایی با امکانات
-          </a>
-        </div>
-      </div>
-
-      <div
+          <!-- <div
         class="hero-visual"
         aria-label="نمایی از نرم افزار حسابداری لاندا"
       >
         <div class="visual-rule" aria-hidden="true"></div>
-
-        <ProductLogo
-          class="landa-logo"
-        />
 
         <img
           src="https://landa-sme.ir/images/front/homepage-img-1.png"
@@ -158,11 +152,10 @@ const benefits = [
           height="480"
           loading="eager"
         />
+      </div> -->
+        </div>
       </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="content-section introduction" aria-labelledby="intro-title">
       <div class="container narrow-content">

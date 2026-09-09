@@ -1,0 +1,1518 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = "دانشنامه | Gamma ITSM";
+const description =
+  "دانشنامه Gamma ITSM برای مدیریت مقالات، دستورالعمل‌ها و دانش سازمانی با دسته‌بندی، کنترل دسترسی، گردش کار و ارتباط با درخواست‌های متداول.";
+
+const categories = [
+  "راهنمای کاربران",
+  "دستورالعمل‌های IT",
+  "شبکه و زیرساخت",
+  "نرم‌افزارها",
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="knowledge-page">
+    <!-- =====================================================
+         Hero
+         ===================================================== -->
+    <section class="hero" id="overview">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="/">خانه</a>
+          <span>/</span>
+          <a href="/products/">محصولات</a>
+          <span>/</span>
+          <a href="/products/gammaitsm/">Gamma ITSM</a>
+          <span>/</span>
+          <span>دانشنامه</span>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <h1>
+              دانشنامه؛
+              <span class="accent-text">دانش را در دسترس قرار دهید</span>
+            </h1>
+
+            <p class="hero-lead">
+              مقالات، دستورالعمل‌ها و دانش سازمانی را ساختارمند کنید، دسترسی
+              آن‌ها را مدیریت کنید و دانش مرتبط را درست در زمان نیاز در اختیار
+              کاربران قرار دهید.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--accent" href="#features">
+                قابلیت‌های دانشنامه
+              </a>
+
+              <a class="button button--secondary" href="#request">
+                ارتباط با درخواست
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="knowledge-visual">
+              <div class="knowledge-search">
+                <span>جستجو در دانشنامه</span>
+                <strong>⌕</strong>
+              </div>
+
+              <div class="knowledge-results">
+                <span>راهنمای کاربران</span>
+                <span>دستورالعمل IT</span>
+                <span>رفع مشکلات رایج</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Introduction
+         ===================================================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            دانشنامه فقط برای
+            <span class="accent-text">مقاله‌نویسی نیست</span>
+          </h2>
+
+          <p>
+            هر سازمان دانش و تجربه‌ای دارد که باید در اختیار افراد مناسب قرار
+            گیرد؛ از دستورالعمل انجام یک فعالیت گرفته تا راهنمای استفاده از یک
+            نرم‌افزار یا پاسخ یک مشکل متداول.
+          </p>
+
+          <p>
+            در Gamma می‌توان این اطلاعات را به‌صورت مقاله مدیریت کرد و در صورت
+            نیاز آن را به فرآیندهای خدمات و درخواست‌های متداول متصل نمود.
+          </p>
+        </div>
+
+        <div class="knowledge-model">
+          <div class="knowledge-model-item">
+            <span>01</span>
+            <strong>تعریف مقاله</strong>
+            <small> ایجاد و نگهداری محتوای دانش </small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="knowledge-model-item">
+            <span>02</span>
+            <strong>کنترل دسترسی</strong>
+            <small> ارائه به افراد یا گروه‌های مشخص </small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="knowledge-model-item">
+            <span>03</span>
+            <strong>ارتباط با خدمت</strong>
+            <small> نمایش دانش مرتبط هنگام درخواست </small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="knowledge-model-item">
+            <span>04</span>
+            <strong>استفاده از دانش</strong>
+            <small> جستجو، مطالعه و بازخورد کاربران </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Features
+         ===================================================== -->
+    <section class="section section--dark" id="features">
+      <div class="container">
+        <div class="section-heading section-heading--dark">
+          <h2>
+            یک دانشنامه
+            <span class="accent-text">قابل مدیریت</span>
+          </h2>
+
+          <p>
+            ساختار، دسترسی، محتوا و ارتباط مقالات با سایر بخش‌های Gamma در یک
+            مدل یکپارچه مدیریت می‌شود.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-index">01</span>
+
+            <h3>طبقه‌بندی و دسترسی</h3>
+
+            <p>
+              دانش را در دسته‌بندی‌های مشخص قرار دهید و تعیین کنید هر مقاله برای
+              چه سطحی از کاربران قابل مشاهده باشد.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-index">02</span>
+
+            <h3>مقاله و محتوای غنی</h3>
+
+            <p>
+              مقاله را با متن، تصویر، تگ و فایل‌های پیوست تکمیل کنید تا اطلاعات
+              موردنیاز کاربران در یک محل در دسترس باشد.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-index">03</span>
+
+            <h3>گردش کار مقاله</h3>
+
+            <p>
+              انتشار مقاله می‌تواند براساس گردش کار انجام شود تا محتوای دانش پیش
+              از ارائه به کاربران، مسیر تعریف‌شده سازمان را طی کند.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-index">04</span>
+
+            <h3>جستجوی دانش</h3>
+
+            <p>
+              کاربران می‌توانند دانش موجود را بر اساس کلمات کلیدی، متن،
+              دسته‌بندی و ارتباط میان مقالات پیدا کنند.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Article access
+         ===================================================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="split-section">
+          <div class="split-copy">
+            <h2>
+              هر مقاله برای
+              <span class="accent-text">کاربر مناسب</span>
+            </h2>
+
+            <p>
+              همه دانش سازمان لزوماً برای همه کاربران قابل مشاهده نیست. برای
+              مقاله می‌توان سطح دسترسی متناسب با نیاز سازمان را تعریف کرد.
+            </p>
+
+            <p>
+              مقاله می‌تواند عمومی باشد یا فقط برای کاربران یا گروه‌های مشخصی در
+              دسترس قرار گیرد.
+            </p>
+          </div>
+
+          <div class="access-card">
+            <div class="access-header">
+              <span>مقاله</span>
+              <strong>راهنمای نصب نرم‌افزار</strong>
+            </div>
+
+            <div class="access-row">
+              <span>دسته‌بندی</span>
+              <strong>دستورالعمل‌های IT</strong>
+            </div>
+
+            <div class="access-row">
+              <span>وضعیت انتشار</span>
+              <strong class="status-active">منتشر شده</strong>
+            </div>
+
+            <div class="access-section">
+              <span>دسترسی</span>
+
+              <div class="access-options">
+                <span class="access-option access-option--active">
+                  کاربران مجاز
+                </span>
+
+                <span class="access-option"> گروه‌های مشخص </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Workflow
+         ===================================================== -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            دانش قابل اعتماد،
+            <span class="accent-text">با گردش کار</span>
+          </h2>
+
+          <p>
+            مقاله می‌تواند مانند سایر فرآیندهای سازمانی، مسیر مشخصی برای ایجاد،
+            بررسی و انتشار داشته باشد.
+          </p>
+        </div>
+
+        <div class="article-workflow">
+          <div class="workflow-item">
+            <span>01</span>
+            <strong>ایجاد مقاله</strong>
+            <small>محتوا و اطلاعات مقاله ثبت می‌شود.</small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="workflow-item">
+            <span>02</span>
+            <strong>بررسی</strong>
+            <small>مقاله مسیر تعریف‌شده سازمان را طی می‌کند.</small>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="workflow-item">
+            <span>03</span>
+            <strong>انتشار</strong>
+            <small>مقاله برای کاربران مجاز قابل مشاهده می‌شود.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Request relation
+         ===================================================== -->
+    <section class="section section--light" id="request">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            دانش در زمان ثبت درخواست؛
+            <span class="accent-text">نه بعد از آن</span>
+          </h2>
+
+          <p>
+            یکی از کاربردهای مهم دانشنامه، ارتباط مقاله با درخواست‌های متداول
+            است. در این حالت دانش مرتبط می‌تواند همان زمانی که کاربر قصد ثبت
+            درخواست دارد در اختیار او قرار گیرد.
+          </p>
+        </div>
+
+        <div class="request-knowledge">
+          <div class="request-panel">
+            <span class="panel-label">درخواست متداول</span>
+
+            <h3>نصب نرم‌افزار</h3>
+
+            <div class="request-panel-row">
+              <span>سرویس</span>
+              <strong>رایانه و تجهیزات</strong>
+            </div>
+
+            <div class="request-panel-row">
+              <span>مقاله مرتبط</span>
+              <strong>راهنمای نصب نرم‌افزار</strong>
+            </div>
+          </div>
+
+          <div class="relation-arrow" aria-hidden="true">
+            <span>دانش مرتبط</span>
+            <i></i>
+          </div>
+
+          <article class="article-preview">
+            <div class="article-preview-header">
+              <span>مقاله مرتبط</span>
+              <h3>راهنمای نصب نرم‌افزار</h3>
+            </div>
+
+            <p>
+              پیش از ثبت درخواست، راهنمای نصب و مراحل انجام کار در اختیار کاربر
+              قرار می‌گیرد.
+            </p>
+
+            <div class="article-tags">
+              <span>نرم‌افزار</span>
+              <span>راهنما</span>
+              <span>نصب</span>
+            </div>
+
+            <div class="article-preview-action">
+              <span>مشاهده مقاله</span>
+              <span>←</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="knowledge-benefit">
+          <strong> شاید پاسخ، پیش از ثبت درخواست پیدا شود. </strong>
+
+          <span>
+            دانش مرتبط را در نقطه‌ای نمایش دهید که کاربر به آن نیاز دارد.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Search
+         ===================================================== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-heading section-heading--dark">
+          <h2>
+            یک دانشنامه،
+            <span class="accent-text">برای جستجو و کشف دانش</span>
+          </h2>
+
+          <p>
+            دانشنامه Gamma به‌صورت مجزا قابل استفاده است و کاربران می‌توانند
+            دانش موجود را جستجو و مقالات مرتبط را دنبال کنند.
+          </p>
+        </div>
+
+        <div class="search-interface">
+          <div class="search-bar">
+            <span>جستجو در مقالات...</span>
+            <strong>⌕</strong>
+          </div>
+
+          <div class="search-filters">
+            <span class="search-filter search-filter--active"> همه </span>
+
+            <span class="search-filter"> دسته‌بندی </span>
+
+            <span class="search-filter"> متن مقاله </span>
+
+            <span class="search-filter"> کلمات کلیدی </span>
+          </div>
+
+          <div class="search-results">
+            <article class="search-result">
+              <div>
+                <span>دستورالعمل‌های IT</span>
+                <h3>راهنمای نصب نرم‌افزار</h3>
+                <p>مراحل نصب و تنظیم نرم‌افزارهای مورد استفاده کاربران...</p>
+              </div>
+
+              <div class="result-tags">
+                <span>نرم‌افزار</span>
+                <span>نصب</span>
+              </div>
+            </article>
+
+            <article class="search-result">
+              <div>
+                <span>راهنمای کاربران</span>
+                <h3>رفع مشکلات رایج نرم‌افزار</h3>
+                <p>بررسی خطاهای متداول و راهکارهای پیشنهادی برای کاربران...</p>
+              </div>
+
+              <div class="result-tags">
+                <span>خطا</span>
+                <span>راهنما</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Feedback & Attachments
+         ===================================================== -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="feedback-grid">
+          <article class="feedback-card">
+            <span class="feedback-index">01</span>
+
+            <h3>نظر کاربران</h3>
+
+            <p>
+              کاربران می‌توانند درباره مفید بودن مقاله نظر دهند. این بازخورد
+              می‌تواند به شناسایی مقالات مفید یا نیازمند بازبینی کمک کند.
+            </p>
+
+            <div class="feedback-demo">
+              <span>آیا این مقاله مفید بود؟</span>
+
+              <div>
+                <button type="button" aria-label="مفید">✓</button>
+                <button type="button" aria-label="مفید نبود">×</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="feedback-card">
+            <span class="feedback-index">02</span>
+
+            <h3>فایل‌های پیوست</h3>
+
+            <p>
+              در کنار محتوای مقاله می‌توان فایل‌های موردنیاز را نیز در اختیار
+              کاربران قرار داد؛ مانند فایل راهنما، مستندات یا نمونه‌های
+              موردنیاز.
+            </p>
+
+            <div class="attachment-demo">
+              <span>PDF</span>
+
+              <div>
+                <strong>راهنمای تنظیمات شبکه</strong>
+                <small>فایل پیوست</small>
+              </div>
+
+              <span class="attachment-size">2.4 MB</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Use cases
+         ===================================================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            یک قابلیت،
+            <span class="accent-text">کاربردهای مختلف</span>
+          </h2>
+
+          <p>
+            نحوه استفاده از دانشنامه به نیاز سازمان بستگی دارد. می‌توان از آن
+            برای مستندات داخلی، دستورالعمل‌ها، راهنمای کاربران یا پشتیبانی از
+            فرآیند خدمات استفاده کرد.
+          </p>
+        </div>
+
+        <div class="use-case-grid">
+          <article class="use-case-card">
+            <span>01</span>
+            <h3>دستورالعمل‌ها</h3>
+            <p>
+              مراحل انجام فعالیت‌ها و رویه‌های مشخص سازمان را در قالب مقاله
+              نگهداری کنید.
+            </p>
+          </article>
+
+          <article class="use-case-card">
+            <span>02</span>
+            <h3>راهنمای کاربران</h3>
+            <p>
+              راهنمای استفاده از نرم‌افزارها، تجهیزات و خدمات را در اختیار
+              کاربران قرار دهید.
+            </p>
+          </article>
+
+          <article class="use-case-card">
+            <span>03</span>
+            <h3>حل مشکلات متداول</h3>
+            <p>
+              پاسخ مشکلات پرتکرار را ثبت کنید تا کاربر بتواند پیش از ثبت درخواست
+              راهکار را پیدا کند.
+            </p>
+          </article>
+
+          <article class="use-case-card">
+            <span>04</span>
+            <h3>دانش سازمانی</h3>
+            <p>
+              تجربه و دانش جمع‌شده سازمان را ساختارمند کنید و دسترسی به آن را
+              مدیریت نمایید.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Summary
+         ===================================================== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="summary">
+          <div class="summary-copy">
+            <h2>
+              دانش را
+              <span class="accent-text">در جریان خدمت قرار دهید</span>
+            </h2>
+
+            <p>
+              در Gamma دانشنامه می‌تواند مستقل از فرآیندهای خدمات استفاده شود یا
+              به درخواست‌های متداول متصل شود تا دانش مرتبط درست در زمان نیاز در
+              اختیار کاربر قرار گیرد.
+            </p>
+          </div>
+
+          <div class="summary-points">
+            <div>
+              <span>01</span>
+              <strong>طبقه‌بندی و کنترل دسترسی</strong>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>مقاله، تصویر، تگ و پیوست</strong>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>گردش کار انتشار</strong>
+            </div>
+
+            <div>
+              <span>04</span>
+              <strong>ارتباط با درخواست‌های متداول</strong>
+            </div>
+
+            <div>
+              <span>05</span>
+              <strong>جستجو و ارتباط مقالات</strong>
+            </div>
+
+            <div>
+              <span>06</span>
+              <strong>بازخورد کاربران</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  /* =========================================================
+     Knowledge Base — page-specific styles only
+     Hero styles are inherited from the global design system.
+     ========================================================= */
+
+  .knowledge-page {
+    --knowledge-line: color-mix(in srgb, var(--color-white) 18%, transparent);
+
+    --knowledge-soft-line: color-mix(
+      in srgb,
+      var(--color-brand-dark) 12%,
+      transparent
+    );
+  }
+
+  /* =========================================================
+     Hero visual
+     ========================================================= */
+
+  .knowledge-logo {
+    width: min(15rem, 60%);
+    margin-inline: auto;
+  }
+
+  .knowledge-visual {
+    max-width: 25rem;
+    margin: var(--space-lg) auto 0;
+  }
+
+  .knowledge-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .knowledge-search span {
+    color: color-mix(in srgb, var(--color-text-on-dark) 72%, transparent);
+    font-size: var(--font-size-sm);
+  }
+
+  .knowledge-search strong {
+    color: var(--color-brand);
+    font-size: 1.4rem;
+  }
+
+  .knowledge-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-block-start: var(--space-sm);
+  }
+
+  .knowledge-results span {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-xs);
+  }
+
+  /* =========================================================
+     Shared sections
+     ========================================================= */
+
+  .section {
+    padding-block: var(--space-xl);
+  }
+
+  .section--light {
+    background: var(--color-white);
+  }
+
+  .section--paper {
+    background: var(--color-paper);
+  }
+
+  .section--dark {
+    background: var(--color-brand-dark);
+    color: var(--color-text-on-dark);
+  }
+
+  .section-heading {
+    max-width: 50rem;
+    margin-inline: auto;
+    margin-block-end: var(--space-xl);
+    text-align: center;
+  }
+
+  .section-heading h2 {
+    margin: 0 0 var(--space-md);
+  }
+
+  .section-heading p {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section-heading p:last-child {
+    margin-block-end: 0;
+  }
+
+  .section-heading--dark p {
+    color: color-mix(in srgb, var(--color-text-on-dark) 72%, transparent);
+  }
+
+  /* =========================================================
+     Knowledge model
+     ========================================================= */
+
+  .knowledge-model {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: var(--space-sm);
+    align-items: center;
+  }
+
+  .knowledge-model-item {
+    min-width: 0;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .knowledge-model-item > span {
+    display: block;
+    margin-block-end: var(--space-md);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .knowledge-model-item strong,
+  .knowledge-model-item small {
+    display: block;
+  }
+
+  .knowledge-model-item strong {
+    margin-block-end: var(--space-xs);
+  }
+
+  .knowledge-model-item small {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+  }
+
+  .knowledge-model > i {
+    width: 2rem;
+    height: 1px;
+    background: var(--color-line);
+  }
+
+  /* =========================================================
+     Feature cards
+     ========================================================= */
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .feature-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-lg);
+  }
+
+  .feature-index {
+    display: block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .feature-card h3 {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-white);
+  }
+
+  .feature-card p {
+    margin: 0;
+    color: color-mix(in srgb, var(--color-text-on-dark) 70%, transparent);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     Split sections
+     ========================================================= */
+
+  .split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .split-section--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .split-copy h2 {
+    margin: 0 0 var(--space-md);
+  }
+
+  .split-copy p {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .split-copy p:last-child {
+    margin-block-end: 0;
+  }
+
+  /* =========================================================
+     Access card
+     ========================================================= */
+
+  .access-card {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .access-header {
+    padding: var(--space-lg);
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .access-header span,
+  .access-section > span {
+    display: block;
+    margin-block-end: var(--space-xs);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .access-header strong {
+    font-size: var(--font-size-xl);
+  }
+
+  .access-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    border-block-end: 1px solid var(--color-line);
+  }
+
+  .access-row span {
+    color: var(--color-text-muted);
+  }
+
+  .status-active {
+    color: var(--color-success);
+  }
+
+  .access-section {
+    padding: var(--space-lg);
+  }
+
+  .access-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .access-option {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .access-option--active {
+    border-color: var(--color-brand);
+    background: var(--color-brand-subtle);
+    color: var(--color-brand);
+  }
+
+  /* =========================================================
+     Article workflow
+     ========================================================= */
+
+  .article-workflow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .workflow-item {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .workflow-item > span {
+    display: block;
+    margin-block-end: var(--space-md);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .workflow-item strong,
+  .workflow-item small {
+    display: block;
+  }
+
+  .workflow-item strong {
+    margin-block-end: var(--space-xs);
+  }
+
+  .workflow-item small {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+  }
+
+  .article-workflow > i {
+    width: 2rem;
+    height: 1px;
+    background: var(--color-line);
+  }
+
+  /* =========================================================
+     Request / knowledge relation
+     ========================================================= */
+
+  .request-knowledge {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .request-panel,
+  .article-preview {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .panel-label,
+  .article-preview-header > span {
+    display: block;
+    margin-block-end: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .request-panel h3,
+  .article-preview h3 {
+    margin: 0 0 var(--space-lg);
+    font-size: var(--font-size-xl);
+  }
+
+  .request-panel-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+    border-block-start: 1px solid var(--color-line);
+  }
+
+  .request-panel-row span {
+    color: var(--color-text-muted);
+  }
+
+  .relation-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+  }
+
+  .relation-arrow i {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: var(--color-brand);
+  }
+
+  .article-preview p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-block-start: var(--space-md);
+  }
+
+  .article-tags span,
+  .result-tags span {
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-paper);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+  }
+
+  .article-preview-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: var(--space-lg);
+    padding-block-start: var(--space-md);
+    border-block-start: 1px solid var(--color-line);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .knowledge-benefit {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-block-start: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border-inline-start: 3px solid var(--color-brand);
+    background: var(--color-brand-subtle);
+  }
+
+  .knowledge-benefit strong {
+    color: var(--color-brand-dark);
+  }
+
+  .knowledge-benefit span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Search interface
+     ========================================================= */
+
+  .search-interface {
+    max-width: 58rem;
+    margin-inline: auto;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .search-bar span {
+    color: color-mix(in srgb, var(--color-text-on-dark) 65%, transparent);
+  }
+
+  .search-bar strong {
+    color: var(--color-brand);
+    font-size: 1.5rem;
+  }
+
+  .search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-block: var(--space-md);
+  }
+
+  .search-filter {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-sm);
+    color: color-mix(in srgb, var(--color-text-on-dark) 70%, transparent);
+    font-size: var(--font-size-xs);
+  }
+
+  .search-filter--active {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+  }
+
+  .search-results {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .search-result {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-lg);
+  }
+
+  .search-result > div:first-child {
+    min-width: 0;
+  }
+
+  .search-result > div:first-child > span {
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+  }
+
+  .search-result h3 {
+    margin: var(--space-xs) 0;
+    color: var(--color-white);
+  }
+
+  .search-result p {
+    margin: 0;
+    color: color-mix(in srgb, var(--color-text-on-dark) 65%, transparent);
+    line-height: var(--line-height-normal);
+  }
+
+  .result-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .result-tags span {
+    background: rgba(255, 255, 255, 0.05);
+    color: color-mix(in srgb, var(--color-text-on-dark) 72%, transparent);
+  }
+
+  /* =========================================================
+     Article network
+     ========================================================= */
+
+  .article-network {
+    position: relative;
+    min-height: 20rem;
+  }
+
+  .network-main,
+  .network-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    padding: var(--space-md);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .network-main {
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    min-width: 10rem;
+    text-align: center;
+    border-color: var(--color-brand);
+  }
+
+  .network-main span,
+  .network-node span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .network-node {
+    width: 9rem;
+  }
+
+  .network-node--one {
+    inset: 10% auto auto 5%;
+  }
+
+  .network-node--two {
+    inset: 10% 5% auto auto;
+  }
+
+  .network-node--three {
+    inset: auto auto 8% 18%;
+  }
+
+  .network-line {
+    position: absolute;
+    height: 1px;
+    background: var(--color-line);
+    transform-origin: left center;
+  }
+
+  .network-line--one {
+    width: 10rem;
+    inset: 42% auto auto 27%;
+    transform: rotate(-25deg);
+  }
+
+  .network-line--two {
+    width: 10rem;
+    inset: 42% auto auto 52%;
+    transform: rotate(25deg);
+  }
+
+  .network-line--three {
+    width: 9rem;
+    inset: 57% auto auto 32%;
+    transform: rotate(25deg);
+  }
+
+  /* =========================================================
+     Feedback / attachments
+     ========================================================= */
+
+  .feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .feedback-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .feedback-index {
+    display: block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .feedback-card h3 {
+    margin: 0 0 var(--space-sm);
+  }
+
+  .feedback-card > p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .feedback-demo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-block-start: var(--space-lg);
+    padding-block-start: var(--space-md);
+    border-block-start: 1px solid var(--color-line);
+  }
+
+  .feedback-demo span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  .feedback-demo div {
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  .feedback-demo button {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    background: var(--color-surface);
+    cursor: default;
+  }
+
+  .feedback-demo button:first-child {
+    border-color: var(--color-success);
+    color: var(--color-success);
+  }
+
+  .attachment-demo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-block-start: var(--space-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+  }
+
+  .attachment-demo > span:first-child {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-brand-subtle);
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .attachment-demo div {
+    flex: 1;
+  }
+
+  .attachment-demo strong,
+  .attachment-demo small {
+    display: block;
+  }
+
+  .attachment-demo small {
+    margin-block-start: var(--space-2xs);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  .attachment-size {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+  }
+
+  /* =========================================================
+     Use cases
+     ========================================================= */
+
+  .use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .use-case-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+  }
+
+  .use-case-card > span {
+    display: block;
+    margin-block-end: var(--space-lg);
+    color: var(--color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .use-case-card h3 {
+    margin: 0 0 var(--space-sm);
+  }
+
+  .use-case-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* =========================================================
+     Summary
+     ========================================================= */
+
+  .summary {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .summary-copy h2 {
+    margin: 0 0 var(--space-md);
+    color: var(--color-white);
+  }
+
+  .summary-copy p {
+    margin: 0;
+    color: color-mix(in srgb, var(--color-text-on-dark) 70%, transparent);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .summary-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .summary-points div {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border: 1px solid var(--knowledge-line);
+    border-radius: var(--radius-md);
+  }
+
+  .summary-points span {
+    color: var(--color-brand);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .summary-points strong {
+    color: var(--color-text-on-dark);
+    font-size: var(--font-size-sm);
+  }
+
+  /* =========================================================
+     Responsive
+     ========================================================= */
+
+  @media (max-width: 1000px) {
+    .feature-grid,
+    .use-case-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .knowledge-model {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .knowledge-model > i {
+      display: none;
+    }
+
+    .summary {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .split-section,
+    .split-section--reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .request-knowledge {
+      grid-template-columns: 1fr;
+    }
+
+    .relation-arrow {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .article-workflow {
+      grid-template-columns: 1fr;
+    }
+
+    .article-workflow > i {
+      width: 1px;
+      height: 1.5rem;
+      margin-inline-start: 0.25rem;
+    }
+
+    .feedback-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .search-result {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding-block: var(--space-lg);
+    }
+
+    .feature-grid,
+    .use-case-grid,
+    .knowledge-model,
+    .summary-points {
+      grid-template-columns: 1fr;
+    }
+
+    .access-row,
+    .request-panel-row {
+      flex-direction: column;
+      gap: var(--space-2xs);
+    }
+
+    .article-network {
+      min-height: 24rem;
+    }
+
+    .network-node {
+      width: 8rem;
+    }
+
+    .network-node--one {
+      inset-inline-start: 0;
+    }
+
+    .network-node--two {
+      inset-inline-end: 0;
+    }
+
+    .network-node--three {
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+    }
+
+    .knowledge-benefit {
+      padding: var(--space-md);
+    }
+  }
+</style>
