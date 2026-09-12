@@ -358,16 +358,16 @@ const benefits = [
 
   /* * متن داخل یک سطح شیشه‌ای بسیار ملایم قرار می‌گیرد. * این باعث می‌شود روی هر تصویری خوانا باشد. */
   .landa-hero-copy {
-    /* width: min(43%, 34rem); */
     padding: clamp(1.25rem, 2.2vw, 2rem);
     pointer-events: auto;
     color: var(--color-primary);
-    background: rgba(255, 255, 255, 0.015);
+
+    background: rgba(255, 255, 255, 0.58);
     border: 1px solid rgba(255, 255, 255, 0.72);
     border-radius: 1rem;
     box-shadow: 0 1rem 3rem rgba(30, 100, 120, 0.08);
+
     backdrop-filter: blur(8px) saturate(110%);
-    -webkit-backdrop-filter: blur(8px) saturate(110%);
   }
 
   .landa-hero-copy h1 {
@@ -375,9 +375,11 @@ const benefits = [
     color: var(--color-primary);
     line-height: 1.5;
   }
+
   .landa-hero-copy .accent-text {
     color: var(--color-brand);
   }
+
   .landa-hero-copy .hero-lead {
     max-width: 31rem;
     margin-top: 1.2rem;
@@ -390,7 +392,9 @@ const benefits = [
     flex-wrap: wrap;
     gap: var(--space-md);
     margin-top: 1.5rem;
-  } /* ========================================================= * Content * ======================================================= */
+  }
+
+  /* ========================================================= * Content * ======================================================= */
   .content-section {
     padding-block: var(--space-xl);
   }
@@ -413,7 +417,9 @@ const benefits = [
     color: var(--color-muted);
     font-size: 1.08rem;
     line-height: 2;
-  } /* ========================================================= * Benefits * ======================================================= */
+  }
+
+  /* ========================================================= * Benefits * ======================================================= */
   .benefits-grid,
   .capability-grid {
     display: grid;
@@ -433,7 +439,9 @@ const benefits = [
     margin: 0;
     color: var(--color-muted);
     line-height: 1.9;
-  } /* ========================================================= * Capabilities * ======================================================= */
+  }
+
+  /* ========================================================= * Capabilities * ======================================================= */
   .capability-group {
     padding: var(--space-md);
     border: 0.0625rem solid var(--color-border);
@@ -561,7 +569,9 @@ const benefits = [
         rgba(42, 143, 170, 0.06) 100%
       );
     }
-  } /* ========================================================= * Mobile * * تصویر کاملاً واضح و بدون overlay باقی می‌ماند. * متن بعد از تصویر قرار می‌گیرد. * ======================================================= */
+  }
+
+  /* ========================================================= * Mobile * * تصویر کاملاً واضح و بدون overlay باقی می‌ماند. * متن بعد از تصویر قرار می‌گیرد. * ======================================================= */
   @media (max-width: 767px) {
     .landa-hero-media {
       overflow: visible;
