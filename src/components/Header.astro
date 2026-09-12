@@ -80,6 +80,8 @@ import CompanyLogo from "./brand/CompanyLogo.astro";
 
 <style>
   .site-header {
+    position: relative;
+    z-index: 100;
     border-bottom: 0.0625rem solid var(--color-line);
     background: var(--color-background);
   }
@@ -331,13 +333,6 @@ import CompanyLogo from "./brand/CompanyLogo.astro";
 
     nav .button {
       text-align: center;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .site-header {
-      position: relative;
-      z-index: 1;
     }
   }
 </style>
